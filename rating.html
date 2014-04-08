@@ -16,15 +16,70 @@
     </script> 
 
  
+ 
+ <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6/dojo/dojo.xd.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6/dojo/io/script.js"></script>
+
+ <script>
+ dojo.ready(function()
+ {
+
+ // Fetching data from Google Spreadsheet (code by Frog)
+ function fetchData()
+ {
+     var jsonpArgs =
+     {
+         url: 'https://spreadsheets.google.com/feeds/cells/18KSTXRKDDCoGPDh36sPcUdNKHDLAA74lexRkzEByt2U/od6/public/values?alt=json-in-script',
+         callbackParamName: "callback",
+         timeout: 5000,
+         handleAs: 'json',
+         load: function(response)
+         {
+             var html = '';
+             var html2 = '';
+             var i = 0;
+             console.log('fetchData response:', response);
+            
+             html += 'Получено данных в ячейках: ' + response.feed.openSearch$totalResults.$t + '<p>';
+             html += 'Последнее обновление таблицы: ' + response.feed.updated.$t + '<p>';
+
+             dojo.forEach(response.feed.entry, function(cell)
+             {
+                 i++;
+                 html +=    'Строка:' + cell.gs$cell.row + ' Столбец:' + cell.gs$cell.col + ' Содержимое: ' + cell.gs$cell.$t + '<br>';
+                 html2 += '<a href="#"><h4>' + i + '. ' + cell.gs$cell.$t + '</h4></a>';
+             });//forEach
+              
+             dojo.byId('content').innerHTML = html2;
+
+         },//load
+
+         error: function(error)
+         {
+             console.log('fetchData: An unexpected error occurred: ' + error);
+         }//error
+
+     };//jsonpArgs
+
+     dojo.io.script.get(jsonpArgs);
+
+ }//fetchData()
+
+ fetchData();
+
+ });
+ </script>
+ 
+ 
 
 
-    <title >Это Кандинский?</title>
+    <title>Кто художник?</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
   </head>
 
-  <body onload="getart()">
+  <body>
 
     <div class="container">
       <div class="header">
@@ -45,7 +100,8 @@
         <div id="corner" class="panel panel-default">
 
          <h3>Доска почёта</h3><br>
-          <img src="rating.jpg" style="max-height: 600px; max-width: 1000px;">
+          <!--<img src="rating.jpg" style="max-height: 600px; max-width: 1000px;">-->
+          <div id="content"></div>
           <br><br>
 
 
@@ -67,7 +123,7 @@
           <p>Нужно верно отгадывать художников по их картинам.</p>
 
           <h4>Чем я могу помочь?</h4>
-Если вам понравился сайт, то будьте так добры, расскажите друзьям:<div style="margin-left: -5px; margin-top: 5px;" class="pluso" data-background="transparent" data-options="medium,square,line,horizontal,counter,theme=06" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print" data-user="999055861"></div>
+Если вам понравился сайт, то будьте так добры, расскажите друзьям:<br><div style="margin-left: -5px; margin-top: 5px;" class="pluso" data-background="transparent" data-options="medium,square,line,horizontal,counter,theme=06" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print" data-user="999055861"></div>
           
           <script type="text/javascript">(function() {
             if (window.pluso)if (typeof window.pluso.start == "function") return;

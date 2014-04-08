@@ -58,6 +58,7 @@
       
       else {
         
+      //var stack_topleft = {"dir1": "down", "dir2": "right"};
         // $.pnotify({
 //             title: 'Угадайте автора картины',
 //             text: 'Докажите какой вы супер-пуппер',
@@ -73,15 +74,33 @@
       }
       
       window.counter = document.getElementById("counter").innerHTML;
+            
       
-      //var stack_topleft = {"dir1": "down", "dir2": "right"};
+    }
+    
+    function puticons() {
       
+    
+/*      document.getElementById("icon1").style.fontSize = "20px"*/
+
+
+      //document.getElementById("icon1").style.color = "green"
+      for (var i=1; i < window.counter; i++ ) {
+          document.getElementById("icon"+i).style.color = "green";        
+/*
+          document.getElementById("icon"+(i+1)).style.fontSize = "20px"
+          document.getElementById("icon"+(i-1)).style.fontSize = "14px"
+*/
+        
+      } 
       
     }
     
     function getart() { 
       
       currentWins();
+      
+
       
       var art = document.getElementById("art");
 
@@ -163,6 +182,8 @@
         putButtons('Николай Рерих');
         window.truePainterName = "Николай Рерих";
       }
+      
+            puticons();
     }
     
     
@@ -237,21 +258,7 @@
       var wins = parseInt(window.counter);
       
       if (wins < 1) {
-        wins = 1;
-        setCookie('wins',wins,"session");    
-        setTimeout(function() {location.reload()}, 2000)
-
-        $.pnotify({
-            title: 'Молодец!',
-            text: 'Вы переходите на следующий уровень',
-            type: 'success',
-            hide: false,
-            closer: false,
-            animate_speed: "normal",
-            sticker: false,
-            history: false          
-        });
-
+ 
 
       }
       
@@ -265,9 +272,9 @@
       setTimeout(function() {location.reload()}, 2000)
       
       $.pnotify({
-          title: 'Молодец!',
+          title: 'Верно!',
           //text: 'Вы переходите на следующий уровень',
-          text: 'Вы переходите на ' + (parseInt(window.counter) + 1) + " уровень",
+          text: 'Вы отгадали ' + parseInt(window.counter) + " картину",
           type: 'success',
           hide: false,
           closer: false,
@@ -293,7 +300,8 @@
           hide: false,
           closer: false,
           animate_speed: "normal",
-          sticker: false
+          sticker: false,
+          history: false
       });
       
       document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
@@ -421,9 +429,23 @@
 
       <div style="text-align: center">
         <div id="corner" class="panel panel-default">
+          <br>
+         <span style="visibility: hidden" id="counter">1</span>
+         <span id="icon1" style="color: gray; font-size: 20px;" class="glyphicon glyphicon-picture"></span>
+         <span id="icon2" style="color: gray; font-size: 20px;" class="glyphicon glyphicon-picture"></span>
+         <span id="icon3" style="color: gray; font-size: 20px;" class="glyphicon glyphicon-picture"></span>
+         <span id="icon4" style="color: gray; font-size: 20px;" class="glyphicon glyphicon-picture"></span>
+         <span id="icon5" style="color: gray; font-size: 20px;" class="glyphicon glyphicon-picture"></span>
+         <span id="icon6" style="color: gray; font-size: 20px;" class="glyphicon glyphicon-picture"></span>
+         <span id="icon7" style="color: gray; font-size: 20px;" class="glyphicon glyphicon-picture"></span>
+         <span id="icon8" style="color: gray; font-size: 20px;" class="glyphicon glyphicon-picture"></span>
+         <span id="icon9" style="color: gray; font-size: 20px;" class="glyphicon glyphicon-picture"></span>
+         <span id="icon10" style="color: gray; font-size: 20px;" class="glyphicon glyphicon-picture"></span>
+         <br>
+         <br>
 
-         <h3><span id="counter">1</span> из 10</h3><br>
-          <img id="art" style="max-height: 600px; max-width: 1000px;">
+         
+          <img id="art" style="max-height: 600px; max-width: 900px;">
           <br>
 
 
@@ -451,17 +473,9 @@
           <p>Нужно верно отгадывать художников по их картинам.</p>
 
           <h4>Чем я могу помочь?</h4>
-Если вам понравился сайт, то будьте так добры, расскажите друзьям:<div style="margin-left: -5px; margin-top: 5px;" class="pluso" data-background="transparent" data-options="medium,square,line,horizontal,counter,theme=06" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print" data-user="999055861"></div>
-          
-          <script type="text/javascript">(function() {
-            if (window.pluso)if (typeof window.pluso.start == "function") return;
-            if (window.ifpluso==undefined) { window.ifpluso = 1;
-              var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
-              s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
-              s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
-              var h=d[g]('body')[0];
-              h.appendChild(s);
-            }})();</script>
+Если вам понравился сайт, то будьте так добры, расскажите друзьям:<br>
+
+
         </div>
 
       </div>
