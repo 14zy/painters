@@ -274,7 +274,7 @@
       $.pnotify({
           title: 'Верно!',
           //text: 'Вы переходите на следующий уровень',
-          text: 'Вы отгадали ' + parseInt(window.counter) + " картину",
+          text: 'Вы отгадали ' + parseInt(window.counter) + " картину.",
           type: 'success',
           hide: false,
           closer: false,
@@ -297,7 +297,7 @@
       
       $.pnotify({
           title: badPhrase(),
-          text:  "Это же " + window.truePainterName + "<br><a href='index.html'>Начать заново</a>",
+          text:  "Это же " + window.truePainterName + ".",
           type: 'error',
           icon: 'glyphicon glyphicon-remove',
           hide: false,
@@ -371,15 +371,11 @@
         
     function badPhrase() {
       
-      switch (Math.floor((Math.random()*5)+1))
+      switch (Math.floor((Math.random()*10)+1))
       {
       case 1:
         phrase = "Да Вы ебанулись!";
         break;
-
-      // case 2:
-      //   phrase = "Да блядь!";
-      //   break;        
         
       case 2:
         phrase = "Ну как не стыдно?";
@@ -397,6 +393,25 @@
         phrase = "Займитесь своим самообразованием!";
         break;
 
+      case 6:
+        phrase = "Как Вы могли?..";
+        break;
+
+      case 7:
+        phrase = "Нет, нет и нет!";
+        break;
+
+      case 8:
+        phrase = "Одумайтесь!";
+        break;
+
+      case 9:
+        phrase = "А если подумать?";
+        break;
+
+      case 10:
+        phrase = "Какого черта?!";
+        break;
 
       }
 
@@ -426,7 +441,7 @@
         
         
         
-        <a href="index.html"><h3 class="text-muted"><span class="glyphicon glyphicon-picture"></span> Кто художник?</h3></a>
+        <a href="index.html"><h3 class="text-muted"><span class="glyphicon glyphicon-pencil"></span> Кто художник?</h3></a>
       </div>
       <br>
 
