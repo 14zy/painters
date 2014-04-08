@@ -293,11 +293,11 @@
         
     else {
 
-      setTimeout(function() {location.reload()}, 3000)
+      setTimeout(function() {location.reload()}, 10000)
       
       $.pnotify({
           title: badPhrase(),
-          text:  "Это же " + window.truePainterName + ".",
+          text:  "Это же " + window.truePainterName + ".<br><a href='index.html'>Начать заново</a>",
           type: 'error',
           icon: 'glyphicon glyphicon-remove',
           hide: false,
