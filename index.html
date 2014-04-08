@@ -292,6 +292,9 @@
 
         
     else {
+
+      setTimeout(function() {location.reload()}, 3000)
+      
       $.pnotify({
           title: badPhrase(),
           text:  "Это же " + window.truePainterName + "<br><a href='index.html'>Начать заново</a>",
