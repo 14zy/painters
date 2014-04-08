@@ -99,7 +99,7 @@
     function getart() { 
       
       currentWins();
-      
+      winner();
 
       
       var art = document.getElementById("art");
@@ -188,8 +188,27 @@
     
     
     function winner() {
-      alert('Победитель!');
+      $.pnotify({
+          title: 'Поздравляем!',
+          //text: 'Вы переходите на следующий уровень',
+          text: 'Вы великолепно разбираетесь в искусcтве!' + "<br><br><a style='margin: 0 0 0 50px;' onclick='Share();' href='#'><img src='artmaster.png'><br><br>Опубликовать достижение</a>",
+          type: 'note',
+          hide: false,
+          closer: false,
+          animate_speed: "normal",
+          sticker: false,
+          icon: "glyphicon glyphicon-thumbs-up",
+          history: false          
+      });
     }
+    
+    function Share() {
+
+      url = "http://vk.com/share.php?url=http://14zy.github.io/painters/" + "&title=Я отлично разбираюсь в искусстве&description=Попробуй отгадать авторов 10 известных картин и получить такой бейдж!&image=http://14zy.github.io/painters/artmaster.png";
+      window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+
+    }        
+    
     
     function randomPainter() {
       switch (Math.floor((Math.random()*11)+1))
@@ -297,7 +316,7 @@
       
       $.pnotify({
           title: badPhrase(),
-          text:  "Это же " + window.truePainterName + ".<br><a href='index.html'>Начать заново</a>",
+          text:  "Это же " + window.truePainterName + ".<br><a href='index.html'>Попробовать еще раз</a>",
           type: 'error',
           icon: 'glyphicon glyphicon-remove',
           hide: false,
@@ -481,37 +500,34 @@
         </div>
         
       </div>
-      <br>
+
       <div class="row marketing">
         <div class="col-lg-6">
 
-          <h4>Что тут происходит?</h4>
+          <h3>Что тут происходит?</h3>
           <p>Молодежь соревнуется в области искусствоведения.</p>
-
-          <h4>Как это работает?</h4>
-          <p>Нужно верно отгадывать авторов картин.</p>
-          Имена сударей и сударынь, которые смогут отгадать 10 картин в ряд, будут увековечены.
           
+          <h3>Как это работает?</h3>
+          <p>Нужно верно отгадывать авторов картин.</p>
+          Имена тех господ, которые смогут отгадать 10 картин подряд, будут увековечены.
+          
+          <h3>Какая от этого польза?</h3>
+          <p>Практикуйтесь и очень скоро вы без труда будете отличать Моне от Мане с первого взгляда.</p>
 
-          <h4>Чем я могу помочь?</h4>
+          <h3>Чем я могу помочь?</h3>
           Если вам понравился сайт, будьте так добры, расскажите о нём друзьям:<br>
           
-          <script type="text/javascript" src="//yandex.st/share/share.js"
+          <script type="text/javascript" src="http://yandex.st/share/share.js"
           charset="utf-8"></script>
           <div style="margin-left: -5px;" class="yashare-auto-init" data-yashareL10n="ru"
-           data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter"
-
-          ></div> 
-
-          
-
+           data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter"></div> 
 
         </div>
 
       </div>
-<br>
+      <br>
       <div class="footer">
-        <a href="http://vk.com/just14zy"><p>&copy; 14zy 2014</p></a>
+        <p>&copy; Сайт создан <a href="https://vk.com/just14zy"><img style="margin-bottom: 7px;" height="20px;" src="https://pp.vk.me/c9682/u10063679/e_b7c0d17c.jpg">Рубеном</a> и <a href="https://vk.com/id9755975"><img style="margin: 0 3px 4px 0;" height="18px;" src="https://pp.vk.me/c322816/v322816975/bd15/qTopJ88cvh0.jpg">Аней</a> в 2014 году.</p>
       </div>
 
     </div> <!-- /container -->
