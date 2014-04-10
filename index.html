@@ -92,7 +92,7 @@
       
       var art = document.getElementById("art");
 
-      window.truePainter = Math.floor((Math.random()*40)+1);
+      window.truePainter = Math.floor((Math.random()*39)+1);
 
       if (truePainter == 1) {
         window.image = Math.floor((Math.random()*96)+1);
@@ -359,12 +359,12 @@
         window.truePainterName = "Питер Брейгель";
       }
 
-      if (truePainter == 40) {
-        window.image = Math.floor((Math.random()*465)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Чарльз Макинтош');
-        window.truePainterName = "Чарльз Макинтош";
-      }
+      // if (truePainter == 40) {
+      //   window.image = Math.floor((Math.random()*465)+1);
+      //   art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+      //   putButtons('Чарльз Макинтош');
+      //   window.truePainterName = "Чарльз Макинтош";
+      // }
       
       puticons();
     }
@@ -392,7 +392,7 @@
     
     
     function randomPainter() {
-      switch (Math.floor((Math.random()*40)+1))
+      switch (Math.floor((Math.random()*39)+1))
       {
       case 1:
         painterName = "Амедео Модильяни";
@@ -550,9 +550,9 @@
         painterName = "Питер Брейгель";
         break;
 
-      case 40:        
-        painterName = "Чарльз Макинтош";
-        break;
+      // case 40:        
+      //   painterName = "Чарльз Макинтош";
+      //   break;
         
       }
 
