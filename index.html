@@ -567,6 +567,11 @@
       return painterName;
     }
     
+    function retry(){
+      yaCounter24594722.reachGoal('AGAIN-CLICK');
+      location.reload(false);
+    }
+    
     
     function checkAnswer(btn) { 
     var answer = document.getElementById(btn).innerHTML;
@@ -617,7 +622,7 @@
       
       $.pnotify({
           title: badPhrase(),
-          text:  "Это же " + window.truePainterName + ".<br><br><img src='" + "https://dl.dropboxusercontent.com/u/15486902/painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><a style='cursor: pointer;' onclick='yaCounter24594722.reachGoal('AGAIN-CLICK'); location.reload(false);'>Попробовать еще раз</a>",
+          text:  "Это же " + window.truePainterName + ".<br><br><img src='" + "https://dl.dropboxusercontent.com/u/15486902/painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><a style='cursor: pointer;' onclick='retry();'>Попробовать еще раз</a>",
           type: 'error',
           icon: 'glyphicon glyphicon-remove',
           hide: false,
@@ -626,6 +631,7 @@
           sticker: false,
           history: false
       });
+      
       
       yaCounter24594722.reachGoal('FAIL');
       
@@ -795,7 +801,7 @@
         <a id ="btn4" onclick="checkAnswer('btn4');" class="btn btn-lg btn-success"  role="button"></a>
 
         
-        <br><br><a id="report" title="Сообщить о проблеме с картиной" style="color: lightgray;" onclick="report();" href="#id">Эта картина нерепрезентативна</a><br><br>
+        <br><br><a id="report" title="Сообщить о проблеме с картиной" style="color: lightgray; cursor: pointer;" onclick="report();">Эта картина нерепрезентативна</a><br><br>
         <!-- <div class="panel-heading">ВРОНГ</div> -->
         </div>
         
