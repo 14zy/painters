@@ -379,7 +379,7 @@
     function winner() {
       $.pnotify({
           title: 'Поздравляем!',
-          text: 'Вы великолепно разбираетесь в искусcтве!' + "<br><br><a style='margin: 0 0 0 30px;' onclick='Share();' href='#'><img src='winner-badge.png'><br><br>Опубликовать достижение</a>",
+          text: 'Вы великолепно разбираетесь в искусcтве!' + "<br><br><a style='margin: 0 0 0 30px;' onclick='Share(); yaCounter24594722.reachGoal('WINNER-SHARE');' href='#'><img src='winner-badge.png'><br><br>Опубликовать достижение</a>",
           type: 'note',
           hide: false,
           closer: false,
@@ -388,6 +388,7 @@
           icon: "glyphicon glyphicon-thumbs-up",
           history: false          
       });
+      yaCounter24594722.reachGoal('WINNER');
       document.getElementById("icon10").style.color = "rgb(53,115,45)";                
     }
 
@@ -570,6 +571,7 @@
     function checkAnswer(btn) { 
     var answer = document.getElementById(btn).innerHTML;
 
+    yaCounter24594722.reachGoal('ANSWER-CLICK')
     if (answer == window.truePainterName) {
  
       document.getElementById("btn1").onclick = function() { void(0);};
@@ -604,7 +606,7 @@
           sticker: false,
           history: false          
       });
-
+      yaCounter24594722.reachGoal('WIN');
       }
       
     }
@@ -615,7 +617,7 @@
       
       $.pnotify({
           title: badPhrase(),
-          text:  "Это же " + window.truePainterName + ".<br><br><img src='" + "https://dl.dropboxusercontent.com/u/15486902/painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><a style='cursor: pointer;' onclick='location.reload(false);'>Попробовать еще раз</a>",
+          text:  "Это же " + window.truePainterName + ".<br><br><img src='" + "https://dl.dropboxusercontent.com/u/15486902/painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><a style='cursor: pointer;' onclick='yaCounter24594722.reachGoal('AGAIN-CLICK'); location.reload(false);'>Попробовать еще раз</a>",
           type: 'error',
           icon: 'glyphicon glyphicon-remove',
           hide: false,
@@ -624,6 +626,8 @@
           sticker: false,
           history: false
       });
+      
+      yaCounter24594722.reachGoal('FAIL');
       
       document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 
@@ -708,7 +712,7 @@
     }
     
     function report() {
-  
+      yaCounter24594722.reachGoal('REPORT');
     document.getElementById("report").innerHTML = "Спасибо, мы проверим!";
 /*    document.getElementById("report").style.color = "green";*/
     document.getElementById("report").onclick = function() { void(0);};
@@ -809,7 +813,6 @@
           <h3>Какая от этого польза?</h3>
           <p>Играйте в свободное время, и очень скоро Вы без труда будете отличать<br>Клода Моне от Эдгара Мане с первого взгляда, и уж точно от Альфреда Сислея, лол)</p>
 
-
           <h3>Чем я могу помочь?</h3>
           Если Вам понравился сайт, будьте так любезны, расскажите о нём друзьям:<br>
 
@@ -819,7 +822,7 @@
            data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter" data-yashareImage="http://artchallenge.ru/art-challenge-logo.png"></div> 
 
           <h3>What about the English version?</h3>
-          <p>Of course, here it is: <a href='en/'>English Version</a></p>
+          <p>Of course, here it is: <a onclick="yaCounter24594722.reachGoal('ENGLISH');" href='en/'>English version</a></p>
 
         </div>
 
@@ -828,7 +831,7 @@
       <br>
       <div class="footer">
 
-        <p>&copy; Сайт создан <a href="https://vk.com/just14zy"><img style="margin-bottom: 7px;" height="20px;" src="https://pp.vk.me/c9682/u10063679/e_b7c0d17c.jpg">Рубеном</a> и <a href="https://vk.com/id9755975"><img style="margin: 0 3px 4px 0;" height="18px;" src="https://pp.vk.me/c322816/v322816975/bd15/qTopJ88cvh0.jpg">Анной</a> в 2014 году.<br>Пишите нам, если у Вас есть “отзывы и предложения” или по любому другому поводу.</p>
+        <p>&copy; Сайт создан <a onclick="yaCounter24594722.reachGoal('RUBEN-CLICK');" href="https://vk.com/just14zy"><img style="margin-bottom: 7px;" height="20px;" src="https://pp.vk.me/c9682/u10063679/e_b7c0d17c.jpg">Рубеном</a> и <a onclick="yaCounter24594722.reachGoal('ANNA-CLICK');" href="https://vk.com/id9755975"><img style="margin: 0 3px 4px 0;" height="18px;" src="https://pp.vk.me/c322816/v322816975/bd15/qTopJ88cvh0.jpg">Анной</a> в 2014 году.<br>Пишите нам, если у Вас есть “отзывы и предложения” или по любому другому поводу.</p>
         
       </div>
 
