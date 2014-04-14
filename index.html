@@ -592,7 +592,7 @@
       else {
       wins = 1 + wins;
       setCookie('wins',wins,"session");    
-      setTimeout(function() {location.reload()}, 2000)
+      setTimeout(function() {location.reload(false)}, 2000)
       
       $.pnotify({
           title: 'Верно!',
@@ -611,7 +611,7 @@
 
     else {
 
-      setTimeout(function() {location.reload()}, 4000)
+      setTimeout(function() {location.reload(false)}, 4000)
       
       $.pnotify({
           title: badPhrase(),
