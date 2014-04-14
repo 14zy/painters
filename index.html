@@ -242,7 +242,7 @@
         window.truePainterName = "Винсент Ван Гог";
       }
       if (truePainter == 22) {
-        window.image = Math.floor((Math.random()*455)+1);
+        window.image = Math.floor((Math.random()*453)+1);
         art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
         putButtons('Густав Климт');
         window.truePainterName = "Густав Климт";
@@ -388,6 +388,7 @@
           icon: "glyphicon glyphicon-thumbs-up",
           history: false          
       });
+      document.getElementById("icon10").style.color = "rgb(53,115,45)";                
     }
 
     
@@ -610,7 +611,7 @@
 
     else {
 
-      setTimeout(function() {location.reload()}, 10000)
+      setTimeout(function() {location.reload()}, 4000)
       
       $.pnotify({
           title: badPhrase(),
@@ -699,7 +700,7 @@
         break;
 
       case 10:
-        phrase = "Какого черта?!";
+        phrase = "Какого чёрта?!";
         break;
       }
 
@@ -741,7 +742,7 @@
 
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
   </head>
 
   <body onload="getart()">
@@ -749,7 +750,7 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <div style="margin-top: 7px;" class="yashare-auto-init" data-yashareL10n="ru"
+          <div style="margin-top: 4px;" class="yashare-auto-init" data-yashareL10n="ru"
            data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter"></div> 
         </ul>
 
@@ -771,7 +772,7 @@
          <span id="icon7" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
          <span id="icon8" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
          <span id="icon9" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
-         <span id="icon10" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+         <span id="icon10" style="color: lightgray; font-size: 24px;" class="glyphicon glyphicon-gift"></span>
          <br><br>
 
 
@@ -790,7 +791,7 @@
         <a id ="btn4" onclick="checkAnswer('btn4');" class="btn btn-lg btn-success"  role="button"></a>
 
         
-        <br><br><a id="report" title="Сообщить о проблеме с картиной" style="color: lightgray;" onclick="report();" href="#id">Эта картина непрезентабельна</a><br><br>
+        <br><br><a id="report" title="Сообщить о проблеме с картиной" style="color: lightgray;" onclick="report();" href="#id">Эта картина нерепрезентативна</a><br><br>
         <!-- <div class="panel-heading">ВРОНГ</div> -->
         </div>
         

@@ -474,9 +474,26 @@ p {
   font-weight: 200;
   line-height: 1.4;
 }
-@media (min-width: 768px) {
+
+
+
+@media (max-width: 768px) {
   .lead {
     font-size: 21px;
+  }
+  
+  #art {
+   width: 360px;
+  }
+  
+  #btn1,#btn2,#btn3,#btn4 {  
+    display: block;
+    margin-top: 5px;
+    padding: 15px;
+  }
+  
+  #btn4 {
+    margin-bottom: -20px;
   }
 }
 small,
