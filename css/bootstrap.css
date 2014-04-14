@@ -487,10 +487,35 @@ p {
   
   
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .lead {
     font-size: 21px;
   }
+  
+  #art {
+   width: 400px;
+  }
+  
+  #report {
+    display: none;
+  }
+  
+  #top-share {
+    display: none;
+  }
+  
+  #btn1,#btn2,#btn3,#btn4 {  
+    display: block;
+    margin: 5px 20px 0 20px;
+    padding: 15px;
+  }
+  
+  #btn4 {
+    margin-bottom: -60px;
+  }
+}
+
+@media (max-width: 470px) {
   
   #art {
    width: 289px;
@@ -506,7 +531,7 @@ p {
   
   #btn1,#btn2,#btn3,#btn4 {  
     display: block;
-    margin-top: 5px;
+    margin: 5px 0 0 0;
     padding: 15px;
   }
   
@@ -514,6 +539,9 @@ p {
     margin-bottom: -80px;
   }
 }
+
+
+
 small,
 .small {
   font-size: 85%;
