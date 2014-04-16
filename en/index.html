@@ -379,7 +379,7 @@
     function winner() {
       $.pnotify({
           title: 'Поздравляем!',
-          text: 'Вы великолепно разбираетесь в искусcтве!' + "<br><br><a style='margin: 0 0 0 30px;' onclick='Share();' href='#'><img src='winner-badge.png'><br><br>Опубликовать достижение</a>",
+          text: 'Вы великолепно разбираетесь в искусcтве!' + "<br><br><a style='margin: 0 0 0 30px; font-size: 20px;' onclick='Share();' href='#'><img src='winner-badge.png'><br><br><span class='glyphicon glyphicon-share-alt'></span>  Рассказать друзьям</a>",
           type: 'note',
           hide: false,
           closer: false,
@@ -393,6 +393,7 @@
 
     
     function Share() {
+      yaCounter24594722.reachGoal('WINNER-SHARE');
       url = "http://vk.com/share.php?url=http://artchallenge.ru/" + "&title=Господа, я отлично разбираюсь в искусстве!&description=Попробуйте отгадать 10 художников подряд и посоревноваться со мной!&image=http://artchallenge.ru/art-challenge-winner1.png";
       window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
     }        
