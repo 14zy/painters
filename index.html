@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Попробуйте отгадать 10 художников подряд и победить своих друзей!">
     <meta property="og:description" content="Попробуйте отгадать 10 художников подряд и победить своих друзей!" />
-    <!-- <meta name="author" content=""> -->
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="image_src" href="http://artchallenge.ru/art-challenge-logo.png">
     <title>Art Challenge - игра на знание популярных художников</title>
@@ -57,33 +56,11 @@
     }
     
     function currentWins() {
-
       if (getCookie('wins') > 1) {
         document.getElementById("counter").innerHTML = getCookie('wins');
         document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
       }
-      
-      else {
-        
-      // var stack_topleft = {"dir1": "down", "dir2": "right"};
-      //  $.pnotify({
-      //        title: 'Кто автор этой картины?',
-      //        text: '<br>',
-      //        type: 'info',
-      //        //addclass: "stack-topleft",
-      //        //stack: stack_topleft,
-      //        //hide: false,
-      //        history: false,
-      //        animate_speed: "fast",
-      //        sticker: false,
-      //        icon: "glyphicon glyphicon-picture"
-      //    });
-        
-      }
-      
       window.counter = document.getElementById("counter").innerHTML;
-            
-      
     }
     
     function puticons() {
@@ -363,15 +340,7 @@
         art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
         putButtons('Питер Брейгель');
         window.truePainterName = "Питер Брейгель";
-      }
-
-      // if (truePainter == 40) {
-      //   window.image = Math.floor((Math.random()*465)+1);
-      //   art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-      //   putButtons('Чарльз Макинтош');
-      //   window.truePainterName = "Чарльз Макинтош";
-      // }
-      
+      }      
       puticons();
     }
 
@@ -558,10 +527,6 @@
       case 39:        
         painterName = "Питер Брейгель";
         break;
-
-      // case 40:        
-      //   painterName = "Чарльз Макинтош";
-      //   break;
         
       }
 
@@ -589,12 +554,8 @@
       document.getElementById(btn).style.borderColor = "blue";      
 
       var wins = parseInt(window.counter);
-      
-      if (wins < 1) {
-      //Удалить
-      }
-      
-      else if (wins == 10) {
+            
+      if (wins == 10) {
         winner();
       }
       
@@ -722,7 +683,6 @@
     function report() {
       yaCounter24594722.reachGoal('REPORT');
     document.getElementById("report").innerHTML = "Спасибо, мы проверим!";
-/*    document.getElementById("report").style.color = "green";*/
     document.getElementById("report").onclick = function() { void(0);};
     
     $.ajax({
@@ -750,9 +710,6 @@
     }
     </script>
 
-
-
-
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
   </head>
@@ -770,7 +727,6 @@
       </div>
       <br>
 
-
       <div style="text-align: center">
         <div id="corner" class="panel panel-default">
           <br>
@@ -787,24 +743,15 @@
          <span id="icon10" style="color: lightgray; font-size: 24px;" class="glyphicon glyphicon-gift"></span>
          <br><br>
 
-
-
           <img id="art" style="max-height: 600px; max-width: 900px;">
 
-
-
         <br><br>
-        
-        <!--<h3 style="padding-bottom: 10px;">Нет, это:</h3>-->
-        <!-- <br><h4>Кто автор картины?</h4> -->
         <a id ="btn1" onclick="checkAnswer('btn1');" class="btn btn-lg btn-success"  role="button"></a>
         <a id ="btn2" onclick="checkAnswer('btn2');" class="btn btn-lg btn-success"  role="button"></a>
         <a id ="btn3" onclick="checkAnswer('btn3');" class="btn btn-lg btn-success"  role="button"></a>
         <a id ="btn4" onclick="checkAnswer('btn4');" class="btn btn-lg btn-success"  role="button"></a>
-
         
         <br><br><a id="report" title="Сообщить о проблеме с картиной" style="color: lightgray; cursor: pointer;" onclick="report();">Эта картина нерепрезентативна</a><br><br>
-        <!-- <div class="panel-heading">ВРОНГ</div> -->
         </div>
         
       </div>
@@ -824,8 +771,6 @@
           <h3>Чем я могу помочь?</h3>
           Если Вам понравился сайт, будьте так любезны, расскажите о нём друзьям:<br>
 
-          <script type="text/javascript" src="http://yandex.st/share/share.js"
-          charset="utf-8"></script>
           <div style="margin-left: -5px;" class="yashare-auto-init" data-yashareL10n="ru"
            data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter" data-yashareImage="http://artchallenge.ru/art-challenge-logo.png"></div> 
 
@@ -833,22 +778,21 @@
           <p>Of course, here it is: <a onclick="yaCounter24594722.reachGoal('ENGLISH');" href='en/'>English version</a></p>
 
         </div>
-
       </div>        
 
       <br>
       <div class="footer">
-
         <p>&copy; Сайт создан <a onclick="yaCounter24594722.reachGoal('RUBEN-CLICK');" href="https://vk.com/just14zy"><img style="margin-bottom: 7px;" height="20px;" src="https://pp.vk.me/c9682/u10063679/e_b7c0d17c.jpg">Рубеном</a> и <a onclick="yaCounter24594722.reachGoal('ANNA-CLICK');" href="https://vk.com/id9755975"><img style="margin: 0 3px 4px 0;" height="18px;" src="https://pp.vk.me/c322816/v322816975/bd15/qTopJ88cvh0.jpg">Анной</a> в 2014 году.<br>Пишите нам, если у Вас есть “отзывы и предложения” или по любому другому поводу.</p>
-        
       </div>
-
     </div> <!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+
+          <script type="text/javascript" src="http://yandex.st/share/share.js"
+          charset="utf-8"></script>
     
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
