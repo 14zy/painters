@@ -14,10 +14,13 @@
     <meta property="og:url" content="http://artchallenge.ru/" />
     <meta property="og:image" content="http://artchallenge.ru/art-challenge-logo-facebook.png" />
     <meta property="og:site_name" content="Art Challenge"/>
-        
+    
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="js/jquery.pnotify.default.css" media="all" rel="stylesheet" type="text/css" />     
+
     <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
     <script src="js/jquery.pnotify.js" type="text/javascript"></script>   
-    <link href="js/jquery.pnotify.default.css" media="all" rel="stylesheet" type="text/css" /> 
 
   	<script type="text/javascript" language="javascript">
 
@@ -169,7 +172,7 @@
       }
 
       if (truePainter == 14) {
-        window.image = Math.floor((Math.random()*199)+1);
+        window.image = Math.floor((Math.random()*198)+1);
         art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
         putButtons('Рене Магритт');
         window.truePainterName = "Рене Магритт";
@@ -710,8 +713,6 @@
     }
     </script>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
   </head>
 
   <body onload="getart()">
@@ -782,7 +783,7 @@
 
       <br>
       <div class="footer">
-        <p>&copy; Сайт создан <a onclick="yaCounter24594722.reachGoal('RUBEN-CLICK');" href="https://vk.com/just14zy"><img style="margin-bottom: 7px;" height="20px;" src="https://pp.vk.me/c9682/u10063679/e_b7c0d17c.jpg">Рубеном</a> и <a onclick="yaCounter24594722.reachGoal('ANNA-CLICK');" href="https://vk.com/id9755975"><img style="margin: 0 3px 4px 0;" height="18px;" src="https://pp.vk.me/c322816/v322816975/bd15/qTopJ88cvh0.jpg">Анной</a> в 2014 году.<br>Пишите нам, если у Вас есть “отзывы и предложения” или по любому другому поводу.</p>
+        <p>&copy; Сайт создан <a onclick="yaCounter24594722.reachGoal('RUBEN-CLICK');" href="https://vk.com/just14zy"><img style="margin-bottom: 7px;" height="20px;" width="20px;" src="https://pp.vk.me/c9682/u10063679/e_b7c0d17c.jpg">Рубеном</a> и <a onclick="yaCounter24594722.reachGoal('ANNA-CLICK');" href="https://vk.com/id9755975"><img style="margin: 0 3px 4px 0;" height="18px;" width="18px;" src="https://pp.vk.me/c322816/v322816975/bd15/qTopJ88cvh0.jpg">Анной</a> в 2014 году.<br>Пишите нам, если у Вас есть “отзывы и предложения” или по любому другому поводу.</p>
       </div>
     </div> <!-- /container -->
 
