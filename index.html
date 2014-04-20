@@ -351,7 +351,7 @@
     function winner() {
       $.pnotify({
           title: 'Поздравляем!',
-          text: 'Вы великолепно разбираетесь в искусcтве!' + "<br><br><a style='margin: 0 0 0 30px; font-size: 20px;' onclick='Share();' href='#'><img src='winner-badge.png'><br><br><span class='glyphicon glyphicon-share-alt'></span>  Рассказать друзьям</a>",
+          text: 'Вы великолепно разбираетесь в искусcтве!' + "<br><br><img style='margin-left: 15px;' width='250px'  src='winner-badge.png'><br><br><text style='font-size: 16px;'>Расскажите о победе друзьям:<br><a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> ВКонтакте </a><br><a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareOD();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Одноклассники </a><br><a onclick='ShareMM();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Мой Мир </a></text>",
           type: 'note',
           hide: false,
           closer: false,
@@ -365,12 +365,33 @@
     }
 
     
-    function Share() {
+    function ShareVK() {
       yaCounter24594722.reachGoal('WINNER-SHARE');
       url = "http://vk.com/share.php?url=http://artchallenge.ru/" + "&title=Господа, я отлично разбираюсь в искусстве!&description=Попробуйте отгадать 10 художников подряд и посоревноваться со мной!&image=http://artchallenge.ru/art-challenge-winner1.png";
       window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
     }        
     
+    function ShareFB() {
+      yaCounter24594722.reachGoal('WINNER-SHARE');
+      
+      url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=http://artchallenge.ru/&redirect_uri=http://localhost/&picture=http://artchallenge.ru/winner-badge200.png&source=http://artchallenge.ru/winner-badge200.png&name=Господа, я отлично разбираюсь в искусстве!&caption=Art Challenge - игра на знание популярных художников"
+      
+      window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+    }        
+
+    function ShareOD() {
+      yaCounter24594722.reachGoal('WINNER-SHARE');
+      url = "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st.comments=Господа, я отлично разбираюсь в искусстве!&st._surl=http://artchallenge.ru/";
+      
+      window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+    }        
+
+    function ShareMM() {
+      yaCounter24594722.reachGoal('WINNER-SHARE');
+      url = "http://connect.mail.ru/share?url=http://artchallenge.ru/&title=Господа, я отлично разбираюсь в искусстве!&description=Art Challenge - игра на знание популярных художников&imageurl=http://artchallenge.ru/winner-badge200.png";
+      window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+    }        
+
     
     function randomPainter() {
       switch (Math.floor((Math.random()*39)+1))
