@@ -521,6 +521,10 @@ p {
    width: 289px;
   }
   
+  #vk_groups {
+    display: none;
+  }
+  
   #report {
     display: none;
   }
