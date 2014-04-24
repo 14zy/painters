@@ -21,7 +21,7 @@
 
     <script type="text/javascript" src="http://vk.com/js/api/openapi.js?112"></script>
     <script type="text/javascript">
-    VK.Widgets.Group("vk_groups", {mode: 0, width: "260", height: "400", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 70435584);
+    VK.Widgets.Group("vk_groups", {mode: 1, width: "360", height: "100", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 70435584);
     </script>
     
     <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
@@ -338,7 +338,7 @@
       }
 
       if (truePainter == 35) {
-        window.image = Math.floor((Math.random()*329)+1);
+        window.image = Math.floor((Math.random()*328)+1);
         art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
         putButtons('Альбрехт Дюрер');
         window.truePainterName = "Альбрехт Дюрер";
@@ -806,7 +806,6 @@
       </div>
 
       <div class="row marketing">
-        <div id="vk_groups" style="float: right; margin: 20px 17px 0 0;"></div>        
         <div class="col-lg-8">
 
           <h3>Что здесь происходит?</h3>
@@ -826,6 +825,9 @@
 
           <h3>What about the English version?</h3>
           <p>Of course, here it is: <a href='en/' onclick="yaCounter24594722.reachGoal('ENGLISH'); return true;">English version</a></p>
+
+          <h3>Art Challenge ВКонтакте:</h3>
+          <div id="vk_groups" style="float: left; margin: 10px 0 0 0;"></div>
 
         </div>
       </div>        
