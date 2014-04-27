@@ -105,7 +105,7 @@
 
       var art = document.getElementById("art");
 
-      window.truePainter = Math.floor((Math.random()*40)+1);
+      window.truePainter = Math.floor((Math.random()*44)+1);
 
       if (truePainter == 1) {
         window.image = Math.floor((Math.random()*193)+1);
@@ -379,6 +379,41 @@
         window.truePainterName = "Марк Шагал";
       }      
 
+      if (truePainter == 41) {
+        window.image = Math.floor((Math.random()*119)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Джотто ди Бондоне');
+        window.truePainterName = "Джотто ди Бондоне";
+      }      
+
+      if (truePainter == 42) {
+        window.image = Math.floor((Math.random()*197)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Сандро Боттичелли');
+        window.truePainterName = "Сандро Боттичелли";
+      }      
+
+      if (truePainter == 43) {
+        window.image = Math.floor((Math.random()*55)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Караваджо');
+        window.truePainterName = "Караваджо";
+      }      
+
+      if (truePainter == 44) {
+        window.image = Math.floor((Math.random()*378)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Зинаида Серебрякова');
+        window.truePainterName = "Зинаида Серебрякова";
+      }      
+
+      // if (truePainter == 45) {
+      //   window.image = Math.floor((Math.random()*157)+1);
+      //   art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+      //   putButtons('Леонардо да Винчи');
+      //   window.truePainterName = "Леонардо да Винчи";
+      // }
+
       puticons();
     }
 
@@ -429,7 +464,7 @@
 
     
     function randomPainter() {
-      switch (Math.floor((Math.random()*39)+1))
+      switch (Math.floor((Math.random()*44)+1))
       {
       case 1:
         painterName = "Амедео Модильяни";
@@ -591,6 +626,26 @@
         painterName = "Марк Шагал";
         break;
         
+      case 41:        
+        painterName = "Джотто ди Бондоне";
+        break;
+
+      case 42:        
+        painterName = "Сандро Боттичелли";
+        break;
+
+      case 43:        
+        painterName = "Караваджо";
+        break;
+
+      case 44:        
+        painterName = "Зинаида Серебрякова";
+        break;
+
+      // case 45:        
+      //   painterName = "Леонардо да Винчи";
+      //   break;
+
       }
 
       return painterName;
@@ -700,7 +755,7 @@
       switch (Math.floor((Math.random()*10)+1))
       {
       case 1:
-        phrase = "Да Вы ебанулись!";
+        phrase = "Да Вы обезумели!";
         break;
         
       case 2:
