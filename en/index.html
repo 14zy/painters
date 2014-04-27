@@ -18,7 +18,12 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="js/jquery.pnotify.default.css" media="all" rel="stylesheet" type="text/css" />     
-        
+
+    <script type="text/javascript" src="http://vk.com/js/api/openapi.js?112"></script>
+    <script type="text/javascript">
+    VK.Widgets.Group("vk_groups", {mode: 1, width: "360", height: "100", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 70435584);
+    </script>
+    
     <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
     <script src="js/jquery.pnotify.js" type="text/javascript"></script>   
 
@@ -63,8 +68,7 @@
         document.getElementById("counter").innerHTML = getCookie('wins');
         document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
       }
-            
-      window.counter = document.getElementById("counter").innerHTML;      
+      window.counter = document.getElementById("counter").innerHTML;
     }
     
     function puticons() {
@@ -73,279 +77,300 @@
       } 
     }
     
+    function removeUTMs() {
+      if (/utm_/.test(location.search) && window.history.replaceState){
+ 
+        // thx @cowboy for the revised hash param magic.
+        var oldUrl = location.href;
+        var newUrl = oldUrl.replace(/\?([^#]*)/, function(_, search) {
+          search = search.split('&').map(function(v) {
+            return !/^utm_/.test(v) && v;
+          }).filter(Boolean).join('&'); // omg filter(Boolean) so dope.
+          return search ? '?' + search : '';
+        });
+ 
+        if ( newUrl != oldUrl ) {
+          window.history.replaceState({},'', newUrl);
+        }
+ 
+      }
+    }
+
+
     function getart() { 
       
-      currentWins();
+      removeUTMs();
       
+      currentWins();
+
       var art = document.getElementById("art");
 
       window.truePainter = Math.floor((Math.random()*39)+1);
 
       if (truePainter == 1) {
-        window.image = Math.floor((Math.random()*96)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Amedeo Modigliani');
-        window.truePainterName = "Amedeo Modigliani";
-      }
+              window.image = Math.floor((Math.random()*96)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Amedeo Modigliani');
+              window.truePainterName = "Amedeo Modigliani";
+            }
 
-      if (truePainter == 2) {
-        window.image = Math.floor((Math.random()*119)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Henri Lebasque');
-        window.truePainterName = "Henri Lebasque";
-      }
+            if (truePainter == 2) {
+              window.image = Math.floor((Math.random()*119)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Henri Lebasque');
+              window.truePainterName = "Henri Lebasque";
+            }
 
-      if (truePainter == 3) {
-        window.image = Math.floor((Math.random()*180)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Arkhip Kuinji');
-        window.truePainterName = "Arkhip Kuinji";
-      }
+            if (truePainter == 3) {
+              window.image = Math.floor((Math.random()*180)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Arkhip Kuinji');
+              window.truePainterName = "Arkhip Kuinji";
+            }
 
-      if (truePainter == 4) {
-        window.image = Math.floor((Math.random()*93)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Vasiliy Kandinskiy');
-        window.truePainterName = "Vasiliy Kandinskiy";
-      }
+            if (truePainter == 4) {
+              window.image = Math.floor((Math.random()*93)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Vasiliy Kandinskiy');
+              window.truePainterName = "Vasiliy Kandinskiy";
+            }
 
-      if (truePainter == 5) {
-        window.image = Math.floor((Math.random()*165)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Vasily Surikov');
-        window.truePainterName = "Vasily Surikov";
-      }
+            if (truePainter == 5) {
+              window.image = Math.floor((Math.random()*165)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Vasily Surikov');
+              window.truePainterName = "Vasily Surikov";
+            }
 
-      if (truePainter == 6) {
-        window.image = Math.floor((Math.random()*77)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Victor Borisov-Musatov');
-        window.truePainterName = "Victor Borisov-Musatov";
-      }
+            if (truePainter == 6) {
+              window.image = Math.floor((Math.random()*77)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Victor Borisov-Musatov');
+              window.truePainterName = "Victor Borisov-Musatov";
+            }
 
-      if (truePainter == 7) {
-        window.image = Math.floor((Math.random()*72)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Diego Rivera');
-        window.truePainterName = "Diego Rivera";
-      }
+            if (truePainter == 7) {
+              window.image = Math.floor((Math.random()*72)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Diego Rivera');
+              window.truePainterName = "Diego Rivera";
+            }
 
-      if (truePainter == 8) {
-        window.image = Math.floor((Math.random()*413)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Ivan Shishkin');
-        window.truePainterName = "Ivan Shishkin";
-      }
+            if (truePainter == 8) {
+              window.image = Math.floor((Math.random()*413)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Ivan Shishkin');
+              window.truePainterName = "Ivan Shishkin";
+            }
 
-      if (truePainter == 9) {
-        window.image = Math.floor((Math.random()*72)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Claude Monet');
-        window.truePainterName = "Claude Monet";
-      }
+            if (truePainter == 9) {
+              window.image = Math.floor((Math.random()*72)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Claude Monet');
+              window.truePainterName = "Claude Monet";
+            }
 
-      if (truePainter == 10) {
-        window.image = Math.floor((Math.random()*178)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Konstantin Yuon');
-        window.truePainterName = "Konstantin Yuon";
-      }
+            if (truePainter == 10) {
+              window.image = Math.floor((Math.random()*178)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Konstantin Yuon');
+              window.truePainterName = "Konstantin Yuon";
+            }
 
-      if (truePainter == 11) {
-        window.image = Math.floor((Math.random()*204)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Nicholas Roerich');
-        window.truePainterName = "Nicholas Roerich";
-      }
+            if (truePainter == 11) {
+              window.image = Math.floor((Math.random()*204)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Nicholas Roerich');
+              window.truePainterName = "Nicholas Roerich";
+            }
       
-      if (truePainter == 12) {
-        window.image = Math.floor((Math.random()*73)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Orest Kiprensky');
-        window.truePainterName = "Orest Kiprensky";
-      }
+            if (truePainter == 12) {
+              window.image = Math.floor((Math.random()*73)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Orest Kiprensky');
+              window.truePainterName = "Orest Kiprensky";
+            }
 
-      if (truePainter == 13) {
-        window.image = Math.floor((Math.random()*48)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Kuzma Petrov-Vodkin');
-        window.truePainterName = "Kuzma Petrov-Vodkin";
-      }
+            if (truePainter == 13) {
+              window.image = Math.floor((Math.random()*48)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Kuzma Petrov-Vodkin');
+              window.truePainterName = "Kuzma Petrov-Vodkin";
+            }
 
-      if (truePainter == 14) {
-        window.image = Math.floor((Math.random()*198)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Rene Magritte');
-        window.truePainterName = "Rene Magritte";
-      }
-      if (truePainter == 15) {
-        window.image = Math.floor((Math.random()*336 )+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Salvador Dali');
-        window.truePainterName = "Salvador Dali";
-      }
-      if (truePainter == 16) {
-        window.image = Math.floor((Math.random()*102)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Sergei Vinogradov');
-        window.truePainterName = "Sergei Vinogradov";
-      }
-      if (truePainter == 17) {
-        window.image = Math.floor((Math.random()*91)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Edouard Manet');
-        window.truePainterName = "Edouard Manet";
-      }
-      if (truePainter == 18) {
-        window.image = Math.floor((Math.random()*265)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Andrew Wyeth');
-        window.truePainterName = "Andrew Wyeth";
-      }
+            if (truePainter == 14) {
+              window.image = Math.floor((Math.random()*198)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Rene Magritte');
+              window.truePainterName = "Rene Magritte";
+            }
+            if (truePainter == 15) {
+              window.image = Math.floor((Math.random()*336 )+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Salvador Dali');
+              window.truePainterName = "Salvador Dali";
+            }
+            if (truePainter == 16) {
+              window.image = Math.floor((Math.random()*102)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Sergei Vinogradov');
+              window.truePainterName = "Sergei Vinogradov";
+            }
+            if (truePainter == 17) {
+              window.image = Math.floor((Math.random()*91)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Edouard Manet');
+              window.truePainterName = "Edouard Manet";
+            }
+            if (truePainter == 18) {
+              window.image = Math.floor((Math.random()*265)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Andrew Wyeth');
+              window.truePainterName = "Andrew Wyeth";
+            }
 
-      if (truePainter == 19) {
-        window.image = Math.floor((Math.random()*100)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Andrei Rublev');
-        window.truePainterName = "Andrei Rublev";
-      }
+            if (truePainter == 19) {
+              window.image = Math.floor((Math.random()*100)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Andrei Rublev');
+              window.truePainterName = "Andrei Rublev";
+            }
 
-      if (truePainter == 20) {
-        window.image = Math.floor((Math.random()*176)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Viktor Vasnetsov');
-        window.truePainterName = "Viktor Vasnetsov";
-      }
-      if (truePainter == 21) {
-        window.image = Math.floor((Math.random()*967)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Vincent van Gogh');
-        window.truePainterName = "Vincent van Gogh";
-      }
-      if (truePainter == 22) {
-        window.image = Math.floor((Math.random()*452)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Gustav Klimt');
-        window.truePainterName = "Gustav Klimt";
-      }
-      if (truePainter == 23) {
-        window.image = Math.floor((Math.random()*416)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Ivan Aivazovsky');
-        window.truePainterName = "Ivan Aivazovsky";
-      }
-      if (truePainter == 24) {
-        window.image = Math.floor((Math.random()*149)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Hieronymus Bosch');
-        window.truePainterName = "Hieronymus Bosch";
-      }
+            if (truePainter == 20) {
+              window.image = Math.floor((Math.random()*176)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Viktor Vasnetsov');
+              window.truePainterName = "Viktor Vasnetsov";
+            }
+            if (truePainter == 21) {
+              window.image = Math.floor((Math.random()*967)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Vincent van Gogh');
+              window.truePainterName = "Vincent van Gogh";
+            }
+            if (truePainter == 22) {
+              window.image = Math.floor((Math.random()*452)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Gustav Klimt');
+              window.truePainterName = "Gustav Klimt";
+            }
+            if (truePainter == 23) {
+              window.image = Math.floor((Math.random()*416)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Ivan Aivazovsky');
+              window.truePainterName = "Ivan Aivazovsky";
+            }
+            if (truePainter == 24) {
+              window.image = Math.floor((Math.random()*149)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Hieronymus Bosch');
+              window.truePainterName = "Hieronymus Bosch";
+            }
       
-      if (truePainter == 25) {
-        window.image = Math.floor((Math.random()*94)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Ilya Repin');
-        window.truePainterName = "Ilya Repin";
-      }
+            if (truePainter == 25) {
+              window.image = Math.floor((Math.random()*94)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Ilya Repin');
+              window.truePainterName = "Ilya Repin";
+            }
       
-      if (truePainter == 26) {
-        window.image = Math.floor((Math.random()*142)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Kazimir Malevich');
-        window.truePainterName = "Kazimir Malevich";
-      }
+            if (truePainter == 26) {
+              window.image = Math.floor((Math.random()*142)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Kazimir Malevich');
+              window.truePainterName = "Kazimir Malevich";
+            }
 
-      if (truePainter == 27) {
-        window.image = Math.floor((Math.random()*189)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Mikhail Vrubel');
-        window.truePainterName = "Mikhail Vrubel";
-      }
+            if (truePainter == 27) {
+              window.image = Math.floor((Math.random()*189)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Mikhail Vrubel');
+              window.truePainterName = "Mikhail Vrubel";
+            }
 
-      if (truePainter == 28) {
-        window.image = Math.floor((Math.random()*464)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Pablo Picasso');
-        window.truePainterName = "Pablo Picasso";
-      }
+            if (truePainter == 28) {
+              window.image = Math.floor((Math.random()*464)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Pablo Picasso');
+              window.truePainterName = "Pablo Picasso";
+            }
 
-      if (truePainter == 29) {
-        window.image = Math.floor((Math.random()*147)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Peter Paul Rubens');
-        window.truePainterName = "Peter Paul Rubens";
-      }
+            if (truePainter == 29) {
+              window.image = Math.floor((Math.random()*147)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Peter Paul Rubens');
+              window.truePainterName = "Peter Paul Rubens";
+            }
 
-      if (truePainter == 30) {
-        window.image = Math.floor((Math.random()*336)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Pierre-Auguste Renoir');
-        window.truePainterName = "Pierre-Auguste Renoir";
-      }
+            if (truePainter == 30) {
+              window.image = Math.floor((Math.random()*336)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Pierre-Auguste Renoir');
+              window.truePainterName = "Pierre-Auguste Renoir";
+            }
 
-      if (truePainter == 31) {
-        window.image = Math.floor((Math.random()*179)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Theophanes the Greek');
-        window.truePainterName = "Theophanes the Greek";
-      }
+            if (truePainter == 31) {
+              window.image = Math.floor((Math.random()*179)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Theophanes the Greek');
+              window.truePainterName = "Theophanes the Greek";
+            }
 
-      if (truePainter == 32) {
-        window.image = Math.floor((Math.random()*328)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Francisco Goya');
-        window.truePainterName = "Francisco Goya";
-      }
+            if (truePainter == 32) {
+              window.image = Math.floor((Math.random()*328)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Francisco Goya');
+              window.truePainterName = "Francisco Goya";
+            }
 
-      if (truePainter == 33) {
-        window.image = Math.floor((Math.random()*120)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Frida Kahlo');
-        window.truePainterName = "Frida Kahlo";
-      }
+            if (truePainter == 33) {
+              window.image = Math.floor((Math.random()*120)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Frida Kahlo');
+              window.truePainterName = "Frida Kahlo";
+            }
 
-      if (truePainter == 34) {
-        window.image = Math.floor((Math.random()*95)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('El Greco');
-        window.truePainterName = "El Greco";
-      }
+            if (truePainter == 34) {
+              window.image = Math.floor((Math.random()*95)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('El Greco');
+              window.truePainterName = "El Greco";
+            }
 
-      if (truePainter == 35) {
-        window.image = Math.floor((Math.random()*329)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Albrecht Dürer');
-        window.truePainterName = "Albrecht Dürer";
-      }
+            if (truePainter == 35) {
+              window.image = Math.floor((Math.random()*329)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Albrecht Dürer');
+              window.truePainterName = "Albrecht Dürer";
+            }
 
-      if (truePainter == 36) {
-        window.image = Math.floor((Math.random()*260)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Alfred Sisley');
-        window.truePainterName = "Alfred Sisley";
-      }
+            if (truePainter == 36) {
+              window.image = Math.floor((Math.random()*260)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Alfred Sisley');
+              window.truePainterName = "Alfred Sisley";
+            }
 
-      if (truePainter == 37) {
-        window.image = Math.floor((Math.random()*168)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Boris Kustodiev');
-        window.truePainterName = "Boris Kustodiev";
-      }
+            if (truePainter == 37) {
+              window.image = Math.floor((Math.random()*168)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Boris Kustodiev');
+              window.truePainterName = "Boris Kustodiev";
+            }
 
-      if (truePainter == 38) {
-        window.image = Math.floor((Math.random()*179)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Karl Bryullov');
-        window.truePainterName = "Karl Bryullov";
-      }
+            if (truePainter == 38) {
+              window.image = Math.floor((Math.random()*179)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Karl Bryullov');
+              window.truePainterName = "Karl Bryullov";
+            }
 
-      if (truePainter == 39) {
-        window.image = Math.floor((Math.random()*166)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Pieter Bruegel');
-        window.truePainterName = "Pieter Bruegel";
-      }
-
+            if (truePainter == 39) {
+              window.image = Math.floor((Math.random()*166)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Pieter Bruegel');
+              window.truePainterName = "Pieter Bruegel";
+            }   
       puticons();
     }
 
@@ -353,7 +378,7 @@
     function winner() {
       $.pnotify({
           title: 'Поздравляем!',
-          text: 'Вы великолепно разбираетесь в искусcтве!' + "<br><br><a style='margin: 0 0 0 30px; font-size: 20px;' onclick='Share();' href='#'><img src='winner-badge.png'><br><br><span class='glyphicon glyphicon-share-alt'></span>  Рассказать друзьям</a>",
+          text: 'Вы великолепно разбираетесь в искусcтве!<br>10 из 10 – это лучше, чем 82% людей, сыгравших в эту игру!' + "<br><br><a onclick='ShareVK();' href='#'><img style='margin-left: 25px;' width='230px'  src='winner-badge.png'></a><br><br><text style='font-size: 16px;'>Вы можете рассказать о победе в социальных сетях:<br><a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> ВКонтакте </a><br><a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareOD();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Одноклассники </a><br><a onclick='ShareMM();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Мой Мир </a></text>",
           type: 'note',
           hide: false,
           closer: false,
@@ -362,187 +387,214 @@
           icon: "glyphicon glyphicon-thumbs-up",
           history: false          
       });
+      yaCounter24594722.reachGoal('WINNER');
       document.getElementById("icon10").style.color = "rgb(53,115,45)";                
     }
 
     
-    function Share() {
-      yaCounter24594722.reachGoal('WINNER-SHARE');
-      url = "http://vk.com/share.php?url=http://artchallenge.ru/" + "&title=Господа, я отлично разбираюсь в искусстве!&description=Попробуйте отгадать 10 художников подряд и посоревноваться со мной!&image=http://artchallenge.ru/art-challenge-winner1.png";
+    function ShareVK() {
+      yaCounter24594722.reachGoal('WINNER-SHARE-VK');
+      url = "http://vk.com/share.php?url=http://artchallenge.ru/?utm_source=vk-win" + "&title=Господа, я отлично разбираюсь в искусстве!&description=Попробуйте отгадать 10 художников подряд и посоревноваться со мной!&image=http://artchallenge.ru/art-challenge-winner1.png";
       window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
     }        
     
+    function ShareFB() {
+      yaCounter24594722.reachGoal('WINNER-SHARE-FB');
+      
+      url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=http://artchallenge.ru/?utm_source=fb-win&redirect_uri=http://artchallenge.ru/&picture=http://artchallenge.ru/winner-badge200.png&source=http://artchallenge.ru/winner-badge200.png&name=Господа, я отлично разбираюсь в искусстве!&caption=Art Challenge - игра на знание популярных художников"
+      
+      window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+    }        
+
+    function ShareOD() {
+      yaCounter24594722.reachGoal('WINNER-SHARE-OD');
+      url = "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st.comments=Господа, я отлично разбираюсь в искусстве!&st._surl=http://artchallenge.ru/?utm_source=od-win";
+      
+      window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+    }        
+
+    function ShareMM() {
+      yaCounter24594722.reachGoal('WINNER-SHARE-MM');
+      url = "http://connect.mail.ru/share?url=http://artchallenge.ru/?utm_source=mm-win&title=Господа, я отлично разбираюсь в искусстве!&description=Art Challenge - игра на знание популярных художников";
+      window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+    }        
+
     
     function randomPainter() {
       switch (Math.floor((Math.random()*39)+1))
       {
       case 1:
-        painterName = "Amedeo Modigliani";
-        break;
+         painterName = "Amedeo Modigliani";
+         break;
         
-      case 2:
-        painterName = "Henri Lebasque";
-        break;
+       case 2:
+         painterName = "Henri Lebasque";
+         break;
         
-      case 3:
-        painterName = "Arkhip Kuinji";
-        break;
+       case 3:
+         painterName = "Arkhip Kuinji";
+         break;
         
-      case 4:
-        painterName = "Vasiliy Kandinskiy";
-        break;
+       case 4:
+         painterName = "Vasiliy Kandinskiy";
+         break;
         
-      case 5:
-        painterName = "Vasily Surikov";
-        break;
+       case 5:
+         painterName = "Vasily Surikov";
+         break;
         
-      case 6:
-        painterName = "Victor Borisov-Musatov";
-        break;
+       case 6:
+         painterName = "Victor Borisov-Musatov";
+         break;
         
-      case 7:
-        painterName = "Diego Rivera";
-        break;
+       case 7:
+         painterName = "Diego Rivera";
+         break;
         
-      case 8:
-        painterName = "Ivan Shishkin";
-        break;
+       case 8:
+         painterName = "Ivan Shishkin";
+         break;
         
-      case 9:
-        painterName = "Claude Monet";
-        break;
+       case 9:
+         painterName = "Claude Monet";
+         break;
         
-      case 10:
-        painterName = "Konstantin Yuon";
-        break;
+       case 10:
+         painterName = "Konstantin Yuon";
+         break;
 
-      case 11:
-        painterName = "Nicholas Roerich"
-        break;
+       case 11:
+         painterName = "Nicholas Roerich"
+         break;
 
-      case 12:
-        painterName = "Orest Kiprensky";
-        break;
+       case 12:
+         painterName = "Orest Kiprensky";
+         break;
         
-      case 13:
-        painterName = "Kuzma Petrov-Vodkin";
-        break;
+       case 13:
+         painterName = "Kuzma Petrov-Vodkin";
+         break;
 
-      case 14:
-        painterName = "Rene Magritte";
-        break;
+       case 14:
+         painterName = "Rene Magritte";
+         break;
 
-      case 15:
-        painterName = "Salvador Dali";
-        break;
+       case 15:
+         painterName = "Salvador Dali";
+         break;
 
-      case 16:
-        painterName = "Sergei Vinogradov";
-        break;
+       case 16:
+         painterName = "Sergei Vinogradov";
+         break;
 
-      case 17:
-        painterName = "Edouard Manet";
-        break;
+       case 17:
+         painterName = "Edouard Manet";
+         break;
 
-      case 18:
-        painterName = "Andrew Wyeth";
-        break;
+       case 18:
+         painterName = "Andrew Wyeth";
+         break;
 
-      case 19:
-        painterName = "Andrei Rublev";
-        break;
+       case 19:
+         painterName = "Andrei Rublev";
+         break;
 
-      case 20:
-        painterName = "Viktor Vasnetsov";
-        break;
+       case 20:
+         painterName = "Viktor Vasnetsov";
+         break;
         
-      case 21:
-        painterName = "Vincent van Gogh";
-        break;
+       case 21:
+         painterName = "Vincent van Gogh";
+         break;
         
-      case 22:
-        painterName = "Gustav Klimt";
-        break;
+       case 22:
+         painterName = "Gustav Klimt";
+         break;
         
-      case 23:
-        painterName = "Ivan Aivazovsky";
-        break;
+       case 23:
+         painterName = "Ivan Aivazovsky";
+         break;
         
-      case 24:
-        painterName = "Hieronymus Bosch";
-        break;
+       case 24:
+         painterName = "Hieronymus Bosch";
+         break;
         
-      case 25:        
-        painterName = "Ilya Repin";
-        break;
+       case 25:        
+         painterName = "Ilya Repin";
+         break;
 
-      case 26:        
-        painterName = "Kazimir Malevich";
-        break;
+       case 26:        
+         painterName = "Kazimir Malevich";
+         break;
 
-      case 27:        
-        painterName = "Mikhail Vrubel";
-        break;
+       case 27:        
+         painterName = "Mikhail Vrubel";
+         break;
 
-      case 28:        
-        painterName = "Pablo Picasso";
-        break;
+       case 28:        
+         painterName = "Pablo Picasso";
+         break;
 
-      case 29:        
-        painterName = "Peter Paul Rubens";
-        break;
+       case 29:        
+         painterName = "Peter Paul Rubens";
+         break;
 
-      case 30:        
-        painterName = "Pierre-Auguste Renoir";
-        break;
+       case 30:        
+         painterName = "Pierre-Auguste Renoir";
+         break;
 
-      case 31:        
-        painterName = "Theophanes the Greek";
-        break;
+       case 31:        
+         painterName = "Theophanes the Greek";
+         break;
 
-      case 32:        
-        painterName = "Francisco Goya";
-        break;
+       case 32:        
+         painterName = "Francisco Goya";
+         break;
 
-      case 33:        
-        painterName = "Frida Kahlo";
-        break;
+       case 33:        
+         painterName = "Frida Kahlo";
+         break;
 
-      case 34:        
-        painterName = "El Greco";
-        break;
+       case 34:        
+         painterName = "El Greco";
+         break;
         
-      case 35:        
-        painterName = "Albrecht Dürer";
-        break;
+       case 35:        
+         painterName = "Albrecht Dürer";
+         break;
         
-      case 36:        
-        painterName = "Alfred Sisley";
-        break;
+       case 36:        
+         painterName = "Alfred Sisley";
+         break;
 
-      case 37:        
-        painterName = "Boris Kustodiev";
-        break;
+       case 37:        
+         painterName = "Boris Kustodiev";
+         break;
 
-      case 38:        
-        painterName = "Karl Bryullov";
-        break;
+       case 38:        
+         painterName = "Karl Bryullov";
+         break;
 
-      case 39:        
-        painterName = "Pieter Bruegel";
-        break;
+       case 39:        
+         painterName = "Pieter Bruegel";
+         break;
         
       }
 
       return painterName;
     }
     
+    function retry(){
+      yaCounter24594722.reachGoal('AGAIN-CLICK');
+      location.reload(false);
+    }
+    
     
     function checkAnswer(btn) { 
     var answer = document.getElementById(btn).innerHTML;
-    
-    yaCounter24594722.reachGoal('ANSWER-CLICK');
 
+    yaCounter24594722.reachGoal('ANSWER-CLICK');
+    
     if (answer == window.truePainterName) {
  
       document.getElementById("btn1").onclick = function() { void(0);};
@@ -553,7 +605,7 @@
       document.getElementById(btn).style.borderColor = "blue";      
 
       var wins = parseInt(window.counter);
-      
+            
       if (wins == 10) {
         winner();
       }
@@ -573,7 +625,7 @@
           sticker: false,
           history: false          
       });
-
+      yaCounter24594722.reachGoal('WIN');
       }
       
     }
@@ -584,7 +636,7 @@
       
       $.pnotify({
           title: badPhrase(),
-          text:  "Это же " + window.truePainterName + ".<br><br><img src='" + "https://dl.dropboxusercontent.com/u/15486902/painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><a style='cursor: pointer;' onclick='location.reload(false);'>Попробовать еще раз</a>",
+          text:  "Это же " + window.truePainterName + ".<br><br><img src='" + "https://dl.dropboxusercontent.com/u/15486902/painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><a style='cursor: pointer;' onclick='retry();'>Попробовать еще раз</a>",
           type: 'error',
           icon: 'glyphicon glyphicon-remove',
           hide: false,
@@ -593,6 +645,9 @@
           sticker: false,
           history: false
       });
+      
+      
+      yaCounter24594722.reachGoal('FAIL');
       
       document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 
@@ -677,7 +732,7 @@
     }
     
     function report() {
-  
+      yaCounter24594722.reachGoal('REPORT');
     document.getElementById("report").innerHTML = "Спасибо, мы проверим!";
     document.getElementById("report").onclick = function() { void(0);};
     
@@ -717,23 +772,13 @@
            data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter"></div> 
         </ul>
 
-
-
         <a href="http://www.artchallenge.ru"><h3 class="text-muted"><span class="glyphicon glyphicon-pencil"></span> Art Challenge</h3></a>
-
-
-
-
-        
       </div>
-
-
-      
       <br>
 
       <div style="text-align: center">
         <div id="corner" class="panel panel-default">
-         <br>
+          <br>
          <span style="visibility: hidden" id="counter">1</span>
          <span id="icon1" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
          <span id="icon2" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
@@ -747,20 +792,19 @@
          <span id="icon10" style="color: lightgray; font-size: 24px;" class="glyphicon glyphicon-gift"></span>
          <br><br>
 
-        <img id="art" style="max-height: 600px; max-width: 900px;">
+          <img id="art" style="max-height: 600px; max-width: 900px;">
 
         <br><br>
-        
         <a id ="btn1" onclick="checkAnswer('btn1');" class="btn btn-lg btn-success"  role="button"></a>
         <a id ="btn2" onclick="checkAnswer('btn2');" class="btn btn-lg btn-success"  role="button"></a>
         <a id ="btn3" onclick="checkAnswer('btn3');" class="btn btn-lg btn-success"  role="button"></a>
         <a id ="btn4" onclick="checkAnswer('btn4');" class="btn btn-lg btn-success"  role="button"></a>
-
-        <br><br><a id="report" title="Сообщить о проблеме с картиной" style="color: lightgray;" onclick="report();" href="#id">Эта картина нерепрезентативна</a><br><br>
-
-        </div>        
+        
+        <br><br><a id="report" title="Сообщить о проблеме с картиной" style="color: lightgray; cursor: pointer;" onclick="report();">Эта картина не репрезентативна</a><br><br>
+        </div>
+        
       </div>
- 
+
       <div class="row marketing">
         <div class="col-lg-8">
 
@@ -771,7 +815,7 @@
           <p>Нужно отгадывать авторов картин.<br>Побеждают те господа, которые смогут отгадать 10 картин подряд.</p>
           
           <h3>Какая от этого польза?</h3>
-          <p>Играйте в свободное время, и очень скоро Вы без труда будете отличать<br>Клода Моне от Эдгара Мане с первого взгляда, и уж точно от Альфреда Сислея, лол)</p>
+          <p>Играйте в свободное время, и очень скоро Вы без труда будете отличать<br>Клода Моне от Эдгара Мане с первого взгляда, и уж точно от Альфреда Сислея)</p>
 
           <h3>Чем я могу помочь?</h3>
           Если Вам понравился сайт, будьте так любезны, расскажите о нём друзьям:<br>
@@ -780,23 +824,28 @@
            data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter" data-yashareImage="http://artchallenge.ru/art-challenge-logo.png"></div> 
 
           <h3>What about the English version?</h3>
-          <p>Of course, here it is: <a href='en/'>English version</a></p>
+          <p>Of course, here it is: <a href='en/' onclick="yaCounter24594722.reachGoal('ENGLISH'); return true;">English version</a></p>
+
+          <h3>Подписывайтесь ВКонтакте:</h3>
+          <div id="vk_groups" onclick="yaCounter24594722.reachGoal('VK-SUBSCRIBE'); return true;" style="float: left; margin: 10px 0 0 0;"></div>
 
         </div>
       </div>        
 
       <br>
       <div class="footer">
-        <p>&copy; Сайт создан <a onclick="yaCounter24594722.reachGoal('RUBEN-CLICK');" href="https://vk.com/just14zy"><img style="margin-bottom: 7px;" height="20px;" width="20px;" src="https://pp.vk.me/c9682/u10063679/e_b7c0d17c.jpg">Рубеном</a> и <a onclick="yaCounter24594722.reachGoal('ANNA-CLICK');" href="https://vk.com/id9755975"><img style="margin: 0 3px 4px 0;" height="18px;" width="18px;" src="https://pp.vk.me/c322816/v322816975/bd15/qTopJ88cvh0.jpg">Анной</a> в 2014 году.<br>Пишите нам, если у Вас есть “отзывы и предложения” или по любому другому поводу.</p>
+        <p>&copy; Сайт создан <a href="https://vk.com/just14zy" onclick="yaCounter24594722.reachGoal('RUBEN-CLICK'); return true;"><img style="margin-bottom: 7px;" height="20px;" width="20px;" src="https://pp.vk.me/c9682/u10063679/e_b7c0d17c.jpg">Рубеном</a> и <a href="https://vk.com/id9755975" onclick="yaCounter24594722.reachGoal('ANNA-CLICK'); return true;"><img style="margin: 0 3px 4px 0;" height="18px;" width="18px;" src="https://pp.vk.me/c322816/v322816975/bd15/qTopJ88cvh0.jpg">Анной</a> в 2014 году. Пишите нам, если у Вас есть “отзывы и предложения” или по любому другому поводу.</p>
+        <p>Другие проекты: <a target="_blank" href="http://social-coins.com/?utm_source=artchallenge">Social Coins</a> | <a target="_blank" href="http://forgiveme.today/?utm_source=artchallenge">Forgiveme.today</p>
       </div>
     </div> <!-- /container -->
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    
-    <script type="text/javascript" src="http://yandex.st/share/share.js"
-    charset="utf-8"></script>
+
+          <script type="text/javascript" src="http://yandex.st/share/share.js"
+          charset="utf-8"></script>
     
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
