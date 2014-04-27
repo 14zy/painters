@@ -747,7 +747,7 @@
       yaCounter24594722.reachGoal('REPORT');
     document.getElementById("report").innerHTML = "Спасибо, мы проверим!";
     document.getElementById("report").onclick = function() { void(0);};
-    
+    var link = "https://dl.dropboxusercontent.com/u/15486902/painters/" + window.truePainter + "/" + window.image + ".jpg"
     $.ajax({
       type: "POST",
       url: "https://mandrillapp.com/api/1.0/messages/send.json",
@@ -757,14 +757,14 @@
           'from_email': 'REPORT@art-challenge.com',
           'to': [
               {
-                'email': 'just14zy@gmail.com',
+                'email': 'report@artchallenge.ru',
                 'name': 'RECIPIENT NAME (OPTIONAL)',
                 'type': 'to'
               }
             ],
           'autotext': 'true',
-          'subject': 'Пользователь пожаловался на картину',
-          'html': "Братан, с " + window.truePainterName + " там какие-то траблы, посмотри: " + window.truePainter + "/" + window.image
+          'subject': window.truePainterName + ', ' + window.truePainter + "/" + window.image,
+          'html': "<a href='" + link + "'><img src='" + link + "' width='200px' ></a>"
         }
       }
      }).done(function(response) {
