@@ -105,10 +105,10 @@
 
       var art = document.getElementById("art");
 
-      window.truePainter = Math.floor((Math.random()*39)+1);
+      window.truePainter = Math.floor((Math.random()*40)+1);
 
       if (truePainter == 1) {
-        window.image = Math.floor((Math.random()*96)+1);
+        window.image = Math.floor((Math.random()*193)+1);
         art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
         putButtons('Амедео Модильяни');
         window.truePainterName = "Амедео Модильяни";
@@ -199,7 +199,7 @@
       }
 
       if (truePainter == 14) {
-        window.image = Math.floor((Math.random()*198)+1);
+        window.image = Math.floor((Math.random()*197)+1);
         art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
         putButtons('Рене Магритт');
         window.truePainterName = "Рене Магритт";
@@ -282,7 +282,7 @@
       }
 
       if (truePainter == 27) {
-        window.image = Math.floor((Math.random()*189)+1);
+        window.image = Math.floor((Math.random()*188)+1);
         art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
         putButtons('Михаил Врубель');
         window.truePainterName = "Михаил Врубель";
@@ -371,6 +371,14 @@
         putButtons('Питер Брейгель');
         window.truePainterName = "Питер Брейгель";
       }      
+
+      if (truePainter == 40) {
+        window.image = Math.floor((Math.random()*251)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Марк Шагал');
+        window.truePainterName = "Марк Шагал";
+      }      
+
       puticons();
     }
 
@@ -577,6 +585,10 @@
 
       case 39:        
         painterName = "Питер Брейгель";
+        break;
+
+      case 40:        
+        painterName = "Марк Шагал";
         break;
         
       }
@@ -800,7 +812,7 @@
         <a id ="btn3" onclick="checkAnswer('btn3');" class="btn btn-lg btn-success"  role="button"></a>
         <a id ="btn4" onclick="checkAnswer('btn4');" class="btn btn-lg btn-success"  role="button"></a>
         
-        <br><br><a id="report" title="Сообщить о проблеме с картиной" style="color: lightgray; cursor: pointer;" onclick="report();">Эта картина не репрезентативна</a><br><br>
+        <br><br><a id="report" title="Сообщить о проблеме с картиной" style="color: lightgray; cursor: pointer;" onclick="report();">С этой картиной что-то не так</a><br><br>
         </div>
         
       </div>
