@@ -767,19 +767,6 @@
     }
     </script>
 
-<style type="text/css">
-#area {
-           width: 700px;
-           height: 650px;
-           margin: -5px auto;
-           -moz-box-shadow:      inset 10px 0 20px rgba(0,0,0,.1);
-           -webkit-box-shadow:   inset 10px 0 20px rgba(0,0,0,.1);
-           box-shadow:           inset 10px 0 20px rgba(0,0,0,.1);
-           padding: 40px 40px;
-         }
-
-
-</style>
 
 
   </head>
@@ -793,12 +780,13 @@
            data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter"></div> 
         </ul>
 
-        <a href="http://www.artchallenge.ru"><h3 class="text-muted"><span class="glyphicon glyphicon-pencil"></span> Art Challenge</h3></a>
+        <a href="http://www.artchallenge.ru"><h3 class="text-muted"><span class="glyphicon glyphicon-book"></span> Book Challenge</h3></a>
       </div>
       <br>
 
+
       <div style="text-align: center">
-        <div id="corner" class="panel panel-default">
+
           <br>
          <span style="visibility: hidden" id="counter">1</span>
          <span id="icon1" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
@@ -811,42 +799,86 @@
          <span id="icon8" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
          <span id="icon9" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
          <span id="icon10" style="color: lightgray; font-size: 24px;" class="glyphicon glyphicon-gift"></span>
-         <br><br>
+         <br><br><br><br>
+        
+      </div>
+
+        <style type="text/css">
 
 
-      <div id="area"></div>
-      <div style="font-size: 40px;" onclick="Book.prevPage();">‹</div>
-      <div style="font-size: 40px;" onclick="Book.nextPage();">›</div>
+          #area {
+            width: 80%;
+            height: 80%;
+
+            margin-left: 20px;
+            max-width: 1250px;
+          }
+
+          #prev {
+            left: 40px;
+          }
+
+          #next {  
+            right: 40px;
+          }
+
+          .arrow {
+            position: absolute;
+            top: 50%;
+            margin-top: 70px;
+            font-size: 64px;
+            color: #E2E2E2;
+            font-family: arial, sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+          }
+
+          .arrow:hover {
+            color: #777;
+          }
+           
+          .arrow:active {
+            color: #000;
+          }
+          
+        </style>
+
+
+
+
+
       
-      <script>
+          <div id="prev" onclick="book.prevPage();" class="arrow">‹</div>
+          <div id="area"></div>
+          <div id="next" onclick="book.nextPage();" class="arrow">›</div>
+          
       
-          var Book = ePub("books/nologo.epub", { 
-            width: 620,
-            height: 600,
-            spreads : false,
-            fixedLayout : true
-          });
-          
-          //Book.renderTo("area");
-          
-          
-          
-          Book.renderTo("area").then(function(){
-          
-          });
-          
-          Book.displayChapter(4);
-      </script>
 
 
+         <script>
+
+            
+            var book = ePub("books/1/4.epub", { width: 1076, height: 588 });
+            
+            book.renderTo("area").then(function(){
+              book.displayChapter(7)
+            });
+
+        </script>
+
+      
+      <div style="text-align: center">
         <br><br>
         <a id ="btn1" onclick="checkAnswer('btn1');" class="btn btn-lg btn-success"  role="button"></a>
         <a id ="btn2" onclick="checkAnswer('btn2');" class="btn btn-lg btn-success"  role="button"></a>
         <a id ="btn3" onclick="checkAnswer('btn3');" class="btn btn-lg btn-success"  role="button"></a>
         <a id ="btn4" onclick="checkAnswer('btn4');" class="btn btn-lg btn-success"  role="button"></a>
         
-        <br><br><a id="report" title="Сообщить о проблеме с картиной" style="color: lightgray; cursor: pointer;" onclick="report();">Эта картина нерепрезентативна</a><br><br>
-        </div>
+        <br><br><a id="report" title="Сообщить о проблеме с картиной" style="color: lightgray; cursor: pointer;" onclick="report();">Это хуёвая книга</a><br><br>
+
         
       </div>
       
@@ -889,35 +921,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
-          <script type="text/javascript" src="http://yandex.st/share/share.js"
-          charset="utf-8"></script>
     
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
-            try {
-                w.yaCounter24594722 = new Ya.Metrika({id:24594722,
-                        webvisor:true,
-                        clickmap:true,
-                        trackLinks:true,
-                        accurateTrackBounce:true});
-            } catch(e) { }
-        });
-
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function () { n.parentNode.insertBefore(s, n); };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
-    })(document, window, "yandex_metrika_callbacks");
-    </script>
-    <noscript><div><img src="//mc.yandex.ru/watch/24594722" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
+   
   </body>
 </html>
