@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta property="og:type"   content="website" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Попробуйте отгадать 10 художников подряд и победить своих друзей!">
-    <meta property="og:description" content="Попробуйте отгадать 10 художников подряд и победить своих друзей!" />
+    <meta name="description" content="Try to guess 10 painters in a row and defeat your friends!">
+    <meta property="og:description" content="Try to guess 10 painters in a row and defeat your friends!" />
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="image_src" href="http://artchallenge.ru/art-challenge-logo.png">
-    <title>Art Challenge - игра на знание популярных художников</title>
-    <meta property="og:title" content="Art Challenge - игра на знание популярных художников" />
-    <meta property="og:url" content="http://artchallenge.ru/" />
+    <title>Art Challenge - Game on Knowledge of Popular Painters</title>
+    <meta property="og:title" content="Art Challenge - Game on Knowledge of Popular Painters" />
+    <meta property="og:url" content="http://artchallenge.ru/en/" />
     <meta property="og:image" content="http://artchallenge.ru/art-challenge-logo-facebook.png" />
     <meta property="og:site_name" content="Art Challenge"/>
     
@@ -427,17 +427,16 @@
               putButtons('Vasily Vereshchagin');
               window.truePainterName = "Vasily Vereshchagin";
             }
-            
-            
-              
+                  
       puticons();
+      winner();
     }
 
     
     function winner() {
       $.pnotify({
-          title: 'Поздравляем!',
-          text: 'Вы великолепно разбираетесь в искусcтве!<br>10 из 10 – это лучше, чем 82% людей, сыгравших в эту игру!' + "<br><br><a onclick='ShareVK();' href='#'><img style='margin-left: 25px;' width='230px'  src='winner-badge.png'></a><br><br><text style='font-size: 16px;'>Вы можете рассказать о победе в социальных сетях:<br><a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> ВКонтакте </a><br><a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareOD();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Одноклассники </a><br><a onclick='ShareMM();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Мой Мир </a></text>",
+          title: 'Congratulations!',
+          text: 'You are perfectly good in the Art!<br>10 out of 10 - it is better than 82% of people who have played this game!' + "<br><br><a onclick='ShareFB();' href='#'><img style='margin-left: 25px;' width='230px'  src='winner-badge.png'></a><br><br><text style='font-size: 16px;'>You can share your win with friends:<br><a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> VKontakte </a></text>",
           type: 'note',
           hide: false,
           closer: false,
@@ -453,28 +452,15 @@
     
     function ShareVK() {
       yaCounter24594722.reachGoal('WINNER-SHARE-VK');
-      url = "http://vk.com/share.php?url=http://artchallenge.ru/?utm_source=vk-win" + "&title=Господа, я отлично разбираюсь в искусстве!&description=Попробуйте отгадать 10 художников подряд и посоревноваться со мной!&image=http://artchallenge.ru/art-challenge-winner1.png";
+      url = "http://vk.com/share.php?url=http://artchallenge.ru/en/?utm_source=vk-win-en" + "&title=Ladies and Gentlemen, I am perfectly good in the Art! %23ArtChallenge&description=Try to guess 10 painters in a row and defeat your friends!&image=http://artchallenge.ru/art-challenge-winner1.png";
       window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
     }        
     
     function ShareFB() {
       yaCounter24594722.reachGoal('WINNER-SHARE-FB');
       
-      url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=http://artchallenge.ru/?utm_source=fb-win&redirect_uri=http://artchallenge.ru/&picture=http://artchallenge.ru/winner-badge200.png&source=http://artchallenge.ru/winner-badge200.png&name=Господа, я отлично разбираюсь в искусстве!&caption=Art Challenge - игра на знание популярных художников"
+      url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=http://artchallenge.ru/en/?utm_source=fb-win-en&redirect_uri=http://artchallenge.ru/1.html&picture=http://artchallenge.ru/en/winner-badge200.png&source=http://artchallenge.ru/en/winner-badge200.png&name=Ladies and Gentlemen, I am perfectly good in the Art!&caption=Art Challenge - Game on Knowledge of Popular Painters"
       
-      window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
-    }        
-
-    function ShareOD() {
-      yaCounter24594722.reachGoal('WINNER-SHARE-OD');
-      url = "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st.comments=Господа, я отлично разбираюсь в искусстве!&st._surl=http://artchallenge.ru/?utm_source=od-win";
-      
-      window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
-    }        
-
-    function ShareMM() {
-      yaCounter24594722.reachGoal('WINNER-SHARE-MM');
-      url = "http://connect.mail.ru/share?url=http://artchallenge.ru/?utm_source=mm-win&title=Господа, я отлично разбираюсь в искусстве!&description=Art Challenge - игра на знание популярных художников";
       window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
     }        
 
@@ -707,8 +693,8 @@
       setTimeout(function() {location.reload(false)}, 2000)
       
       $.pnotify({
-          title: 'Верно!',
-          text: 'Вы отгадали ' + parseInt(window.counter) + " картину",
+          title: 'Right!',
+          text: 'You guessed ' + parseInt(window.counter) + " picture",
           type: 'success',
           hide: false,
           closer: false,
@@ -727,7 +713,7 @@
       
       $.pnotify({
           title: badPhrase(),
-          text:  "Это же " + window.truePainterName + ".<br><br><img src='" + "https://dl.dropboxusercontent.com/u/15486902/painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><a style='cursor: pointer;' onclick='retry();'>Попробовать еще раз</a>",
+          text:  "It's " + window.truePainterName + ".<br><br><img src='" + "https://dl.dropboxusercontent.com/u/15486902/painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><a style='cursor: pointer;' onclick='retry();'>Try again.</a>",
           type: 'error',
           icon: 'glyphicon glyphicon-remove',
           hide: false,
@@ -779,43 +765,43 @@
       switch (Math.floor((Math.random()*10)+1))
       {
       case 1:
-        phrase = "Да Вы обезумели!";
+        phrase = "You mad!";
         break;
         
       case 2:
-        phrase = "Ну как не стыдно?";
+        phrase = "No shame?";
         break;
 
       case 3:
-        phrase = "Вам нездоровится?";
+        phrase = "You ill?";
         break;
         
       case 4:
-        phrase = "Что за нелепость?";
+        phrase = "What nonsense?";
         break;
         
       case 5:
-        phrase = "Займитесь самообразованием!";
+        phrase = "Engage in self!";
         break;
 
       case 6:
-        phrase = "Как Вы могли?..";
+        phrase = "How could you?..";
         break;
 
       case 7:
-        phrase = "Нет, нет и нет!";
+        phrase = "No, no and no!";
         break;
 
       case 8:
-        phrase = "Одумайтесь!";
+        phrase = "Think better!";
         break;
 
       case 9:
-        phrase = "А если подумать?";
+        phrase = "Sorry.";
         break;
 
       case 10:
-        phrase = "Какого чёрта?!";
+        phrase = "What the hell?";
         break;
       }
 
@@ -863,7 +849,7 @@
            data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter"></div> 
         </ul>
 
-        <a href="http://www.artchallenge.ru"><h3 class="text-muted"><span class="glyphicon glyphicon-pencil"></span> Art Challenge</h3></a>
+        <a href="http://www.artchallenge.ru/en/"><h3 class="text-muted"><span class="glyphicon glyphicon-pencil"></span> Art Challenge</h3></a>
       </div>
       <br>
 
@@ -890,68 +876,41 @@
         <a id ="btn2" onclick="checkAnswer('btn2');" class="btn btn-lg btn-success"  role="button"></a>
         <a id ="btn3" onclick="checkAnswer('btn3');" class="btn btn-lg btn-success"  role="button"></a>
         <a id ="btn4" onclick="checkAnswer('btn4');" class="btn btn-lg btn-success"  role="button"></a>
-        
-        <br><br><a id="report" title="Сообщить о проблеме с картиной" style="color: lightgray; cursor: pointer;" onclick="report();">Эта картина не репрезентативна</a><br><br>
+
+        <br><br><a id="report" title="Report a problem with this picture" style="color: lightgray; cursor: pointer;" onclick="report();"><span class="glyphicon glyphicon-warning-sign"></span></a><br><br>
         </div>
         
       </div>
       
-      
-      <div style="float: right; margin-top: 15px">
-        
-        <a id="banner" onclick="yaCounter24594722.reachGoal('BANNER'); return true;" target="_blank" rel="nofollow" href="http://ad.admitad.com/goto/5fd1589d3851b6125fbfe0fbcdf1d18f284381fe/?subid=1">
-        <img width="234" height="60" border="0" src="http://ad.admitad.com/b/5fd1589d3851b6125fbfe0fbcdf1d18f284381fe/" alt="Anno Online" />
-        </a>
-        <br><br>
-        
-        <script type='text/javascript'>(function() {
-          /* Optional settings (these lines can be removed): */ 
-          subID = "2";  // - local banner key;
-          injectTo = "";  // - #id of html element (ex., "top-banner").
-          /* End settings block */ 
-
-          if(injectTo=="")injectTo="admitad_shuffle"+subID+Math.round(Math.random()*100000000);
-          if(subID=='')subid_block=''; else subid_block='subid/'+subID+'/';
-          document.write('<div id="'+injectTo+'"></div>');
-          var s = document.createElement('script');
-          s.type = 'text/javascript'; s.async = true;
-          s.src = 'http://www.ad.admitad.com/shuffle/62f599748d/'+subid_block+'?inject_to='+injectTo;
-          var x = document.getElementsByTagName('script')[0];
-          x.parentNode.insertBefore(s, x);
-        })();</script>
-      </div>
 
       <div class="row marketing">
         <div class="col-lg-8">
 
-          <h3>Что здесь происходит?</h3>
-          <p>Вам предлагается развлечь себя игрой на знание истории изобразительного искусства.</p>
+          <h3>What's going on here?</h3>
+          <p>You are proposed to entertain yourself by playing a game on knowledge of the history of art.</p>
 
-          <h3>Как это работает?</h3>
-          <p>Нужно отгадывать авторов картин.<br>Побеждают те господа, которые смогут отгадать 10 картин подряд.</p>
+          <h3>How it's work?</h3>
+          <p>You need to guess painters.<br>You will win if you can guess the 10 pictures in a row.</p>
           
-          <h3>Какая от этого польза?</h3>
-          <p>Играйте в свободное время, и очень скоро Вы без труда будете отличать<br>Клода Моне от Эдгара Мане с первого взгляда, и уж точно от Альфреда Сислея)</p>
+          <h3>What good is it?</h3>
+          <p>Play free time, and very soon you'll be easily differentiate Claude Monet from Edgar Manet at a glance, and certainly from Alfred Sisley :)</p>
 
-          <h3>Чем я могу помочь?</h3>
-          Если Вам понравился сайт, будьте так любезны, расскажите о нём друзьям:<br>
+          <h3>How can I help?</h3>
+          If you liked the site, be so kind and tell your friends about it:<br>
 
           <div style="margin-left: -5px;" class="yashare-auto-init" data-yashareL10n="ru"
            data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter" data-yashareImage="http://artchallenge.ru/art-challenge-logo.png"></div> 
 
-          <h3>What about the English version?</h3>
-          <p>Of course, here it is: <a href='en/' onclick="yaCounter24594722.reachGoal('ENGLISH'); return true;">English version</a></p>
-
-          <h3>Подписывайтесь ВКонтакте:</h3>
-          <div id="vk_groups" onclick="yaCounter24594722.reachGoal('VK-SUBSCRIBE'); return true;" style="float: left; margin: 10px 0 0 0;"></div>
+          <h3>Other languages?</h3>
+          <p>Yes, we also have the <a href='http://artchallenge.ru'>Russian version.</a></p>
 
         </div>
       </div>        
 
       <br>
       <div class="footer">
-        <p>&copy; Сайт создан <a href="https://vk.com/just14zy" onclick="yaCounter24594722.reachGoal('RUBEN-CLICK'); return true;"><img style="margin-bottom: 7px;" height="20px;" width="20px;" src="https://pp.vk.me/c9682/u10063679/e_b7c0d17c.jpg">Рубеном</a> и <a href="https://vk.com/id9755975" onclick="yaCounter24594722.reachGoal('ANNA-CLICK'); return true;"><img style="margin: 0 3px 4px 0;" height="18px;" width="18px;" src="https://pp.vk.me/c322816/v322816975/bd15/qTopJ88cvh0.jpg">Анной</a> в 2014 году. Пишите нам, если у Вас есть “отзывы и предложения” или по любому другому поводу.</p>
-        <p>Другие наши проекты: <a target="_blank" href="http://social-coins.com/?utm_source=artchallenge">Social Coins</a> | <a target="_blank" href="http://forgiveme.today/?utm_source=artchallenge">Forgiveme.today</p>
+        <p>&copy; Site created by <a href="http://facebook.com/just14zy" onclick="yaCounter24594722.reachGoal('RUBEN-CLICK'); return true;"><img style="margin-bottom: 7px;" height="20px;" width="20px;" src="https://pp.vk.me/c9682/u10063679/e_b7c0d17c.jpg">Ruben</a> and <a href="https://www.facebook.com/plotkina.anna" onclick="yaCounter24594722.reachGoal('ANNA-CLICK'); return true;"><img style="margin: 0 3px 4px 0;" height="18px;" width="18px;" src="https://pp.vk.me/c322816/v322816975/bd15/qTopJ88cvh0.jpg">Anna</a> in 2014. Feel free to write us, if you have any questions.<br>
+        Our other projects: <a target="_blank" href="http://social-coins.com/?utm_source=artchallenge-en">Social Coins</a> | <a target="_blank" href="http://forgiveme.today/?utm_source=artchallenge-en">Forgiveme.today</p>
       </div>
     </div> <!-- /container -->
 
