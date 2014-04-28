@@ -23,14 +23,6 @@
     <script src="js/jquery.pnotify.js" type="text/javascript"></script>   
 
 
-    <script src="epub.js-master/build/epub.min.js"></script>
-    <script src="epub.js-master/build/libs/zip.min.js"></script>  
-    <script src="epub.js-master/build/hooks.js"></script>
-    <script src="epub.js-master/build/reader.js"></script>    
-    
-    <script>
-        EPUBJS.filePath = "epub.js-master/build/libs/";
-    </script>
     
 
   	<script type="text/javascript" language="javascript">
@@ -41,7 +33,7 @@
       
       var painters = [painter];
 
-      for (var i=0;i<10;i++) {
+      for (var i=0;i<20;i++) {
         painters.push(randomPainter());
       }
        
@@ -109,274 +101,171 @@
       
       currentWins();
 
-      var art = document.getElementById("art");
+      var LeftPage = document.getElementById("LeftPage");
+      var RightPage = document.getElementById("RightPage");
 
-      window.truePainter = Math.floor((Math.random()*39)+1);
+      window.truePainter = Math.floor((Math.random()*4)+1);
+      switch (window.truePainter)
+      {
 
-      if (truePainter == 1) {
-        window.image = Math.floor((Math.random()*96)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Амедео Модильяни');
-        window.truePainterName = "Амедео Модильяни";
-      }
+      case 1:
+        window.image = Math.floor((Math.random()*5)+1);
+        
+        switch (window.image)
+        {
 
-      if (truePainter == 2) {
-        window.image = Math.floor((Math.random()*119)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Анри Лебаск');
-        window.truePainterName = "Анри Лебаск";
-      }
+        case 1:
+          window.bookname = "Вий";
+          window.page1 = Math.floor((Math.random()*49)+1) + 10;
+          break;
 
-      if (truePainter == 3) {
-        window.image = Math.floor((Math.random()*180)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Архип Куинджи');
-        window.truePainterName = "Архип Куинджи";
-      }
+        case 2:
+          window.bookname = "Повести";
+          window.page1 = Math.floor((Math.random()*587)+1) + 10;
+          break;
 
-      if (truePainter == 4) {
-        window.image = Math.floor((Math.random()*93)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Василий Кандинский');
-        window.truePainterName = "Василий Кандинский";
-      }
+        case 3:
+          window.bookname = "Ревизор";
+          window.page1 = Math.floor((Math.random()*272)+1) + 10;
+          break;
 
-      if (truePainter == 5) {
-        window.image = Math.floor((Math.random()*165)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Василий Суриков');
-        window.truePainterName = "Василий Суриков";
-      }
+        case 4:
+          window.bookname = "Мёртвые Души";
+          window.page1 = Math.floor((Math.random()*431)+1) + 10;
+          break;
 
-      if (truePainter == 6) {
-        window.image = Math.floor((Math.random()*77)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Виктор Борисов-Мусатов');
-        window.truePainterName = "Виктор Борисов-Мусатов";
-      }
+        case 5:
+          window.bookname = "Мёртвые Души";
+          window.page1 = Math.floor((Math.random()*279)+1) + 10;
+          break;
 
-      if (truePainter == 7) {
-        window.image = Math.floor((Math.random()*72)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Диего Ривера');
-        window.truePainterName = "Диего Ривера";
-      }
+        }
 
-      if (truePainter == 8) {
-        window.image = Math.floor((Math.random()*413)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Иван Шишкин');
-        window.truePainterName = "Иван Шишкин";
-      }
+        window.page2 = window.page1 + 1;
+        LeftPage.src = "https://dl.dropboxusercontent.com/u/15486902/books/" + truePainter + "/" + window.image + "/" + window.page1 + ".jpg"
+        RightPage.src = "https://dl.dropboxusercontent.com/u/15486902/books/" + truePainter + "/" + window.image + "/" + window.page2 + ".jpg"
+        putButtons('Николай Гоголь');
+        window.truePainterName = "Николай Гоголь";
+        break;
+        
+        
+      case 2:
+        window.image = Math.floor((Math.random()*3)+1);
+        switch (window.image)
+        {
 
-      if (truePainter == 9) {
-        window.image = Math.floor((Math.random()*72)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Клод Моне');
-        window.truePainterName = "Клод Моне";
-      }
+        case 1:
+          window.bookname = "Вишнёвый Сад";
+          window.page1 = Math.floor((Math.random()*102)+1) + 10;
+          break;
 
-      if (truePainter == 10) {
-        window.image = Math.floor((Math.random()*178)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Константин Юон');
-        window.truePainterName = "Константин Юон";
-      }
+        case 2:
+          window.bookname = "Палата №6";
+          window.page1 = Math.floor((Math.random()*73)+1) + 10;
+          break;
 
-      if (truePainter == 11) {
-        window.image = Math.floor((Math.random()*204)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Николай Рерих');
-        window.truePainterName = "Николай Рерих";
-      }
-      
-      if (truePainter == 12) {
-        window.image = Math.floor((Math.random()*73)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Орест Кипренский');
-        window.truePainterName = "Орест Кипренский";
-      }
+        case 3:
+          window.bookname = "Чёрный монах";
+          window.page1 = Math.floor((Math.random()*35)+1) + 10;
+          break;
+        }
 
-      if (truePainter == 13) {
-        window.image = Math.floor((Math.random()*48)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Кузьма Петров-Водкин');
-        window.truePainterName = "Кузьма Петров-Водкин";
-      }
+        window.page2 = window.page1 + 1;
+        LeftPage.src = "https://dl.dropboxusercontent.com/u/15486902/books/" + truePainter + "/" + window.image + "/" + window.page1 + ".jpg"
+        RightPage.src = "https://dl.dropboxusercontent.com/u/15486902/books/" + truePainter + "/" + window.image + "/" + window.page2 + ".jpg"
+        putButtons('Антон Чехов');
+        window.truePainterName = "Антон Чехов";
+        break;
 
-      if (truePainter == 14) {
-        window.image = Math.floor((Math.random()*198)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Рене Магритт');
-        window.truePainterName = "Рене Магритт";
-      }
-      if (truePainter == 15) {
-        window.image = Math.floor((Math.random()*336)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Сальвадор Дали');
-        window.truePainterName = "Сальвадор Дали";
-      }
-      if (truePainter == 16) {
-        window.image = Math.floor((Math.random()*102)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Сергей Виноградов');
-        window.truePainterName = "Сергей Виноградов";
-      }
-      if (truePainter == 17) {
-        window.image = Math.floor((Math.random()*91)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Эдуард Мане');
-        window.truePainterName = "Эдуард Мане";
-      }
-      if (truePainter == 18) {
-        window.image = Math.floor((Math.random()*265)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Эндрю Уайет');
-        window.truePainterName = "Эндрю Уайет";
-      }
+        
+      case 3:
+        window.image = Math.floor((Math.random()*4)+1);
+        
+        switch (window.image)
+        {
 
-      if (truePainter == 19) {
-        window.image = Math.floor((Math.random()*100)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Андрей Рублёв');
-        window.truePainterName = "Андрей Рублёв";
-      }
+        case 1:
+          window.bookname = "Преступление и Наказание";
+          window.page1 = Math.floor((Math.random()*122)+1);
+          break;
 
-      if (truePainter == 20) {
-        window.image = Math.floor((Math.random()*176)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Виктор Васнецов');
-        window.truePainterName = "Виктор Васнецов";
-      }
-      if (truePainter == 21) {
-        window.image = Math.floor((Math.random()*967)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Винсент Ван Гог');
-        window.truePainterName = "Винсент Ван Гог";
-      }
-      if (truePainter == 22) {
-        window.image = Math.floor((Math.random()*452)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Густав Климт');
-        window.truePainterName = "Густав Климт";
-      }
-      if (truePainter == 23) {
-        window.image = Math.floor((Math.random()*416)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Иван Айвазовский');
-        window.truePainterName = "Иван Айвазовский";
-      }
-      if (truePainter == 24) {
-        window.image = Math.floor((Math.random()*149)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Иероним Босх');
-        window.truePainterName = "Иероним Босх";
-      }
-      
-      if (truePainter == 25) {
-        window.image = Math.floor((Math.random()*94)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Илья Репин');
-        window.truePainterName = "Илья Репин";
-      }
-      
-      if (truePainter == 26) {
-        window.image = Math.floor((Math.random()*142)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Казимир Малевич');
-        window.truePainterName = "Казимир Малевич";
+        case 2:
+          window.bookname = "Идиот";
+          window.page1 = Math.floor((Math.random()*93)+1);
+          break;
+
+        case 3:
+          window.bookname = "Бесы";
+          window.page1 = Math.floor((Math.random()*55)+1);
+          break;
+
+        case 4:
+          window.bookname = "Братья Карамазовы";
+          window.page1 = Math.floor((Math.random()*55)+1);
+          break;
+
+        }
+
+        window.page2 = window.page1 + 1;
+        LeftPage.src = "https://dl.dropboxusercontent.com/u/15486902/books/" + truePainter + "/" + window.image + "/" + window.page1 + ".jpg"
+        RightPage.src = "https://dl.dropboxusercontent.com/u/15486902/books/" + truePainter + "/" + window.image + "/" + window.page2 + ".jpg"
+        putButtons('Фёдор Достоевский');
+        window.truePainterName = "Фёдор Достоевский";
+        break;
+        
+        
+      case 4:
+        window.image = Math.floor((Math.random()*7)+1);
+        
+        switch (window.image)
+        {
+
+        case 1:
+          window.bookname = "Исповедь";
+          window.page1 = Math.floor((Math.random()*79)+1) + 10;
+          break;
+
+        case 2:
+          window.bookname = "Война и Мир";
+          window.page1 = Math.floor((Math.random()*795)+1) + 10;
+          break;
+
+        case 3:
+          window.bookname = "Война и Мир";
+          window.page1 = Math.floor((Math.random()*791)+1) + 10;
+          break;
+
+        case 4:
+          window.bookname = "Война и Мир";
+          window.page1 = Math.floor((Math.random()*868)+1) + 10;
+          break;
+
+        case 5:
+          window.bookname = "Война и Мир";
+          window.page1 = Math.floor((Math.random()*572)+1) + 10;
+          break;
+
+        case 6:
+          window.bookname = "Анна Каренина";
+          window.page1 = Math.floor((Math.random()*869)+1) + 10;
+          break;
+
+        case 7:
+          window.bookname = "Анна Каренина";
+          window.page1 = Math.floor((Math.random()*827)+1) + 10;
+          break;
+
+        }
+
+        window.page2 = window.page1 + 1;
+        LeftPage.src = "https://dl.dropboxusercontent.com/u/15486902/books/" + truePainter + "/" + window.image + "/" + window.page1 + ".jpg"
+        RightPage.src = "https://dl.dropboxusercontent.com/u/15486902/books/" + truePainter + "/" + window.image + "/" + window.page2 + ".jpg"
+        putButtons('Лев Толстой');
+        window.truePainterName = "Лев Толстой";
+        break;
+        
       }
 
-      if (truePainter == 27) {
-        window.image = Math.floor((Math.random()*189)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Михаил Врубель');
-        window.truePainterName = "Михаил Врубель";
-      }
-
-      if (truePainter == 28) {
-        window.image = Math.floor((Math.random()*464)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Пабло Пикассо');
-        window.truePainterName = "Пабло Пикассо";
-      }
-
-      if (truePainter == 29) {
-        window.image = Math.floor((Math.random()*147)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Питер Рубенс');
-        window.truePainterName = "Питер Рубенс";
-      }
-
-      if (truePainter == 30) {
-        window.image = Math.floor((Math.random()*336)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Пьер Ренуар');
-        window.truePainterName = "Пьер Ренуар";
-      }
-
-      if (truePainter == 31) {
-        window.image = Math.floor((Math.random()*179)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Феофан Грек');
-        window.truePainterName = "Феофан Грек";
-      }
-
-      if (truePainter == 32) {
-        window.image = Math.floor((Math.random()*328)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Франсиско Гойя');
-        window.truePainterName = "Франсиско Гойя";
-      }
-
-      if (truePainter == 33) {
-        window.image = Math.floor((Math.random()*120)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Фрида Кало');
-        window.truePainterName = "Фрида Кало";
-      }
-
-      if (truePainter == 34) {
-        window.image = Math.floor((Math.random()*95)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Эль Греко');
-        window.truePainterName = "Эль Греко";
-      }
-
-      if (truePainter == 35) {
-        window.image = Math.floor((Math.random()*329)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Альбрехт Дюрер');
-        window.truePainterName = "Альбрехт Дюрер";
-      }
-
-      if (truePainter == 36) {
-        window.image = Math.floor((Math.random()*260)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Альфред Сислей');
-        window.truePainterName = "Альфред Сислей";
-      }
-
-      if (truePainter == 37) {
-        window.image = Math.floor((Math.random()*168)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Борис Кустодиев');
-        window.truePainterName = "Борис Кустодиев";
-      }
-
-      if (truePainter == 38) {
-        window.image = Math.floor((Math.random()*179)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Карл Брюллов');
-        window.truePainterName = "Карл Брюллов";
-      }
-
-      if (truePainter == 39) {
-        window.image = Math.floor((Math.random()*166)+1);
-        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-        putButtons('Питер Брейгель');
-        window.truePainterName = "Питер Брейгель";
-      }      
       puticons();
     }
 
@@ -427,164 +316,23 @@
 
     
     function randomPainter() {
-      switch (Math.floor((Math.random()*39)+1))
+      switch (Math.floor((Math.random()*4)+1))
       {
       case 1:
-        painterName = "Амедео Модильяни";
+        painterName = "Николай Гоголь";
         break;
         
       case 2:
-        painterName = "Анри Лебаск";
+        painterName = "Антон Чехов";
         break;
         
       case 3:
-        painterName = "Архип Куинджи";
+        painterName = "Фёдор Достоевский";
         break;
         
       case 4:
-        painterName = "Василий Кандинский";
+        painterName = "Лев Толстой";
         break;
-        
-      case 5:
-        painterName = "Василий Суриков";
-        break;
-        
-      case 6:
-        painterName = "Виктор Борисов-Мусатов";
-        break;
-        
-      case 7:
-        painterName = "Диего Ривера";
-        break;
-        
-      case 8:
-        painterName = "Иван Шишкин";
-        break;
-        
-      case 9:
-        painterName = "Клод Моне";
-        break;
-        
-      case 10:
-        painterName = "Константин Юон";
-        break;
-
-      case 11:
-        painterName = "Николай Рерих"
-        break;
-
-      case 12:
-        painterName = "Орест Кипренский";
-        break;
-        
-      case 13:
-        painterName = "Кузьма Петров-Водкин";
-        break;
-
-      case 14:
-        painterName = "Рене Магритт";
-        break;
-
-      case 15:
-        painterName = "Сальвадор Дали";
-        break;
-
-      case 16:
-        painterName = "Сергей Виноградов";
-        break;
-
-      case 17:
-        painterName = "Эдуард Мане";
-        break;
-
-      case 18:
-        painterName = "Эндрю Уайет";
-        break;
-
-      case 19:
-        painterName = "Андрей Рублёв";
-        break;
-
-      case 20:
-        painterName = "Виктор Васнецов";
-        break;
-        
-      case 21:
-        painterName = "Винсент Ван Гог";
-        break;
-        
-      case 22:
-        painterName = "Густав Климт";
-        break;
-        
-      case 23:
-        painterName = "Иван Айвазовский";
-        break;
-        
-      case 24:
-        painterName = "Иероним Босх";
-        break;
-        
-      case 25:        
-        painterName = "Илья Репин";
-        break;
-
-      case 26:        
-        painterName = "Казимир Малевич";
-        break;
-
-      case 27:        
-        painterName = "Михаил Врубель";
-        break;
-
-      case 28:        
-        painterName = "Пабло Пикассо";
-        break;
-
-      case 29:        
-        painterName = "Питер Рубенс";
-        break;
-
-      case 30:        
-        painterName = "Пьер Ренуар";
-        break;
-
-      case 31:        
-        painterName = "Феофан Грек";
-        break;
-
-      case 32:        
-        painterName = "Франсиско Гойя";
-        break;
-
-      case 33:        
-        painterName = "Фрида Кало";
-        break;
-
-      case 34:        
-        painterName = "Эль Греко";
-        break;
-        
-      case 35:        
-        painterName = "Альбрехт Дюрер";
-        break;
-        
-      case 36:        
-        painterName = "Альфред Сислей";
-        break;
-
-      case 37:        
-        painterName = "Борис Кустодиев";
-        break;
-
-      case 38:        
-        painterName = "Карл Брюллов";
-        break;
-
-      case 39:        
-        painterName = "Питер Брейгель";
-        break;
-        
       }
 
       return painterName;
@@ -619,11 +367,11 @@
       else {
       wins = 1 + wins;
       setCookie('wins',wins,"session");    
-      setTimeout(function() {location.reload(false)}, 2000)
+      setTimeout(function() {location.reload(false)}, 3000)
       
       $.pnotify({
           title: 'Верно!',
-          text: 'Вы отгадали ' + parseInt(window.counter) + " картину",
+          text: "Это " + window.bookname + ".<br>Вы отгадали " + parseInt(window.counter) + " книгу.",
           type: 'success',
           hide: false,
           closer: false,
@@ -642,7 +390,7 @@
       
       $.pnotify({
           title: badPhrase(),
-          text:  "Это же " + window.truePainterName + ".<br><br><img src='" + "https://dl.dropboxusercontent.com/u/15486902/painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><a style='cursor: pointer;' onclick='retry();'>Попробовать еще раз</a>",
+          text:  "Это же " + window.truePainterName + " - " + window.bookname + ".<br><br><img src='" + "https://dl.dropboxusercontent.com/u/15486902/books/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><a style='cursor: pointer;' onclick='retry();'>Попробовать еще раз</a>",
           type: 'error',
           icon: 'glyphicon glyphicon-remove',
           hide: false,
@@ -757,21 +505,39 @@
               }
             ],
           'autotext': 'true',
-          'subject': 'Пользователь пожаловался на картину',
-          'html': "Братан, с " + window.truePainterName + " там какие-то траблы, посмотри: " + window.truePainter + "/" + window.image
+          'subject': 'Пользователь пожаловался на книгу',
+          'html': "Братан, с " + window.truePainterName + " там какие-то траблы, посмотри: " + window.truePainter + "/" + window.image + "/" + window.page1
         }
       }
      }).done(function(response) {
        console.log(response); // if you're into that sorta thing
      });
     }
+    
+    
+    
+    function nextPage() {
+      window.page1 = window.page1 + 2;
+      window.page2 = window.page2 + 2;
+      document.getElementById("LeftPage").src = "https://dl.dropboxusercontent.com/u/15486902/books/" + window.truePainter + "/" + window.image + "/" + window.page1 + ".jpg";
+      document.getElementById("RightPage").src = "https://dl.dropboxusercontent.com/u/15486902/books/" + window.truePainter + "/" + window.image + "/" + window.page2 + ".jpg";
+    }
+
+    function prevPage() {
+      window.page1 = window.page1 - 2;
+      window.page2 = window.page2 - 2;
+      document.getElementById("LeftPage").src = "https://dl.dropboxusercontent.com/u/15486902/books/" + window.truePainter + "/" + window.image + "/" + window.page1 + ".jpg";
+      document.getElementById("RightPage").src = "https://dl.dropboxusercontent.com/u/15486902/books/" + window.truePainter + "/" + window.image + "/" + window.page2 + ".jpg";
+    }
+
+    
     </script>
 
 
 
   </head>
 
-  <body>
+  <body onload="getart();">
 
     <div class="container">
       <div class="header">
@@ -799,85 +565,27 @@
          <span id="icon8" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
          <span id="icon9" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
          <span id="icon10" style="color: lightgray; font-size: 24px;" class="glyphicon glyphicon-gift"></span>
-         <br><br><br><br>
+         <br><br>
         
       </div>
 
-        <style type="text/css">
-
-
-          #area {
-            width: 80%;
-            height: 80%;
-
-            margin-left: 20px;
-            max-width: 1250px;
-          }
-
-          #prev {
-            left: 40px;
-          }
-
-          #next {  
-            right: 40px;
-          }
-
-          .arrow {
-            position: absolute;
-            top: 50%;
-            margin-top: 70px;
-            font-size: 64px;
-            color: #E2E2E2;
-            font-family: arial, sans-serif;
-            font-weight: bold;
-            cursor: pointer;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-          }
-
-          .arrow:hover {
-            color: #777;
-          }
-           
-          .arrow:active {
-            color: #000;
-          }
-          
-        </style>
-
-
-
-
-
-      
-          <div id="prev" onclick="book.prevPage();" class="arrow">‹</div>
-          <div id="area"></div>
-          <div id="next" onclick="book.nextPage();" class="arrow">›</div>
-          
-      
-
-
-         <script>
-
-            
-            var book = ePub("books/1/4.epub", { width: 1076, height: 588 });
-            
-            book.renderTo("area").then(function(){
-              book.displayChapter(7)
-            });
-
-        </script>
-
-      
       <div style="text-align: center">
+      
+          <div id="prev" onclick="prevPage();" class="arrow">‹</div>
+          <div id="area">
+            <img id="LeftPage" class="page" width="500">            
+            <img id="RightPage" style="margin-left: -10px;" class="page" width="500">
+          </div>
+          <div id="next" onclick="nextPage();" class="arrow">›</div>
+      
+
         <br><br>
         <a id ="btn1" onclick="checkAnswer('btn1');" class="btn btn-lg btn-success"  role="button"></a>
         <a id ="btn2" onclick="checkAnswer('btn2');" class="btn btn-lg btn-success"  role="button"></a>
         <a id ="btn3" onclick="checkAnswer('btn3');" class="btn btn-lg btn-success"  role="button"></a>
         <a id ="btn4" onclick="checkAnswer('btn4');" class="btn btn-lg btn-success"  role="button"></a>
         
-        <br><br><a id="report" title="Сообщить о проблеме с картиной" style="color: lightgray; cursor: pointer;" onclick="report();">Это хуёвая книга</a><br><br>
+        <br><br><a id="report" title="Сообщить о проблеме" style="color: lightgray; cursor: pointer;" onclick="report();"><span class="glyphicon glyphicon-warning-sign"></span></a><br><br>
 
         
       </div>
@@ -903,9 +611,6 @@
 
           <div style="margin-left: -5px;" class="yashare-auto-init" data-yashareL10n="ru"
            data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter" data-yashareImage="http://artchallenge.ru/art-challenge-logo.png"></div> 
-
-          <h3>What about the English version?</h3>
-          <p>Of course, here it is: <a href='en/' onclick="yaCounter24594722.reachGoal('ENGLISH'); return true;">English version</a></p>
 
         </div>
       </div>        
