@@ -525,6 +525,10 @@ p {
     display: none;
   }
   
+  #banner {
+    display: none;
+  }
+  
   #report {
     display: none;
   }
