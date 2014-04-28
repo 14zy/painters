@@ -105,7 +105,7 @@
 
       var art = document.getElementById("art");
 
-      window.truePainter = Math.floor((Math.random()*44)+1);
+      window.truePainter = Math.floor((Math.random()*47)+1);
 
       if (truePainter == 1) {
         window.image = Math.floor((Math.random()*193)+1);
@@ -407,12 +407,26 @@
         window.truePainterName = "Зинаида Серебрякова";
       }      
 
-      // if (truePainter == 45) {
-      //   window.image = Math.floor((Math.random()*157)+1);
-      //   art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-      //   putButtons('Леонардо да Винчи');
-      //   window.truePainterName = "Леонардо да Винчи";
-      // }
+      if (truePainter == 45) {
+        window.image = Math.floor((Math.random()*157)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Леонардо да Винчи');
+        window.truePainterName = "Леонардо да Винчи";
+      }
+
+      if (truePainter == 46) {
+        window.image = Math.floor((Math.random()*129)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Диего Веласкес');
+        window.truePainterName = "Диего Веласкес";
+      }
+
+      if (truePainter == 47) {
+        window.image = Math.floor((Math.random()*192)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Василий Верещагин');
+        window.truePainterName = "Василий Верещагин";
+      }
 
       puticons();
     }
@@ -464,7 +478,7 @@
 
     
     function randomPainter() {
-      switch (Math.floor((Math.random()*44)+1))
+      switch (Math.floor((Math.random()*47)+1))
       {
       case 1:
         painterName = "Амедео Модильяни";
@@ -642,9 +656,17 @@
         painterName = "Зинаида Серебрякова";
         break;
 
-      // case 45:        
-      //   painterName = "Леонардо да Винчи";
-      //   break;
+      case 45:        
+        painterName = "Леонардо да Винчи";
+        break;
+
+      case 46:        
+        painterName = "Диего Веласкес";
+        break;
+        
+      case 47:        
+        painterName = "Василий Верещагин";
+        break;
 
       }
 

@@ -105,7 +105,7 @@
 
       var art = document.getElementById("art");
 
-      window.truePainter = Math.floor((Math.random()*44)+1);
+      window.truePainter = Math.floor((Math.random()*47)+1);
 
       if (truePainter == 1) {
               window.image = Math.floor((Math.random()*193)+1);
@@ -407,12 +407,26 @@
               window.truePainterName = "Zinaida Serebriakova";
             }      
 
-            // if (truePainter == 45) {
-            //   window.image = Math.floor((Math.random()*157)+1);
-            //   art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-            //   putButtons('Leonardo da Vinci');
-            //   window.truePainterName = "Leonardo da Vinci";
-            // }            
+            if (truePainter == 45) {
+              window.image = Math.floor((Math.random()*157)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Leonardo da Vinci');
+              window.truePainterName = "Leonardo da Vinci";
+            }            
+            
+            if (truePainter == 46) {
+              window.image = Math.floor((Math.random()*129)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Diego Velazquez');
+              window.truePainterName = "Diego Velazquez";
+            }
+
+            if (truePainter == 47) {
+              window.image = Math.floor((Math.random()*192)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Vasily Vereshchagin');
+              window.truePainterName = "Vasily Vereshchagin";
+            }
             
             
               
@@ -466,7 +480,7 @@
 
     
     function randomPainter() {
-      switch (Math.floor((Math.random()*44)+1))
+      switch (Math.floor((Math.random()*47)+1))
       {
       case 1:
          painterName = "Amedeo Modigliani";
@@ -644,11 +658,17 @@
          painterName = "Zinaida Serebriakova";
          break;
 
-       // case 45:        
-       //   painterName = "Leonardo da Vinci";
-       //   break;
+       case 45:        
+         painterName = "Leonardo da Vinci";
+         break;
 
-
+       case 46:        
+         painterName = "Diego Velazquez";
+         break;
+         
+       case 47:        
+         painterName = "Vasily Vereshchagin";
+         break;
         
       }
 
