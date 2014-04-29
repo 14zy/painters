@@ -774,7 +774,7 @@
         
     function badPhrase() {
       
-      switch (Math.floor((Math.random()*10)+1))
+      switch (Math.floor((Math.random()*12)+1))
       {
       case 1:
         phrase = "Да Вы обезумели!";
@@ -815,6 +815,16 @@
       case 10:
         phrase = "Какого чёрта?!";
         break;
+
+      case 11:
+        phrase = "Бескультурье!";
+        break;
+
+      case 12:
+        phrase = "Коллега!";
+        break;
+
+
       }
 
       return phrase;      
@@ -889,9 +899,10 @@
         <a id ="btn3" onclick="checkAnswer('btn3');" class="btn btn-lg btn-success"  role="button"></a>
         <a id ="btn4" onclick="checkAnswer('btn4');" class="btn btn-lg btn-success"  role="button"></a>
         
-        <br><br><a id="report" title="Сообщить о проблеме с данной картиной" style="color: lightgray; cursor: pointer;" onclick="report();"><span class="glyphicon glyphicon-warning-sign"></span></a><br><br>
+        <br><br>
+        <!-- <a id="report" title="Сообщить о проблеме с данной картиной" style="color: lightgray; cursor: pointer;" onclick="report();"><span class="glyphicon glyphicon-warning-sign"></span></a><br><br> -->
+
         </div>
-        
       </div>
 
       <div id="banner" style="float: right; margin-top: 15px">

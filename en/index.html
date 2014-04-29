@@ -435,7 +435,7 @@
     function winner() {
       $.pnotify({
           title: 'Congratulations!',
-          text: 'You are perfectly good in the Art!<br>10 out of 10 - it is better than 82% of people who have played this game!' + "<br><br><a onclick='ShareFB();' href='#'><img style='margin-left: 25px;' width='230px'  src='winner-badge.png'></a><br><br><text style='font-size: 16px;'>You can share your win with friends:<br><a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> VKontakte </a></text>",
+          text: 'You are really good at knowledge of the Art!<br>10 out of 10 - it is better than 82% of people who have played this game!' + "<br><br><a onclick='ShareFB();' href='#'><img style='margin-left: 25px;' width='230px'  src='winner-badge.png'></a><br><br><text style='font-size: 16px;'>You can share your win with friends:<br><a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> VKontakte </a></text>",
           type: 'note',
           hide: false,
           closer: false,
@@ -451,14 +451,14 @@
     
     function ShareVK() {
       yaCounter24594722.reachGoal('WINNER-SHARE-VK');
-      url = "http://vk.com/share.php?url=http://artchallenge.ru/en/?utm_source=vk-win-en" + "&title=Ladies and Gentlemen, I am perfectly good in the Art! %23ArtChallenge&description=Try to guess 10 painters in a row and defeat your friends!&image=http://artchallenge.ru/art-challenge-winner1.png";
+      url = "http://vk.com/share.php?url=http://artchallenge.ru/en/?utm_source=vk-win-en" + "&title=Ladies and Gentlemen, I am really good at the knowledge of Art! %23ArtChallenge&description=Try to guess 10 painters in a row and defeat your friends!&image=http://artchallenge.ru/art-challenge-winner1.png";
       window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
     }        
     
     function ShareFB() {
       yaCounter24594722.reachGoal('WINNER-SHARE-FB');
       
-      url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=http://artchallenge.ru/en/?utm_source=fb-win-en&redirect_uri=http://artchallenge.ru/1.html&picture=http://artchallenge.ru/en/winner-badge200.png&source=http://artchallenge.ru/en/winner-badge200.png&name=Ladies and Gentlemen, I am perfectly good in the Art!&caption=Art Challenge - Game on Knowledge of Popular Painters"
+      url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=http://artchallenge.ru/en/?utm_source=fb-win-en&redirect_uri=http://artchallenge.ru/1.html&picture=http://artchallenge.ru/en/winner-badge460.png&source=http://artchallenge.ru/en/winner-badge460.png&name=Ladies and Gentlemen, I am really good at the knowledge of Art!&caption=Art Challenge - Game on Knowledge of Popular Painters"
       
       window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
     }        
@@ -693,7 +693,7 @@
       
       $.pnotify({
           title: 'Right!',
-          text: 'You guessed ' + parseInt(window.counter) + " picture",
+          text: 'You guessed picture ' + parseInt(window.counter),
           type: 'success',
           hide: false,
           closer: false,
@@ -761,47 +761,57 @@
         
     function badPhrase() {
       
-      switch (Math.floor((Math.random()*10)+1))
+      switch (Math.floor((Math.random()*12)+1))
       {
       case 1:
-        phrase = "You mad!";
+        phrase = "You are mad!";
         break;
         
       case 2:
-        phrase = "No shame?";
+        phrase = "Hell of a day, huh?";
         break;
 
       case 3:
-        phrase = "You ill?";
+        phrase = "You should be ashamed of yourself.";
         break;
         
       case 4:
-        phrase = "What nonsense?";
+        phrase = "Are you ill?!";
         break;
         
       case 5:
-        phrase = "Engage in self!";
+        phrase = "This is ridiculous!";
         break;
 
       case 6:
-        phrase = "How could you?..";
+        phrase = "What`s the nonsense?!";
         break;
 
       case 7:
-        phrase = "No, no and no!";
+        phrase = "Engage yourself!";
         break;
 
       case 8:
-        phrase = "Think better!";
+        phrase = "No, no and no!";
         break;
 
       case 9:
-        phrase = "Sorry.";
+        phrase = "Think better!";
         break;
 
       case 10:
-        phrase = "What the hell?";
+        phrase = "Sorry, it`s wrong.";
         break;
+
+      case 11:
+        phrase = "What`s the hell?";
+        break;
+
+      case 12:
+        phrase = "God blind me!..";
+        break;
+
+
       }
 
       return phrase;      
@@ -886,13 +896,13 @@
         <div class="col-lg-8">
 
           <h3>What's going on here?</h3>
-          <p>You are proposed to entertain yourself by playing a game on knowledge of the history of art.</p>
+          <p>You are proposed to entertain yourself by playing the game on knowledge of the history of art.</p>
 
-          <h3>How it's work?</h3>
-          <p>You need to guess painters.<br>You will win if you can guess the 10 pictures in a row.</p>
+          <h3>How does it work?</h3>
+          <p>You need to guess the painters.<br>You will win if you can guess 10 pictures in a row.</p>
           
-          <h3>What good is it?</h3>
-          <p>Play free time, and very soon you'll be easily differentiate Claude Monet from Edgar Manet at a glance, and certainly from Alfred Sisley :)</p>
+          <h3>What good can it do?</h3>
+          <p>Play in your free time, and very soon you'll easily differentiate Claude Monet from Edgar Manet at a glance, and certainly from Alfred Sisley :)</p>
 
           <h3>How can I help?</h3>
           If you liked the site, be so kind and tell your friends about it:<br>
