@@ -525,6 +525,11 @@ p {
     display: none;
   }
   
+  #fb_page {
+    display: none;
+  }
+  
+  
   #banner {
     display: none;
   }

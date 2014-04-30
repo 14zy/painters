@@ -524,6 +524,11 @@ p {
   #vk_groups {
     display: none;
   }
+
+  #fb_page {
+    display: none;
+  }
+
   
   #banner {
     display: none;
