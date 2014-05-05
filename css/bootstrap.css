@@ -530,10 +530,6 @@ p {
   }
 
   
-  #banner {
-    display: none;
-  }
-  
   #report {
     display: none;
   }
@@ -549,7 +545,7 @@ p {
   }
   
   #btn4 {
-    margin-bottom: -80px;
+    margin-bottom: -40px;
   }
 }
 
