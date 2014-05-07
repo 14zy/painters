@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:type"   content="website" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Попробуйте отгадать 10 художников подряд и победить своих друзей!">
+    <meta property="og:description" content="Попробуйте отгадать 10 художников подряд и победить своих друзей!" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="image_src" href="http://artchallenge.ru/art-challenge-logo.png">
+    <title>Art Challenge - игра на знание популярных художников</title>
+    <meta property="og:title" content="Art Challenge - игра на знание популярных художников" />
+    <meta property="og:url" content="http://artchallenge.ru/" />
+    <meta property="og:image" content="http://artchallenge.ru/art-challenge-logo-facebook.png" />
+    <meta property="og:site_name" content="Art Challenge"/>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="js/jquery.pnotify.default.css" media="all" rel="stylesheet" type="text/css" />     
+
+    <script type="text/javascript" src="http://vk.com/js/api/openapi.js?112"></script>
+    <script type="text/javascript">
+    VK.Widgets.Group("vk_groups", {mode: 0, width: "360", height: "250", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 70435584);
+    </script>
+    
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "http://connect.facebook.net/en_GB/all.js#xfbml=1&appId=478531102278887";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+    
+    <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <script src="js/jquery.pnotify.js" type="text/javascript"></script>   
+
+  	<script type="text/javascript" language="javascript">
+
+    $.pnotify.defaults.styling = "bootstrap3";
+    
+    function putButtons(painter) {
+      
+      var painters = [painter];
+
+      for (var i=0;i<10;i++) {
+        painters.push(randomPainter());
+      }
+       
+      //unique
+      painters = painters.reverse().filter(function (e, i, painters) {
+         return painters.indexOf(e, i+1) === -1;
+      }).reverse(); 
+
+      var buttons = [];
+      buttons.push(painters[0]);      
+      buttons.push(painters[1]);
+      buttons.push(painters[2]);
+      buttons.push(painters[3]);     
+      
+      function shuffle(o){ //v1.0
+          for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+          return o;
+      };
+
+      shuffle(buttons);
+             
+      document.getElementById("btn1").innerHTML = buttons[0];
+      document.getElementById("btn2").innerHTML = buttons[1];
+      document.getElementById("btn3").innerHTML = buttons[2];
+      document.getElementById("btn4").innerHTML = buttons[3];
+    }
+    
+    function currentWins() {
+      if (getCookie('wins') > 1) {
+        document.getElementById("counter").innerHTML = getCookie('wins');
+        document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+      }
+      window.counter = document.getElementById("counter").innerHTML;
+    }
+    
+    function puticons() {
+      for (var i=1; i < window.counter; i++ ) {
+          document.getElementById("icon"+i).style.color = "rgb(53,115,45)";                
+      } 
+    }
+    
+    function removeUTMs() {
+      if (/utm_/.test(location.search) && window.history.replaceState){
+ 
+        // thx @cowboy for the revised hash param magic.
+        var oldUrl = location.href;
+        var newUrl = oldUrl.replace(/\?([^#]*)/, function(_, search) {
+          search = search.split('&').map(function(v) {
+            return !/^utm_/.test(v) && v;
+          }).filter(Boolean).join('&'); // omg filter(Boolean) so dope.
+          return search ? '?' + search : '';
+        });
+ 
+        if ( newUrl != oldUrl ) {
+          window.history.replaceState({},'', newUrl);
+        }
+ 
+      }
+    }
+
+
+    function getart() { 
+      
+      removeUTMs();
+      
+      currentWins();
+
+      var art = document.getElementById("art");
+
+      window.truePainter = Math.floor((Math.random()*28)+1);
+
+      switch (window.truePainter)
+      {
+
+      case 1:
+        window.image = Math.floor((Math.random()*23)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Chrono Trigger');
+        window.truePainterName = "Chrono Trigger";
+        window.platform = "SNES";
+        window.year = "1995";
+        break;
+
+      case 2:
+        window.image = Math.floor((Math.random()*19)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('The Legend of Zelda: Ocarina of Time');
+        window.truePainterName = "The Legend of Zelda: Ocarina of Time";
+        window.platform = "Nintendo 64";
+        window.year = "1998";
+        break;
+
+      case 3:
+        window.image = Math.floor((Math.random()*64)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Alter Ego');
+        window.truePainterName = "Alter Ego";
+        window.platform = "DOS";
+        window.year = "1986";
+        break;
+
+      case 4:
+        window.image = Math.floor((Math.random()*55)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('World of Goo');
+        window.truePainterName = "World of Goo";
+        window.platform = "Wii";
+        window.year = "2008";
+        break;
+
+      case 5:
+        window.image = Math.floor((Math.random()*54)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Grand Theft Auto IV');
+        window.truePainterName = "Grand Theft Auto IV";
+        window.platform = "PlayStation 3";
+        window.year = "2008";
+        break;
+
+      case 6:
+        window.image = Math.floor((Math.random()*21)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Super Mario Bros. 3');
+        window.truePainterName = "Super Mario Bros. 3";
+        window.platform = "NES";
+        window.year = "1988";
+        break;
+
+      case 7:
+        window.image = Math.floor((Math.random()*18)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('SoulCalibur');
+        window.truePainterName = "SoulCalibur";
+        window.platform = "Dreamcast";
+        window.year = "1998";
+        break;
+
+      case 8:
+        window.image = Math.floor((Math.random()*33)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Super Mario Galaxy');
+        window.truePainterName = "Super Mario Galaxy";
+        window.platform = "Wii";
+        window.year = "2007";
+        break;
+
+      case 9:
+        window.image = Math.floor((Math.random()*29)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Metroid Prime');
+        window.truePainterName = "Metroid Prime";
+        window.platform = "GameCube";
+        window.year = "2002";
+        break;
+
+      case 10:
+        window.image = Math.floor((Math.random()*37)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Wing Commander');
+        window.truePainterName = "Wing Commander";
+        window.platform = "Sega CD";
+        window.year = "1990";
+        break;
+
+      case 11:
+        window.image = Math.floor((Math.random()*23)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('BioShock');
+        window.truePainterName = "BioShock";
+        window.platform = "Xbox 360";
+        window.year = "2007";
+        break;
+      
+      case 12:
+        window.image = Math.floor((Math.random()*35)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Super Mario 64');
+        window.truePainterName = "Super Mario 64";
+        window.platform = "Nintendo 64";
+        window.year = "1996";
+        break;
+
+      case 13:
+        window.image = Math.floor((Math.random()*23)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Gran Turismo');
+        window.truePainterName = "Gran Turismo";
+        window.platform = "PlayStation";
+        window.year = "1998";
+        break;
+
+      case 14:
+        window.image = Math.floor((Math.random()*16)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('The Legend of Zelda: Twilight Princess');
+        window.truePainterName = "The Legend of Zelda: Twilight Princess";
+        window.platform = "Wii";
+        window.year = "2006";
+        break;
+        
+      case 15:
+        window.image = Math.floor((Math.random()*29)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Uncharted 2: Among Thieves');
+        window.truePainterName = "Uncharted 2: Among Thieves";
+        window.platform = "PlayStation 3";
+        window.year = "2009";
+        break;
+        
+      case 16:
+        window.image = Math.floor((Math.random()*19)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Batman: Arkham City');
+        window.truePainterName = "Batman: Arkham City";
+        window.platform = "PlayStation 3";
+        window.year = "2011";
+        break;
+        
+      case 17:
+        window.image = Math.floor((Math.random()*25)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('The Ultimate DOOM');
+        window.truePainterName = "The Ultimate DOOM";
+        window.platform = "DOS";
+        window.year = "1995";
+        break;
+        
+      case 18:
+        window.image = Math.floor((Math.random()*28)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Red Dead Redemption');
+        window.truePainterName = "Red Dead Redemption";
+        window.platform = "Xbox 360";
+        window.year = "2010";
+        break;
+
+      case 19:
+        window.image = Math.floor((Math.random()*31)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Oddworld: Abes Exoddus');
+        window.truePainterName = "Oddworld: Abes Exoddus";
+        window.platform = "PlayStation 2";
+        window.year = "1988";
+        break;
+        
+      case 20:
+        window.image = Math.floor((Math.random()*41)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Mafia');
+        window.truePainterName = "Mafia";
+        window.platform = "PlayStation 2";
+        window.year = "2002";
+        break;
+
+      case 21:
+        window.image = Math.floor((Math.random()*82)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Killer7');
+        window.truePainterName = "Killer7";
+        window.platform = "GameCube";
+        window.year = "2005";
+        break;
+        
+      case 22:
+        window.image = Math.floor((Math.random()*75)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Deus Ex: Human Revolution');
+        window.truePainterName = "Deus Ex: Human Revolution";
+        window.platform = "Xbox 360";
+        window.year = "2011";
+        break;
+        
+      case 23:
+        window.image = Math.floor((Math.random()*19)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('The Witcher');
+        window.truePainterName = "The Witcher";
+        window.platform = "PC";
+        window.year = "2008";
+        break;
+        
+      case 24:
+        window.image = Math.floor((Math.random()*27)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Portal 2');
+        window.truePainterName = "Portal 2";
+        window.platform = "Xbox 360";
+        window.year = "2011";
+        break;
+        
+      case 25:
+        window.image = Math.floor((Math.random()*5)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Tempest 2000');
+        window.truePainterName = "Tempest 2000";
+        window.platform = "DOS";
+        window.year = "1994";
+        break;
+      
+      case 26:
+        window.image = Math.floor((Math.random()*32)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Gray Matter');
+        window.truePainterName = "Gray Matter";
+        window.platform = "PC";
+        window.year = "2010";
+        break;
+              
+      case 27:
+        window.image = Math.floor((Math.random()*18)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Plants vs. Zombies');
+        window.truePainterName = "Plants vs. Zombies";
+        window.platform = "iOS";
+        window.year = "2009";
+        break;
+        
+      case 28:
+        window.image = Math.floor((Math.random()*7)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/games/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Pokémon Silver Version');
+        window.truePainterName = "Pokémon Silver Version";
+        window.platform = "Game Boy Color";
+        window.year = "2000";
+        break;
+        
+      }
+
+      puticons();
+    }
+
+    
+    function winner() {
+      $.pnotify({
+          title: 'Поздравляем!',
+          text: 'Вы великолепно разбираетесь в искусcтве!<br>10 из 10 – это лучше, чем 82% людей, сыгравших в эту игру!' + "<br><br><a onclick='ShareVK();' href='#'><img style='margin-left: 25px;' width='230px'  src='winner-badge.png'></a><br><br><text style='font-size: 16px;'>Вы можете рассказать о победе в социальных сетях:<br><a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> ВКонтакте </a><br><a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareOD();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Одноклассники </a><br><a onclick='ShareMM();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Мой Мир </a></text>",
+          type: 'note',
+          hide: false,
+          closer: false,
+          animate_speed: "normal",
+          sticker: false,
+          icon: "glyphicon glyphicon-thumbs-up",
+          history: false          
+      });
+      yaCounter24594722.reachGoal('WINNER');
+      document.getElementById("icon10").style.color = "rgb(53,115,45)";                
+    }
+
+    
+    function ShareVK() {
+      yaCounter24594722.reachGoal('WINNER-SHARE-VK');
+      url = "http://vk.com/share.php?url=http://artchallenge.ru/?utm_source=vk-win" + "&title=Господа, я отлично разбираюсь в искусстве! %23ArtChallenge&description=Попробуйте отгадать 10 художников подряд и посоревноваться со мной!&image=http://artchallenge.ru/art-challenge-winner1.png";
+      window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+    }        
+    
+    function ShareFB() {
+      yaCounter24594722.reachGoal('WINNER-SHARE-FB');
+      
+      url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=http://artchallenge.ru/?utm_source=fb-win&redirect_uri=http://artchallenge.ru/1.html&picture=http://artchallenge.ru/winner-badge460.png&source=http://artchallenge.ru/winner-badge460.png&name=Господа, я отлично разбираюсь в искусстве!&caption=Art Challenge - игра на знание популярных художников"
+      
+      window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+    }        
+
+    function ShareOD() {
+      yaCounter24594722.reachGoal('WINNER-SHARE-OD');
+      url = "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st.comments=Господа, я отлично разбираюсь в искусстве!&st._surl=http://artchallenge.ru/?utm_source=od-win";
+      
+      window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+    }        
+
+    function ShareMM() {
+      yaCounter24594722.reachGoal('WINNER-SHARE-MM');
+      url = "http://connect.mail.ru/share?url=http://artchallenge.ru/?utm_source=mm-win&title=Господа, я отлично разбираюсь в искусстве!&description=Art Challenge - игра на знание популярных художников";
+      window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+    }        
+
+    
+    function randomPainter() {
+      switch (Math.floor((Math.random()*28)+1))
+      {
+      case 1:
+        painterName = "Chrono Trigger";
+        break;
+        
+      case 2:
+        painterName = "The Legend of Zelda: Ocarina of Time";
+        break;
+        
+      case 3:
+        painterName = "Alter Ego";
+        break;
+        
+      case 4:
+        painterName = "World of Goo";
+        break;
+        
+      case 5:
+        painterName = "Grand Theft Auto IV";
+        break;
+        
+      case 6:
+        painterName = "Super Mario Bros. 3";
+        break;
+        
+      case 7:
+        painterName = "SoulCalibur";
+        break;
+        
+      case 8:
+        painterName = "Super Mario Galaxy";
+        break;
+        
+      case 9:
+        painterName = "Metroid Prime";
+        break;
+        
+      case 10:
+        painterName = "Wing Commander";
+        break;
+
+      case 11:
+        painterName = "BioShock"
+        break;
+
+      case 12:
+        painterName = "Super Mario 64";
+        break;
+        
+      case 13:
+        painterName = "Gran Turismo";
+        break;
+
+      case 14:
+        painterName = "The Legend of Zelda: Twilight Princess";
+        break;
+
+      case 15:
+        painterName = "Uncharted 2: Among Thieves";
+        break;
+
+      case 16:
+        painterName = "Batman: Arkham City";
+        break;
+
+      case 17:
+        painterName = "The Ultimate DOOM";
+        break;
+
+      case 18:
+        painterName = "Red Dead Redemption";
+        break;
+
+      case 19:
+        painterName = "Oddworld: Abes Exoddus";
+        break;
+
+      case 20:
+        painterName = "Mafia";
+        break;
+        
+      case 21:
+        painterName = "Killer7";
+        break;
+        
+      case 22:
+        painterName = "Deus Ex: Human Revolution";
+        break;
+        
+      case 23:
+        painterName = "The Witcher";
+        break;
+        
+      case 24:
+        painterName = "Portal 2";
+        break;
+        
+      case 25:        
+        painterName = "Tempest 2000";
+        break;
+
+      case 26:        
+        painterName = "Gray Matter";
+        break;
+
+      case 27:        
+        painterName = "Plants vs. Zombies";
+        break;
+
+      case 28:        
+        painterName = "Pokémon Silver Version";
+        break;
+      }
+
+      return painterName;
+    }
+    
+    function retry(){
+      yaCounter24594722.reachGoal('AGAIN-CLICK');
+      location.reload(false);
+    }
+    
+    
+    function checkAnswer(btn) { 
+    var answer = document.getElementById(btn).innerHTML;
+
+    yaCounter24594722.reachGoal('ANSWER-CLICK');
+    
+    if (answer == window.truePainterName) {
+ 
+      document.getElementById("btn1").onclick = function() { void(0);};
+      document.getElementById("btn2").onclick = function() { void(0);};
+      document.getElementById("btn3").onclick = function() { void(0);};
+      document.getElementById("btn4").onclick = function() { void(0);};
+      document.getElementById(btn).style.background = "blue";
+      document.getElementById(btn).style.borderColor = "blue";      
+
+      var wins = parseInt(window.counter);
+            
+      if (wins == 10) {
+        winner();
+      }
+      
+      else {
+      wins = 1 + wins;
+      setCookie('wins',wins,"session");    
+      setTimeout(function() {location.reload(false)}, 2000)
+      
+      $.pnotify({
+          title: 'Верно!',
+          text: 'Вы отгадали ' + parseInt(window.counter) + " картину",
+          type: 'success',
+          hide: false,
+          closer: false,
+          animate_speed: "normal",
+          sticker: false,
+          history: false          
+      });
+      yaCounter24594722.reachGoal('WIN');
+      }
+      
+    }
+
+    else {
+
+      setTimeout(function() {location.reload(false)}, 4000)
+      
+      $.pnotify({
+          title: badPhrase(),
+          text:  "Это же " + window.truePainterName + ".<br><br><img src='" + "https://dl.dropboxusercontent.com/u/15486902/games/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><a style='cursor: pointer;' onclick='retry();'>Попробовать еще раз</a>",
+          type: 'error',
+          icon: 'glyphicon glyphicon-remove',
+          hide: false,
+          closer: false,
+          animate_speed: "normal",
+          sticker: false,
+          history: false
+      });
+      
+      
+      yaCounter24594722.reachGoal('FAIL');
+      
+      document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+
+      document.getElementById("btn1").onclick = function() { location.reload(); };
+      document.getElementById("btn2").onclick = function() { location.reload(); };
+      document.getElementById("btn3").onclick = function() { location.reload(); };
+      document.getElementById("btn4").onclick = function() { location.reload(); };
+      document.getElementById("art").onclick = function() { location.reload(); };
+      document.getElementById(btn).style.background = "red";
+      document.getElementById(btn).style.borderColor = "red";
+
+    }
+      
+    }
+        
+    function setCookie(cname,cvalue,exdays)
+    {
+    var d = new Date();
+    d.setTime(d.getTime()+(exdays*24*60*60*1000));
+    var expires = "expires="+d.toGMTString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+    }
+    
+    function getCookie(cname)
+    {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) 
+      {
+      var c = ca[i].trim();
+      if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+      }
+    return "";
+    }    
+        
+    function badPhrase() {
+      
+      switch (Math.floor((Math.random()*12)+1))
+      {
+      case 1:
+        phrase = "Да Вы обезумели!";
+        break;
+        
+      case 2:
+        phrase = "Ну как не стыдно?";
+        break;
+
+      case 3:
+        phrase = "Вам нездоровится?";
+        break;
+        
+      case 4:
+        phrase = "Что за нелепость?";
+        break;
+        
+      case 5:
+        phrase = "Займитесь самообразованием!";
+        break;
+
+      case 6:
+        phrase = "Как Вы могли?..";
+        break;
+
+      case 7:
+        phrase = "Нет, нет и нет!";
+        break;
+
+      case 8:
+        phrase = "Одумайтесь!";
+        break;
+
+      case 9:
+        phrase = "А если подумать?";
+        break;
+
+      case 10:
+        phrase = "Какого чёрта?!";
+        break;
+
+      case 11:
+        phrase = "Бескультурье!";
+        break;
+
+      case 12:
+        phrase = "Коллега!";
+        break;
+
+
+      }
+
+      return phrase;      
+    }
+    
+    function report() {
+      yaCounter24594722.reachGoal('REPORT');
+    document.getElementById("report").innerHTML = "Спасибо, мы проверим!";
+    document.getElementById("report").onclick = function() { void(0);};
+    var link = "https://dl.dropboxusercontent.com/u/15486902/painters/" + window.truePainter + "/" + window.image + ".jpg"
+    $.ajax({
+      type: "POST",
+      url: "https://mandrillapp.com/api/1.0/messages/send.json",
+      data: {
+        'key': 'pyL7NQYaVCP7PkkLq0BnSQ',
+        'message': {
+          'from_email': 'REPORT@art-challenge.com',
+          'to': [
+              {
+                'email': 'report@artchallenge.ru',
+                'name': 'RECIPIENT NAME (OPTIONAL)',
+                'type': 'to'
+              }
+            ],
+          'autotext': 'true',
+          'subject': window.truePainterName + ', ' + window.truePainter + "/" + window.image,
+          'html': "<a href='" + link + "'><img src='" + link + "' width='200px' ></a>"
+        }
+      }
+     }).done(function(response) {
+       console.log(response); // if you're into that sorta thing
+     });
+    }
+    </script>
+
+  </head>
+
+  <body onload="getart()">
+    
+    
+
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <div id="top-share" style="margin-top: 4px;" class="yashare-auto-init" data-yashareL10n="ru"
+           data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter"></div> 
+        </ul>
+
+        <a href="http://www.artchallenge.ru"><h3 class="text-muted"><span class="glyphicon glyphicon-pencil"></span> Art Challenge</h3></a>
+      </div>
+      <br>
+
+      <div style="text-align: center">
+        <div id="corner" class="panel panel-default">
+          <br>
+         <span style="visibility: hidden" id="counter">1</span>
+         <span id="icon1" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+         <span id="icon2" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+         <span id="icon3" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+         <span id="icon4" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+         <span id="icon5" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+         <span id="icon6" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+         <span id="icon7" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+         <span id="icon8" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+         <span id="icon9" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
+         <span id="icon10" style="color: lightgray; font-size: 24px;" class="glyphicon glyphicon-gift"></span>
+         <br><br>
+
+          <img id="art" src="loading1.gif" style="max-height: 600px; max-width: 900px;">
+
+        <br><br>
+        <a id ="btn1" onclick="checkAnswer('btn1');" class="btn btn-lg btn-success"  role="button"></a>
+        <a id ="btn2" onclick="checkAnswer('btn2');" class="btn btn-lg btn-success"  role="button"></a>
+        <a id ="btn3" onclick="checkAnswer('btn3');" class="btn btn-lg btn-success"  role="button"></a>
+        <a id ="btn4" onclick="checkAnswer('btn4');" class="btn btn-lg btn-success"  role="button"></a>
+        
+        <br><br>
+        <!-- <a id="report" title="Сообщить о проблеме с данной картиной" style="color: lightgray; cursor: pointer;" onclick="report();"><span class="glyphicon glyphicon-warning-sign"></span></a><br><br> -->
+
+        </div>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-8">
+          
+          
+          <h3>Что здесь происходит?</h3>
+          <p>Вам предлагается развлечь себя игрой на знание истории изобразительного искусства.</p>
+
+          <h3>Как это работает?</h3>
+          <p>Нужно отгадывать авторов картин.<br>Побеждают те господа, которые смогут отгадать 10 картин подряд.</p>
+          
+          <h3>Какая от этого польза?</h3>
+          <p>Играйте в свободное время, и очень скоро Вы без труда будете отличать<br>Клода Моне от Эдуарда Мане с первого взгляда, и уж точно от Альфреда Сислея :)</p>
+
+          <h3>Чем я могу помочь?</h3>
+          Если Вам понравился сайт, будьте так любезны, расскажите о нём друзьям:<br>
+
+          <div style="margin-left: -5px;" class="yashare-auto-init" data-yashareL10n="ru"
+           data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter" data-yashareImage="http://artchallenge.ru/art-challenge-logo.png"></div> 
+
+          <h3>На сайте нет рекламы?</h3>
+          Нет и не будет.<br>Мы не хотим раздражать вас ужасными баннерами, и решили никогда не добавлять рекламу на этот сайт.<br>
+          Будем очень рады, если вы поможете нам сохранить подобные устои и сделаете небольшое пожертвование:<br><br>
+          
+          <iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/donate.xml?account=41001585423948&quickpay=donate&payment-type-choice=on&default-sum=50&targets=%D0%A7%D1%82%D0%BE%D0%B1%D1%8B+%D0%BD%D0%B0+Art+Challenge+%D0%BD%D0%B8%D0%BA%D0%BE%D0%B3%D0%B4%D0%B0+%D0%BD%D0%B5+%D0%B1%D1%8B%D0%BB%D0%BE+%D1%80%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D1%8B+&target-visibility=on&project-name=Art+Challenge&project-site=http%3A%2F%2Fartchallenge.ru&button-text=01" width="522" height="131"></iframe>
+
+          
+
+          <h3>Do you have English version?</h3>
+          <p>Of course, here it is: <a href='en/' onclick="yaCounter24594722.reachGoal('ENGLISH'); return true;">English version</a></p>
+
+          <h3>Подписывайтесь в социальных сетях:</h3>
+          <div id="vk_groups" onclick="yaCounter24594722.reachGoal('VK-SUBSCRIBE'); return true;" style="float: left; margin: 10px 0 0 0;"></div>
+
+          <div id="fb_page" class="fb-like-box" style="margin-top: 10px; padding: 0 0 0 10px;" data-href="https://www.facebook.com/artchallenge.ru" data-width="300" data-height="250" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+
+        </div>
+      </div>        
+
+      <br>
+      <div class="footer">
+        
+        <p>&copy; Сайт создан <a href="https://vk.com/just14zy" onclick="yaCounter24594722.reachGoal('RUBEN-CLICK'); return true;"><img style="margin-bottom: 7px;" height="20" width="20" src="ruben.jpg">Рубеном</a> и <a href="https://vk.com/id9755975" onclick="yaCounter24594722.reachGoal('ANNA-CLICK'); return true;"><img style="margin: 0 3px 4px 0;" height="18" width="18" src="anna.jpg">Анной</a> в 2014 году. Пишите нам, если у Вас есть “отзывы и предложения” или по любому другому поводу.<br>
+        Другие наши проекты: <a target="_blank" href="http://social-coins.com/?utm_source=artchallenge">Social Coins</a> | <a target="_blank" href="http://forgiveme.today/?utm_source=artchallenge">Forgiveme.today</p>
+
+        <p><!-- Yandex.Metrika informer -->
+        <a href="https://metrika.yandex.ru/stat/?id=24594722&amp;from=informer"
+        target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/24594722/3_1_FFFFFFFF_FFFFFFFF_0_pageviews"
+        style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:24594722,lang:'ru'});return false}catch(e){}"/></a>
+        <!-- /Yandex.Metrika informer --></p>
+      </div>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+          <script type="text/javascript" src="http://yandex.st/share/share.js"
+          charset="utf-8"></script>
+    
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter24594722 = new Ya.Metrika({id:24594722,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/24594722" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+  </body>
+</html>
