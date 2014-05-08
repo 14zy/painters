@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta property="og:type"   content="website" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Попробуйте отгадать 10 художников подряд и победить своих друзей!">
-    <meta property="og:description" content="Попробуйте отгадать 10 художников подряд и победить своих друзей!" />
+    <meta name="description" content="Попробуйте отгадать 10 игр подряд и победить своих друзей!">
+    <meta property="og:description" content="Попробуйте отгадать 10 игр подряд и победить своих друзей!" />
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="image_src" href="http://artchallenge.ru/art-challenge-logo.png">
-    <title>Art Challenge - игра на знание популярных художников</title>
-    <meta property="og:title" content="Art Challenge - игра на знание популярных художников" />
+    <title>Game Challenge - игра на знание популярных игр</title>
+    <meta property="og:title" content="Game Challenge - игра на знание популярных игр" />
     <meta property="og:url" content="http://artchallenge.ru/" />
     <meta property="og:image" content="http://artchallenge.ru/art-challenge-logo-facebook.png" />
-    <meta property="og:site_name" content="Art Challenge"/>
+    <meta property="og:site_name" content="Game Challenge"/>
     
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -83,7 +83,7 @@
     
     function puticons() {
       for (var i=1; i < window.counter; i++ ) {
-          document.getElementById("icon"+i).style.color = "rgb(53,115,45)";                
+          document.getElementById("icon"+i).style.color = "#f39c12";                
       } 
     }
     
@@ -559,8 +559,8 @@
       document.getElementById("btn2").onclick = function() { void(0);};
       document.getElementById("btn3").onclick = function() { void(0);};
       document.getElementById("btn4").onclick = function() { void(0);};
-      document.getElementById(btn).style.background = "blue";
-      document.getElementById(btn).style.borderColor = "blue";      
+      document.getElementById(btn).style.background = "#f39c12";
+      document.getElementById(btn).style.borderColor = "#f39c12";      
 
       var wins = parseInt(window.counter);
             
@@ -575,8 +575,9 @@
       
       $.pnotify({
           title: 'Верно!',
-          text: 'Вы отгадали ' + parseInt(window.counter) + " картину",
-          type: 'success',
+          text: '<strong>Вы отгадали ' + parseInt(window.counter) + " игру</strong>",
+          type: 'notice',
+          icon: 'glyphicon glyphicon-ok',
           hide: false,
           closer: false,
           animate_speed: "normal",
@@ -590,11 +591,11 @@
 
     else {
 
-      setTimeout(function() {location.reload(false)}, 4000)
+      setTimeout(function() {location.reload(false)}, 14000)
       
       $.pnotify({
           title: badPhrase(),
-          text:  "Это же " + window.truePainterName + ".<br><br><img src='" + "https://dl.dropboxusercontent.com/u/15486902/games/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><a style='cursor: pointer;' onclick='retry();'>Попробовать еще раз</a>",
+          text:  "<strong>Это же " + window.truePainterName + ".<br><br><img src='" + "https://dl.dropboxusercontent.com/u/15486902/games/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><a style='cursor: pointer;'>Поиграть в эту игру</a> | <a style='cursor: pointer;' onclick='retry();'>Начать заново</a></strong>",
           type: 'error',
           icon: 'glyphicon glyphicon-remove',
           hide: false,
@@ -646,27 +647,27 @@
       switch (Math.floor((Math.random()*12)+1))
       {
       case 1:
-        phrase = "Да Вы обезумели!";
+        phrase = "Школота!";
         break;
         
       case 2:
-        phrase = "Ну как не стыдно?";
+        phrase = "Учи уроки!";
         break;
 
       case 3:
-        phrase = "Вам нездоровится?";
+        phrase = "Нууб!";
         break;
         
       case 4:
-        phrase = "Что за нелепость?";
+        phrase = "Совесть есть?";
         break;
         
       case 5:
-        phrase = "Займитесь самообразованием!";
+        phrase = "Проиграл!";
         break;
 
       case 6:
-        phrase = "Как Вы могли?..";
+        phrase = "Ты ебанулся?";
         break;
 
       case 7:
@@ -674,11 +675,11 @@
         break;
 
       case 8:
-        phrase = "Одумайтесь!";
+        phrase = "Одумайся!";
         break;
 
       case 9:
-        phrase = "А если подумать?";
+        phrase = "Ты чё?";
         break;
 
       case 10:
@@ -686,11 +687,11 @@
         break;
 
       case 11:
-        phrase = "Бескультурье!";
+        phrase = "Нахуй иди отсюда!";
         break;
 
       case 12:
-        phrase = "Коллега!";
+        phrase = "Нееееет!";
         break;
 
 
@@ -742,7 +743,7 @@
            data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter"></div> 
         </ul>
 
-        <a href="http://www.artchallenge.ru"><h3 class="text-muted"><span class="glyphicon glyphicon-pencil"></span> Art Challenge</h3></a>
+        <a href="http://www.artchallenge.ru"><h3 class="text-muted"><span class="glyphicon glyphicon-headphones"></span> Game Challenge</h3></a>
       </div>
       <br>
 
@@ -750,25 +751,25 @@
         <div id="corner" class="panel panel-default">
           <br>
          <span style="visibility: hidden" id="counter">1</span>
-         <span id="icon1" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
-         <span id="icon2" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
-         <span id="icon3" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
-         <span id="icon4" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
-         <span id="icon5" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
-         <span id="icon6" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
-         <span id="icon7" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
-         <span id="icon8" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
-         <span id="icon9" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
-         <span id="icon10" style="color: lightgray; font-size: 24px;" class="glyphicon glyphicon-gift"></span>
+         <span id="icon1" style="color: gray; font-size: 20px;" class="glyphicon glyphicon-star"></span>
+         <span id="icon2" style="color: gray; font-size: 20px;" class="glyphicon glyphicon-star"></span>
+         <span id="icon3" style="color: gray; font-size: 20px;" class="glyphicon glyphicon-star"></span>
+         <span id="icon4" style="color: gray; font-size: 20px;" class="glyphicon glyphicon-star"></span>
+         <span id="icon5" style="color: gray; font-size: 20px;" class="glyphicon glyphicon-star"></span>
+         <span id="icon6" style="color: gray; font-size: 20px;" class="glyphicon glyphicon-star"></span>
+         <span id="icon7" style="color: gray; font-size: 20px;" class="glyphicon glyphicon-star"></span>
+         <span id="icon8" style="color: gray; font-size: 20px;" class="glyphicon glyphicon-star"></span>
+         <span id="icon9" style="color: gray; font-size: 20px;" class="glyphicon glyphicon-star"></span>
+         <span id="icon10" style="color: gray; font-size: 24px;" class="glyphicon glyphicon-gift"></span>
          <br><br>
 
           <img id="art" src="loading1.gif" style="max-height: 600px; max-width: 900px;">
 
         <br><br>
-        <a id ="btn1" onclick="checkAnswer('btn1');" class="btn btn-lg btn-success"  role="button"></a>
-        <a id ="btn2" onclick="checkAnswer('btn2');" class="btn btn-lg btn-success"  role="button"></a>
-        <a id ="btn3" onclick="checkAnswer('btn3');" class="btn btn-lg btn-success"  role="button"></a>
-        <a id ="btn4" onclick="checkAnswer('btn4');" class="btn btn-lg btn-success"  role="button"></a>
+        <a id ="btn1" onclick="checkAnswer('btn1');" class="btn btn-info"  role="button"></a>
+        <a id ="btn2" onclick="checkAnswer('btn2');" class="btn btn-info"  role="button"></a>
+        <a id ="btn3" onclick="checkAnswer('btn3');" class="btn btn-info"  role="button"></a>
+        <a id ="btn4" onclick="checkAnswer('btn4');" class="btn btn-info"  role="button"></a>
         
         <br><br>
         <!-- <a id="report" title="Сообщить о проблеме с данной картиной" style="color: lightgray; cursor: pointer;" onclick="report();"><span class="glyphicon glyphicon-warning-sign"></span></a><br><br> -->
@@ -795,36 +796,18 @@
           <div style="margin-left: -5px;" class="yashare-auto-init" data-yashareL10n="ru"
            data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter" data-yashareImage="http://artchallenge.ru/art-challenge-logo.png"></div> 
 
-          <h3>На сайте нет рекламы?</h3>
-          Нет и не будет.<br>Мы не хотим раздражать вас ужасными баннерами, и решили никогда не добавлять рекламу на этот сайт.<br>
-          Будем очень рады, если вы поможете нам сохранить подобные устои и сделаете небольшое пожертвование:<br><br>
+
+          <!-- <h3>Подписывайтесь в социальных сетях:</h3> -->
           
-          <iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/donate.xml?account=41001585423948&quickpay=donate&payment-type-choice=on&default-sum=50&targets=%D0%A7%D1%82%D0%BE%D0%B1%D1%8B+%D0%BD%D0%B0+Art+Challenge+%D0%BD%D0%B8%D0%BA%D0%BE%D0%B3%D0%B4%D0%B0+%D0%BD%D0%B5+%D0%B1%D1%8B%D0%BB%D0%BE+%D1%80%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D1%8B+&target-visibility=on&project-name=Art+Challenge&project-site=http%3A%2F%2Fartchallenge.ru&button-text=01" width="522" height="131"></iframe>
-
           
-
-          <h3>Do you have English version?</h3>
-          <p>Of course, here it is: <a href='en/' onclick="yaCounter24594722.reachGoal('ENGLISH'); return true;">English version</a></p>
-
-          <h3>Подписывайтесь в социальных сетях:</h3>
-          <div id="vk_groups" onclick="yaCounter24594722.reachGoal('VK-SUBSCRIBE'); return true;" style="float: left; margin: 10px 0 0 0;"></div>
-
-          <div id="fb_page" class="fb-like-box" style="margin-top: 10px; padding: 0 0 0 10px;" data-href="https://www.facebook.com/artchallenge.ru" data-width="300" data-height="250" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
-
         </div>
       </div>        
 
       <br>
       <div class="footer">
         
-        <p>&copy; Сайт создан <a href="https://vk.com/just14zy" onclick="yaCounter24594722.reachGoal('RUBEN-CLICK'); return true;"><img style="margin-bottom: 7px;" height="20" width="20" src="ruben.jpg">Рубеном</a> и <a href="https://vk.com/id9755975" onclick="yaCounter24594722.reachGoal('ANNA-CLICK'); return true;"><img style="margin: 0 3px 4px 0;" height="18" width="18" src="anna.jpg">Анной</a> в 2014 году. Пишите нам, если у Вас есть “отзывы и предложения” или по любому другому поводу.<br>
-        Другие наши проекты: <a target="_blank" href="http://social-coins.com/?utm_source=artchallenge">Social Coins</a> | <a target="_blank" href="http://forgiveme.today/?utm_source=artchallenge">Forgiveme.today</p>
+        <p>&copy; 2014. Пишите, если у Вас есть “отзывы и предложения” или по любому другому поводу.<br>
 
-        <p><!-- Yandex.Metrika informer -->
-        <a href="https://metrika.yandex.ru/stat/?id=24594722&amp;from=informer"
-        target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/24594722/3_1_FFFFFFFF_FFFFFFFF_0_pageviews"
-        style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:24594722,lang:'ru'});return false}catch(e){}"/></a>
-        <!-- /Yandex.Metrika informer --></p>
       </div>
     </div> <!-- /container -->
 
