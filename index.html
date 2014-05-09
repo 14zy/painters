@@ -115,7 +115,7 @@
 
       var art = document.getElementById("art");
 
-      window.truePainter = Math.floor((Math.random()*47)+1);
+      window.truePainter = Math.floor((Math.random()*49)+1);
 
       switch (window.truePainter)
       {
@@ -448,6 +448,21 @@
         putButtons('Василий Верещагин');
         window.truePainterName = "Василий Верещагин";
         break;
+
+      case 48:
+        window.image = Math.floor((Math.random()*98)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Исаак Левитан');
+        window.truePainterName = "Исаак Левитан";
+        break;
+
+      case 49:
+        window.image = Math.floor((Math.random()*193)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Анри Матисс');
+        window.truePainterName = "Анри Матисс";
+        break;
+
       }
 
       puticons();
@@ -500,7 +515,7 @@
 
     
     function randomPainter() {
-      switch (Math.floor((Math.random()*47)+1))
+      switch (Math.floor((Math.random()*49)+1))
       {
       case 1:
         painterName = "Амедео Модильяни";
@@ -690,6 +705,13 @@
         painterName = "Василий Верещагин";
         break;
 
+      case 48:        
+        painterName = "Исаак Левитан";
+        break;
+
+      case 49:        
+        painterName = "Анри Матисс";
+        break;
       }
 
       return painterName;

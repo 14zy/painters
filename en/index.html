@@ -115,7 +115,7 @@
 
       var art = document.getElementById("art");
 
-      window.truePainter = Math.floor((Math.random()*47)+1);
+      window.truePainter = Math.floor((Math.random()*49)+1);
 
       if (truePainter == 1) {
               window.image = Math.floor((Math.random()*194)+1);
@@ -437,6 +437,19 @@
               putButtons('Vasily Vereshchagin');
               window.truePainterName = "Vasily Vereshchagin";
             }
+            
+            if (truePainter == 48) {
+              window.image = Math.floor((Math.random()*98)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Isaac Levitan');
+              window.truePainterName = "Isaac Levitan";
+            }
+
+            if (truePainter == 49) {
+              window.image = Math.floor((Math.random()*193)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Henri Matisse');
+              window.truePainterName = "Henri Matisse";
                   
       puticons();
     }
@@ -475,7 +488,7 @@
 
     
     function randomPainter() {
-      switch (Math.floor((Math.random()*47)+1))
+      switch (Math.floor((Math.random()*49)+1))
       {
       case 1:
          painterName = "Amedeo Modigliani";
@@ -663,6 +676,14 @@
          
        case 47:        
          painterName = "Vasily Vereshchagin";
+         break;
+
+       case 48:        
+         painterName = "Isaac Levitan";
+         break;
+
+       case 49:        
+         painterName = "Henri Matisse";
          break;
         
       }
