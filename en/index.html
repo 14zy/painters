@@ -115,7 +115,7 @@
 
       var art = document.getElementById("art");
 
-      window.truePainter = Math.floor((Math.random()*49)+1);
+      window.truePainter = Math.floor((Math.random()*56)+1);
 
       if (truePainter == 1) {
               window.image = Math.floor((Math.random()*194)+1);
@@ -450,7 +450,57 @@
               art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
               putButtons('Henri Matisse');
               window.truePainterName = "Henri Matisse";
-                  
+            }
+
+            if (truePainter == 50) {
+              window.image = Math.floor((Math.random()*102)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Jan van Eyck');
+              window.truePainterName = "Jan van Eyck";
+            }
+            
+            if (truePainter == 51) {
+              window.image = Math.floor((Math.random()*207)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('John Waterhouse');
+              window.truePainterName = "John Waterhouse";
+            }
+            
+            if (truePainter == 52) {
+              window.image = Math.floor((Math.random()*258)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Egon Schiele');
+              window.truePainterName = "Egon Schiele";
+            }
+            
+            if (truePainter == 53) {
+              window.image = Math.floor((Math.random()*736)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Edgar Degas');
+              window.truePainterName = "Edgar Degas";
+            }
+            
+            if (truePainter == 54) {
+              window.image = Math.floor((Math.random()*283)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Rembrandt');
+              window.truePainterName = "Rembrandt";
+            }
+            
+            if (truePainter == 55) {
+              window.image = Math.floor((Math.random()*293)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Titian');
+              window.truePainterName = "Titian";
+            }
+            
+            if (truePainter == 56) {
+              window.image = Math.floor((Math.random()*275)+1);
+              art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+              putButtons('Alphonse Mucha');
+              window.truePainterName = "Alphonse Mucha";
+            }
+
       puticons();
     }
 
@@ -488,7 +538,7 @@
 
     
     function randomPainter() {
-      switch (Math.floor((Math.random()*49)+1))
+      switch (Math.floor((Math.random()*56)+1))
       {
       case 1:
          painterName = "Amedeo Modigliani";
@@ -685,7 +735,34 @@
        case 49:        
          painterName = "Henri Matisse";
          break;
-        
+
+       case 50:        
+         painterName = "Jan van Eyck";
+         break;
+         
+       case 51:        
+         painterName = "John Waterhouse";
+         break;
+         
+       case 52:        
+         painterName = "Egon Schiele";
+         break;
+         
+       case 53:        
+         painterName = "Edgar Degas";
+         break;
+         
+       case 54:        
+         painterName = "Rembrandt";
+         break;
+         
+       case 55:        
+         painterName = "Titian";
+         break;
+         
+       case 56:        
+         painterName = "Alphonse Mucha";
+         break;
       }
 
       return painterName;

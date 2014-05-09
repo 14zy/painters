@@ -115,7 +115,7 @@
 
       var art = document.getElementById("art");
 
-      window.truePainter = Math.floor((Math.random()*49)+1);
+      window.truePainter = Math.floor((Math.random()*56)+1);
 
       switch (window.truePainter)
       {
@@ -463,6 +463,55 @@
         window.truePainterName = "Анри Матисс";
         break;
 
+      case 50:
+        window.image = Math.floor((Math.random()*102)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Ян ван Эйк');
+        window.truePainterName = "Ян ван Эйк";
+        break;
+
+      case 51:
+        window.image = Math.floor((Math.random()*207)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Джон Уотерхаус');
+        window.truePainterName = "Джон Уотерхаус";
+        break;
+
+      case 52:
+        window.image = Math.floor((Math.random()*258)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Эгон Шиле');
+        window.truePainterName = "Эгон Шиле";
+        break;
+
+      case 53:
+        window.image = Math.floor((Math.random()*736)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Эдгар Дега');
+        window.truePainterName = "Эдгар Дега";
+        break;
+
+      case 54:
+        window.image = Math.floor((Math.random()*283)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Рембрандт');
+        window.truePainterName = "Рембрандт";
+        break;
+
+      case 55:
+        window.image = Math.floor((Math.random()*293)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Тициан');
+        window.truePainterName = "Тициан";
+        break;
+
+      case 56:
+        window.image = Math.floor((Math.random()*275)+1);
+        art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+        putButtons('Альфонс Муха');
+        window.truePainterName = "Альфонс Муха";
+        break;
+
       }
 
       puticons();
@@ -515,7 +564,7 @@
 
     
     function randomPainter() {
-      switch (Math.floor((Math.random()*49)+1))
+      switch (Math.floor((Math.random()*56)+1))
       {
       case 1:
         painterName = "Амедео Модильяни";
@@ -711,6 +760,34 @@
 
       case 49:        
         painterName = "Анри Матисс";
+        break;
+
+      case 50:        
+        painterName = "Ян ван Эйк";
+        break;
+
+      case 51:        
+        painterName = "Джон Уотерхаус";
+        break;
+
+      case 52:        
+        painterName = "Эгон Шиле";
+        break;
+
+      case 53:        
+        painterName = "Эдгар Дега";
+        break;
+
+      case 54:        
+        painterName = "Рембрандт";
+        break;
+
+      case 55:        
+        painterName = "Тициан";
+        break;
+
+      case 56:        
+        painterName = "Альфонс Муха";
         break;
       }
 
