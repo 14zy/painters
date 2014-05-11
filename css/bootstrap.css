@@ -518,7 +518,7 @@ p {
 @media (max-width: 470px) {
   
   #art {
-   width: 289px;
+   width: 288px;
   }
   
   #vk_groups {
@@ -526,6 +526,10 @@ p {
   }
 
   #fb_page {
+    display: none;
+  }
+  
+  #donate {
     display: none;
   }
 
