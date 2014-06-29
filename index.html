@@ -930,7 +930,7 @@
           text: 'Вы отгадали ' + parseInt(window.counter) + " картину",
           type: 'success',
           hide: true,
-          animate_speed: "fast",
+          animate_speed: "normal",
           delay: 2000,
           remove: true,
           buttons: {
@@ -953,12 +953,12 @@
       setTimeout(function() {refresh("bad");}, 4000)
       new PNotify({
           title: badPhrase(),
-          text:  "Это же " + window.truePainterName + ".<br><br><img src='" + "painters/" + window.truePainter + "-thumbnails/photo.jpg' style='width: 100px;'><br><br><a href='painters/" + window.link + "' class='btn btn-primary'>Узнать больше</a>",
+          text:  "Это же " + window.truePainterName + ".<br><br><img src='" + "painters/" + window.truePainter + "-thumbnails/photo.jpg' style='width: 100px;'><br><br><a href='painters/" + window.link + "' class='btn btn-primary'>Узнать больше</a><!-- <btn onclick='retry();' class='btn btn-danger'>Начать заново</a> -->",
           type: 'error',
           icon: 'glyphicon glyphicon-remove',
           hide: true,
-          animate_speed: "fast",
-          delay: 5000,
+          animate_speed: "normal",
+          delay: 4000,
           remove: true,
           buttons: {
             closer: false,
@@ -1095,8 +1095,7 @@
     };
     
     // function retry(){
-    //   refresh();
-    //   //location.reload(false);
+    //   refresh(bad);
     //   yaCounter24594722.reachGoal('AGAIN-CLICK');
     // };
     
@@ -1106,6 +1105,7 @@
             document.getElementById("icon"+i).style.color = "lightgray";                
         }; 
       };
+
       document.getElementById("btn1").onclick = function() { checkAnswer('btn1'); };
       document.getElementById("btn1").style.background = "";
       document.getElementById("btn1").style.borderColor = "";
@@ -1119,8 +1119,7 @@
       document.getElementById("btn4").style.background = "";
       document.getElementById("btn4").style.borderColor = "";
 
-      var art = document.getElementById("art");
-      art.src = "loading1.gif"
+      document.getElementById("art").src = "loading1.gif"
       getart();
     }
     
