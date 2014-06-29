@@ -1106,6 +1106,9 @@
             document.getElementById("icon"+i).style.color = "lightgray";                
         }; 
       };
+      var art = document.getElementById("art");
+      art.src = "loading1.gif"
+
       document.getElementById("btn1").onclick = function() { checkAnswer('btn1'); };
       document.getElementById("btn1").style.background = "";
       document.getElementById("btn1").style.borderColor = "";
@@ -1119,8 +1122,6 @@
       document.getElementById("btn4").style.background = "";
       document.getElementById("btn4").style.borderColor = "";
 
-      var art = document.getElementById("art");
-      art.src = "loading1.gif"
       getart();
     }
     
