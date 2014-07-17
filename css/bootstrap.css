@@ -516,7 +516,7 @@ p {
    width: 288px;
   }
   
-  #vk_groups {
+  #vk_groups, #vk_groups_title {
     display: none;
   }
 
