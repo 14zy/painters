@@ -1,0 +1,63 @@
+/* Ruben zone */
+
+@media (max-width: 992px) {
+  
+  #art {
+   width: 400px;
+  }
+  
+}
+  
+@media (max-width: 600px) {
+  .lead {
+    font-size: 21px;
+  }
+  
+  #art {
+   width: 400px;
+  }
+    
+  #top-share {
+    display: none;
+  }
+  
+  #btn1,#btn2,#btn3,#btn4 {  
+    display: block;
+    margin: 5px 40px 0 40px;
+    padding: 15px;
+  }
+  
+  #btn4 {
+    margin-bottom: -30px;
+  }
+}
+
+@media (max-width: 470px) {
+  
+  #art {
+   width: 288px;
+  }
+  
+  #vk_groups, #vk_groups_title {
+    display: none;
+  }
+
+  #fb_page {
+    display: none;
+  }
+      
+  #top-share {
+    display: none;
+  }
+  
+  #btn1,#btn2,#btn3,#btn4 {  
+    display: block;
+    margin: 5px 0 0 0;
+    padding: 15px;
+  }
+  
+  #btn4 {
+    margin-bottom: -30px;
+  }
+}
+/* /Ruben zone */
