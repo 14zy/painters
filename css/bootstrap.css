@@ -476,6 +476,7 @@ p {
 }
 
 
+/* Ruben zone */
 
 @media (max-width: 992px) {
   
@@ -485,8 +486,6 @@ p {
   
 }
   
-  
-
 @media (max-width: 600px) {
   .lead {
     font-size: 21px;
@@ -495,11 +494,7 @@ p {
   #art {
    width: 400px;
   }
-  
-  #report {
-    display: none;
-  }
-  
+    
   #top-share {
     display: none;
   }
@@ -528,16 +523,7 @@ p {
   #fb_page {
     display: none;
   }
-  
-  #donate {
-    display: none;
-  }
-
-  
-  #report {
-    display: none;
-  }
-  
+      
   #top-share {
     display: none;
   }
@@ -549,11 +535,10 @@ p {
   }
   
   #btn4 {
-    margin-bottom: -40px;
+    margin-bottom: -30px;
   }
 }
-
-
+/* /Ruben zone */
 
 small,
 .small {
