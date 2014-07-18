@@ -953,7 +953,7 @@
 
     else {
 
-      setTimeout(function() {location.reload(false);}, 4000)
+      setTimeout(function() {refresh("bad");}, 4000)
       new PNotify({
           title: badPhrase(),
           text:  "Это же " + window.truePainterName + ".<br><br><img src='" + "painters/" + window.truePainter + "-thumbnails/photo.jpg' style='width: 100px;'><br><br><a href='painters/" + window.link + "' class='btn btn-primary'>Узнать больше</a><!-- <btn onclick='retry();' class='btn btn-danger'>Начать заново</a> -->",
