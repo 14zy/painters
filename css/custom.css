@@ -1,20 +1,10 @@
 /* Ruben zone */
 
-#dasMobile {
-  display: none;
-}
-
-
 @media (max-width: 992px) {
   
   #art {
    width: 400px;
   }
-  
-  #dasMobile {
-    display: none;
-  }
-  
   
 }
   
@@ -41,9 +31,6 @@
     margin-bottom: -30px;
   }
   
-  #dasMobile {
-    display: none;
-  }
 }
 
 @media (max-width: 470px) {
@@ -73,15 +60,6 @@
   #btn4 {
     margin-bottom: -30px;
   }
-  
-  #dasDesktop {
-    display: none;
-  }
-
-  #dasMobile {
-    display: inline-block;
-  }
-  
-  
+    
 }
 /* /Ruben zone */
