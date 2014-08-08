@@ -1,0 +1,79 @@
+{
+  "id": 1,
+  "name": {
+    "ru": "",
+    "en": "" },
+  "years": "",
+  "genre": {
+    "ru": "",
+    "en": "" },
+  "nationality": {
+    "ru": "",
+    "en": "" },
+  "bio": {
+    "ru": "",
+    "en": "" },
+  "link": {
+    "local": "",
+    "wikipedia": {
+      "ru": "",
+      "en": "" }
+    },
+  "paintings": [
+    {
+      "id": 1,
+      "name": {
+        "ru": "",
+        "en": "" },
+      "year": "",
+      "genre": {
+        "ru": "",
+        "en": "" },
+      "description": {
+        "ru": "",
+        "en": "" }
+    },
+    
+    {
+      "id": 2,
+      "name": {
+        "ru": "",
+        "en": "" },
+      "year": "",
+      "genre": {
+        "ru": "",
+        "en": "" },
+      "description": {
+        "ru": "",
+        "en": "" }
+    },
+    
+    {
+      "id": 3,
+      "name": {
+        "ru": "",
+        "en": "" },
+      "year": "",
+      "genre": {
+        "ru": "",
+        "en": "" },
+      "description": {
+        "ru": "",
+        "en": "" }
+    },
+    
+    {
+      "id": 4,
+      "name": {
+        "ru": "",
+        "en": "" },
+      "year": "",
+      "genre": {
+        "ru": "",
+        "en": "" },
+      "description": {
+        "ru": "",
+        "en": "" }
+    }
+  ]
+}
