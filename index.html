@@ -130,6 +130,10 @@
       removeUTMs();
       document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
       begood(getCookie("begood"));
+      window.errorDelay = 8000;
+      if (document.getElementById("art").width <= 400) {
+        window.errorDelay = 4000;        
+      };
       getart();
     }
 
@@ -527,7 +531,7 @@
           icon: 'glyphicon glyphicon-remove',
           hide: true,
           animate_speed: "normal",
-          delay: 8000,
+          delay: window.errorDelay,
           remove: true,
           buttons: {
             closer: true,
