@@ -143,6 +143,9 @@
           art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
           window.truePainterName = json.name.ru;
           window.link = json.link.local;
+          window.years = json.years;
+          window.nation = json.nationality.ru;
+          window.genre = json.genre.ru;
           putButtons(json.name.ru);
       });
 
@@ -519,12 +522,12 @@
       setTimeout(function() {refresh("bad");}, 4000)
       new PNotify({
           title: badPhrase(),
-          text:  "Это же " + window.truePainterName + ".<br><br><img src='" + "painters/" + window.truePainter + "-thumbnails/photo.jpg' style='width: 100px;'><br><br><a href='painters/" + window.link + "' class='btn btn-primary'>Узнать больше</a><!-- <btn onclick='retry();' class='btn btn-danger'>Начать заново</a> -->",
+          text:  "Это же " + window.truePainterName + ".<br><br><img src='" + "painters/" + window.truePainter + "-thumbnails/photo.jpg' style='width: 100px;'><br><br><div style='padding: 2px;'>Годы жизни: " + window.years + "<br>Национальность: " + window.nation + "<br>Жанры: " + window.genre + "</div><br><a href='painters/" + window.link + "' class='btn btn-primary'>Узнать больше</a>",
           type: 'error',
           icon: 'glyphicon glyphicon-remove',
           hide: true,
           animate_speed: "normal",
-          delay: 4000,
+          delay: 8000,
           remove: true,
           buttons: {
             closer: true,
