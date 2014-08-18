@@ -3,21 +3,21 @@
   "name": {
     "ru": "Анри Лебаск",
     "en": "Henri Lebasque" },
-  "years": "",
+  "years": "1865-1937",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Импрессионизм",
+    "en": "Impressionism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Француз",
+    "en": "French" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Henri_Lebasque.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "https://ru.wikipedia.org/wiki/Лебаск,_Анри",
+      "en": "https://en.wikipedia.org/wiki/Henri_Lebasque" }
     },
   "paintings": [
         {"id": 1,

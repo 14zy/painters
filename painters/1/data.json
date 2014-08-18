@@ -3,21 +3,21 @@
   "name": {
     "ru": "Амедео Модильяни",
     "en": "Amedeo Modigliani" },
-  "years": "",
+  "years": "1884 - 1920",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Экспрессионизм",
+    "en": "Expressionism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Итальянец",
+    "en": "Italian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Amedeo_Modigliani.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Модильяни,_Амедео",
+      "en": "http://en.wikipedia.org/wiki/Amedeo_Modigliani" }
     },
   "paintings": [
         {"id": 1,
