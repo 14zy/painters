@@ -5,19 +5,19 @@
     "en": "Andrew Wyeth" },
   "years": "",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Реализм",
+    "en": "Realism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Американец",
+    "en": "American" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Andrew_Wyeth.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "https://ru.wikipedia.org/wiki/Уайет,_Эндрю",
+      "en": "https://en.wikipedia.org/wiki/Andrew_Wyeth" }
     },
   "paintings": [
         {"id": 1,

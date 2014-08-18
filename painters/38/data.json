@@ -3,21 +3,21 @@
   "name": {
     "ru": "Карл Брюллов",
     "en": "Karl Bryullov" },
-  "years": "",
+  "years": "1799 - 1852",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Неоклассицизм, Романтизм",
+    "en": "Neoclassicism, Romanticism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский",
+    "en": "Russian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Karl_Bryullov.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Брюллов,_Карл_Павлович",
+      "en": "http://en.wikipedia.org/wiki/Karl_Bryullov" }
     },
   "paintings": [
         {"id": 1,

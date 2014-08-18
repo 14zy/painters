@@ -3,21 +3,21 @@
   "name": {
     "ru": "Орест Кипренский",
     "en": "Orest Kiprensky" },
-  "years": "",
+  "years": "1782 - 1836",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Романтизм",
+    "en": "Romanticism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский",
+    "en": "Russian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Orest_Kiprensky.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Кипренский,_Орест_Адамович",
+      "en": "http://en.wikipedia.org/wiki/Orest_Kiprensky" }
     },
   "paintings": [
         {"id": 1,

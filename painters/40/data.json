@@ -3,21 +3,21 @@
   "name": {
     "ru": "Марк Шагал",
     "en": "Marc Chagall" },
-  "years": "",
+  "years": "1887 - 1985",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Примитивизм",
+    "en": "Primitivism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Француз, Еврей, Белорус",
+    "en": "French, Jewish, Belarusian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Marc_Chagall.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Шагал,_Марк_Захарович",
+      "en": "http://en.wikipedia.org/wiki/Marc_Chagall#France_.281948.E2.80.931985.29" }
     },
   "paintings": [
         {"id": 1,

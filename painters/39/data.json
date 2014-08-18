@@ -3,21 +3,21 @@
   "name": {
     "ru": "Питер Брейгель",
     "en": "Pieter Bruegel" },
-  "years": "",
+  "years": "1525 - 1569",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Северное Возрождение",
+    "en": "Northern Renaissance" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Фламандец",
+    "en": "Flemish" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Pieter_Bruegel_the_Elder.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Брейгель_Старший,_Питер",
+      "en": "http://en.wikipedia.org/wiki/Pieter_Bruegel_the_Elder" }
     },
   "paintings": [
         {"id": 1,

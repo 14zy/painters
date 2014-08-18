@@ -3,21 +3,21 @@
   "name": {
     "ru": "Казимир Малевич",
     "en": "Kazimir Malevich" },
-  "years": "",
+  "years": "1879 - 1935",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Супрематизм",
+    "en": "Suprematism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский",
+    "en": "Russian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Kazimir_Malevich.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Малевич,_Казимир_Северинович",
+      "en": "http://en.wikipedia.org/wiki/Kazimir_Malevich" }
     },
   "paintings": [
         {"id": 1,

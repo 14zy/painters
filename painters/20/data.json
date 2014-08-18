@@ -3,21 +3,21 @@
   "name": {
     "ru": "Виктор Васнецов",
     "en": "Viktor Vasnetsov" },
-  "years": "",
+  "years": "1848 - 1926",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Романтизм, Символизм",
+    "en": "Romanticism, Symbolism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский",
+    "en": "Russian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Viktor_Vasnetsov.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Васнецов,_Виктор_Михайлович",
+      "en": "http://en.wikipedia.org/wiki/Viktor_Vasnetsov" }
     },
   "paintings": [
         {"id": 1,

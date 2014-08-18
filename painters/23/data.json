@@ -3,21 +3,21 @@
   "name": {
     "ru": "Иван Айвазовский",
     "en": "Ivan Aivazovsky" },
-  "years": "",
+  "years": "1817-1900",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Романтизм",
+    "en": "Romanticism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский, Армянин",
+    "en": "Russian, Armenian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Ivan_Aivazovsky.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Айвазовский,_Иван_Константинович",
+      "en": "http://en.wikipedia.org/wiki/Ivan_Aivazovsky" }
     },
   "paintings": [
         {"id": 1,

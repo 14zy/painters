@@ -3,21 +3,21 @@
   "name": {
     "ru": "Иван Шишкин",
     "en": "Ivan Shishkin" },
-  "years": "",
+  "years": "1832 - 1898",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Реализм",
+    "en": "Realism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский",
+    "en": "Russian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Ivan_Shishkin.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Шишкин,_Иван_Иванович",
+      "en": "http://en.wikipedia.org/wiki/Ivan_Shishkin" }
     },
   "paintings": [
         {"id": 1,

@@ -3,21 +3,21 @@
   "name": {
     "ru": "Михаил Врубель",
     "en": "Mikhail Vrubel" },
-  "years": "",
+  "years": "1856 - 1910",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Символизм",
+    "en": "Symbolism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский",
+    "en": "Russian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Mikhail_Vrubel.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Врубель,_Михаил_Александрович",
+      "en": "http://en.wikipedia.org/wiki/Mikhail_Vrubel" }
     },
   "paintings": [
         {"id": 1,

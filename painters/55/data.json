@@ -3,21 +3,21 @@
   "name": {
     "ru": "Тициан",
     "en": "Titian" },
-  "years": "",
+  "years": "1488 - 1576",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Высокое Возрождение, Маньеризм (Позднее Возрождение)",
+    "en": "High Renaissance, Mannerism (Late Renaissance)" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Итальянец",
+    "en": "Italian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Titian.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Тициан",
+      "en": "http://en.wikipedia.org/wiki/Titian" }
     },
   "paintings": [
         {"id": 1,

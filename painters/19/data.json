@@ -3,21 +3,21 @@
   "name": {
     "ru": "Андрей Рублёв",
     "en": "Andrei Rublev" },
-  "years": "",
+  "years": "1360-1430",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Византийское Искусство",
+    "en": "Byzantine Art" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский",
+    "en": "Russian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Andrei_Rublev.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Андрей_Рублёв",
+      "en": "http://en.wikipedia.org/wiki/Andrei_Rublev" }
     },
   "paintings": [
         {"id": 1,

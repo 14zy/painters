@@ -3,21 +3,21 @@
   "name": {
     "ru": "Пабло Пикассо",
     "en": "Pablo Picasso" },
-  "years": "",
+  "years": "1881 - 1973",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Кубизм",
+    "en": "Cubism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Испанец",
+    "en": "Spanish" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Pablo_Picasso.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Пикассо,_Пабло",
+      "en": "http://en.wikipedia.org/wiki/Pablo_Picasso" }
     },
   "paintings": [
         {"id": 1,

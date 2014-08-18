@@ -3,21 +3,21 @@
   "name": {
     "ru": "Густав Климт",
     "en": "Gustav Klimt" },
-  "years": "",
+  "years": "1862 - 1918",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Символизм, Ар Нуво",
+    "en": "Symbolism, Art Nouveau" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Австриец",
+    "en": "Austrian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Gustav_Klimt.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Климт,_Густав",
+      "en": "http://en.wikipedia.org/wiki/Gustav_Klimt" }
     },
   "paintings": [
         {"id": 1,

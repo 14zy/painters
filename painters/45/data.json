@@ -3,21 +3,21 @@
   "name": {
     "ru": "Леонардо да Винчи",
     "en": "Leonardo da Vinci" },
-  "years": "",
+  "years": "1452 - 1519",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Высокое Возрождение",
+    "en": "High Renaissance" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Итальянец",
+    "en": "Italian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Leonardo_da_Vinci.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Леонардо_да_Винчи",
+      "en": "http://en.wikipedia.org/wiki/Leonardo_da_Vinci" }
     },
   "paintings": [
         {"id": 1,

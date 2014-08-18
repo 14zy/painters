@@ -3,21 +3,21 @@
   "name": {
     "ru": "Эгон Шиле",
     "en": "Egon Schiele" },
-  "years": "",
+  "years": "1890 - 1918",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Экспрессионизм",
+    "en": "Expressionism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Австриец",
+    "en": "Austrian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Egon_Schiele.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Шиле,_Эгон",
+      "en": "http://en.wikipedia.org/wiki/Egon_Schiele" }
     },
   "paintings": [
         {"id": 1,

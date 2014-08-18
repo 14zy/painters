@@ -3,21 +3,21 @@
   "name": {
     "ru": "Константин Юон",
     "en": "Konstantin Yuon" },
-  "years": "",
+  "years": "1875–1958",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Импрессионизм",
+    "en": "Impressionism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский",
+    "en": "Russian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Konstantin_Yuon.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "https://ru.wikipedia.org/wiki/Юон,_Константин_Фёдорович",
+      "en": "https://en.wikipedia.org/wiki/Konstantin_Yuon" }
     },
   "paintings": [
         {"id": 1,

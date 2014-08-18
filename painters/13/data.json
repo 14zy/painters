@@ -3,21 +3,21 @@
   "name": {
     "ru": "Кузьма Петров-Водкин",
     "en": "Kuzma Petrov-Vodkin" },
-  "years": "",
+  "years": "1878 - 1939",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Символизм",
+    "en": "Symbolism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский",
+    "en": "Russian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Kuzma_Petrov-Vodkin.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Петров-Водкин,_Кузьма_Сергеевич",
+      "en": "http://en.wikipedia.org/wiki/Kuzma_Petrov-Vodkin" }
     },
   "paintings": [
         {"id": 1,

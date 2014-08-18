@@ -3,21 +3,21 @@
   "name": {
     "ru": "Эль Греко",
     "en": "El Greco" },
-  "years": "",
+  "years": "1541 - 1614",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Маньеризм (Позднее Возрождение)",
+    "en": "Mannerism (Late Renaissance)" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Испанец, Грек",
+    "en": "Spanish, Greek" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "El_Greco.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Эль_Греко",
+      "en": "http://en.wikipedia.org/wiki/El_Greco" }
     },
   "paintings": [
         {"id": 1,

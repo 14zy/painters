@@ -3,21 +3,21 @@
   "name": {
     "ru": "Архип Куинджи",
     "en": "Arkhip Kuinji" },
-  "years": "",
+  "years": "1842 - 1910",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Реализм, Импрессионизм",
+    "en": "Realism, Impressionism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский",
+    "en": "Russian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Arkhip_Kuindzhi.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Куинджи,_Архип_Иванович",
+      "en": "http://en.wikipedia.org/wiki/Arkhip_Kuindzhi" }
     },
   "paintings": [
         {"id": 1,

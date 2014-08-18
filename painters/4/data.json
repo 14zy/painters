@@ -3,21 +3,21 @@
   "name": {
     "ru": "Василий Кандинский",
     "en": "Vasiliy Kandinskiy" },
-  "years": "",
+  "years": "1866 - 1944",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Экспрессионизм, Абстракционизм",
+    "en": "Expressionism, Abstract Art" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский",
+    "en": "Russian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Wassily_Kandinsky.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Кандинский,_Василий_Васильевич",
+      "en": "http://en.wikipedia.org/wiki/Wassily_Kandinsky" }
     },
   "paintings": [
         {"id": 1,

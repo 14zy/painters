@@ -3,21 +3,21 @@
   "name": {
     "ru": "Эдуард Мане",
     "en": "Edouard Manet" },
-  "years": "",
+  "years": "1832 - 1883",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Реализм, Импрессионизм",
+    "en": "Realism, Impressionism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Француз",
+    "en": "French" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Edouard_Manet.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Мане,_Эдуар",
+      "en": "http://en.wikipedia.org/wiki/Édouard_Manet" }
     },
   "paintings": [
         {"id": 1,

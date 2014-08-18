@@ -3,21 +3,21 @@
   "name": {
     "ru": "Феофан Грек",
     "en": "Theophanes the Greek" },
-  "years": "",
+  "years": "1340 - 1405",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Иконопись",
+    "en": "Iconography" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский",
+    "en": "Russian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Theophanes_the_Greek.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "https://ru.wikipedia.org/wiki/Феофан_Грек",
+      "en": "https://en.wikipedia.org/wiki/Theophanes_the_Greek" }
     },
   "paintings": [
         {"id": 1,

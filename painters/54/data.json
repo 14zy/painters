@@ -3,21 +3,21 @@
   "name": {
     "ru": "Рембрандт",
     "en": "Rembrandt" },
-  "years": "",
+  "years": "1606 - 1669",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Барокко",
+    "en": "Baroque" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Голландец",
+    "en": "Dutch" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Rembrandt.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Рембрандт",
+      "en": "http://en.wikipedia.org/wiki/Rembrandt" }
     },
   "paintings": [
         {"id": 1,

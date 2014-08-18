@@ -3,21 +3,21 @@
   "name": {
     "ru": "Альбрехт Дюрер",
     "en": "Albrecht Dürer" },
-  "years": "",
+  "years": "1471 - 1528",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Северное Возрождение",
+    "en": "Northern Renaissance" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Немец",
+    "en": "German" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Albrecht_Durer.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Дюрер,_Альбрехт",
+      "en": "http://en.wikipedia.org/wiki/Albrecht_Dürer" }
     },
   "paintings": [
         {"id": 1,

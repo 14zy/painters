@@ -3,21 +3,21 @@
   "name": {
     "ru": "Борис Кустодиев",
     "en": "Boris Kustodiev" },
-  "years": "",
+  "years": "1878 - 1927",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Реализм, Ар Нуво",
+    "en": "Realism, Art Nouveau" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский",
+    "en": "Russian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Boris_Kustodiev.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Кустодиев,_Борис_Михайлович",
+      "en": "http://en.wikipedia.org/wiki/Boris_Kustodiev" }
     },
   "paintings": [
         {"id": 1,

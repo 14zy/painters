@@ -3,21 +3,21 @@
   "name": {
     "ru": "Джотто ди Бондоне",
     "en": "Giotto di Bondone" },
-  "years": "",
+  "years": "1266 - 1337",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Проторенессанс",
+    "en": "Proto Renaissance" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Итальянец",
+    "en": "Italian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Giotto.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Джотто_ди_Бондоне",
+      "en": "http://en.wikipedia.org/wiki/Giotto_di_Bondone" }
     },
   "paintings": [
         {"id": 1,

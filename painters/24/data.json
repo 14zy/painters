@@ -3,21 +3,21 @@
   "name": {
     "ru": "Иероним Босх",
     "en": "Hieronymus Bosch" },
-  "years": "",
+  "years": "1450 - 1516",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Северное Возрождение",
+    "en": "Northern Renaissance" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Голландец",
+    "en": "Dutch" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Hieronymus_Bosch.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Босх,_Иероним",
+      "en": "http://en.wikipedia.org/wiki/Hieronymus_Bosch" }
     },
   "paintings": [
         {"id": 1,

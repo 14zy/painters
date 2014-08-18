@@ -3,21 +3,21 @@
   "name": {
     "ru": "Франсиско Гойя",
     "en": "Francisco Goya" },
-  "years": "",
+  "years": "1746 - 1828",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Романтизм",
+    "en": "Romanticism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Испанец",
+    "en": "Spanish" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Francisco_Goya.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Гойя,_Франсиско",
+      "en": "http://en.wikipedia.org/wiki/Francisco_Goya" }
     },
   "paintings": [
         {"id": 1,

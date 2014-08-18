@@ -3,21 +3,21 @@
   "name": {
     "ru": "Ян ван Эйк",
     "en": "Jan van Eyck" },
-  "years": "",
+  "years": "1395 - 1441",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Северное Возрождение",
+    "en": "Northern Renaissance" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Фламандец",
+    "en": "Flemish" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Jan_van_Eyck.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Эйк,_Ян_ван",
+      "en": "http://en.wikipedia.org/wiki/Jan_van_Eyck" }
     },
   "paintings": [
         {"id": 1,

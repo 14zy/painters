@@ -3,21 +3,21 @@
   "name": {
     "ru": "Виктор Борисов-Мусатов",
     "en": "Victor Borisov-Musatov" },
-  "years": "",
+  "years": "1870 - 1905",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Символизм",
+    "en": "Symbolism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский",
+    "en": "Russian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Victor_Borisov-Musatov.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Борисов-Мусатов,_Виктор_Эльпидифорович",
+      "en": "http://en.wikipedia.org/wiki/Victor_Borisov-Musatov" }
     },
   "paintings": [
         {"id": 1,

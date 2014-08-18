@@ -3,21 +3,21 @@
   "name": {
     "ru": "Альфред Сислей",
     "en": "Alfred Sisley" },
-  "years": "",
+  "years": "1839 - 1899",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Импрессионизм",
+    "en": "Impressionism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Француз, Британец",
+    "en": "French, British" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Alfred_Sisley.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Сислей,_Альфред",
+      "en": "http://en.wikipedia.org/wiki/Alfred_Sisley" }
     },
   "paintings": [
         {"id": 1,

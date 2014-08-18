@@ -3,21 +3,21 @@
   "name": {
     "ru": "Илья Репин",
     "en": "Ilya Repin" },
-  "years": "",
+  "years": "1844 - 1930",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Реализм",
+    "en": "Realism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский",
+    "en": "Russian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Ilya_Repin.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Репин,_Илья_Ефимович",
+      "en": "http://en.wikipedia.org/wiki/Ilya_Repin" }
     },
   "paintings": [
         {"id": 1,

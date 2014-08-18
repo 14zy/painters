@@ -3,21 +3,21 @@
   "name": {
     "ru": "Николай Рерих",
     "en": "Nicholas Roerich" },
-  "years": "",
+  "years": "1874 - 1947",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Символизм",
+    "en": "Symbolism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский",
+    "en": "Russian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Nicholas_Roerich.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Рерих,_Николай_Константинович",
+      "en": "http://en.wikipedia.org/wiki/Nicholas_Roerich" }
     },
   "paintings": [
         {"id": 1,

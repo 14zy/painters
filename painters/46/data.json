@@ -3,21 +3,21 @@
   "name": {
     "ru": "Диего Веласкес",
     "en": "Diego Velazquez" },
-  "years": "",
+  "years": "1599 - 1660",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Барокко",
+    "en": "Baroque" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Испанец",
+    "en": "Spanish" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Diego_Velazquez.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Веласкес,_Диего",
+      "en": "http://en.wikipedia.org/wiki/Diego_Velázquez" }
     },
   "paintings": [
         {"id": 1,

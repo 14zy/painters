@@ -3,21 +3,21 @@
   "name": {
     "ru": "Исаак Левитан",
     "en": "Isaac Levitan" },
-  "years": "",
+  "years": "1860 - 1900",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Реализм",
+    "en": "Realism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский, Еврей",
+    "en": "Russian, Jewish" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Isaac_Levitan.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Левитан,_Исаак_Ильич",
+      "en": "http://en.wikipedia.org/wiki/Isaac_Levitan" }
     },
   "paintings": [
         {"id": 1,

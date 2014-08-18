@@ -3,21 +3,21 @@
   "name": {
     "ru": "Василий Суриков",
     "en": "Vasily Surikov" },
-  "years": "",
+  "years": "1848 - 1916",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Реализм",
+    "en": "Realism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский",
+    "en": "Russian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Vasily_Surikov.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Суриков,_Василий_Иванович",
+      "en": "http://en.wikipedia.org/wiki/Vasily_Surikov" }
     },
   "paintings": [
         {"id": 1,

@@ -3,21 +3,21 @@
   "name": {
     "ru": "Зинаида Серебрякова",
     "en": "Zinaida Serebriakova" },
-  "years": "",
+  "years": "1884 - 1967",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Символизм, Экспрессионизм, Ар-деко",
+    "en": "Symbolism, Expressionism, Art Deco" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский",
+    "en": "Russian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Zinaida_Serebriakova.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Серебрякова,_Зинаида_Евгеньевна",
+      "en": "http://en.wikipedia.org/wiki/Zinaida_Serebriakova" }
     },
   "paintings": [
         {"id": 1,

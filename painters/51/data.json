@@ -3,21 +3,21 @@
   "name": {
     "ru": "Джон Уотерхаус",
     "en": "John Waterhouse" },
-  "years": "",
+  "years": "1849 - 1917",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Романтизм",
+    "en": "Romanticism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Британец",
+    "en": "British" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "John_William_Waterhouse.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Уотерхаус,_Джон_Уильям",
+      "en": "http://en.wikipedia.org/wiki/John_William_Waterhouse" }
     },
   "paintings": [
         {"id": 1,

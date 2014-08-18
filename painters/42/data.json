@@ -3,21 +3,21 @@
   "name": {
     "ru": "Сандро Боттичелли",
     "en": "Sandro Botticelli" },
-  "years": "",
+  "years": "1445 - 1510",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Раннее Возрождение",
+    "en": "Early Renaissance" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Итальянец",
+    "en": "Italian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Sandro_Botticelli.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Сандро_Боттичелли",
+      "en": "http://en.wikipedia.org/wiki/Sandro_Botticelli" }
     },
   "paintings": [
         {"id": 1,

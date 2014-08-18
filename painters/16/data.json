@@ -3,21 +3,21 @@
   "name": {
     "ru": "Сергей Виноградов",
     "en": "Sergei Vinogradov" },
-  "years": "",
+  "years": "1869-1963",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Импрессионизм",
+    "en": "Impressionism" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Русский",
+    "en": "Russian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Sergei_Vinogradov.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "https://ru.wikipedia.org/wiki/Виноградов,_Сергей_Арсеньевич",
+      "en": "https://de.wikipedia.org/wiki/Sergei_Arsenjewitsch_Winogradow" }
     },
   "paintings": [
         {"id": 1,

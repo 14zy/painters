@@ -3,21 +3,21 @@
   "name": {
     "ru": "Караваджо",
     "en": "Caravaggio" },
-  "years": "",
+  "years": "1571 - 1610",
   "genre": {
-    "ru": "",
-    "en": "" },
+    "ru": "Барокко",
+    "en": "Baroque" },
   "nationality": {
-    "ru": "",
-    "en": "" },
+    "ru": "Итальянец",
+    "en": "Italian" },
   "bio": {
     "ru": "",
     "en": "" },
   "link": {
     "local": "Caravaggio.html",
     "wikipedia": {
-      "ru": "",
-      "en": "" }
+      "ru": "http://ru.wikipedia.org/wiki/Караваджо",
+      "en": "http://en.wikipedia.org/wiki/Caravaggio" }
     },
   "paintings": [
         {"id": 1,
