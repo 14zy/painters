@@ -84,7 +84,7 @@
            data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter" data-yashareImage="http://artchallenge.ru/art-challenge-logo.png" data-yashareLink="http://artchallenge.ru/"></div> 
         
           <h3>Настройки:</h3>
-          Язык: <strong><img style="margin-top: -6px; padding-right: 2px;" width="24" src="pics/RU.png" alt="Флаг России">Русский</strong> / <a href="http://artchallenge.me" title="ArtChallenge English version"><img style="margin-top: -6px; padding-right: 2px;" width="24" src="pics/GB.png" alt="English flag">English</a> <!--<span style="color: gray">/ Deutsch / Italiana / Français / Español / 日本語 / 漢語 </span>--><br>
+          Язык: <strong><img style="margin-top: -6px; padding-right: 2px;" width="24" src="pics/RU.png" alt="Флаг России">Русский</strong> / <a href="http://artchallenge.me" title="ArtChallenge English version"><img style="margin-top: -6px; padding-right: 2px;" width="24" src="pics/GB.png" alt="English">English</a> <!--<span style="color: gray">/ Deutsch / Italiana / Français / Español / 日本語 / 漢語 </span>--><br>
           Ругательства: <span id="btnOn" style="font-weight:bold;" onclick="begood(0);">Вкл.</span> / <span id="btnOff" style="cursor:pointer; color:#428BCA;" onclick="begood(1);">Выкл.</span>
            
           <h3 id="vk_groups_title">Подписывайтесь в социальных сетях:</h3>
@@ -526,7 +526,7 @@
       setTimeout(function() {refresh("bad");}, 4000)
       new PNotify({
           title: badPhrase(),
-          text:  "Это же " + window.truePainterName + ".<br><br><img src='" + "painters/" + window.truePainter + "-thumbnails/photo.jpg' style='width: 100px;'><br><br><div style='padding: 2px;'>Годы жизни: " + window.years + "<br>Национальность: " + window.nation + "<br>Жанры: " + window.genre + "</div><br><a href='painters/" + window.link + "' class='btn btn-primary'>Узнать больше</a>",
+          text:  "Это же " + window.truePainterName + ".<br><br><img src='" + "painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><div style='padding: 2px;'>Годы жизни: " + window.years + "<br>Национальность: " + window.nation + "<br>Жанры: " + window.genre + "</div><br><a href='painters/" + window.link + "' class='btn btn-primary'>Узнать больше</a>",
           type: 'error',
           icon: 'glyphicon glyphicon-remove',
           hide: true,
