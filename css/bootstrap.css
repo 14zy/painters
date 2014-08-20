@@ -479,7 +479,8 @@ p {
 /* Ruben zone */
 
 #corner {
- font-size: 14pt
+ font-size: 14pt;
+ text-align: justify;
 }
 
 @media (max-width: 992px) {
