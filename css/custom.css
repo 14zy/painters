@@ -1,5 +1,29 @@
 /* Ruben zone */
 
+.lang-area {
+  color: gray;
+}
+
+.lang {
+  color: #428bca;
+  cursor: pointer;
+}
+
+.lang:hover {
+  text-decoration: underline;
+}
+
+.lang img, .lang-active img {
+  margin-top: -6px; 
+  padding-right: 2px;
+  width: 24px; 
+}
+
+.lang-active {
+  color: black;
+  font-weight: bold;
+}
+
 @media (max-width: 992px) {
   
   #art {
