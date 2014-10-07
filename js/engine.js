@@ -10,6 +10,7 @@ function getCookie(cname) {
 };
 
 function setLang(lang) {
+  if (lang == "ru") {lang="ru-ru"};
   if (window.lang != null) {
     document.getElementById(window.lang).className="lang";
   }
@@ -29,7 +30,7 @@ function setLang(lang) {
 function load() {
   var lang = window.navigator.userLanguage || window.navigator.language;
   lang = lang.toLowerCase();
-  alert(lang);
+  console.log(lang);
   setLang(lang);
   removeUTMs();
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
