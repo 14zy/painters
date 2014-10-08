@@ -14,8 +14,12 @@ function setLang(lang) {
   if (lang == "ru") {lang="ru-ru"};
   if (window.lang != null) {
     document.getElementById(window.lang).className="lang";
+
+    document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";    
+    refresh("bad");
   }
   window.lang = lang;
+  window.langShort = lang.substring(0, 2);
   i18n.init({ lng: lang });
   i18n.init(function(t) {
       // translate nav
@@ -26,6 +30,7 @@ function setLang(lang) {
       //window.message = t("app.message");
   });
   document.getElementById(lang).className="lang-active";
+
 };
 
 function load() {
@@ -52,14 +57,17 @@ function getart() {
   $.getJSON("painters/" + window.truePainter + "/data.json", function(json) {
       window.image = Math.floor((Math.random()*json.paintings.length)+1);
       art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-      window.truePainterName = json.name.ru;
+      window.truePainterName = json.name[window.langShort];
       window.link = json.link.local;
       window.years = json.years;
-      window.nation = json.nationality.ru;
-      window.genre = json.genre.ru;
-      putButtons(json.name.ru);
-  });
+      window.nation = json.nationality[window.langShort];
+      window.genre = json.genre[window.langShort];
 
+      // alert(window.lang);
+      // alert(i18n.t("painters.56", { lng: window.lang }));
+
+      putButtons(json.name[window.langShort]);
+  });
   puticons();
 };
 
@@ -94,227 +102,227 @@ function putButtons(painter) {
     switch (Math.floor((Math.random()*56)+1))
     {
     case 1:
-      painterName = "Амедео Модильяни";
+      painterName = i18n.t("painters.1", { lng: window.lang });
       break;
     
     case 2:
-      painterName = "Анри Лебаск";
+      painterName = i18n.t("painters.2", { lng: window.lang }); 
       break;
     
     case 3:
-      painterName = "Архип Куинджи";
+      painterName = i18n.t("painters.3", { lng: window.lang }); 
       break;
     
     case 4:
-      painterName = "Василий Кандинский";
+      painterName = i18n.t("painters.4", { lng: window.lang }); 
       break;
     
     case 5:
-      painterName = "Василий Суриков";
+      painterName = i18n.t("painters.5", { lng: window.lang }); 
       break;
     
     case 6:
-      painterName = "Виктор Борисов-Мусатов";
+      painterName = i18n.t("painters.6", { lng: window.lang }); 
       break;
     
     case 7:
-      painterName = "Диего Ривера";
+      painterName = i18n.t("painters.7", { lng: window.lang }); 
       break;
     
     case 8:
-      painterName = "Иван Шишкин";
+      painterName = i18n.t("painters.8", { lng: window.lang }); 
       break;
     
     case 9:
-      painterName = "Клод Моне";
+      painterName = i18n.t("painters.9", { lng: window.lang }); 
       break;
     
     case 10:
-      painterName = "Константин Юон";
+      painterName = i18n.t("painters.10", { lng: window.lang }); 
       break;
 
     case 11:
-      painterName = "Николай Рерих"
+      painterName = i18n.t("painters.11", { lng: window.lang }); 
       break;
 
     case 12:
-      painterName = "Орест Кипренский";
+      painterName = i18n.t("painters.12", { lng: window.lang }); 
       break;
     
     case 13:
-      painterName = "Кузьма Петров-Водкин";
+      painterName = i18n.t("painters.13", { lng: window.lang }); 
       break;
 
     case 14:
-      painterName = "Рене Магритт";
+      painterName = i18n.t("painters.14", { lng: window.lang }); 
       break;
 
     case 15:
-      painterName = "Сальвадор Дали";
+      painterName = i18n.t("painters.15", { lng: window.lang }); 
       break;
 
     case 16:
-      painterName = "Сергей Виноградов";
+      painterName = i18n.t("painters.16", { lng: window.lang }); 
       break;
 
     case 17:
-      painterName = "Эдуард Мане";
+      painterName = i18n.t("painters.17", { lng: window.lang }); 
       break;
 
     case 18:
-      painterName = "Эндрю Уайет";
+      painterName = i18n.t("painters.18", { lng: window.lang }); 
       break;
 
     case 19:
-      painterName = "Андрей Рублёв";
+      painterName = i18n.t("painters.19", { lng: window.lang }); 
       break;
 
     case 20:
-      painterName = "Виктор Васнецов";
+      painterName = i18n.t("painters.20", { lng: window.lang }); 
       break;
     
     case 21:
-      painterName = "Винсент Ван Гог";
+      painterName = i18n.t("painters.21", { lng: window.lang }); 
       break;
     
     case 22:
-      painterName = "Густав Климт";
+      painterName = i18n.t("painters.22", { lng: window.lang }); 
       break;
     
     case 23:
-      painterName = "Иван Айвазовский";
+      painterName = i18n.t("painters.23", { lng: window.lang }); 
       break;
     
     case 24:
-      painterName = "Иероним Босх";
+      painterName = i18n.t("painters.24", { lng: window.lang }); 
       break;
     
     case 25:        
-      painterName = "Илья Репин";
+      painterName = i18n.t("painters.25", { lng: window.lang }); 
       break;
 
     case 26:        
-      painterName = "Казимир Малевич";
+      painterName = i18n.t("painters.26", { lng: window.lang }); 
       break;
 
     case 27:        
-      painterName = "Михаил Врубель";
+      painterName = i18n.t("painters.27", { lng: window.lang }); 
       break;
 
     case 28:        
-      painterName = "Пабло Пикассо";
+      painterName = i18n.t("painters.28", { lng: window.lang }); 
       break;
 
     case 29:        
-      painterName = "Питер Рубенс";
+      painterName = i18n.t("painters.29", { lng: window.lang }); 
       break;
 
     case 30:        
-      painterName = "Пьер Огюст Ренуар";
+      painterName = i18n.t("painters.30", { lng: window.lang }); 
       break;
 
     case 31:        
-      painterName = "Феофан Грек";
+      painterName = i18n.t("painters.31", { lng: window.lang }); 
       break;
 
     case 32:        
-      painterName = "Франсиско Гойя";
+      painterName = i18n.t("painters.32", { lng: window.lang }); 
       break;
 
     case 33:        
-      painterName = "Фрида Кало";
+      painterName = i18n.t("painters.33", { lng: window.lang }); 
       break;
 
     case 34:        
-      painterName = "Эль Греко";
+      painterName = i18n.t("painters.34", { lng: window.lang }); 
       break;
     
     case 35:        
-      painterName = "Альбрехт Дюрер";
+      painterName = i18n.t("painters.35", { lng: window.lang }); 
       break;
     
     case 36:        
-      painterName = "Альфред Сислей";
+      painterName = i18n.t("painters.36", { lng: window.lang }); 
       break;
 
     case 37:        
-      painterName = "Борис Кустодиев";
+      painterName = i18n.t("painters.37", { lng: window.lang }); 
       break;
 
     case 38:        
-      painterName = "Карл Брюллов";
+      painterName = i18n.t("painters.38", { lng: window.lang }); 
       break;
 
     case 39:        
-      painterName = "Питер Брейгель";
+      painterName = i18n.t("painters.39", { lng: window.lang }); 
       break;
 
     case 40:        
-      painterName = "Марк Шагал";
+      painterName = i18n.t("painters.40", { lng: window.lang }); 
       break;
     
     case 41:        
-      painterName = "Джотто ди Бондоне";
+      painterName = i18n.t("painters.41", { lng: window.lang }); 
       break;
 
     case 42:        
-      painterName = "Сандро Боттичелли";
+      painterName = i18n.t("painters.42", { lng: window.lang }); 
       break;
 
     case 43:        
-      painterName = "Караваджо";
+      painterName = i18n.t("painters.43", { lng: window.lang }); 
       break;
 
     case 44:        
-      painterName = "Зинаида Серебрякова";
+      painterName = i18n.t("painters.44", { lng: window.lang }); 
       break;
 
     case 45:        
-      painterName = "Леонардо да Винчи";
+      painterName = i18n.t("painters.45", { lng: window.lang }); 
       break;
 
     case 46:        
-      painterName = "Диего Веласкес";
+      painterName = i18n.t("painters.46", { lng: window.lang }); 
       break;
     
     case 47:        
-      painterName = "Василий Верещагин";
+      painterName = i18n.t("painters.47", { lng: window.lang }); 
       break;
 
     case 48:        
-      painterName = "Исаак Левитан";
+      painterName = i18n.t("painters.48", { lng: window.lang }); 
       break;
 
     case 49:        
-      painterName = "Анри Матисс";
+      painterName = i18n.t("painters.49", { lng: window.lang }); 
       break;
 
     case 50:        
-      painterName = "Ян ван Эйк";
+      painterName = i18n.t("painters.50", { lng: window.lang }); 
       break;
 
     case 51:        
-      painterName = "Джон Уотерхаус";
+      painterName = i18n.t("painters.51", { lng: window.lang }); 
       break;
 
     case 52:        
-      painterName = "Эгон Шиле";
+      painterName = i18n.t("painters.52", { lng: window.lang }); 
       break;
 
     case 53:        
-      painterName = "Эдгар Дега";
+      painterName = i18n.t("painters.53", { lng: window.lang }); 
       break;
 
     case 54:        
-      painterName = "Рембрандт";
+      painterName = i18n.t("painters.54", { lng: window.lang }); 
       break;
 
     case 55:        
-      painterName = "Тициан";
+      painterName = i18n.t("painters.55", { lng: window.lang }); 
       break;
 
     case 56:        
-      painterName = "Альфонс Муха";
+      painterName = i18n.t("painters.56", { lng: window.lang }); 
       break;
     };
     return painterName;
