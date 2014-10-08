@@ -22,7 +22,7 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <div id="top-share" style="margin-top: 4px;" class="yashare-auto-init" data-yashareL10n="ru"
+          <div id="top-share" class="yashare-auto-init" data-yashareL10n="ru"
            data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter" data-yashareLink="http://artchallenge.ru/"></div>
         </ul>
 
@@ -33,19 +33,18 @@
       <div style="text-align: center">
         <div id="corner" class="panel panel-default">
           <br>
-          <span style="visibility: hidden" id="counter">1</span>
-          <span id="icon1" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
-          <span id="icon2" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
-          <span id="icon3" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
-          <span id="icon4" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
-          <span id="icon5" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
-          <span id="icon6" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
-          <span id="icon7" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
-          <span id="icon8" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
-          <span id="icon9" style="color: lightgray; font-size: 20px;" class="glyphicon glyphicon-ok-sign"></span>
-          <span id="icon10" style="color: lightgray; font-size: 24px;" class="glyphicon glyphicon-gift"></span>
+          <span id="icon1" class="glyphicon glyphicon-ok-sign top-icons"></span>
+          <span id="icon2" class="glyphicon glyphicon-ok-sign top-icons"></span>
+          <span id="icon3" class="glyphicon glyphicon-ok-sign top-icons"></span>
+          <span id="icon4" class="glyphicon glyphicon-ok-sign top-icons"></span>
+          <span id="icon5" class="glyphicon glyphicon-ok-sign top-icons"></span>
+          <span id="icon6" class="glyphicon glyphicon-ok-sign top-icons"></span>
+          <span id="icon7" class="glyphicon glyphicon-ok-sign top-icons"></span>
+          <span id="icon8" class="glyphicon glyphicon-ok-sign top-icons"></span>
+          <span id="icon9" class="glyphicon glyphicon-ok-sign top-icons"></span>
+          <span id="icon10" class="glyphicon glyphicon-ok-gift top-icons"></span>
           <br><br>
-          <img id="art" src="loading1.gif" style="max-height: 600px; max-width: 900px;" title="Угадайте автора картины" alt="Угадайте автора картины">
+          <img id="art" src="loading1.gif">
 
           <br><br>
           <a id ="btn1" onclick="checkAnswer('btn1');" class="btn btn-lg btn-success" role="button"></a>
@@ -92,21 +91,20 @@
             <span class="lang" id="es-es" onclick="setLang('es-es');" title="ArtChallenge Español version"><img src="pics/flags/ES.png" alt="Español">Español</span> / 
             <span class="lang" id="it-it" onclick="setLang('it-it');" title="ArtChallenge Italiana version"><img src="pics/flags/IT.png" alt="Italiana">Italiana</span>
           </span>
-            <br>
-          Ругательства: <span id="btnOn" style="font-weight:bold;" onclick="begood(0);">Вкл.</span> / <span id="btnOff" style="cursor:pointer; color:#428BCA;" onclick="begood(1);">Выкл.</span>
-           
+          <br>
+          Ругательства: <span id="btnOn" onclick="begood(0);">Вкл.</span> / <span id="btnOff" onclick="begood(1);">Выкл.</span>
+          
           <h3 id="vk_groups_title">Подписывайтесь в социальных сетях:</h3>
-          <div id="vk_groups" style="float: left; margin: 10px 0 0 0;"></div>
-
+          <div id="vk_groups"></div>
           <div id="fb_show">
-          <div id="fb_page" class="fb-like-box" style="margin-top: 10px; padding: 0 0 0 10px;" data-href="https://www.facebook.com/artchallenge.ru" data-width="300" data-height="250" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div></div>
+            <div id="fb_page" class="fb-like-box" data-href="https://www.facebook.com/artchallenge.ru" data-width="300" data-height="250" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+          </div>
 
         </div>
-      </div>        
+      </div>
 
       <br>
       <div class="footer">
-        
         <p>&copy; Сайт создан <a href="https://vk.com/just14zy" title="Рубен Бабаев" onclick="yaCounter24594722.reachGoal('RUBEN-CLICK'); return true;"><img style="margin-bottom: 7px;" height="20" width="20" src="pics/ruben.jpg" alt="Рубен Бабаев">Рубеном</a> и <a href="https://vk.com/id9755975" title="Анна Плоткина" onclick="yaCounter24594722.reachGoal('ANNA-CLICK'); return true;"><img style="margin: 0 3px 4px 0;" height="18" width="18" src="pics/anna.jpg" alt="Анна Плоткина">Анной</a> в 2014 году.<br>
         Другие наши проекты: <a target="_blank" href="http://gamechallenge.ru/?utm_source=artchallenge" title="Угадай игру по скриншоту">Game Challenge</a> | <a target="_blank" href="http://forgiveme.today/?utm_source=artchallenge" title="Анонимно попросить прощения">Forgiveme.today</a> | <a target="_blank" href="http://rostov-english.ru/?utm_source=artchallenge" title="Английский язык в Ростове-на-Дону">Rostov English</a>
       </div>
@@ -115,7 +113,6 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-
     
     <script defer src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
     <script defer src="js/i18next-1.7.4.min.js" type="text/javascript"></script>
