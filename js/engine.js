@@ -11,7 +11,6 @@ function getCookie(cname) {
 };
 
 function setLang(lang) {
-  if (lang == "ru") {lang="ru-ru"};
   if (window.lang != null) {
     document.getElementById(window.lang).className="lang";
 
@@ -19,12 +18,12 @@ function setLang(lang) {
     refresh("bad");
   }
   window.lang = lang;
-  window.langShort = lang.substring(0, 2);
   i18n.init({ lng: lang });
   i18n.init(function(t) {
       // translate nav
       $(".desc").i18n({lng: lang});
-
+      $(".head-lang").i18n({lng: lang});
+      $(".footer").i18n({lng: lang});
       // programatical access
       //var appName = t("app.name");
       //window.message = t("app.message");
@@ -36,6 +35,7 @@ function setLang(lang) {
 function load() {
   var lang = window.navigator.userLanguage || window.navigator.language;
   lang = lang.toLowerCase();
+  lang = lang.substring(0, 2);
   console.log(lang);
   setLang(lang);
   removeUTMs();
@@ -57,16 +57,16 @@ function getart() {
   $.getJSON("painters/" + window.truePainter + "/data.json", function(json) {
       window.image = Math.floor((Math.random()*json.paintings.length)+1);
       art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-      window.truePainterName = json.name[window.langShort];
+      window.truePainterName = json.name[window.lang];
       window.link = json.link.local;
       window.years = json.years;
-      window.nation = json.nationality[window.langShort];
-      window.genre = json.genre[window.langShort];
+      window.nation = json.nationality[window.lang];
+      window.genre = json.genre[window.lang];
 
       // alert(window.lang);
       // alert(i18n.t("painters.56", { lng: window.lang }));
 
-      putButtons(json.name[window.langShort]);
+      putButtons(json.name[window.lang]);
   });
   puticons();
 };

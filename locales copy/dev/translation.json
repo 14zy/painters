@@ -1,0 +1,11 @@
+{
+  "app": {
+    "name": "i18next",
+    "message": "сучка"
+  },
+  "nav": {
+    "home": "Home",
+    "page1": "Page One",
+    "page2": "Page Two"
+  }
+}
