@@ -36,7 +36,7 @@ function load() {
   var lang = window.navigator.userLanguage || window.navigator.language;
   lang = lang.toLowerCase();
   lang = lang.substring(0, 2);
-  console.log(lang);
+  //console.log(lang);
   setLang(lang);
   removeUTMs();
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
@@ -62,10 +62,6 @@ function getart() {
       window.years = json.years;
       window.nation = json.nationality[window.lang];
       window.genre = json.genre[window.lang];
-
-      // alert(window.lang);
-      // alert(i18n.t("painters.56", { lng: window.lang }));
-
       putButtons(json.name[window.lang]);
   });
   puticons();
@@ -388,8 +384,8 @@ if (answer == window.truePainterName) {
   setTimeout(function() {refresh("good");}, 1000)
   
   new PNotify({
-      title: 'Верно!',
-      text: 'Вы отгадали ' + parseInt(window.counter) + " картину",
+      title: i18n.t("message.right", { lng: window.lang }),
+      text: i18n.t("message.right-desc", { lng: window.lang, myVar: parseInt(window.counter) }),
       type: 'success',
       hide: true,
       animate_speed: "normal",
@@ -415,7 +411,7 @@ else {
   setTimeout(function() {refresh("bad");}, 4000)
   new PNotify({
       title: badPhrase(),
-      text:  "Это же " + window.truePainterName + ".<br><br><img src='" + "painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><div style='padding: 2px;'>Годы жизни: " + window.years + "<br>Национальность: " + window.nation + "<br>Жанры: " + window.genre + "</div><br><a href='painters/" + window.link + "' class='btn btn-primary'>Узнать больше</a>",
+      text:  i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + ".<br><br><img src='" + "painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><div style='padding: 2px;'>" + i18n.t("message.years", { lng: window.lang }) + ": " + window.years + "<br>" + i18n.t("message.nationality", { lng: window.lang }) + ": " + window.nation + "<br>" + i18n.t("message.years", { lng: window.lang }) + ": " + window.genre + "</div><br><a href='painters/" + window.link + "' class='btn btn-primary'>" + i18n.t("message.learn-more", { lng: window.lang }) + "</a>",
       type: 'error',
       icon: 'glyphicon glyphicon-remove',
       hide: true,
@@ -456,57 +452,57 @@ function setCookie(cname,cvalue,exdays) {
 
 function badPhrase() {
   if (window.goodboy == 1) {
-    phrase = "Неверно!"
+    phrase = i18n.t("message.wrong", { lng: window.lang });
   }
   else {
     switch (Math.floor((Math.random()*12)+1))
     {
     case 1:
-      phrase = "Да Вы обезумели!";
+      phrase = i18n.t("badPhrases.1", { lng: window.lang });
       break;
     
     case 2:
-      phrase = "Ну как не стыдно?";
+      phrase = i18n.t("badPhrases.2", { lng: window.lang });
       break;
 
     case 3:
-      phrase = "Вам нездоровится?";
+      phrase = i18n.t("badPhrases.3", { lng: window.lang });
       break;
     
     case 4:
-      phrase = "Что за нелепость?";
+      phrase = i18n.t("badPhrases.4", { lng: window.lang });
       break;
     
     case 5:
-      phrase = "Займитесь самообразованием!";
+      phrase = i18n.t("badPhrases.5", { lng: window.lang });
       break;
 
     case 6:
-      phrase = "Как Вы могли?..";
+      phrase = i18n.t("badPhrases.6", { lng: window.lang });
       break;
 
     case 7:
-      phrase = "Нет, нет и нет!";
+      phrase = i18n.t("badPhrases.7", { lng: window.lang });
       break;
 
     case 8:
-      phrase = "Одумайтесь!";
+      phrase = i18n.t("badPhrases.8", { lng: window.lang });
       break;
 
     case 9:
-      phrase = "А если подумать?";
+      phrase = i18n.t("badPhrases.9", { lng: window.lang });
       break;
 
     case 10:
-      phrase = "Какого чёрта?!";
+      phrase = i18n.t("badPhrases.10", { lng: window.lang });
       break;
 
     case 11:
-      phrase = "Бескультурье!";
+      phrase = i18n.t("badPhrases.11", { lng: window.lang });
       break;
 
     case 12:
-      phrase = "Коллега!";
+      phrase = i18n.t("badPhrases.12", { lng: window.lang });
       break;
     };
   };
@@ -515,8 +511,8 @@ function badPhrase() {
 
 function winner() {
   new PNotify({
-      title: 'Поздравляем!',
-      text: 'Вы великолепно разбираетесь в искусcтве!<br>10 из 10 – это лучше, чем 82% людей, сыгравших в эту игру!' + "<br><br><a onclick='ShareVK();' href='#'><img style='margin-left: 25px;' width='230px'  src='winner-badge.png'></a><br><br><text style='font-size: 16px;'>Вы можете рассказать о победе в социальных сетях:<br><a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> ВКонтакте </a><br><a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareOD();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Одноклассники </a><br><a onclick='ShareMM();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Мой Мир </a></text>",
+      title: i18n.t("message.winner", { lng: window.lang }),
+      text: i18n.t("message.winner-desc", { lng: window.lang }) + "<br><br><a onclick='ShareVK();' href='#'><img style='margin-left: 25px;' width='230px' src='"+ i18n.t("message.winner-badge", { lng: window.lang }) +"'></a><br><br><text style='font-size: 16px;'>" + i18n.t("message.share", { lng: window.lang }) + "<br><a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> ВКонтакте </a><br><a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareOD();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Одноклассники </a><br><a onclick='ShareMM();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Мой Мир </a></text>",
       type: 'note',
       hide: false,
       animate_speed: "normal",

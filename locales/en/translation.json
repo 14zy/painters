@@ -1,13 +1,42 @@
 {
   "head": {
-    "title": "Art Challenge - Game on Knowledge of Popular Painters",
-    "message": "сучка"
+    "title": "Art Challenge - Game on Knowledge of Popular Painters"
+  },
+  "message": {
+    "right": "Right!",
+    "right-desc": "You guessed picture __myVar__",
+    "wrong": "Wrong!",
+    "wrong-desc": "It's",
+    "years": "Years",
+    "nationality": "Nationality",
+    "genre": "Genre",
+    "learn-more": "Learn more",
+    "winner": "Congratulations!",
+    "winner-desc": "You are really good at knowledge of the Art!<br>10/10 – it is better than 82% of people who plays this game!",
+    "winner-badge": "pics/badges/winner-badge-en.png",
+    "share": "You can share your win with friends:"
+  },
+  "badPhrases": {
+    "1": "You are mad!",
+    "2": "Hell of a day, huh?",
+    "3": "You should be ashamed of yourself.",
+    "4": "Are you ill?!",
+    "5": "This is ridiculous!",
+    "6": "What`s the nonsense?!",
+    "7": "Engage yourself!",
+    "8": "No, no and no!",
+    "9": "Think better!",
+    "10": "Sorry, it`s wrong.",
+    "11": "What`s the hell?",
+    "12": "God blind me!.."
   },
   "footer": {
     "created": "Site created by",
     "ruben": "Ruben",
     "and": "and",
-    "anna": "Anna"
+    "anna": "Anna",
+    "year": "in 2014",
+    "other-projects": "Our other projects"
   },
   "painters": {
     "1": "Amedeo Modigliani",
