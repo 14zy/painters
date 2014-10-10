@@ -23,6 +23,7 @@ function setLang(lang) {
   i18n.init(function(t) {
       $(".desc").i18n({lng: lang});
       $(".head-lang").i18n({lng: lang});
+      $(".yashare-auto-init").i18n({lng: lang});
       $(".footer").i18n({lng: lang});
   });
   document.getElementById("langMain").src="pics/flags/" + lang.toUpperCase() + ".png";
