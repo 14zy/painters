@@ -1,16 +1,15 @@
 /* Ruben zone */
 
+#langMainDiv {
+  margin: -40px 0 0 190px;
+}
+
 .lang-area {
   color: gray;
 }
 
 .lang {
-  color: #428bca;
   cursor: pointer;
-}
-
-.lang:hover {
-  text-decoration: underline;
 }
 
 .lang img, .lang-active img {
@@ -20,8 +19,8 @@
 }
 
 .lang-active {
-  color: black;
-  font-weight: bold;
+  font-weight: bold!important;
+  color: black!important;
 }
 
 .top-icons {
@@ -46,14 +45,14 @@
   cursor:pointer; color:#428BCA;
 }
 
-#vk_groups{
+/*#vk_groups{
   float: left; margin: 10px 0 0 0;
 }
 
 #fb_page {
   margin-top: 10px; padding: 0 0 0 10px;
 }
-
+*/
 @media (max-width: 992px) {
   
   #art {
@@ -75,6 +74,10 @@
     display: none;
   }
   
+  #langMainDiv {
+    text-align: right;
+  }
+  
   #btn1,#btn2,#btn3,#btn4 {  
     display: block;
     margin: 5px 40px 0 40px;
@@ -93,13 +96,13 @@
    width: 288px;
   }
   
-  #vk_groups, #vk_groups_title, #fb_show {
+/*  #vk_groups, #vk_groups_title, #fb_show {
     display: none;
   }
-
-  #fb_page {
+*/
+  /*#fb_page {
     display: none;
-  }
+  }*/
       
   #top-share {
     display: none;

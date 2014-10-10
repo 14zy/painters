@@ -13,29 +13,30 @@ function getCookie(cname) {
 function setLang(lang) {
   if (window.lang != null) {
     document.getElementById(window.lang).className="lang";
-
-    document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";    
+    setCookie('lang',lang,360);
+    document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
     refresh("bad");
-  }
+  };
+
   window.lang = lang;
   i18n.init({ lng: lang });
   i18n.init(function(t) {
-      // translate nav
       $(".desc").i18n({lng: lang});
       $(".head-lang").i18n({lng: lang});
       $(".footer").i18n({lng: lang});
-      // programatical access
-      //var appName = t("app.name");
-      //window.message = t("app.message");
   });
+  document.getElementById("langMain").src="pics/flags/" + lang.toUpperCase() + ".png";
   document.getElementById(lang).className="lang-active";
 
 };
 
 function load() {
   var lang = window.navigator.userLanguage || window.navigator.language;
-  lang = lang.toLowerCase();
-  lang = lang.substring(0, 2);
+  lang = lang.substring(0, 2).toLowerCase();
+  langCookie = getCookie("lang");
+  if (langCookie != "") {
+    lang = langCookie;
+  }
   //console.log(lang);
   setLang(lang);
   removeUTMs();
@@ -512,7 +513,7 @@ function badPhrase() {
 function winner() {
   new PNotify({
       title: i18n.t("message.winner", { lng: window.lang }),
-      text: i18n.t("message.winner-desc", { lng: window.lang }) + "<br><br><a onclick='ShareFB();' href='#'><img style='margin-left: 25px;' width='230px' src='"+ i18n.t("message.winner-badge", { lng: window.lang }) +"'></a><br><br><text style='font-size: 16px;'>" + i18n.t("message.share", { lng: window.lang }) + "<br>" + getShares() + "</text>",
+      text: i18n.t("message.winner-desc", { lng: window.lang }) + "<br><br><a onclick='ShareFB();' href='#'><img style='margin-left: 25px;' width='230px' src=pics/badges/'"+ i18n.t("message.winner-badge", { lng: window.lang }) +"'></a><br><br><text style='font-size: 16px;'>" + i18n.t("message.share", { lng: window.lang }) + "<br>" + getShares() + "</text>",
       type: 'note',
       hide: false,
       animate_speed: "normal",

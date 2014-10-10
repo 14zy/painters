@@ -1,6 +1,23 @@
 {
   "head": {
-    "title": "Art Challenge - Game on Knowledge of Popular Painters"
+    "title": "Art Challenge - Game on Knowledge of Popular Painters",
+    "description": "Try to guess 10 painters in a row and defeat your friends!"
+  },
+  "desc": {
+    "what": "What's going on here?",
+    "what-desc": "You are proposed to entertain yourself by playing the game on knowledge of the history of art.",
+    "how": "How does it work?",
+    "how-desc": "You need to guess the painters.<br>You will win if you can guess 10 pictures in a row.",
+    "what-good": "What good can it do?",
+    "what-good-desc": "Play in your free time, and very soon you'll easily differentiate Claude Monet from Edouard Manet at a glance, and certainly from Alfred Sisley :)",
+    "how-help": "How can I help?",
+    "how-help-desc": "If you like this site, be so kind and tell your friends about it",
+    "settings": "Options:",
+    "lang": "Language",
+    "swear": "Profanity",
+    "swear-on": "On",
+    "swear-off": "Off",
+    "subscribe": "Subscribe for news:"
   },
   "message": {
     "right": "Right!",
@@ -13,7 +30,7 @@
     "learn-more": "Learn more",
     "winner": "Congratulations!",
     "winner-desc": "You are really good at knowledge of the Art!<br>10/10 – it is better than 82% of people who plays this game!",
-    "winner-badge": "pics/badges/winner-badge-en.png",
+    "winner-badge": "winner-badge-en.png",
     "share": "You can share your win with friends:"
   },
   "badPhrases": {
@@ -30,12 +47,20 @@
     "11": "What`s the hell?",
     "12": "God blind me!.."
   },
+  "shares": {
+    "title": "Ladies and Gentlemen, I am really good at the knowledge of Art!",
+    "description": "Try to guess 10 painters in a row and defeat me!",
+    "caption": "Art Challenge - Game on Knowledge of Popular Painters"
+  },
   "footer": {
     "created": "Created by",
     "ruben": "Ruben",
+    "ruben-full": "Ruben Babaev",
     "and": "and",
     "anna": "Anna",
+    "anna-full": "Anna Plotkina",
     "year": "in 2014",
+    "vk": "VKontakte",
     "other-projects": "Our other projects"
   },
   "painters": {
@@ -95,21 +120,5 @@
     "54": "Rembrandt",
     "55": "Titian",
     "56": "Alphonse Mucha"
-  },
-  "desc": {
-    "what": "What's going on here?",
-    "what-desc": "You are proposed to entertain yourself by playing the game on knowledge of the history of art.",
-    "how": "How does it work?",
-    "how-desc": "You need to guess the painters.<br>You will win if you can guess 10 pictures in a row.",
-    "what-good": "What good can it do?",
-    "what-good-desc": "Play in your free time, and very soon you'll easily differentiate Claude Monet from Edouard Manet at a glance, and certainly from Alfred Sisley :)",
-    "how-help": "How can I help?",
-    "how-help-desc": "If you like this site, be so kind and tell your friends about it",
-    "settings": "Options:",
-    "lang": "Language",
-    "swear": "Profanity",
-    "swear-on": "On",
-    "swear-off": "Off",
-    "subscribe": "Subscribe for news:"
   }
 }
