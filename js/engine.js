@@ -41,7 +41,7 @@ function load() {
   removeUTMs();
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
   begood(getCookie("begood"));
-  window.errorDelay = 8000;
+  window.errorDelay = 7000;
   if (document.getElementById("art").width <= 400) {
     window.errorDelay = 4000;        
   };
@@ -411,7 +411,7 @@ else {
   setTimeout(function() {refresh("bad");}, 4000)
   new PNotify({
       title: badPhrase(),
-      text:  i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + ".<br><br><img src='" + "painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><div style='padding: 2px;'>" + i18n.t("message.years", { lng: window.lang }) + ": " + window.years + "<br>" + i18n.t("message.nationality", { lng: window.lang }) + ": " + window.nation + "<br>" + i18n.t("message.years", { lng: window.lang }) + ": " + window.genre + "</div><br><a href='painters/" + window.link + "' class='btn btn-primary'>" + i18n.t("message.learn-more", { lng: window.lang }) + "</a>",
+      text:  i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + ".<br><br><img src='" + "painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><div style='padding: 2px;'>" + i18n.t("message.years", { lng: window.lang }) + ": " + window.years + "<br>" + i18n.t("message.nationality", { lng: window.lang }) + ": " + window.nation + "<br>" + i18n.t("message.genre", { lng: window.lang }) + ": " + window.genre + "</div><br><a href='painters/" + window.link + "' class='btn btn-primary'>" + i18n.t("message.learn-more", { lng: window.lang }) + "</a>",
       type: 'error',
       icon: 'glyphicon glyphicon-remove',
       hide: true,
@@ -512,7 +512,7 @@ function badPhrase() {
 function winner() {
   new PNotify({
       title: i18n.t("message.winner", { lng: window.lang }),
-      text: i18n.t("message.winner-desc", { lng: window.lang }) + "<br><br><a onclick='ShareVK();' href='#'><img style='margin-left: 25px;' width='230px' src='"+ i18n.t("message.winner-badge", { lng: window.lang }) +"'></a><br><br><text style='font-size: 16px;'>" + i18n.t("message.share", { lng: window.lang }) + "<br><a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> ВКонтакте </a><br><a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareOD();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Одноклассники </a><br><a onclick='ShareMM();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Мой Мир </a></text>",
+      text: i18n.t("message.winner-desc", { lng: window.lang }) + "<br><br><a onclick='ShareFB();' href='#'><img style='margin-left: 25px;' width='230px' src='"+ i18n.t("message.winner-badge", { lng: window.lang }) +"'></a><br><br><text style='font-size: 16px;'>" + i18n.t("message.share", { lng: window.lang }) + "<br>" + getShares() + "</text>",
       type: 'note',
       hide: false,
       animate_speed: "normal",
@@ -531,15 +531,36 @@ function winner() {
   yaCounter24594722.reachGoal('WINNER');
 };
 
+function getShares() {
+  
+  switch (window.lang)
+  {
+  case "ru":
+    shares = "<a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> ВКонтакте </a><br><a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareOD();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Одноклассники </a><br><a onclick='ShareMM();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Мой Мир </a>";
+    break;
+  
+  case "en":
+    shares = "<a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareTW();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> Twitter </a><br><a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> VKontakte </a>";
+    break;
+  };
+  
+  return shares;
+};
+
 
 function ShareVK() {
-  url = "http://vk.com/share.php?url=http://artchallenge.ru/?utm_source=vk-win" + "&title=Господа, я отлично разбираюсь в искусстве! %23ArtChallenge&description=Попробуйте отгадать 10 художников подряд и посоревноваться со мной!&image=http://artchallenge.ru/art-challenge-winner1.png";
+  url = "http://vk.com/share.php?url=http://artchallenge.ru/?utm_source=vk-win" + "&title=Господа, я отлично разбираюсь в искусстве! %23ArtChallenge&description=Попробуйте отгадать 10 художников подряд и посоревноваться со мной!&image=http://artchallenge.ru/pics/badges/winner-badge-ru-shareVK.png&noparse=true";
   window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24594722.reachGoal('WINNER-SHARE-VK');
 };  
 
 function ShareFB() {      
-  url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=http://artchallenge.ru/?utm_source=fb-win&redirect_uri=http://artchallenge.ru/1.html&picture=http://artchallenge.ru/winner-badge460.png&source=http://artchallenge.ru/winner-badge460.png&name=Господа, я отлично разбираюсь в искусстве!&caption=Art Challenge - игра на знание популярных художников";
+  if (window.lang == "ru") {
+    url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=http://artchallenge.ru/?utm_source=fb-win&redirect_uri=http://artchallenge.ru/1.html&picture=http://artchallenge.ru/pics/badges/winner-badge-ru-shareFB.png&source=http://artchallenge.ru/pics/badges/winner-badge-ru-shareFB.png&name=Господа, я отлично разбираюсь в искусстве!&caption=Art Challenge - игра на знание популярных художников&description=Попробуйте отгадать 10 художников подряд и посоревноваться со мной!";
+  }
+  else if (window.lang == "en") {
+    url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=http://artchallenge.ru/?utm_source=fb-win&redirect_uri=http://artchallenge.ru/1.html&picture=http://artchallenge.ru/pics/badges/winner-badge-en-shareFB.png&source=http://artchallenge.ru/pics/badges/winner-badge-en-shareFB.png&name=Ladies and Gentlemen, I am really good at the knowledge of Art!&caption=Art Challenge - Game on Knowledge of Popular Painters&description=Try to guess 10 painters in a row and defeat me!";
+  };
   window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24594722.reachGoal('WINNER-SHARE-FB');
 };
@@ -555,6 +576,13 @@ function ShareMM() {
   window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24594722.reachGoal('WINNER-SHARE-MM');
 };
+
+function ShareTW() {
+  url= "http://twitter.com/share?text=Ladies and Gentlemen, I am really good at the knowledge of Art! http://artchallenge.ru/pics/badges/winner-badge-en-shareTW.png &url=http://artchallenge.ru/&hashtags=artchallenge";
+  window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+  yaCounter24594722.reachGoal('WINNER-SHARE-TW');
+};
+
     
 function refresh(sign){
   if (sign == "bad") {
