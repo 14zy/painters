@@ -34,9 +34,13 @@ function setLang(lang) {
 function load() {
   var lang = window.navigator.userLanguage || window.navigator.language;
   lang = lang.substring(0, 2).toLowerCase();
+  if (document.location.search.substring(1,5) == "lang") {
+    lang = document.location.search.substring(6);
+    lang = lang.substring(0, 2).toLowerCase();
+  }
   langCookie = getCookie("lang");
   if (langCookie != "") {
-    lang = langCookie;
+   lang = langCookie;
   }
   //console.log(lang);
   setLang(lang);
