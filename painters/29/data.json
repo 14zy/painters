@@ -2,17 +2,33 @@
   "id": 29,
   "name": {
     "ru": "Питер Рубенс",
-    "en": "Peter Paul Rubens" },
+    "en": "Peter Paul Rubens",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1577 - 1640",
   "genre": {
     "ru": "Барокко",
-    "en": "Baroque" },
+    "en": "Baroque",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Фламандец",
-    "en": "Flemish" },
+    "en": "Flemish",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Peter_Paul_Rubens.html",
     "wikipedia": {

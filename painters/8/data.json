@@ -2,17 +2,33 @@
   "id": 8,
   "name": {
     "ru": "Иван Шишкин",
-    "en": "Ivan Shishkin" },
+    "en": "Ivan Shishkin",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1832 - 1898",
   "genre": {
     "ru": "Реализм",
-    "en": "Realism" },
+    "en": "Realism",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Русский",
-    "en": "Russian" },
+    "en": "Russian",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Ivan_Shishkin.html",
     "wikipedia": {

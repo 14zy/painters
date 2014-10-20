@@ -2,17 +2,33 @@
   "id": 7,
   "name": {
     "ru": "Диего Ривера",
-    "en": "Diego Rivera" },
+    "en": "Diego Rivera",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1886 - 1957",
   "genre": {
     "ru": "Социальный Реализм, Мурализм",
-    "en": "Social Realism, Muralism" },
+    "en": "Social Realism, Muralism",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Мексиканец",
-    "en": "Mexican" },
+    "en": "Mexican",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Diego_Rivera.html",
     "wikipedia": {

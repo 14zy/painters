@@ -2,17 +2,33 @@
   "id": 49,
   "name": {
     "ru": "Анри Матисс",
-    "en": "Henri Matisse" },
+    "en": "Henri Matisse",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1869 - 1954",
   "genre": {
     "ru": "Импрессионизм, Постимпрессионизм",
-    "en": "Impressionism, Post-Impressionism" },
+    "en": "Impressionism, Post-Impressionism",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Француз",
-    "en": "French" },
+    "en": "French",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Henri_Matisse.html",
     "wikipedia": {

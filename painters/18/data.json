@@ -2,17 +2,33 @@
   "id": 18,
   "name": {
     "ru": "Эндрю Уайет",
-    "en": "Andrew Wyeth" },
+    "en": "Andrew Wyeth",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1917 - 2009",
   "genre": {
     "ru": "Реализм",
-    "en": "Realism" },
+    "en": "Realism",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Американец",
-    "en": "American" },
+    "en": "American",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Andrew_Wyeth.html",
     "wikipedia": {

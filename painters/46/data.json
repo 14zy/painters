@@ -2,17 +2,33 @@
   "id": 46,
   "name": {
     "ru": "Диего Веласкес",
-    "en": "Diego Velazquez" },
+    "en": "Diego Velazquez",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1599 - 1660",
   "genre": {
     "ru": "Барокко",
-    "en": "Baroque" },
+    "en": "Baroque",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Испанец",
-    "en": "Spanish" },
+    "en": "Spanish",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Diego_Velazquez.html",
     "wikipedia": {

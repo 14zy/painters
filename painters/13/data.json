@@ -2,17 +2,33 @@
   "id": 13,
   "name": {
     "ru": "Кузьма Петров-Водкин",
-    "en": "Kuzma Petrov-Vodkin" },
+    "en": "Kuzma Petrov-Vodkin",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1878 - 1939",
   "genre": {
     "ru": "Символизм",
-    "en": "Symbolism" },
+    "en": "Symbolism",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Русский",
-    "en": "Russian" },
+    "en": "Russian",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Kuzma_Petrov-Vodkin.html",
     "wikipedia": {

@@ -2,17 +2,33 @@
   "id": 32,
   "name": {
     "ru": "Франсиско Гойя",
-    "en": "Francisco Goya" },
+    "en": "Francisco Goya",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1746 - 1828",
   "genre": {
     "ru": "Романтизм",
-    "en": "Romanticism" },
+    "en": "Romanticism",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Испанец",
-    "en": "Spanish" },
+    "en": "Spanish",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Francisco_Goya.html",
     "wikipedia": {

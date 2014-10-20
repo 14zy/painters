@@ -2,17 +2,33 @@
   "id": 9,
   "name": {
     "ru": "Клод Моне",
-    "en": "Claude Monet" },
+    "en": "Claude Monet",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1840 - 1926",
   "genre": {
     "ru": "Импрессионизм",
-    "en": "Impressionism" },
+    "en": "Impressionism",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Француз",
-    "en": "French" },
+    "en": "French",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Claude_Monet.html",
     "wikipedia": {

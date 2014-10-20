@@ -2,17 +2,33 @@
   "id": 56,
   "name": {
     "ru": "Альфонс Муха",
-    "en": "Alphonse Mucha" },
+    "en": "Alphonse Mucha",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1860 - 1939",
   "genre": {
     "ru": "Ар Нуво",
-    "en": "Art Nouveau" },
+    "en": "Art Nouveau",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Чех",
-    "en": "Czech" },
+    "en": "Czech",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Alphonse_Mucha.html",
     "wikipedia": {

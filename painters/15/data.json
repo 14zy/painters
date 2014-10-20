@@ -2,17 +2,33 @@
   "id": 15,
   "name": {
     "ru": "Сальвадор Дали",
-    "en": "Salvador Dali" },
+    "en": "Salvador Dali",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1904 - 1989",
   "genre": {
     "ru": "Сюрреализм",
-    "en": "Surrealism" },
+    "en": "Surrealism",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Испанец",
-    "en": "Spanish" },
+    "en": "Spanish",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Salvador_Dali.html",
     "wikipedia": {

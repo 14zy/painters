@@ -2,17 +2,33 @@
   "id": 25,
   "name": {
     "ru": "Илья Репин",
-    "en": "Ilya Repin" },
+    "en": "Ilya Repin",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1844 - 1930",
   "genre": {
     "ru": "Реализм",
-    "en": "Realism" },
+    "en": "Realism",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Русский",
-    "en": "Russian" },
+    "en": "Russian",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Ilya_Repin.html",
     "wikipedia": {

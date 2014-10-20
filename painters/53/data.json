@@ -2,17 +2,33 @@
   "id": 53,
   "name": {
     "ru": "Эдгар Дега",
-    "en": "Edgar Degas" },
+    "en": "Edgar Degas",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1834 - 1917",
   "genre": {
     "ru": "Импрессионизм",
-    "en": "Impressionism" },
+    "en": "Impressionism",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Француз",
-    "en": "French" },
+    "en": "French",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Edgar_Degas.html",
     "wikipedia": {

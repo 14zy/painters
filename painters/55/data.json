@@ -2,17 +2,33 @@
   "id": 55,
   "name": {
     "ru": "Тициан",
-    "en": "Titian" },
+    "en": "Titian",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1488 - 1576",
   "genre": {
     "ru": "Высокое Возрождение, Маньеризм (Позднее Возрождение)",
-    "en": "High Renaissance, Mannerism (Late Renaissance)" },
+    "en": "High Renaissance, Mannerism (Late Renaissance)",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Итальянец",
-    "en": "Italian" },
+    "en": "Italian",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Titian.html",
     "wikipedia": {

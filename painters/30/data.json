@@ -2,17 +2,33 @@
   "id": 30,
   "name": {
     "ru": "Пьер Огюст Ренуар",
-    "en": "Pierre-Auguste Renoir" },
+    "en": "Pierre-Auguste Renoir",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1841 - 1919",
   "genre": {
     "ru": "Импрессионизм",
-    "en": "Impressionism" },
+    "en": "Impressionism",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Француз",
-    "en": "French" },
+    "en": "French",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Pierre-Auguste_Renoir.html",
     "wikipedia": {

@@ -2,17 +2,33 @@
   "id": 23,
   "name": {
     "ru": "Иван Айвазовский",
-    "en": "Ivan Aivazovsky" },
+    "en": "Ivan Aivazovsky",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1817-1900",
   "genre": {
     "ru": "Романтизм",
-    "en": "Romanticism" },
+    "en": "Romanticism",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Русский, Армянин",
-    "en": "Russian, Armenian" },
+    "en": "Russian, Armenian",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Ivan_Aivazovsky.html",
     "wikipedia": {

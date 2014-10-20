@@ -2,17 +2,33 @@
   "id": 51,
   "name": {
     "ru": "Джон Уотерхаус",
-    "en": "John Waterhouse" },
+    "en": "John Waterhouse",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1849 - 1917",
   "genre": {
     "ru": "Романтизм",
-    "en": "Romanticism" },
+    "en": "Romanticism",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Британец",
-    "en": "British" },
+    "en": "British",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "John_William_Waterhouse.html",
     "wikipedia": {

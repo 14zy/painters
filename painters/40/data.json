@@ -2,17 +2,33 @@
   "id": 40,
   "name": {
     "ru": "Марк Шагал",
-    "en": "Marc Chagall" },
+    "en": "Marc Chagall",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1887 - 1985",
   "genre": {
     "ru": "Примитивизм",
-    "en": "Primitivism" },
+    "en": "Primitivism",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Француз, Еврей, Белорус",
-    "en": "French, Jewish, Belarusian" },
+    "en": "French, Jewish, Belarusian",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Marc_Chagall.html",
     "wikipedia": {

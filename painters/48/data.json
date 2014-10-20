@@ -2,17 +2,33 @@
   "id": 48,
   "name": {
     "ru": "Исаак Левитан",
-    "en": "Isaac Levitan" },
+    "en": "Isaac Levitan",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1860 - 1900",
   "genre": {
     "ru": "Реализм",
-    "en": "Realism" },
+    "en": "Realism",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Русский, Еврей",
-    "en": "Russian, Jewish" },
+    "en": "Russian, Jewish",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Isaac_Levitan.html",
     "wikipedia": {

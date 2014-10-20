@@ -2,17 +2,33 @@
   "id": 52,
   "name": {
     "ru": "Эгон Шиле",
-    "en": "Egon Schiele" },
+    "en": "Egon Schiele",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1890 - 1918",
   "genre": {
     "ru": "Экспрессионизм",
-    "en": "Expressionism" },
+    "en": "Expressionism",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Австриец",
-    "en": "Austrian" },
+    "en": "Austrian",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Egon_Schiele.html",
     "wikipedia": {

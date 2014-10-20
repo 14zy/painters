@@ -2,17 +2,33 @@
   "id": 34,
   "name": {
     "ru": "Эль Греко",
-    "en": "El Greco" },
+    "en": "El Greco",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1541 - 1614",
   "genre": {
     "ru": "Маньеризм (Позднее Возрождение)",
-    "en": "Mannerism (Late Renaissance)" },
+    "en": "Mannerism (Late Renaissance)",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Испанец, Грек",
-    "en": "Spanish, Greek" },
+    "en": "Spanish, Greek",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "El_Greco.html",
     "wikipedia": {

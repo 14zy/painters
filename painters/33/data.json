@@ -2,17 +2,33 @@
   "id": 33,
   "name": {
     "ru": "Фрида Кало",
-    "en": "Frida Kahlo" },
+    "en": "Frida Kahlo",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1907 - 1954",
   "genre": {
     "ru": "Примитивизм, Сюрреализм",
-    "en": "Primitivism, Surrealism" },
+    "en": "Primitivism, Surrealism",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Мексиканец",
-    "en": "Mexican" },
+    "en": "Mexican",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Frida_Kahlo.html",
     "wikipedia": {

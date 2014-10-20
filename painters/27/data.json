@@ -2,17 +2,33 @@
   "id": 27,
   "name": {
     "ru": "Михаил Врубель",
-    "en": "Mikhail Vrubel" },
+    "en": "Mikhail Vrubel",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "years": "1856 - 1910",
   "genre": {
     "ru": "Символизм",
-    "en": "Symbolism" },
+    "en": "Symbolism",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "nationality": {
     "ru": "Русский",
-    "en": "Russian" },
+    "en": "Russian",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "bio": {
     "ru": "",
-    "en": "" },
+    "en": "",
+    "de": "",
+    "fr": "",
+    "es": "",
+    "it": "" },
   "link": {
     "local": "Mikhail_Vrubel.html",
     "wikipedia": {
