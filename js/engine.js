@@ -60,15 +60,36 @@ function getart() {
   var art = document.getElementById("art");
   window.truePainter = Math.floor((Math.random()*56)+1);
   
-  $.getJSON("painters/" + window.truePainter + "/data.json", function(json) {
+  $.getJSON("painters/" + window.truePainter + "/data2.json", function(json) {
       window.image = Math.floor((Math.random()*json.paintings.length)+1);
       art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-      window.truePainterName = json.name[window.lang];
+      //window.truePainterName = json.name[window.lang];
+      window.truePainterName = i18n.t("painters." + truePainter, { lng: window.lang });
       window.link = json.link.local;
       window.years = json.years;
-      window.nation = json.nationality[window.lang];
-      window.genre = json.genre[window.lang];
-      putButtons(json.name[window.lang]);
+      //window.nation = json.nationality[window.lang];
+
+      //window.nation = i18n.t("nation." + json.nationality, { lng: window.lang });      
+      window.nation = undefined;
+      json.nationality.forEach(function(entry) {
+        if (window.nation == undefined) {
+          window.nation = i18n.t("nation." + entry, { lng: window.lang });
+        } else {
+          window.nation = window.nation + ", " + i18n.t("nation." + entry, { lng: window.lang });
+        }
+      });
+
+      //window.genre = json.genre[window.lang];
+      window.genre = undefined;
+      json.genre.forEach(function(entry) {
+        if (window.genre == undefined) {
+          window.genre = i18n.t("genre." + entry, { lng: window.lang });
+        } else {
+          window.genre = window.genre + ", " + i18n.t("genre." + entry, { lng: window.lang });
+        }
+      });
+
+      putButtons(window.truePainterName);
   });
   puticons();
 };
@@ -333,7 +354,10 @@ function putButtons(painter) {
   var painters = [painter];
   for (var i=0;i<10;i++) {
     painters.push(randomPainter());
-  }
+    if (painters[1] == "") {
+      location.reload(); // bug fix на коленке, происходит когда нажимаешь "Назад" в браузере
+    };
+  };
    
   //unique
   painters = painters.reverse().filter(function (e, i, painters) {
@@ -352,7 +376,6 @@ function putButtons(painter) {
   };
 
   shuffle(buttons);
-
   document.getElementById("btn1").innerHTML = buttons[0];
   document.getElementById("btn2").innerHTML = buttons[1];
   document.getElementById("btn3").innerHTML = buttons[2];
