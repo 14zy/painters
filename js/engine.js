@@ -51,6 +51,9 @@ function load() {
   if (document.getElementById("art").width <= 400) {
     window.errorDelay = 4000;        
   };
+  
+  window.basicSet = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56];
+  window.currentSet = basicSet;
   getart();
 };
 load();
@@ -58,18 +61,13 @@ load();
 function getart() { 
   currentWins();
   var art = document.getElementById("art");
-  window.truePainter = Math.floor((Math.random()*56)+1);
-  
+  window.truePainter = window.currentSet[Math.floor((Math.random()*window.currentSet.length))];
   $.getJSON("painters/" + window.truePainter + "/data2.json", function(json) {
       window.image = Math.floor((Math.random()*json.paintings.length)+1);
       art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
-      //window.truePainterName = json.name[window.lang];
       window.truePainterName = i18n.t("painters." + truePainter, { lng: window.lang });
       window.link = json.link.local;
       window.years = json.years;
-      //window.nation = json.nationality[window.lang];
-
-      //window.nation = i18n.t("nation." + json.nationality, { lng: window.lang });      
       window.nation = undefined;
       json.nationality.forEach(function(entry) {
         if (window.nation == undefined) {
@@ -78,8 +76,6 @@ function getart() {
           window.nation = window.nation + ", " + i18n.t("nation." + entry, { lng: window.lang });
         }
       });
-
-      //window.genre = json.genre[window.lang];
       window.genre = undefined;
       json.genre.forEach(function(entry) {
         if (window.genre == undefined) {
@@ -88,7 +84,6 @@ function getart() {
           window.genre = window.genre + ", " + i18n.t("genre." + entry, { lng: window.lang });
         }
       });
-
       putButtons(window.truePainterName);
   });
   puticons();
