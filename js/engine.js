@@ -64,7 +64,7 @@ function getart() {
   window.truePainter = window.currentSet[Math.floor((Math.random()*window.currentSet.length))];
   $.getJSON("painters/" + window.truePainter + "/data2.json", function(json) {
       window.image = Math.floor((Math.random()*json.paintings.length)+1);
-      art.src = "https://dl.dropboxusercontent.com/u/15486902/painters/" + truePainter + "/" + window.image + ".jpg"
+      art.src = "file:///Users/14zy/Dropbox/Public/painters/" + truePainter + "/" + window.image + ".jpg"
       window.truePainterName = i18n.t("painters." + truePainter, { lng: window.lang });
       window.link = json.link.local;
       window.years = json.years;

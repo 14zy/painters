@@ -30,41 +30,45 @@
       <div class="header">                
         
         <ul class="nav nav-pills pull-right">
-          <div data-i18n="[data-yashareTitle]head.title;[data-yashareDescription]head.description" id="top-share" class="yashare-auto-init" data-yashareL10n="ru" data-yashareImage="http://artchallenge.ru/art-challenge-logo.png" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter" data-yashareLink="http://artchallenge.ru/"></div>
+          <!-- <div data-i18n="[data-yashareTitle]head.title;[data-yashareDescription]head.description" id="top-share" class="yashare-auto-init" data-yashareL10n="ru" data-yashareImage="http://artchallenge.ru/art-challenge-logo.png" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter" data-yashareLink="http://artchallenge.ru/"></div> -->
+          
+          
+          <div class="btn-group" style="margin-top: -5px;">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="border: none;">
+              <img id="langMain2" src="pics/packs/popular.png" alt="" width="32">
+              Популярные художники <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a style="font-weight: bold; color: black;" class="lang" id="" onclick="" title=""><img src="pics/packs/popular.png" alt=""> Популярные художники</a></li>
+              <li><a style="#color:lightgray" class="lang" id="" onclick="" title=""><img src="pics/packs/Roundicons-09.png" alt=""> Художники Англии</a></li>
+              <li><a style="color: lightgray" class="lang" id="" onclick="" title=""><img src="pics/packs/Roundicons-45.png" alt=""> Импрессионисты 19 века</a></li>
+              <li><a style="color: lightgray" class="lang" id="" onclick="" title=""><img src="pics/packs/Roundicons-54.png" alt=""> Констрктивисты СССР</a></li>
+              <li><a style="color: lightgray" class="lang" id="" onclick="" title=""><img src="pics/packs/Roundicons-20.png" alt=""> Русская школа живописи</a></li>
+              <li><a style="color: lightgray" class="lang" id="" onclick="" title=""><img src="pics/packs/Roundicons-47.png" alt=""> Итальянское возрождение</a></li>
+            </ul>
+          </div>
+          
+          
         </ul>
 
-        <a href="http://www.artchallenge.ru" title="ArtChallenge"><h3 class="text-muted"><span class="glyphicon glyphicon-pencil"></span> Art Challenge</h3></a>
+        <a class="logo" href="http://www.artchallenge.ru" title="ArtChallenge"><h3 class="text-muted logo">Art Challenge</h3></a>
         
         <div id="langMainDiv">
           <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-              <img id="langMain" src="pics/flags/GB.png" alt="" width="24"> <span class="caret"></span>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="border: none;">
+              <img id="langMain" src="pics/flags/EN.png" alt="" width="32"> <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
-              <li class="lang"><a id="ru" onclick="setLang('ru');" title="Russian version"><img src="pics/flags/RU.png" alt="Русский">Русский</a></li>
-              <li><a class="lang" id="en" onclick="setLang('en');" title="English version"><img src="pics/flags/GB.png" alt="English">English</a></li>
-              <li><a class="lang" id="de" onclick="setLang('de');" title="Deutsch version"><img src="pics/flags/DE.png" alt="Deutsch">Deutsch</a></li>
-              <li><a class="lang" id="fr" onclick="setLang('fr');" title="Français version"><img src="pics/flags/FR.png" alt="Deutsch">Français</a></li>
-              <li><a class="lang" id="es" onclick="setLang('es');" title="Español version"><img src="pics/flags/ES.png" alt="Español">Español</a></li>
-              <li><a class="lang" id="it" onclick="setLang('it');" title="Italiana version"><img src="pics/flags/IT.png" alt="Italiana">Italiana</a></li>
+              <li><a class="lang" id="ru" onclick="setLang('ru');" title="Russian version"><img src="pics/flags/RU.png" alt="Русский"> Русский</a></li>
+              <li><a class="lang" id="en" onclick="setLang('en');" title="English version"><img src="pics/flags/EN.png" alt="English"> English</a></li>
+              <li><a class="lang" id="de" onclick="setLang('de');" title="Deutsch version"><img src="pics/flags/DE.png" alt="Deutsch"> Deutsch</a></li>
+              <li><a class="lang" id="fr" onclick="setLang('fr');" title="Français version"><img src="pics/flags/FR.png" alt="Deutsch"> Français</a></li>
+              <li><a class="lang" id="es" onclick="setLang('es');" title="Español version"><img src="pics/flags/ES.png" alt="Español"> Español</a></li>
+              <li><a class="lang" id="it" onclick="setLang('it');" title="Italiana version"><img src="pics/flags/IT.png" alt="Italiana"> Italiana</a></li>
             </ul>
           </div>
 
 
-          <div class="btn-group">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-              <img id="langMain" src="pics/flags/GB.png" alt="" width="24">
-              Базовый курс <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-              <li class="lang"><a id="ru" onclick="setLang('ru');" title="Russian version"><img src="pics/flags/RU.png" alt="Русский">Базовый курс</a></li>
-              <li><a class="lang" id="en" onclick="setLang('en');" title="English version"><img src="pics/flags/GB.png" alt="English">Художники Англии</a></li>
-              <li><a class="lang" id="de" onclick="setLang('de');" title="Deutsch version"><img src="pics/flags/DE.png" alt="Deutsch">Импрессионисты 19 века</a></li>
-              <li><a class="lang" id="fr" onclick="setLang('fr');" title="Français version"><img src="pics/flags/FR.png" alt="Deutsch">Констрктивисты СССР</a></li>
-              <li><a class="lang" id="es" onclick="setLang('es');" title="Español version"><img src="pics/flags/ES.png" alt="Español">Русская школа живописи</a></li>
-              <li><a class="lang" id="it" onclick="setLang('it');" title="Italiana version"><img src="pics/flags/IT.png" alt="Italiana">Итальянское возрождение</a></li>
-            </ul>
-          </div>
 
         </div>
         
@@ -126,22 +130,30 @@
           <span data-i18n="desc.how-help-desc">Если Вам понравился сайт, будьте так любезны, расскажите о нём друзьям</span>:<br>
           <div style="margin-left: -5px;" data-i18n="[data-yashareTitle]head.title;[data-yashareDescription]head.description" class="yashare-auto-init" data-yashareL10n="ru"
            data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter" data-yashareImage="http://artchallenge.ru/art-challenge-logo.png" data-yashareLink="http://artchallenge.ru/"></div>           
+
+          <h3>Подписывайтесь в социальных сетях:</h3>
+          <a target="_blank" href="http://facebook.com/artchallenge.ru" title="ArtChallenge Facebook page" onclick="yaCounter24594722.reachGoal('FB-CLICK'); return true;">
+            <img src="pics/socialmedia/fb.png">
+          </a>
+          <a target="_blank" href="http://vk.com/art.challenge" title="Сообщество ArtChallenge ВКонтакте" onclick="yaCounter24594722.reachGoal('VK-CLICK'); return true;">
+            <img src="pics/socialmedia/vk.png">
+          </a>          
         </div>
 
       </div>
 
       <br>
-      <div class="footer" style="text-align: center">
+      <div class="footer" style="text-align: left">
         <p>&copy; <span data-i18n="footer.created">Сайт создан</span> <a target="_blank" href="http://facebook.com/just14zy" title="Рубен Бабаев"><img style="margin-bottom: 7px;" height="20" width="20" src="pics/ruben.jpg" alt="Рубен Бабаев"><span data-i18n="footer.ruben">Рубеном</span></a> <span data-i18n="footer.and">и</span> <a target="_blank" href="http://facebook.com/plotkina.anna" title="Анна Плоткина"><img style="margin: 0 3px 4px 0;" height="18" width="18" src="pics/anna.jpg" alt="Анна Плоткина"><span data-i18n="footer.anna">Анной</span></a> <span data-i18n="footer.year">в 2014 году</span>.
-        <br>
+        <!-- <br>
         <a target="_blank" href="http://facebook.com/artchallenge.ru" title="ArtChallenge Facebook page" onclick="yaCounter24594722.reachGoal('FB-CLICK'); return true;">
           <img style="margin-bottom: 7px;" height="20" width="20" src="pics/socialmedia/fb.png">
           <span>Facebook</span>
-        </a> / 
+        </a> /
         <a target="_blank" href="http://vk.com/art.challenge" title="Сообщество ArtChallenge ВКонтакте" onclick="yaCounter24594722.reachGoal('VK-CLICK'); return true;">
           <img style="margin-bottom: 7px;" height="20" width="20" src="pics/socialmedia/vk.png">
           <span data-i18n="footer.vk">ВКонтакте</span>
-        </a>
+        </a> -->
 
         <!-- <br>
         <span data-i18n="footer.other-projects">Другие наши проекты</span>: <a target="_blank" href="http://gamechallenge.ru/?utm_source=artchallenge" title="Угадай игру по скриншоту">Game Challenge</a> | <a target="_blank" href="http://forgiveme.today/?utm_source=artchallenge" title="Анонимно попросить прощения">Forgiveme.today</a> | <a target="_blank" href="http://rostov-english.ru/?utm_source=artchallenge" title="Английский язык в Ростове-на-Дону">Rostov English</a> -->

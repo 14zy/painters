@@ -1,7 +1,7 @@
 /* Ruben zone */
 
 #langMainDiv {
-  margin: -40px 0 0 190px;
+  margin: -39px 0 0 150px;
 }
 
 .lang-area {
@@ -10,6 +10,11 @@
 
 .lang {
   cursor: pointer;
+}
+
+.logo:hover {
+  text-decoration: none;
+  color: #428bca;
 }
 
 .lang img, .lang-active img {
