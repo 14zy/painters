@@ -29,11 +29,8 @@
     <div class="container">
       <div class="header">                
         
-        <ul class="nav nav-pills pull-right">
-          <!-- <div data-i18n="[data-yashareTitle]head.title;[data-yashareDescription]head.description" id="top-share" class="yashare-auto-init" data-yashareL10n="ru" data-yashareImage="http://artchallenge.ru/art-challenge-logo.png" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir" data-yashareTheme="counter" data-yashareLink="http://artchallenge.ru/"></div> -->
-          
-          
-          <div class="btn-group" style="margin-top: -5px;">
+        <ul class="nav nav-pills pull-right">          
+          <!-- <div class="btn-group" style="margin-top: -5px;">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="border: none;">
               <img id="langMain2" src="pics/packs/popular.png" alt="" width="32">
               Популярные художники <span class="caret"></span>
@@ -46,9 +43,7 @@
               <li><a style="color: lightgray" class="lang" id="" onclick="" title=""><img src="pics/packs/Roundicons-20.png" alt=""> Русская школа живописи</a></li>
               <li><a style="color: lightgray" class="lang" id="" onclick="" title=""><img src="pics/packs/Roundicons-47.png" alt=""> Итальянское возрождение</a></li>
             </ul>
-          </div>
-          
-          
+          </div> -->
         </ul>
 
         <a class="logo" href="http://www.artchallenge.ru" title="ArtChallenge"><h3 class="text-muted logo">Art Challenge</h3></a>
@@ -58,7 +53,7 @@
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="border: none;">
               <img id="langMain" src="pics/flags/EN.png" alt="" width="32"> <span class="caret"></span>
             </button>
-            <ul class="dropdown-menu" role="menu">
+            <ul id="langDropMenu" class="dropdown-menu" role="menu">
               <li><a class="lang" id="ru" onclick="setLang('ru');" title="Russian version"><img src="pics/flags/RU.png" alt="Русский"> Русский</a></li>
               <li><a class="lang" id="en" onclick="setLang('en');" title="English version"><img src="pics/flags/EN.png" alt="English"> English</a></li>
               <li><a class="lang" id="de" onclick="setLang('de');" title="Deutsch version"><img src="pics/flags/DE.png" alt="Deutsch"> Deutsch</a></li>
@@ -67,14 +62,11 @@
               <li><a class="lang" id="it" onclick="setLang('it');" title="Italiana version"><img src="pics/flags/IT.png" alt="Italiana"> Italiana</a></li>
             </ul>
           </div>
-
-
-
         </div>
         
       </div>
-      <br>
 
+      <br>
       <div style="text-align: center">
         <div id="corner" class="panel panel-default">
           <br>
