@@ -439,7 +439,7 @@ else {
   setTimeout(function() {refresh("bad");}, 4000)
   new PNotify({
       title: badPhrase(),
-      text:  i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + ".<br><br><img src='" + "painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><div style='padding: 2px;'>" + i18n.t("message.years", { lng: window.lang }) + ": " + window.years + "<br>" + i18n.t("message.nationality", { lng: window.lang }) + ": " + window.nation + "<br>" + i18n.t("message.genre", { lng: window.lang }) + ": " + window.genre + "</div><br><a href='painters/" + window.link + "' class='btn btn-primary' onclick='yaCounter24594722.reachGoal('LEARN-MORE'); return true'>" + i18n.t("message.learn-more", { lng: window.lang }) + "</a>",
+      text:  i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + ".<br><br><img src='" + "painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><div style='padding: 2px;'>" + i18n.t("message.years", { lng: window.lang }) + ": " + window.years + "<br>" + i18n.t("message.nationality", { lng: window.lang }) + ": " + window.nation + "<br>" + i18n.t("message.genre", { lng: window.lang }) + ": " + window.genre + "</div><br><a onclick='learnMore()' class='btn btn-primary'>" + i18n.t("message.learn-more", { lng: window.lang }) + "</a>",
       type: 'error',
       icon: 'glyphicon glyphicon-remove',
       hide: true,
@@ -470,6 +470,11 @@ else {
   
 yaCounter24594722.reachGoal('ANSWER-CLICK');
 };
+
+function learnMore() {
+  yaCounter24594722.reachGoal('LEARN-MORE');
+  window.location = "painters/" + window.link; 
+}
     
 function setCookie(cname,cvalue,exdays) {
   var d = new Date();
