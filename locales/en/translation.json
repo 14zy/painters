@@ -1,45 +1,45 @@
 {
   "head": {
-    "title": "Art Challenge - Game on Knowledge of Popular Painters",
-    "description": "Try to guess 10 painters in a row and defeat your friends!"
+    "title": "Art Challenge – A Quiz Game of Famous Painters",
+    "description": "Try to guess 10 painters in a row and beat your friends!"
   },
   "desc": {
     "what": "What's going on here?",
-    "what-desc": "You are proposed to entertain yourself by playing the game on knowledge of the history of art.",
+    "what-desc": "We offer you to have some fun by playing the art history game!",
     "how": "How does it work?",
-    "how-desc": "You need to guess the painters.<br>You will win if you can guess 10 pictures in a row.",
-    "what-good": "What good can it do?",
-    "what-good-desc": "Play in your free time, and very soon you'll easily differentiate Claude Monet from Edouard Manet at a glance, and certainly from Alfred Sisley :)",
+    "how-desc": "You need to guess the artists who made famous paintings.<br>You win if you manage to guess 10 painters in a row.",
+    "what-good": "What’s the use of it?",
+    "what-good-desc": "Play in your free time and very soon you’ll be able to tell Claude Monet from Edouard Manet at a glance, let alone Alfred Sisley :)",
     "how-help": "How can I help?",
-    "how-help-desc": "If you like this site, be so kind and tell your friends about it",
+    "how-help-desc": "If you like this site, could you be so kind to share it with your friends?",
     "settings": "Options:",
     "lang": "Language",
-    "swear": "Profanity",
+    "swear": "Swearing",
     "swear-on": "On",
     "swear-off": "Off",
     "subscribe": "Subscribe for news:"
   },
   "message": {
-    "right": "Right!",
-    "right-desc": "You guessed picture __myVar__",
+    "right": "You got it right!",
+    "right-desc": "The painting __myVar__ is done!",
     "wrong": "Wrong!",
-    "wrong-desc": "It's",
+    "wrong-desc": "That's",
     "years": "Years",
     "nationality": "Nationality",
     "genre": "Genre",
     "learn-more": "Learn more",
     "winner": "Congratulations!",
-    "winner-desc": "You are really good at knowledge of the Art!<br>10/10 – it is better than 82% of people who plays this game!",
-    "share": "You can share your win with friends:"
+    "winner-desc": "You are really good at Art!<br>10/10 – it is better than 82% of people who has played this game!",
+    "share": "You can share your victory with friends:"
   },
   "badPhrases": {
-    "1": "You are mad!",
-    "2": "Hell of a day, huh?",
-    "3": "You should be ashamed of yourself.",
-    "4": "Are you ill?!",
+    "1": "You are nuts!",
+    "2": "Damn..., huh?",
+    "3": "Shame on you, man!",
+    "4": "Are you unwell?!",
     "5": "This is ridiculous!",
     "6": "What`s the nonsense?!",
-    "7": "Engage yourself!",
+    "7": "You’s better upgrade yourself!",
     "8": "No, no and no!",
     "9": "Think better!",
     "10": "Sorry, it`s wrong.",
@@ -47,9 +47,9 @@
     "12": "God blind me!.."
   },
   "shares": {
-    "title": "Ladies and Gentlemen, I am really good at the knowledge of Art!",
-    "description": "Try to guess 10 painters in a row and defeat me!",
-    "caption": "Art Challenge - Game on Knowledge of Popular Painters"
+    "title": "Ladies and Gentlemen, I am really good at Art!",
+    "description": "Try to guess 10 painters in a row and beat your friends!",
+    "caption": "Art Challenge – A Quiz Game of Famous Painters"
   },
   "footer": {
     "created": "Created by",
