@@ -1,5 +1,11 @@
 /* Ruben zone */
 
+.ui-pnotify.stack-mobile{
+  top:2%;
+  left: 50%;
+  margin-left: -150px;
+}
+
 #langMainDiv {
   margin: -39px 0 0 150px;
 }
