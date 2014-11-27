@@ -69,7 +69,7 @@ function getart() {
   window.truePainter = window.currentSet[Math.floor((Math.random()*window.currentSet.length))];
   $.getJSON("painters/" + window.truePainter + "/data2.json", function(json) {
       window.image = Math.floor((Math.random()*json.paintings.length)+1);
-      art.src = "file:///Users/14zy/Dropbox/Public/painters/" + truePainter + "/" + window.image + ".jpg" // file:///Users/14zy/Dropbox/Public/painters/  || https://dl.dropboxusercontent.com/u/15486902/painters/
+      art.src = "http://178.62.133.139/painters/" + truePainter + "/" + window.image + ".jpg" // file:///Users/14zy/Dropbox/Public/painters/  || https://dl.dropboxusercontent.com/u/15486902/painters/ || http://178.62.133.139/painters/
       window.truePainterName = i18n.t("painters." + truePainter, { lng: window.lang });
       window.link = json.link.local;
       window.years = json.years;
