@@ -44,13 +44,14 @@ function load() {
   }
   //console.log(lang);
   setLang(lang);
-  removeUTMs();
+  //removeUTMs();
+  window.platform = "http://178.62.133.139/painters/" // https://dl.dropboxusercontent.com/u/15486902/painters/ || http://178.62.133.139/painters/ || file:///Users/14zy/Dropbox/Public/painters/
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-  window.errorDelay = 5000;
+  window.errorDelay = 3500;
   window.pnotify = "";
   //js magic for mobiles
   if (window.innerWidth <= 600) {
-    window.errorDelay = 3500;
+    window.errorDelay = 3000;
     document.getElementById("langDropMenu").className += " pull-right";
     window.pnotify = "stack-mobile";
   };
@@ -67,12 +68,15 @@ function getart() {
   currentWins();
   var art = document.getElementById("art");
   window.truePainter = window.currentSet[Math.floor((Math.random()*window.currentSet.length))];
-  $.getJSON("painters/" + window.truePainter + "/data2.json", function(json) {
-      window.image = Math.floor((Math.random()*json.paintings.length)+1);
-      art.src = "http://178.62.133.139/painters/" + truePainter + "/" + window.image + ".jpg" // file:///Users/14zy/Dropbox/Public/painters/  || https://dl.dropboxusercontent.com/u/15486902/painters/ || http://178.62.133.139/painters/
+  $.getJSON("painters/" + window.truePainter + "/data.json", function(json) {
+      window.paintings = json.paintings.length;
+      window.image = Math.floor((Math.random()*window.paintings)+1);
+      art.src = window.platform + truePainter + "/" + window.image + ".jpg";
       window.truePainterName = i18n.t("painters." + truePainter, { lng: window.lang });
       window.link = json.link.local;
+      window.wiki = json.link.wikipedia.ru;
       window.years = json.years;
+      window.bio = json.bio.ru;
       window.nation = undefined;
       json.nationality.forEach(function(entry) {
         if (window.nation == undefined) {
@@ -441,7 +445,7 @@ else {
   setTimeout(function() {refresh("bad");}, 4000)
   new PNotify({
       title: badPhrase(),
-      text:  i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + ".<br><br><img src='" + "painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><div style='padding: 2px;'>" + i18n.t("message.years", { lng: window.lang }) + ": " + window.years + "<br>" + i18n.t("message.nationality", { lng: window.lang }) + ": " + window.nation + "<br>" + i18n.t("message.genre", { lng: window.lang }) + ": " + window.genre + "</div><br><a onclick='learnMore()' class='btn btn-primary'>" + i18n.t("message.learn-more", { lng: window.lang }) + "</a>",
+      text:  i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "<br><br><img src='" + "painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><a id='btnLearnMore' onTouchStart='learnMore();' onclick='learnMore();' class='btn btn-primary'>" + i18n.t("message.learn-more", { lng: window.lang }) + "</a>",
       type: 'error',
       icon: 'glyphicon glyphicon-remove',
       hide: true,
@@ -449,6 +453,7 @@ else {
       delay: window.errorDelay,
       remove: true,
       addclass: window.pnotify,
+      mouse_reset: false,
       buttons: {
         closer: true,
         sticker: false
@@ -475,9 +480,47 @@ yaCounter24594722.reachGoal('ANSWER-CLICK');
 };
 
 function learnMore() {
-  yaCounter24594722.reachGoal('LEARN-MORE');
-  window.location = "painters/" + window.link; 
-}
+  var learnMoreText = "\
+    <div style='max-height: 570px; overflow: scroll;'>\
+      <div id='learnMoreInfo'><p><img style='height: 200px; max-width: 170px;' src='painters/" + window.truePainter + "/photo.jpg'></p>\
+      <p>"+window.years+"<br>"+window.nation+"</p>\
+      <p><strong>"+i18n.t("message.genre", { lng: window.lang })+":</strong><br>"+window.genre+"</p>\
+      </div>\
+      <h2 style='margin: 5px 0 0 0; padding-bottom: 10px;'>"+window.truePainterName+"</h2>\
+      <div id='learnMoreBio'>\
+      "+window.bio+"\
+      </div>\
+      <div style='text-align: center; padding-top: 25px;'>\
+      <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
+      <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
+      <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
+      <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
+      <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
+      </div>\
+    </div>\
+    ";
+  
+  new PNotify({
+      text: learnMoreText,
+      type: 'info',
+      hide: false,
+      animate_speed: "normal",
+      icon: "",
+      addclass: "stack-learnMore",
+      buttons: {
+        closer: true,
+        closer_hover: false,
+        sticker: false
+      },
+      history: {
+        history: true,
+        menu: false
+      }
+  });
+  
+  yaCounter24594722.reachGoal('LEARN-MORE'); return true;
+  
+};
     
 function setCookie(cname,cvalue,exdays) {
   var d = new Date();
