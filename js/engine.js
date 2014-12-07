@@ -41,9 +41,14 @@ function load() {
   langCookie = getCookie("lang");
   if (langCookie != "") {
    lang = langCookie;
-  }
-  //console.log(lang);
-  setLang(lang);
+  };
+  if (lang == "ru" || lang == "en" || lang == "de" || lang == "fr" || lang == "it" || lang == "es" ) {
+    //console.log(lang);
+    setLang(lang);    
+  } else {
+    lang = "en";
+    setLang(lang);
+  };
   //removeUTMs();
   window.platform = "http://178.62.133.139/painters/" // https://dl.dropboxusercontent.com/u/15486902/painters/ || http://178.62.133.139/painters/ || file:///Users/14zy/Dropbox/Public/painters/
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
@@ -74,7 +79,11 @@ function getart() {
       art.src = window.platform + truePainter + "/" + window.image + ".jpg";
       window.truePainterName = i18n.t("painters." + truePainter, { lng: window.lang });
       window.link = json.link.local;
-      window.wiki = json.link.wikipedia.ru;
+      if (window.lang == "ru") { //Временно, пока в json не будут ссылки на википедию на всех языках
+        window.wiki = json.link.wikipedia.ru;
+      } else {
+        window.wiki = json.link.wikipedia.en;
+      };
       window.years = json.years;
       window.bio = json.bio.ru;
       window.nation = undefined;
@@ -485,17 +494,18 @@ function learnMore() {
       <div id='learnMoreInfo'><p><img style='height: 200px; max-width: 170px;' src='painters/" + window.truePainter + "/photo.jpg'></p>\
       <p>"+window.years+"<br>"+window.nation+"</p>\
       <p><strong>"+i18n.t("message.genre", { lng: window.lang })+":</strong><br>"+window.genre+"</p>\
+      <p><a style='' target='_blank' href='"+window.wiki+"' class='btn btn-primary'>Wikipedia <span class='glyphicon glyphicon-share-alt'></span></a></p>\
       </div>\
       <h2 style='margin: 5px 0 0 0; padding-bottom: 10px;'>"+window.truePainterName+"</h2>\
       <div id='learnMoreBio'>\
       "+window.bio+"\
       </div>\
       <div style='text-align: center; padding-top: 25px;'>\
-      <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
-      <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
-      <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
-      <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
-      <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
+        <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
+        <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
+        <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
+        <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
+        <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
       </div>\
     </div>\
     ";
