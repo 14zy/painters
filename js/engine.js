@@ -52,7 +52,7 @@ function load() {
   //removeUTMs();
   window.platform = "http://178.62.133.139/painters/" // https://dl.dropboxusercontent.com/u/15486902/painters/ || http://178.62.133.139/painters/ || file:///Users/14zy/Dropbox/Public/painters/
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-  window.errorDelay = 3500;
+  window.errorDelay = 3000;
   window.pnotify = "";
   //js magic for mobiles
   if (window.innerWidth <= 600) {
@@ -451,8 +451,8 @@ if (answer == window.truePainterName) {
 
 else {
 
-  setTimeout(function() {refresh("bad");}, 4000)
-  new PNotify({
+  setTimeout(function() {refresh("bad");}, 3500)
+  window.msgWrong = new PNotify({
       title: badPhrase(),
       text:  i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "<br><br><img src='" + "painters/" + window.truePainter + "/photo.jpg' style='width: 100px;'><br><br><a id='btnLearnMore' onTouchStart='learnMore();' onclick='learnMore();' class='btn btn-primary'>" + i18n.t("message.learn-more", { lng: window.lang }) + "</a>",
       type: 'error',
@@ -489,8 +489,9 @@ yaCounter24594722.reachGoal('ANSWER-CLICK');
 };
 
 function learnMore() {
+  window.msgWrong.remove();
   var learnMoreText = "\
-    <div style='max-height: 570px; overflow: scroll;'>\
+    <div id='learnMoreDiv' style='max-height: 570px; overflow: scroll;'>\
       <div id='learnMoreInfo'><p><img style='height: 200px; max-width: 170px;' src='painters/" + window.truePainter + "/photo.jpg'></p>\
       <p>"+window.years+"<br>"+window.nation+"</p>\
       <p><strong>"+i18n.t("message.genre", { lng: window.lang })+":</strong><br>"+window.genre+"</p>\
@@ -688,7 +689,9 @@ function refresh(sign){
   document.getElementById("btn4").style.background = "";
   document.getElementById("btn4").style.borderColor = "";
 
-  document.getElementById("art").src = "loading1.gif";
+  document.getElementById("art").src = "pics/loading.gif";
+  //window.scrollTo(0, 0);
+  $("html, body").animate({ scrollTop: 75 }, "slow");
   getart();
 }
 

@@ -1,15 +1,22 @@
-/* Ruben zone */
-
 .ui-pnotify.stack-mobile{
   top:2%;
   left: 50%;
   margin-left: -150px;
 }
 
-.ui-pnotify.stack-learnMore{
+.container {
+  width: 100%;
+}
+
+
+.ui-pnotify.stack-learnMore {
   top:10%;
   left: 15%; 
   width: 70%!important;
+}
+
+#learnMoreDiv {
+  overflow: hidden!important;
 }
 
 #learnMoreInfo {
@@ -24,7 +31,8 @@
   height: 300px;
   text-align: justify;
   padding-right: 5px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 
@@ -61,13 +69,10 @@
   font-size: 20px;
 }
 
-#top-share {
-  margin-top: 4px;
-}
 
 #art {
-  max-height: 600px;
-  max-width: 900px;
+  height: 600px;
+  max-width: 100%;
 }
 
 #btnOn {
@@ -78,42 +83,60 @@
   cursor:pointer; color:#428BCA;
 }
 
-/*#vk_groups{
-  float: left; margin: 10px 0 0 0;
-}
 
-#fb_page {
-  margin-top: 10px; padding: 0 0 0 10px;
-}
-*/
 @media (max-width: 992px) {
   
   #art {
-   width: 400px;
+   height: 500px;
   }
-    
-}
   
+  .container {
+    width: 100%;
+  }
+
+  #corner {
+    border-left: none;
+    border-right: none;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  
+  #learnMoreBio {  
+    height: 350px;
+  }
+  
+  #btn1,#btn2,#btn3,#btn4 {  
+    margin-top: 5px;
+  }
+      
+}
+
+
 @media (max-width: 600px) {
   .lead {
     font-size: 21px;
   }
   
   #art {
-   width: 400px;
-  }
-    
-  #top-share {
-    display: none;
+    width: 100%;
+    height: auto;
   }
   
+  #corner {
+    border-left: none;
+    border-right: none;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+      
   #langMainDiv {
     text-align: right;
   }
   
-  #btn1,#btn2,#btn3,#btn4 {  
+  #btn1,#btn2,#btn3,#btn4 {
+/*    border-radius: 0;*/
     display: block;
-    margin: 5px 40px 0 40px;
+    margin: 5px 50px 0 50px;
     padding: 15px;
   }
   
@@ -136,36 +159,31 @@
     left: 5%; 
     width: 90%!important;
   }
-  
-  
+   
 }
 
-@media (max-width: 470px) {
+
+@media (max-width: 500px) {
   
-  #art {
-   width: 288px;
+  .ui-pnotify.stack-learnMore{
+    text-align: center;
+    left: 2%; 
+    width: 96%!important;
   }
   
-/*  #vk_groups, #vk_groups_title, #fb_show {
-    display: none;
+  #learnMoreInfo {
+    float: none;
+    padding: 0;
+    max-width: none;
   }
-*/
-  /*#fb_page {
-    display: none;
-  }*/
       
-  #top-share {
-    display: none;
+  #art {
+    width: 100%;
+    height: auto;
   }
-  
+          
   #btn1,#btn2,#btn3,#btn4 {  
-    display: block;
-    margin: 5px 0 0 0;
-    padding: 15px;
+    margin: 5px 10px 0 10px;
   }
   
-  #btn4 {
-    margin-bottom: -30px;
-  }
 }
-/* /Ruben zone */
