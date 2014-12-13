@@ -689,7 +689,7 @@ function refresh(sign){
   document.getElementById("btn4").style.background = "";
   document.getElementById("btn4").style.borderColor = "";
 
-  document.getElementById("art").src = "pics/loading.gif";
+  document.getElementById("art").src = "pics/loading.svg";
   //window.scrollTo(0, 0);
   $("html, body").animate({ scrollTop: 75 }, "slow");
   getart();
