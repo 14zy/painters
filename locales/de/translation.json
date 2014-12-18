@@ -21,7 +21,7 @@
   },
   "message": {
     "right": "Right!",
-    "right-desc": "You guessed picture __myVar__",
+    "right-desc": "You guessed picture __count__",
     "wrong": "Wrong!",
     "wrong-desc": "It's",
     "years": "Years",

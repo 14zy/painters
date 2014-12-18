@@ -21,7 +21,7 @@
   },
   "message": {
     "right": "You got it right!",
-    "right-desc": "The painting __myVar__ is done!",
+    "right-desc": "The painting __count__ is done!",
     "wrong": "Wrong!",
     "wrong-desc": "That's",
     "years": "Years",

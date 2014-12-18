@@ -427,7 +427,7 @@ if (answer == window.truePainterName) {
   
   new PNotify({
       title: i18n.t("message.right", { lng: window.lang }),
-      text: i18n.t("message.right-desc", { lng: window.lang, myVar: parseInt(window.counter) }),
+      text: i18n.t("message.right-desc", { lng: window.lang, count: parseInt(window.counter) }),
       type: 'success',
       hide: true,
       animate_speed: "normal",

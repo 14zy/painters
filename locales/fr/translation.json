@@ -21,7 +21,7 @@
   },
   "message": {
     "right": "Exact!",
-    "right-desc": "Vous avez deviné __myVar__ le tableau",
+    "right-desc": "Vous avez deviné __count__ le tableau",
     "wrong": "Faux!",
     "wrong-desc": "C' est",
     "years": "Années de vie",

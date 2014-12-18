@@ -21,7 +21,8 @@
   },
   "message": {
     "right": "Giusto!",
-    "right-desc": "Lei ha indovinato __myVar__ opere",
+    "right-desc": "Lei ha indovinato __count__ opera",
+    "right-desc_plural": "Lei ha indovinato __count__ opere",
     "wrong": "Sbagliato!",
     "wrong-desc": "Ma è",
     "years": "Anni di vita",

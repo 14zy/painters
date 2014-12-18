@@ -21,7 +21,7 @@
   },
   "message": {
     "right": "Верно!",
-    "right-desc": "Вы отгадали __myVar__ картину",
+    "right-desc": "Вы отгадали __count__ картину",
     "wrong": "Не верно!",
     "wrong-desc": "Это же",
     "years": "Годы жизни",

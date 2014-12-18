@@ -21,7 +21,7 @@
   },
   "message": {
     "right": "¡Has acertado!",
-    "right-desc": "El cuadro __myVar__ está acabado!",
+    "right-desc": "El cuadro __count__ está acabado!",
     "wrong": "‘Incorrecto!",
     "wrong-desc": "Es",
     "years": "Años",
