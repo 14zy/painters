@@ -56,7 +56,7 @@ function load() {
     setLang(lang);
   };
   //removeUTMs();
-  window.platform = "http://artchallenge.me/painters/" // https://dl.dropboxusercontent.com/u/15486902/painters/ || http://178.62.133.139/painters/ || file:///Users/14zy/Dropbox/Public/painters/
+  window.platform = "http://178.62.133.139/painters/" // https://dl.dropboxusercontent.com/u/15486902/painters/ || http://178.62.133.139/painters/ || file:///Users/14zy/Dropbox/Public/painters/
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
   window.errorDelay = 3000;
   window.pnotify = "";
@@ -79,7 +79,7 @@ function getart() {
   currentWins();
   var art = document.getElementById("art");
   window.truePainter = window.currentSet[Math.floor((Math.random()*window.currentSet.length))];
-  $.getJSON("http://artchallenge.me/painters/" + window.truePainter + "/data.json", function(json) {
+  $.getJSON("painters/" + window.truePainter + "/data.json", function(json) {
       window.paintings = json.paintings.length;
       window.image = Math.floor((Math.random()*window.paintings)+1);
       art.src = window.platform + truePainter + "/" + window.image + ".jpg";
