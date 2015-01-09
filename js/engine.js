@@ -30,7 +30,7 @@ function setLang(lang) {
   document.getElementById(lang).className="lang-active";
   
   if (lang == "ru") {
-    $("#subscribe")[0].style.display="block";
+    $("#subscribe")[0].style.display="none";
   } else {
     $("#subscribe")[0].style.display="none";
   }
@@ -91,7 +91,11 @@ function getart() {
         window.wiki = json.link.wikipedia.en;
       };
       window.years = json.years;
-      window.bio = json.bio.ru;
+      if (window.lang == "ru" || window.lang == "en") {
+        window.bio = json.bio[window.lang];
+      } else {
+        window.bio = json.bio.ru;
+      }
       window.nation = undefined;
       json.nationality.forEach(function(entry) {
         if (window.nation == undefined) {
