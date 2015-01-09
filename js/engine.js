@@ -28,6 +28,12 @@ function setLang(lang) {
   });
   document.getElementById("langMain").src="pics/flags/" + lang.toUpperCase() + ".png";
   document.getElementById(lang).className="lang-active";
+  
+  if (lang == "ru") {
+    $("#subscribe")[0].style.display="block";
+  } else {
+    $("#subscribe")[0].style.display="none";
+  }
 
 };
 
@@ -107,24 +113,24 @@ function getart() {
   puticons();
 };
 
-function removeUTMs() {
-  if (/utm_/.test(location.search) && window.history.replaceState){
-
-    // thx @cowboy for the revised hash param magic.
-    var oldUrl = location.href;
-    var newUrl = oldUrl.replace(/\?([^#]*)/, function(_, search) {
-      search = search.split('&').map(function(v) {
-        return !/^utm_/.test(v) && v;
-      }).filter(Boolean).join('&'); // omg filter(Boolean) so dope.
-      return search ? '?' + search : '';
-    });
-
-    if ( newUrl != oldUrl ) {
-      window.history.replaceState({},'', newUrl);
-    }
-
-  }
-};
+// function removeUTMs() {
+//   if (/utm_/.test(location.search) && window.history.replaceState){
+//
+//     // thx @cowboy for the revised hash param magic.
+//     var oldUrl = location.href;
+//     var newUrl = oldUrl.replace(/\?([^#]*)/, function(_, search) {
+//       search = search.split('&').map(function(v) {
+//         return !/^utm_/.test(v) && v;
+//       }).filter(Boolean).join('&'); // omg filter(Boolean) so dope.
+//       return search ? '?' + search : '';
+//     });
+//
+//     if ( newUrl != oldUrl ) {
+//       window.history.replaceState({},'', newUrl);
+//     }
+//
+//   }
+// };
 
 function currentWins() {
   if (getCookie('wins') > 1) {
@@ -135,233 +141,8 @@ function currentWins() {
 
 function putButtons(painter) {
   function randomPainter() {
-    switch (Math.floor((Math.random()*56)+1))
-    {
-    case 1:
-      painterName = i18n.t("painters.1", { lng: window.lang });
-      break;
-    
-    case 2:
-      painterName = i18n.t("painters.2", { lng: window.lang }); 
-      break;
-    
-    case 3:
-      painterName = i18n.t("painters.3", { lng: window.lang }); 
-      break;
-    
-    case 4:
-      painterName = i18n.t("painters.4", { lng: window.lang }); 
-      break;
-    
-    case 5:
-      painterName = i18n.t("painters.5", { lng: window.lang }); 
-      break;
-    
-    case 6:
-      painterName = i18n.t("painters.6", { lng: window.lang }); 
-      break;
-    
-    case 7:
-      painterName = i18n.t("painters.7", { lng: window.lang }); 
-      break;
-    
-    case 8:
-      painterName = i18n.t("painters.8", { lng: window.lang }); 
-      break;
-    
-    case 9:
-      painterName = i18n.t("painters.9", { lng: window.lang }); 
-      break;
-    
-    case 10:
-      painterName = i18n.t("painters.10", { lng: window.lang }); 
-      break;
-
-    case 11:
-      painterName = i18n.t("painters.11", { lng: window.lang }); 
-      break;
-
-    case 12:
-      painterName = i18n.t("painters.12", { lng: window.lang }); 
-      break;
-    
-    case 13:
-      painterName = i18n.t("painters.13", { lng: window.lang }); 
-      break;
-
-    case 14:
-      painterName = i18n.t("painters.14", { lng: window.lang }); 
-      break;
-
-    case 15:
-      painterName = i18n.t("painters.15", { lng: window.lang }); 
-      break;
-
-    case 16:
-      painterName = i18n.t("painters.16", { lng: window.lang }); 
-      break;
-
-    case 17:
-      painterName = i18n.t("painters.17", { lng: window.lang }); 
-      break;
-
-    case 18:
-      painterName = i18n.t("painters.18", { lng: window.lang }); 
-      break;
-
-    case 19:
-      painterName = i18n.t("painters.19", { lng: window.lang }); 
-      break;
-
-    case 20:
-      painterName = i18n.t("painters.20", { lng: window.lang }); 
-      break;
-    
-    case 21:
-      painterName = i18n.t("painters.21", { lng: window.lang }); 
-      break;
-    
-    case 22:
-      painterName = i18n.t("painters.22", { lng: window.lang }); 
-      break;
-    
-    case 23:
-      painterName = i18n.t("painters.23", { lng: window.lang }); 
-      break;
-    
-    case 24:
-      painterName = i18n.t("painters.24", { lng: window.lang }); 
-      break;
-    
-    case 25:        
-      painterName = i18n.t("painters.25", { lng: window.lang }); 
-      break;
-
-    case 26:        
-      painterName = i18n.t("painters.26", { lng: window.lang }); 
-      break;
-
-    case 27:        
-      painterName = i18n.t("painters.27", { lng: window.lang }); 
-      break;
-
-    case 28:        
-      painterName = i18n.t("painters.28", { lng: window.lang }); 
-      break;
-
-    case 29:        
-      painterName = i18n.t("painters.29", { lng: window.lang }); 
-      break;
-
-    case 30:        
-      painterName = i18n.t("painters.30", { lng: window.lang }); 
-      break;
-
-    case 31:        
-      painterName = i18n.t("painters.31", { lng: window.lang }); 
-      break;
-
-    case 32:        
-      painterName = i18n.t("painters.32", { lng: window.lang }); 
-      break;
-
-    case 33:        
-      painterName = i18n.t("painters.33", { lng: window.lang }); 
-      break;
-
-    case 34:        
-      painterName = i18n.t("painters.34", { lng: window.lang }); 
-      break;
-    
-    case 35:        
-      painterName = i18n.t("painters.35", { lng: window.lang }); 
-      break;
-    
-    case 36:        
-      painterName = i18n.t("painters.36", { lng: window.lang }); 
-      break;
-
-    case 37:        
-      painterName = i18n.t("painters.37", { lng: window.lang }); 
-      break;
-
-    case 38:        
-      painterName = i18n.t("painters.38", { lng: window.lang }); 
-      break;
-
-    case 39:        
-      painterName = i18n.t("painters.39", { lng: window.lang }); 
-      break;
-
-    case 40:        
-      painterName = i18n.t("painters.40", { lng: window.lang }); 
-      break;
-    
-    case 41:        
-      painterName = i18n.t("painters.41", { lng: window.lang }); 
-      break;
-
-    case 42:        
-      painterName = i18n.t("painters.42", { lng: window.lang }); 
-      break;
-
-    case 43:        
-      painterName = i18n.t("painters.43", { lng: window.lang }); 
-      break;
-
-    case 44:        
-      painterName = i18n.t("painters.44", { lng: window.lang }); 
-      break;
-
-    case 45:        
-      painterName = i18n.t("painters.45", { lng: window.lang }); 
-      break;
-
-    case 46:        
-      painterName = i18n.t("painters.46", { lng: window.lang }); 
-      break;
-    
-    case 47:        
-      painterName = i18n.t("painters.47", { lng: window.lang }); 
-      break;
-
-    case 48:        
-      painterName = i18n.t("painters.48", { lng: window.lang }); 
-      break;
-
-    case 49:        
-      painterName = i18n.t("painters.49", { lng: window.lang }); 
-      break;
-
-    case 50:        
-      painterName = i18n.t("painters.50", { lng: window.lang }); 
-      break;
-
-    case 51:        
-      painterName = i18n.t("painters.51", { lng: window.lang }); 
-      break;
-
-    case 52:        
-      painterName = i18n.t("painters.52", { lng: window.lang }); 
-      break;
-
-    case 53:        
-      painterName = i18n.t("painters.53", { lng: window.lang }); 
-      break;
-
-    case 54:        
-      painterName = i18n.t("painters.54", { lng: window.lang }); 
-      break;
-
-    case 55:        
-      painterName = i18n.t("painters.55", { lng: window.lang }); 
-      break;
-
-    case 56:        
-      painterName = i18n.t("painters.56", { lng: window.lang }); 
-      break;
-    };
-    return painterName;
+    var random = "painters." + Math.floor((Math.random()*56)+1)
+    return i18n.t(random, { lng: window.lang });
   };
   
   var painters = [painter];
@@ -545,56 +326,8 @@ function badPhrase() {
     phrase = i18n.t("message.wrong", { lng: window.lang });
   }
   else {
-    switch (Math.floor((Math.random()*12)+1))
-    {
-    case 1:
-      phrase = i18n.t("badPhrases.1", { lng: window.lang });
-      break;
-    
-    case 2:
-      phrase = i18n.t("badPhrases.2", { lng: window.lang });
-      break;
-
-    case 3:
-      phrase = i18n.t("badPhrases.3", { lng: window.lang });
-      break;
-    
-    case 4:
-      phrase = i18n.t("badPhrases.4", { lng: window.lang });
-      break;
-    
-    case 5:
-      phrase = i18n.t("badPhrases.5", { lng: window.lang });
-      break;
-
-    case 6:
-      phrase = i18n.t("badPhrases.6", { lng: window.lang });
-      break;
-
-    case 7:
-      phrase = i18n.t("badPhrases.7", { lng: window.lang });
-      break;
-
-    case 8:
-      phrase = i18n.t("badPhrases.8", { lng: window.lang });
-      break;
-
-    case 9:
-      phrase = i18n.t("badPhrases.9", { lng: window.lang });
-      break;
-
-    case 10:
-      phrase = i18n.t("badPhrases.10", { lng: window.lang });
-      break;
-
-    case 11:
-      phrase = i18n.t("badPhrases.11", { lng: window.lang });
-      break;
-
-    case 12:
-      phrase = i18n.t("badPhrases.12", { lng: window.lang });
-      break;
-    };
+    var phrase = "badPhrases." + Math.floor((Math.random()*12)+1)
+    phrase = i18n.t(phrase, { lng: window.lang });
   };
   return phrase;      
 };
