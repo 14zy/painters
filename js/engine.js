@@ -80,7 +80,7 @@ function getart() {
   var art = document.getElementById("art");
   window.truePainter = window.currentSet[Math.floor((Math.random()*window.currentSet.length))];
   $.getJSON("painters/" + window.truePainter + "/data.json", function(json) {
-      window.paintings = json.paintings.length;
+      window.paintings = json.paintings;
       window.image = Math.floor((Math.random()*window.paintings)+1);
       art.src = window.platform + truePainter + "/" + window.image + ".jpg";
       window.truePainterName = i18n.t("painters." + truePainter, { lng: window.lang });
