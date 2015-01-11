@@ -401,7 +401,7 @@ function ShareOD() {
 };
 
 function ShareMM() {
-  url = "http://connect.mail.ru/share?url=http://artchallenge.ru/?utm_source=mm-win&title=Господа, я отлично разбираюсь в искусстве!&description=Art Challenge - игра на знание популярных художников";
+  url = "http://connect.mail.ru/share?url=http://artchallenge.me/?utm_source=mm-win&title="+i18n.t("shares.title",{lng: window.lang})+"&description="+i18n.t("shares.description",{lng: window.lang})+"&image_url=http://artchallenge.ru/pics/badges/winner-badge-"+window.lang+"-shareVK.png";
   window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24594722.reachGoal('WINNER-SHARE-MM');
 };
