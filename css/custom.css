@@ -83,6 +83,10 @@
   cursor:pointer; color:#428BCA;
 }
 
+.press:hover {
+  opacity: 0.4;
+}
+
 
 @media (max-width: 992px) {
   
