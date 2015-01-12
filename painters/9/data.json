@@ -15,7 +15,11 @@
     "local": "Claude_Monet.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Моне,_Клод",
-      "en": "http://en.wikipedia.org/wiki/Claude_Monet" }
+      "en": "http://en.wikipedia.org/wiki/Claude_Monet",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 72
 }

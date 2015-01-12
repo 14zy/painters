@@ -15,7 +15,11 @@
     "local": "Egon_Schiele.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Шиле,_Эгон",
-      "en": "http://en.wikipedia.org/wiki/Egon_Schiele" }
+      "en": "http://en.wikipedia.org/wiki/Egon_Schiele",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 258
 }

@@ -15,7 +15,11 @@
     "local": "Salvador_Dali.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Дали,_Сальвадор",
-      "en": "http://en.wikipedia.org/wiki/Salvador_Dalí" }
+      "en": "http://en.wikipedia.org/wiki/Salvador_Dalí",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 336
 }

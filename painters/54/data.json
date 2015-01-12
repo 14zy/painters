@@ -15,7 +15,11 @@
     "local": "Rembrandt.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Рембрандт",
-      "en": "http://en.wikipedia.org/wiki/Rembrandt" }
+      "en": "http://en.wikipedia.org/wiki/Rembrandt",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 282
 }

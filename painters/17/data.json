@@ -15,7 +15,11 @@
     "local": "Edouard_Manet.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Мане,_Эдуар",
-      "en": "http://en.wikipedia.org/wiki/Édouard_Manet" }
+      "en": "http://en.wikipedia.org/wiki/Édouard_Manet",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 91
 }

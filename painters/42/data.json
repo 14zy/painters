@@ -15,7 +15,11 @@
     "local": "Sandro_Botticelli.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Сандро_Боттичелли",
-      "en": "http://en.wikipedia.org/wiki/Sandro_Botticelli" }
+      "en": "http://en.wikipedia.org/wiki/Sandro_Botticelli",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 197
 }

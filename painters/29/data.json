@@ -15,7 +15,11 @@
     "local": "Peter_Paul_Rubens.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Рубенс,_Питер_Пауль",
-      "en": "http://en.wikipedia.org/wiki/Peter_Paul_Rubens" }
+      "en": "http://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 147
 }

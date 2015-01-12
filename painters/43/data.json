@@ -15,7 +15,11 @@
     "local": "Caravaggio.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Караваджо",
-      "en": "http://en.wikipedia.org/wiki/Caravaggio" }
+      "en": "http://en.wikipedia.org/wiki/Caravaggio",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 55
 }

@@ -15,7 +15,11 @@
     "local": "Marc_Chagall.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Шагал,_Марк_Захарович",
-      "en": "http://en.wikipedia.org/wiki/Marc_Chagall" }
+      "en": "http://en.wikipedia.org/wiki/Marc_Chagall",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 251
 }

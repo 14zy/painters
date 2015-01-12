@@ -15,7 +15,11 @@
     "local": "Rene_Magritte.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Магритт,_Рене",
-      "en": "http://en.wikipedia.org/wiki/René_Magritte" }
+      "en": "http://en.wikipedia.org/wiki/René_Magritte",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 196
 }

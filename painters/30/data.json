@@ -15,7 +15,11 @@
     "local": "Pierre-Auguste_Renoir.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Ренуар,_Пьер_Огюст",
-      "en": "http://en.wikipedia.org/wiki/Pierre-Auguste_Renoir" }
+      "en": "http://en.wikipedia.org/wiki/Pierre-Auguste_Renoir",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 336
 }

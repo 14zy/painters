@@ -15,7 +15,11 @@
     "local": "John_William_Waterhouse.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Уотерхаус,_Джон_Уильям",
-      "en": "http://en.wikipedia.org/wiki/John_William_Waterhouse" }
+      "en": "http://en.wikipedia.org/wiki/John_William_Waterhouse",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 207
 }

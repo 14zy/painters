@@ -15,7 +15,11 @@
     "local": "Jan_van_Eyck.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Эйк,_Ян_ван",
-      "en": "http://en.wikipedia.org/wiki/Jan_van_Eyck" }
+      "en": "http://en.wikipedia.org/wiki/Jan_van_Eyck",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 102
 }

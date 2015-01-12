@@ -15,7 +15,11 @@
     "local": "Henri_Matisse.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Матисс,_Анри",
-      "en": "http://en.wikipedia.org/wiki/Henri_Matisse" }
+      "en": "http://en.wikipedia.org/wiki/Henri_Matisse",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 193
 }

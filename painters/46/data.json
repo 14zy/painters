@@ -15,7 +15,11 @@
     "local": "Diego_Velazquez.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Веласкес,_Диего",
-      "en": "http://en.wikipedia.org/wiki/Diego_Velázquez" }
+      "en": "http://en.wikipedia.org/wiki/Diego_Velázquez",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 129
 }

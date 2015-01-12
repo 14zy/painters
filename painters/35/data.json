@@ -15,7 +15,11 @@
     "local": "Albrecht_Durer.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Дюрер,_Альбрехт",
-      "en": "http://en.wikipedia.org/wiki/Albrecht_Dürer" }
+      "en": "http://en.wikipedia.org/wiki/Albrecht_Dürer",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 328
 }

@@ -15,7 +15,11 @@
     "local": "Vincent_van_Gogh.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Ван_Гог,_Винсент",
-      "en": "http://en.wikipedia.org/wiki/Vincent_van_Gogh" }
+      "en": "http://en.wikipedia.org/wiki/Vincent_van_Gogh",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 967
 }

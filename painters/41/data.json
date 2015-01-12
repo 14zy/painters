@@ -15,7 +15,11 @@
     "local": "Giotto.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Джотто_ди_Бондоне",
-      "en": "http://en.wikipedia.org/wiki/Giotto_di_Bondone" }
+      "en": "http://en.wikipedia.org/wiki/Giotto_di_Bondone",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 119
 }

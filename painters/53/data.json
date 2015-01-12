@@ -15,7 +15,11 @@
     "local": "Edgar_Degas.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Дега,_Эдгар",
-      "en": "http://en.wikipedia.org/wiki/Edgar_Degas" }
+      "en": "http://en.wikipedia.org/wiki/Edgar_Degas",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 729
 }

@@ -15,7 +15,11 @@
     "local": "Kazimir_Malevich.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Малевич,_Казимир_Северинович",
-      "en": "http://en.wikipedia.org/wiki/Kazimir_Malevich" }
+      "en": "http://en.wikipedia.org/wiki/Kazimir_Malevich",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 142
 }

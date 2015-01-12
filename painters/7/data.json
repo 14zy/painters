@@ -15,7 +15,11 @@
     "local": "Diego_Rivera.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Ривера,_Диего",
-      "en": "http://en.wikipedia.org/wiki/Diego_Rivera" }
+      "en": "http://en.wikipedia.org/wiki/Diego_Rivera",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 70
 }

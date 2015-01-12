@@ -15,7 +15,11 @@
     "local": "Titian.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Тициан",
-      "en": "http://en.wikipedia.org/wiki/Titian" }
+      "en": "http://en.wikipedia.org/wiki/Titian",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 293
 }

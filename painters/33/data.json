@@ -15,7 +15,11 @@
     "local": "Frida_Kahlo.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Кало,_Фрида",
-      "en": "http://en.wikipedia.org/wiki/Frida_Kahlo" }
+      "en": "http://en.wikipedia.org/wiki/Frida_Kahlo",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 120
 }

@@ -15,7 +15,11 @@
     "local": "Alphonse_Mucha.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Муха,_Альфонс_Мариа",
-      "en": "http://en.wikipedia.org/wiki/Alphonse_Mucha" }
+      "en": "http://en.wikipedia.org/wiki/Alphonse_Mucha",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 274
 }

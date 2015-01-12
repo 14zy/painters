@@ -15,7 +15,11 @@
     "local": "Francisco_Goya.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Гойя,_Франсиско",
-      "en": "http://en.wikipedia.org/wiki/Francisco_Goya" }
+      "en": "http://en.wikipedia.org/wiki/Francisco_Goya",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 328
 }

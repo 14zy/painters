@@ -15,7 +15,11 @@
     "local": "El_Greco.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Эль_Греко",
-      "en": "http://en.wikipedia.org/wiki/El_Greco" }
+      "en": "http://en.wikipedia.org/wiki/El_Greco",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 94
 }

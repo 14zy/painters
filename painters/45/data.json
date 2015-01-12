@@ -15,7 +15,11 @@
     "local": "Leonardo_da_Vinci.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Леонардо_да_Винчи",
-      "en": "http://en.wikipedia.org/wiki/Leonardo_da_Vinci" }
+      "en": "http://en.wikipedia.org/wiki/Leonardo_da_Vinci",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 157
 }

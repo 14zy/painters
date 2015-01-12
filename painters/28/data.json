@@ -15,7 +15,11 @@
     "local": "Pablo_Picasso.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Пикассо,_Пабло",
-      "en": "http://en.wikipedia.org/wiki/Pablo_Picasso" }
+      "en": "http://en.wikipedia.org/wiki/Pablo_Picasso",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 464
 }

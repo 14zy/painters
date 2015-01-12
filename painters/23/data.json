@@ -15,7 +15,11 @@
     "local": "Ivan_Aivazovsky.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Айвазовский,_Иван_Константинович",
-      "en": "http://en.wikipedia.org/wiki/Ivan_Aivazovsky" }
+      "en": "http://en.wikipedia.org/wiki/Ivan_Aivazovsky",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 416
 }

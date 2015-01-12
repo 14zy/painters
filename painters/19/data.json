@@ -15,7 +15,11 @@
     "local": "Andrei_Rublev.html",
     "wikipedia": {
       "ru": "http://ru.wikipedia.org/wiki/Андрей_Рублёв",
-      "en": "http://en.wikipedia.org/wiki/Andrei_Rublev" }
+      "en": "http://en.wikipedia.org/wiki/Andrei_Rublev",
+      "de": "",
+      "fr": "",
+      "es": "",
+      "it": "" }
     },
   "paintings": 100
 }
