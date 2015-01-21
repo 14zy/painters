@@ -119,7 +119,14 @@
     "53": "Edgar Degas",
     "54": "Rembrandt",
     "55": "Titien",
-    "56": "Alfons Mucha"
+    "56": "Alfons Mucha",
+    "57": "Henri de Toulouse-Lautrec",
+    "58": "Gustave Courbet",
+    "59": "Dante Gabriel Rossetti",
+    "60": "John Singer Sargent",
+    "61": "Camille Pissarro",
+    "62": "William Turner",
+    "63": "Edvard Munch"
   },
   "nation": {
     "Russian": "Russe",
@@ -138,7 +145,8 @@
     "Jewish": "Juif",
     "Belarusian": "Biélorusse",
     "Czech": "Tchèque",
-    "Greek": "Grecque"
+    "Greek": "Grecque",
+    "Norwegian": "Norvégienne"
   },
   "genre": {
     "Romanticism": "Romantisme",
@@ -164,6 +172,7 @@
     "Proto Renaissance": "Proto Renaissance",
     "Early Renaissance": "Début de la Renaissance",
     "Art Deco": "Art Déco",
-    "High Renaissance": "Haute Renaissance"
+    "High Renaissance": "Haute Renaissance",
+    "Aestheticism": "Esthétisme"
   }
 }
