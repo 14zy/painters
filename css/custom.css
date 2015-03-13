@@ -1,0 +1,318 @@
+.ui-pnotify.stack-mobile{
+  top:2%;
+  left: 50%;
+  margin-left: -150px;
+}
+
+.container {
+  width: 100%;
+}
+
+.ui-pnotify.stack-winner {
+  text-align: center;
+  top: 8%;
+  left: 20%;
+  width: 60%!important;
+  font-size: 20px;
+  z-index: 1;
+}
+
+.ui-pnotify.stack-winner .ui-pnotify-container {
+  background-color: white !important;
+  border: none !important;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  }
+
+.ui-pnotify.stack-winner .ui-pnotify-title {
+  font-size: 36px;
+  padding: 10px 0 10px 0;
+}
+
+
+.ui-pnotify.stack-learnMore {
+  top:10%;
+  left: 15%; 
+  width: 70%!important;
+}
+
+#learnMoreDiv {
+  overflow: hidden!important;
+}
+
+#learnMoreInfo {
+  float: left;
+  padding: 10px 20px 5px 5px;
+  max-width: 180px;
+  text-align: center;
+  font-size: 14px;
+}
+
+#learnMoreBio {  
+  height: 300px;
+  text-align: justify;
+  padding-right: 5px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+
+/*#langMainDiv {
+  margin-top: -40px;
+} */
+
+#langMainDiv img{
+  margin-top: -2px;
+  width: 24px;
+}
+
+
+.lang-area {
+  color: gray;
+}
+
+.lang {
+  cursor: pointer;
+}
+
+.logo {
+  color: gray;
+}
+
+.logo:hover {
+  text-decoration: none;
+  color: #428bca;
+}
+
+.lang img, .lang-active img {
+  margin-top: -3px; 
+  padding-right: 2px;
+  width: 24px; 
+}
+
+.lang-active {
+  background-color: rgb(245,245,245);
+  cursor: default;
+}
+
+
+.top-icons {
+  color: lightgray;
+  font-size: 20px;
+}
+
+
+#art {
+  height: 600px;
+  max-width: 100%;
+}
+
+#btnOn {
+  font-weight:bold;
+}
+
+#btnOff {
+  cursor:pointer; color:#428BCA;
+}
+
+.press:hover {
+  opacity: 0.4;
+}
+
+#currentSetImg {
+  width: 60px;
+}
+
+#btnLearnMore:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.sets {
+  margin-top: -16px;
+}
+
+.sets-ul {
+  width: 500px;
+}
+
+.sets-ul span{
+  white-space: normal;
+}
+
+.sets-ul img{
+  margin-top: 2px;
+  padding-right: 7px;
+  width: 64px;
+  float: left;
+}
+
+.sets-ul li{
+  padding: 7px 0 7px 0;
+}
+
+.allSet-count {
+  float: right;
+}
+
+
+
+.up { bottom:100% !important; top:auto !important; }
+
+@media (max-width: 992px) {
+  
+  #art {
+   height: 500px;
+  }
+  
+  .container {
+    width: 100%;
+  }
+
+  #corner {
+    border-left: none;
+    border-right: none;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  
+  #learnMoreBio {  
+    height: 350px;
+  }
+  
+  #btn1,#btn2,#btn3,#btn4 {  
+    margin-top: 5px;
+  }
+  
+  .ui-pnotify.stack-winner {
+    text-align: center;
+    top: 5%;
+    left: 5%;
+    width: 90%!important;
+    z-index: 1;
+    font-size: 16px;
+  }
+  
+  .ui-pnotify.stack-winner .ui-pnotify-title {
+    font-size: 20px;
+    padding: 5px 0 5px 0;
+  }
+  
+  .btn-share {
+    margin: 2px; 
+    font-size: 14px;
+  }
+      
+}
+
+
+@media (max-width: 600px) {
+  .lead {
+    font-size: 21px;
+  }
+  
+  #art {
+    width: auto;
+    min-height: 0;
+    height: auto;
+    max-height: 500px;
+  }
+  
+  #corner {
+    border-left: none;
+    border-right: none;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+      
+/*  #langMainDiv {
+    text-align: right;
+  }
+*/  
+  #btn1,#btn2,#btn3,#btn4 {
+/*    border-radius: 0;*/
+    display: block;
+    margin: 5px 50px 0 50px;
+    padding: 15px;
+  }
+  
+  #btn4 {
+    margin-bottom: -30px;
+  }
+  
+  #learnMoreInfo {
+    float: left;
+  }
+  
+  #learnMoreBio {  
+    text-align: justify;
+    overflow: visible;
+    display:inline;
+  }
+  
+  .ui-pnotify.stack-learnMore{
+    top: 2%;
+    left: 5%; 
+    width: 90%!important;
+  }
+  
+  #learnMoreDiv {
+   overflow: scroll!important;
+  }
+  
+  #currentSetTitle {
+    display: none;
+  }
+   
+}
+
+
+@media (max-width: 500px) {
+  
+  .ui-pnotify.stack-learnMore{
+    text-align: center;
+    left: 2%; 
+    width: 96%!important;
+  }
+  
+  #learnMoreInfo {
+    float: none;
+    padding: 0;
+    max-width: none;
+  }
+      
+  #art {
+    min-height: 0;
+    height: auto;
+    max-height: 400px;
+  }
+          
+  #btn1,#btn2,#btn3,#btn4 {  
+    margin: 5px 10px 0 10px;
+  }
+  
+  .sets-ul {
+    width: 300px;
+  }
+  
+  .top-icons {
+    float: left;
+    margin-top: 30px;
+    left: 14px;
+    width: 250px;
+    z-index: 1;
+    position: absolute;
+    font-size: 16px;
+  }
+  
+  .sets {
+    margin-right: -15px;
+  }
+  
+  .allSet-count {
+    display: none;
+  }
+  
+  
+}
