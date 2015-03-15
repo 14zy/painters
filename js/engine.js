@@ -62,7 +62,7 @@ function load() {
   window.pnotify = "";
   //js magic for mobiles
   if (window.innerWidth <= 600) {
-    window.errorDelay = 3000;
+    window.errorDelay = 4000;
     window.pnotify = "stack-mobile";
   };
 

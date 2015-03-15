@@ -243,24 +243,24 @@
   "sets": {
     "basicSet": "Die bekannten Maler",
     "basicSet-desc": "Die Sammlung der Bilder von den bekannten Malern",
-    "basicSet-count": "50 painters, 8 450 paintings",
+    "basicSet-count": "50 Malern, 8 450 Gemälde",
     "renaissanceSet": "Die Renaissance",
     "renaissanceSet-desc": "Von Nord-Renaissance und Protorenaissance bis Hochrenaissance",
-    "renaissanceSet-count": "24 painters, 2 783 paintings",
+    "renaissanceSet-count": "24 Malern, 2 783 Gemälde",
     "impressionismSet" : "Der Impressionismus and der Postimpressionismus",
     "impressionismSet-desc" : "Die Werke von den Malern von dem Impressionismus und dem Postimpressionismus",
-    "impressionismSet-count": "18 painters, 4 231 paintings",
+    "impressionismSet-count": "18 Malern, 4 231 Gemälde",
     "realismSet": "Die Realist-Maler",
     "realismSet-desc": "Die Sammlung von den Bildern von den Realist-Malern",
-    "realismSet-count": "12 painters, 2 083 paintings",
+    "realismSet-count": "12 Malern, 2 083 Gemälde",
     "russianSet": "Die russischen Maler",
     "russianSet-desc": "Von allen Zeiten und verschiedenen Malerschulen",
-    "russianSet-count": "33 painters, 5 140 paintings",
+    "russianSet-count": "33 Malern, 5 140 Gemälde",
     "frenchSet": "Die französischen Maler",
     "frenchSet-desc": "Die Sammlung von französischen Malern",
-    "frenchSet-count": "22 painters, 3 758 paintings",
+    "frenchSet-count": "22 Malern, 3 758 Gemälde",
     "allSet": "Die volle Sammlung",
     "allSet-desc": "Die Bilder von allen zum Spiel eingefuegten Maler – fuer beschlagene Spieler",
-    "allSet-count": "118 painters, 17 695 paintings"
+    "allSet-count": "118 Malern, 17 695 Gemälde"
   }
 }
