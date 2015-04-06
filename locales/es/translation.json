@@ -22,7 +22,7 @@
   },
   "message": {
     "right": "¡Has acertado!",
-    "right-desc": "El cuadro __count__ está acabado!",
+    "right-desc": "El cuadro __count__ está acabado",
     "wrong": "‘Incorrecto!",
     "wrong-desc": "Es",
     "years": "Años",
@@ -30,7 +30,7 @@
     "genre": "Género",
     "learn-more": "Aprende más",
     "winner": "¡Enhorabuena!",
-    "winner-desc": "Collection of <strong>__setName__</strong> passed!",
+    "winner-desc": "Colección de <strong>__setName__</strong> pasó!",
     "winner-desc-old": "¡Se te da muy bien el arte!<br>10 de los 10 – está bastante mejor que el 82% de la gente que ha jugado a esto!",
     "share": "Puedes compartir tu victoria con tus amigos:"
   },

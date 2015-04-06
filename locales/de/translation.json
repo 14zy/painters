@@ -22,7 +22,7 @@
   },
   "message": {
     "right": "Richtig!",
-    "right-desc": "Das Gemalde __count__ ist erraten!",
+    "right-desc": "Das Gemalde __count__ ist erraten",
     "wrong": "Das schtimmt nicht!",
     "wrong-desc": "Das ist doch",
     "years": "Lebensjahre",
@@ -30,7 +30,7 @@
     "genre": "Genre",
     "learn-more": "Mehr erfahren",
     "winner": "Unsere Gratulationen",
-    "winner-desc": "Collection of <strong>__setName__</strong> passed!",
+    "winner-desc": "Sammlung von <strong>__setName__</strong> bestanden!",
     "winner-desc-old": "Sie verstehen viel von Kunst<br>10 aus 10 das ist besser als 82% von Menschen, die bei diesem Spiel mitgemacht haben!",
     "share": "Sie können von Ihrem Sieg im sozialen Netzwerk berichten:"
   },

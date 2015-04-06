@@ -31,7 +31,7 @@
     "genre": "Pittura di genere",
     "learn-more": "Saperne di più",
     "winner": "Augurissimi!",
-    "winner-desc": "Collection of <strong>__setName__</strong> passed!",
+    "winner-desc": "La collezione <strong>__setName__</strong> è superata!",
     "winner-desc-old": "Lei è perfettamente versato/a nell'arte!<br>10 su 10 – è meglio del 82% delle persone che hanno partecipato a questo gioco!",
     "share": "Può condividere la Sua vittoria nelle reti sociali:"
   },
@@ -182,7 +182,7 @@
     "92": "Hans Baldung",
     "93": "Gustave Moreau",
     "94": "Paul Gauguin",
-    "95": "Raphael",
+    "95": "Raffaello",
     "96": "Paul Signac",
     "97": "Nicolas Poussin",
     "98": "Hans Holbein",

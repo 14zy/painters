@@ -368,13 +368,12 @@ function goodPhrase() {
 function winner() {
 
   var winnerDiv = "\
-  <a onclick='ShareFB();' href='#'>\
-    <img style='width: 90%; max-height: 350px' src=pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareFB.png>\
-  </a>\
-  <br><br>\
-  <text>" + i18n.t("message.winner-desc", { lng: window.lang, setName: i18n.t("sets." + window.currentSetName, { lng: window.lang }) }) + "\
-  <br>\
-  " + i18n.t("message.share", { lng: window.lang }) + "</text>" + getShares();
+  <p>"+i18n.t("message.winner-desc", { lng: window.lang, setName: i18n.t("sets." + window.currentSetName, { lng: window.lang }) })+"</p>\
+  <p><a onclick='ShareFB();' href='#'>\
+    <img style='width: 80%; max-height: 350px' src=pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareFB.png>\
+  </a></p>\
+  <p>" + i18n.t("message.winner-desc-old", { lng: window.lang }) + "</p>\
+  <p>" + i18n.t("message.share", { lng: window.lang }) + "</p>" + getShares();
 
   window.msgWinner = new PNotify({
       title: i18n.t("message.winner", { lng: window.lang }),
@@ -410,7 +409,7 @@ function getShares() {
   {
   case "ru":
     shares_old = "<a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> ВКонтакте </a><br><a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareOD();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Одноклассники </a><br><a onclick='ShareMM();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Мой Мир </a>";
-    shares = "<br><div style='padding: 15px'>\
+    shares = "<div style='padding: 15px'>\
     <button type='button' class='btn btn-lg btn-primary btn-share' aria-label='ВКонтакте' onclick='ShareVK();'>\
      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> ВКонтакте\
     </button>\
@@ -420,7 +419,7 @@ function getShares() {
     <button type='button' class='btn btn-lg btn-warning btn-share' aria-label='Одноклассники' onclick='ShareOD();'>\
       <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Одноклассники\
     </button>\
-    <button type='button' class='btn btn-lg btn-info btn-share' aria-label='Мой Мир' onclick='ShareTW();'>\
+    <button type='button' class='btn btn-lg btn-info btn-share' aria-label='Twitter' onclick='ShareTW();'>\
       <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Twitter\
     </button>\
     </div>";
@@ -428,7 +427,7 @@ function getShares() {
       
   default:
     shares_old = "<a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareTW();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> Twitter </a><br><a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> VKontakte </a>";
-    shares = "<br><div style='padding: 15px'>\
+    shares = "<div style='padding: 15px'>\
     <button type='button' class='btn btn-lg btn-primary btn-share' aria-label='Facebook' onclick='ShareFB();'>\
       <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Facebook\
     </button>\
