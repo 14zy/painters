@@ -96,7 +96,11 @@ function getart() {
       window.paintings = json.paintings;
       window.image = Math.floor((Math.random()*window.paintings)+1);
 
-      art.src = window.platform + truePainter + "/" + window.image + ".jpg";
+      if (window.pnotify == "stack-mobile") {
+        art.src = window.platform + truePainter + "/thumbnails/" + window.image + ".jpg";
+      } else {
+        art.src = window.platform + truePainter + "/" + window.image + ".jpg";
+      };
 
       window.link = json.link.local;
       if (window.lang == "ru") { //Временно, пока в json не будут ссылки на википедию на всех языках
@@ -136,7 +140,7 @@ function getart() {
         putButtons(window.truePainterName);        
       } else {
         console.log("Error: window.truePainterName is empty, sleep for 1000 and retry");
-        art.src = "pics/loading.svg";
+        art.src = "pics/loading.gif";
         setTimeout(function () {
           refresh("bad",false);
         }, 1000);
@@ -228,7 +232,7 @@ if (answer == window.truePainterName) {
   setTimeout(function() {refresh("good");}, 1000)
   
   new PNotify({
-      title: i18n.t("message.right", { lng: window.lang }),
+      title: goodPhrase(),
       text: i18n.t("message.right-desc", { lng: window.lang, count: parseInt(window.counter) }),
       type: 'success',
       hide: true,
@@ -355,6 +359,12 @@ function badPhrase() {
 };
 
 
+function goodPhrase() {
+    var phrase = "goodPhrases." + Math.floor((Math.random()*20)+1)
+    phrase = i18n.t(phrase, { lng: window.lang });
+  return phrase;      
+};
+
 function winner() {
 
   var winnerDiv = "\
@@ -480,7 +490,7 @@ function refresh(sign,scroll){
   document.getElementById("btn4").style.background = "";
   document.getElementById("btn4").style.borderColor = "";
 
-  document.getElementById("art").src = "pics/loading.svg";
+  document.getElementById("art").src = "pics/loading.gif";
   if (scroll != false) {
     $("html, body").animate({ scrollTop: 90 }, "slow");
   }
