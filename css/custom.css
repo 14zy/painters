@@ -1,3 +1,14 @@
+#promo {
+  display: inline;
+  padding-left: 80px;
+  margin-top: 7px;
+  font-size:  16px;
+}
+
+#promo a{
+  color: #15cb63;
+}
+
 .ui-pnotify.stack-mobile{
   top:2%;
   left: 50%;
@@ -163,6 +174,10 @@
 
 @media (max-width: 992px) {
   
+  #promo {
+    display: none;
+  }
+  
   #art {
     width: auto;
     height: auto;
@@ -211,6 +226,8 @@
 
 
 @media (max-width: 600px) {
+ 
+  
   .lead {
     font-size: 21px;
   }
