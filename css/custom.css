@@ -1,12 +1,25 @@
 #promo {
   display: inline;
-  padding-left: 80px;
-  margin-top: 7px;
+  padding-left: 50px;
+/*  margin-top: 7px;*/
   font-size:  16px;
 }
 
 #promo a{
-  color: #15cb63;
+/*  color: #15cb63;*/
+/*  color: black;*/
+	color: #a94442
+}
+
+#promo span{
+	margin-left: 50px;
+}
+
+
+#promo img{
+	position: absolute;
+	height: 65px;
+	margin-top: -20px;
 }
 
 .ui-pnotify.stack-mobile{

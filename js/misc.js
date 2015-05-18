@@ -64,3 +64,42 @@ $('#mc-embedded-subscribe-form').submit(function () {
  yaCounter24594722.reachGoal('SUBSCRIBE');
  return false;
 });
+
+
+//boomstarter
+
+// $( document ).ready(function() {
+//
+// 	window.promoImg = Math.floor(( Math.random() * 6 )) + 1;
+// 	window.promoTextId = Math.floor(( Math.random() * 6 )) + 1;
+//
+// 	switch(window.promoTextId) {
+// 	  case 1:
+// 		window.promoText = "Поддержите разработку мобильного приложения!";
+// 		break;
+// 	  case 2:
+//   		window.promoText = "Скоро будет мобильное приложение!";
+//   		break;
+// 	  case 3:
+//   		window.promoText = "Мобильное приложение Art Challenge";
+//   		break;
+// 	  case 4:
+//   		window.promoText = "Мы разрабатываем мобильное приложение!";
+//   		break;
+// 	  case 5:
+// 		window.promoText = "Господа, поддержите нас на Boomstarter";
+// 		break;
+// 	  case 6:
+// 		window.promoText = "Господа, мобильное приложение!";
+// 		break;
+//
+// 	};
+//
+// 	$( "#promo-text" ).text(window.promoText);
+// 	$( "#promo-img" ).attr("src","pics/promo/iphone" + window.promoImg + ".png")
+//
+// });
+//
+// $( "#promo-link" ).click(function() {
+//   yaCounter24594722.reachGoal('BOOMSTARTER-CLICK-1');
+// });
