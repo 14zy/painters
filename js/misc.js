@@ -68,7 +68,24 @@ $('#mc-embedded-subscribe-form').submit(function () {
 
 //boomstarter
 
+var MOSCOW_OFF = 4; // hours
+var MONTHS = ["January", "February", "March", "April", "May", "June", "July", 
+              "August", "September", "October", "November", "December"];
+
+// desired format => November 1, 2011 21:31:00
+function getLocalTime(offset) {
+    var d = new Date();
+    d.setTime((new Date().getTime()) + 
+              (d.getTimezoneOffset() * 60 * 1000) + // local offset
+              (1000 * 60 * 60 * offset)); // target offset
+			  return MONTHS[d.getMonth()] + " " + d.getDate() + "; " + d.toTimeString().split(" ")[0];
+}
+
+
+
 $( document ).ready(function() {
+	
+
 
 	window.promoImg = Math.floor(( Math.random() * 10 )) + 1;
 	window.promoTextId = Math.floor(( Math.random() * 8 )) + 1;
@@ -128,11 +145,7 @@ $( "#promo-link" ).click(function() {
 	var currentDate = new Date()
 	
 	var data = "click=" 
-	+ currentDate.getDate() 
-	+ "." + currentDate.getMonth()+1 
-	+ "." + currentDate.getFullYear() 
-	+ "; " + currentDate.getHours() 
-	+ ":" + currentDate.getMinutes() 
+	+ getLocalTime(MOSCOW_OFF)
 	+ "; " + window.promoTextId 
 	+ "; " + window.promoText 
 	+ "; " + window.promoImg
