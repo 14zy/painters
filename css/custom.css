@@ -1,3 +1,4 @@
+/*Верхний баннер*/
 #promo {
   display: inline;
   padding-left: 50px;
@@ -22,6 +23,34 @@
 	height: 65px;
 	margin-top: -20px;
 }
+/* --Верхний баннер*/
+
+/*Промо попап*/
+.ui-pnotify.stack-promo{
+    text-align: center;
+    top: 10%;
+    left: 15%;
+    width: 70%!important;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.ui-pnotify.stack-promo .ui-pnotify-container {
+  background-color: white !important;
+  border: none !important;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+ }
+ 
+ .ui-pnotify.stack-promo .ui-pnotify-title {
+   font-size: 24px;
+   padding: 5px 0 10px 0;
+   color:  black;
+ }
+ 
+/* --Промо попап*/
+
 
 .ui-pnotify.stack-mobile{
   top:2%;
@@ -188,6 +217,11 @@
 
 @media (max-width: 992px) {
   
+  .ui-pnotify.stack-promo{
+    font-size: 12px;
+  }
+  
+  
   #promo {
     display: none;
   }
@@ -240,8 +274,11 @@
 
 
 @media (max-width: 600px) {
- 
   
+  .ui-pnotify.stack-promo{
+	display: none!important;
+  }
+
   .lead {
     font-size: 21px;
   }

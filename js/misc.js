@@ -84,9 +84,7 @@ function getLocalTime(offset) {
 
 
 $( document ).ready(function() {
-	
-
-
+	//Верхний баннер
 	window.promoImg = Math.floor(( Math.random() * 10 )) + 1;
 	window.promoTextId = Math.floor(( Math.random() * 8 )) + 1;
 	window.promoTextColorId = Math.floor(( Math.random() * 4 )) + 1;
@@ -137,6 +135,68 @@ $( document ).ready(function() {
 	$( "#promo-text" ).text(window.promoText);
 	$( "#promo-img" ).attr("src","pics/promo/iphone" + window.promoImg + ".png");
 	$( "#promo-link" ).css( "color", window.promoTextColor );
+	// --Верхний баннер
+	
+	// Промо окно
+	
+    var promoDiv = "\
+   	<div class='col-xs-4' style='padding-left: 5%'>\
+		<img class='img-responsive' src='pics/promo/banner2.png'>\
+	</div>\
+   	<div class='col-xs-8' style='text-align: justify; color: black; padding-right: 5%'>\
+		<br>\
+		<p>Господа, мы хотим сделать бесплатное мобильное приложение, чтобы играть в Art Challenge можно было всегда и везде, даже без интернета!</p>\
+		<p>Вы сможете просматривать работы и читать биографии 118 художников, более 20 000 картин всегда будут в Вашем кармане!</p>\
+		<p>Обычно, подобные приложения направлены на заработок денег и не доступны бесплатно.</p>\
+		<p>Мы же хотим разбить эту практику и сделать по-настоящему открытое и бесплатное приложение, доступное всем!</p>\
+		<p>Пожалуйста, поддержите нашу инициативу и получите сувениры с символикой Art Challenge на память!</p>\
+		<br>\
+		<div style=''>\
+			<button id='promoBtnYes' class='btn btn-lg btn-primary'>Поддержать Art Challenge</button>\
+			<button id='promoBtnNo' class='btn btn-lg btn-danger'>Мне не интересно</button>\
+		</div>\
+	</div>\
+	"
+	if (getCookie("promoYes") != 1) {
+	    window.msgPromo = new PNotify({
+	        title: "Поддержите разработку мобильного приложения!", //Господа, помогите нам с приложением!
+	        text: promoDiv,
+	        type: 'note',
+	        hide: false,
+	        animate_speed: "normal",
+	        icon: false,
+	        addclass: "stack-promo",
+	        opacity: 0.95,
+	        buttons: {
+	          closer: true,
+	          sticker: false
+	        },
+	        history: {
+	          history: true,
+	          menu: false
+	        }
+	    });
+	};
+
+	$( "#promoBtnYes" ).click(function() {
+		window.msgPromo.remove(); 
+		window.open('https://boomstarter.ru/projects/90794/art_challenge_-_igra_na_znanie_populyarnyh_hudozhnikov', '_blank');
+        swal({
+          title: "Спасибо за Вашу поддержку!",
+          type: "success",
+        });
+		setCookie('promoYes',1,360);
+		yaCounter24594722.reachGoal('PROMO-BTN-YES');
+	});
+
+
+	$( "#promoBtnNo" ).click(function() {
+		window.msgPromo.remove();
+		yaCounter24594722.reachGoal('PROMO-BTN-NO');
+	});
+	
+	
+	// --Промо окно
 
 });
 
