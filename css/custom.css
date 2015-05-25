@@ -2,21 +2,13 @@
 #promo {
   display: inline;
   padding-left: 50px;
-/*  margin-top: 7px;*/
   font-size:  16px;
-}
-
-#promo a{
-/*  color: #15cb63; green*/
-/*  color: black; */
-/*	color: #a94442; red*/
-/*	color: #337ab7; blue*/
+  display: none;
 }
 
 #promo span{
 	margin-left: 50px;
 }
-
 
 #promo img{
 	position: absolute;
@@ -48,10 +40,31 @@
    padding: 5px 0 10px 0;
    color:  black;
  }
- 
 /* --Промо попап*/
+ 
+/* Промо баннер внизу */
+ 
+#promo-bottom {
+ position: fixed;
+ margin-bottom: -350px;
+ bottom: 0;
+ right: 5%;
+ cursor: pointer;
+ text-align: center;
+ width: 280px;
+}
 
+#promo-bottom p{
+	font-size: 20px;
+	display: none;
+	width: 100%;
+	border-radius: 10px;
+	padding: 5px;
+	background-color: rgba(255,255,255,0.7);
+}
 
+/* --Промо баннер внизу */
+ 
 .ui-pnotify.stack-mobile{
   top:2%;
   left: 50%;
@@ -226,6 +239,10 @@
     display: none;
   }
   
+  #promo-bottom {
+  	display: none;
+  }
+
   #art {
     width: auto;
     height: auto;

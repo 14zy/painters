@@ -81,12 +81,12 @@ function getLocalTime(offset) {
 			  return MONTHS[d.getMonth()] + " " + d.getDate() + "; " + d.toTimeString().split(" ")[0];
 }
 
-
-
 $( document ).ready(function() {
 	//Верхний баннер
 	window.promoImg = [1,3,4,6,10][Math.floor(Math.random() * 5)];
+	window.promoBottomImg = [1,2,3,4,5,6,7,8,9,10,11,12,13,14][Math.floor(Math.random() * 14)];
 	window.promoTextId = Math.floor(( Math.random() * 5 )) + 1;
+	window.promoBottomTextId = Math.floor(( Math.random() * 9 )) + 1;
 	window.promoTextColorId = Math.floor(( Math.random() * 2 )) + 1;
 
 	switch(window.promoTextId) {
@@ -106,6 +106,37 @@ $( document ).ready(function() {
 		window.promoText = "Господа, помогите нам с приложением!";
 		break;
 	};
+
+	switch(window.promoBottomTextId) {
+	  case 1:
+		window.promoBottomText = "Без Вас приложение не появится!";
+		break;
+	  case 2:
+  		window.promoBottomText = "Art Challenge будет работать без интернета!";
+  		break;
+	  case 3:
+		window.promoBottomText = "Народное финансирование мобильного приложения";
+		break;
+	  case 4:
+		window.promoBottomText = "Сбор средств на мобильное приложение";
+		break;
+	  case 5:
+		window.promoBottomText = "Господа, давайте сделаем мобильное приложение!";
+		break;
+	  case 6:
+		window.promoBottomText = "Мобильное приложение ArtChallenge";
+		break;
+	  case 7:
+		window.promoBottomText = "Господа, помогите нам с приложением!";
+		break;
+	  case 8:
+		window.promoBottomText = "Господа, мобильное приложение!";
+		break;
+	  case 9:
+		window.promoBottomText = "Приложение не появится без Вашей помощи!";
+		break;
+	};
+
 	
 	switch(window.promoTextColorId) {
 	  case 1:
@@ -117,6 +148,8 @@ $( document ).ready(function() {
 	};
 
 	$( "#promo-text" ).text(window.promoText);
+	$( "#promo-bottom-text" ).html(window.promoBottomText);
+	$( "#promo-bottom-img" ).attr("src","pics/promo/bottom-banner" + window.promoBottomImg + ".png");
 	$( "#promo-img" ).attr("src","pics/promo/iphone" + window.promoImg + ".png");
 	$( "#promo-link" ).css( "color", window.promoTextColor );
 	// --Верхний баннер
@@ -179,8 +212,6 @@ $( document ).ready(function() {
 		setCookie('promo',1,360);
 		yaCounter24594722.reachGoal('PROMO-BTN-NO');
 	});
-	
-	
 	// --Промо окно
 
 });
@@ -213,3 +244,40 @@ $( "#promo-link" ).click(function() {
 	
   yaCounter24594722.reachGoal('PROMO-CLICK');
 });
+
+// Промо баннер нижний
+
+$( "#promo-bottom" ).hover(function() {
+	$( this).animate({ marginBottom: '-80px' }, 500);
+	$( "#promo-bottom p" ).css("display", "block");
+}, function() {
+	$( this ).animate({ marginBottom: '-350px' }, 500);
+	$( "#promo-bottom p" ).css("display", "none");
+  }
+);
+
+$( "#promo-bottom" ).click(function() {
+	window.open('https://boomstarter.ru/projects/90794/art_challenge_-_igra_na_znanie_populyarnyh_hudozhnikov', '_blank');
+	yaCounter24594722.reachGoal('PROMO-BOTTOM-CLICK');
+	
+	var currentDate = new Date()
+	
+	var data = "click=" 
+	+ getLocalTime(MOSCOW_OFF) 
+	+ "; " + window.promoBottomText 
+	+ "; " + window.promoBottomImg;
+    $.ajax({
+        type: 'POST',
+        url: 'http://178.62.133.139/analytics/mayak.php',
+        data: data,
+        error: function()
+        {
+			console.log('error');
+        },
+        success: function(response)
+        {
+			console.log('success');
+        }});
+	
+});
+// --Промо баннер нижний
