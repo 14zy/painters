@@ -251,7 +251,7 @@ $( "#promo-bottom" ).hover(function() {
 	$( this).animate({ marginBottom: '-80px' }, 500);
 	$( "#promo-bottom p" ).css("display", "block");
 }, function() {
-	$( this ).animate({ marginBottom: '-350px' }, 500);
+	$( this ).animate({ marginBottom: '-410px' }, 500);
 	$( "#promo-bottom p" ).css("display", "none");
   }
 );
