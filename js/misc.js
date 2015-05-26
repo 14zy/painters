@@ -193,6 +193,8 @@ $( document ).ready(function() {
 	          menu: false
 	        }
 	    });
+		
+		setCookie('promo',1,360);
 	};
 
 	$( "#promoBtnYes" ).click(function() {
@@ -202,14 +204,12 @@ $( document ).ready(function() {
           title: "Спасибо за Вашу поддержку!",
           type: "success",
         });
-		setCookie('promo',1,360);
 		yaCounter24594722.reachGoal('PROMO-BTN-YES');
 	});
 
 
 	$( "#promoBtnNo" ).click(function() {
 		window.msgPromo.remove();
-		setCookie('promo',1,360);
 		yaCounter24594722.reachGoal('PROMO-BTN-NO');
 	});
 	// --Промо окно
@@ -251,7 +251,7 @@ $( "#promo-bottom" ).hover(function() {
 	$( this).animate({ marginBottom: '-80px' }, 500);
 	$( "#promo-bottom p" ).css("display", "block");
 }, function() {
-	$( this ).animate({ marginBottom: '-410px' }, 500);
+	$( this ).animate({ marginBottom: '-440px' }, 500);
 	$( "#promo-bottom p" ).css("display", "none");
   }
 );
