@@ -61,9 +61,11 @@ function load() {
   window.errorDelay = 6000;
   window.pnotify = "";
   //js magic for mobiles
+  window.enviroment = "desktop"
   if (window.innerWidth <= 600) {
     window.errorDelay = 4000;
     window.pnotify = "stack-mobile";
+	window.enviroment = "mobile"
   };
 
   if (getCookie("currentSet") == "") {
@@ -136,6 +138,12 @@ function getart() {
           window.genre = window.genre + ", " + i18n.t("genre." + entry, { lng: window.lang });
         }
       });
+	  
+	  //for analytics.js
+  	  window.truePainterNameEn = json.name;
+	  window.nationEnSingle = json.nationality[0];
+	  //
+	  
       if (window.truePainterName != "") {
         putButtons(window.truePainterName);        
       } else {
@@ -251,6 +259,7 @@ if (answer == window.truePainterName) {
 
   });
   yaCounter24594722.reachGoal('WIN');
+  window.answer = 1;
   };
   
 }
@@ -290,9 +299,11 @@ else {
   document.getElementById(btn).style.borderColor = "red";
 
   yaCounter24594722.reachGoal('FAIL');      
+  window.answer = 0;
 };
   
 yaCounter24594722.reachGoal('ANSWER-CLICK');
+recordData();
 };
 
 function learnMore() {

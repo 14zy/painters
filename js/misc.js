@@ -78,7 +78,7 @@ function getLocalTime(offset) {
     d.setTime((new Date().getTime()) + 
               (d.getTimezoneOffset() * 60 * 1000) + // local offset
               (1000 * 60 * 60 * offset)); // target offset
-			  return MONTHS[d.getMonth()] + " " + d.getDate() + "; " + d.toTimeString().split(" ")[0];
+			  return MONTHS[d.getMonth()] + " " + d.getDate() + ";" + d.toTimeString().split(" ")[0];
 }
 
 $( document ).ready(function() {
