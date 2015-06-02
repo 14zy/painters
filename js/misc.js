@@ -84,9 +84,9 @@ function getLocalTime(offset) {
 $( document ).ready(function() {
 	//Верхний баннер
 	window.promoImg = [1,3,4,6,10][Math.floor(Math.random() * 5)];
-	window.promoBottomImg = [1,2,3,4,5,6,7,8,9,10,11,12,13,14][Math.floor(Math.random() * 14)];
+	window.promoBottomImg = [1,2,3,5,7,8,10,12,14][Math.floor(Math.random() * 9)];
 	window.promoTextId = Math.floor(( Math.random() * 5 )) + 1;
-	window.promoBottomTextId = Math.floor(( Math.random() * 9 )) + 1;
+	window.promoBottomTextId = Math.floor(( Math.random() * 7 )) + 1;
 	window.promoTextColorId = Math.floor(( Math.random() * 2 )) + 1;
 
 	switch(window.promoTextId) {
@@ -112,28 +112,22 @@ $( document ).ready(function() {
 		window.promoBottomText = "Без Вас приложение не появится!";
 		break;
 	  case 2:
-  		window.promoBottomText = "Art Challenge будет работать без интернета!";
-  		break;
-	  case 3:
 		window.promoBottomText = "Народное финансирование мобильного приложения";
 		break;
-	  case 4:
+	  case 3:
 		window.promoBottomText = "Сбор средств на мобильное приложение";
 		break;
-	  case 5:
+	  case 4:
 		window.promoBottomText = "Господа, давайте сделаем мобильное приложение!";
 		break;
-	  case 6:
+	  case 5:
 		window.promoBottomText = "Мобильное приложение ArtChallenge";
 		break;
-	  case 7:
+	  case 6:
 		window.promoBottomText = "Господа, помогите нам с приложением!";
 		break;
-	  case 8:
+	  case 7:
 		window.promoBottomText = "Господа, мобильное приложение!";
-		break;
-	  case 9:
-		window.promoBottomText = "Приложение не появится без Вашей помощи!";
 		break;
 	};
 
