@@ -168,7 +168,7 @@ $( document ).ready(function() {
 		</div>\
 	</div>\
 	"
-	if (getCookie("promo") != 1) {
+	if (getCookie("promo") != 2) {
 	    window.msgPromo = new PNotify({
 	        title: "Поддержите разработку мобильного приложения!", //Господа, помогите нам с приложением!
 	        text: promoDiv,
@@ -188,7 +188,7 @@ $( document ).ready(function() {
 	        }
 	    });
 		
-		setCookie('promo',1,360);
+		setCookie('promo',2,360);
 	};
 
 	$( "#promoBtnYes" ).click(function() {
@@ -212,19 +212,20 @@ $( document ).ready(function() {
 
 $( "#promo-link" ).click(function() {
 	
+
 	var currentDate = new Date()
-	
-	var data = "click=" 
+
+	var data = "click="
 	+ getLocalTime(MOSCOW_OFF)
-	+ "; " + window.promoTextId 
-	+ "; " + window.promoText 
+	+ "; " + window.promoTextId
+	+ "; " + window.promoText
 	+ "; " + window.promoImg
 	+ "; " + window.promoTextColor
 	+ "; " + window.promoTextColorId;
-		
+
     $.ajax({
         type: 'POST',
-        url: 'http://178.62.133.139/analytics/post.php',
+        url: 'http://178.62.133.139/analytics/old/post.php',
         data: data,
         error: function()
         {
@@ -234,7 +235,7 @@ $( "#promo-link" ).click(function() {
         {
 			console.log('success');
         }});
-	
+
 	
   yaCounter24594722.reachGoal('PROMO-CLICK');
 });
