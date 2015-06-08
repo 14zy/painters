@@ -254,13 +254,13 @@
     "Art Deco": "Art Deco",
     "High Renaissance": "Hochrenaissance",
     "Aestheticism": "Ästhetizismus",
-    "Analytical Realism": "Analytical Realism",
-    "Neoplasticism": "Neoplasticism",
-    "Rococo": "Rococo",
+    "Analytical Realism": "Analytische Realismus",
+    "Neoplasticism": "Neoplastizismus",
+    "Rococo": "Rokoko",
     "Pop Art": "Pop Art",
-    "Socialist Realism": "Socialist Realism",
-    "Academic Art": "Academic Art",
-    "Abstract Expressionism": "Abstract Expressionism"
+    "Socialist Realism": "Sozialistischer Realismus",
+    "Academic Art": "Akademische Kunst",
+    "Abstract Expressionism": "Abstrakter Expressionismus"
   },
   "sets": {
     "basicSet": "Die bekannten Maler",
