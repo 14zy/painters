@@ -149,28 +149,33 @@ $( document ).ready(function() {
 	// --Верхний баннер
 	
 	// Промо окно
-	
     var promoDiv = "\
    	<div class='col-xs-4' style='padding-left: 5%'>\
-		<img class='img-responsive' src='pics/promo/banner2.png'>\
+		<img class='img-responsive' src='pics/promo/bottom-banner14.png'>\
 	</div>\
    	<div class='col-xs-8' style='text-align: justify; color: black; padding-right: 5%'>\
 		<br>\
-		<p>Господа, мы хотим сделать бесплатное мобильное приложение, чтобы играть в Art Challenge можно было всегда и везде, даже без интернета! И сейчас просим Вас помочь нам!</p>\
-		<p>В приложении Вы сможете просматривать работы и читать биографии 118 художников, более 20 000 картин всегда будут в Вашем кармане!</p>\
-		<p>Обычно, подобные приложения направлены на заработок денег и не доступны бесплатно.</p>\
-		<p>Мы же хотим разбить эту практику и сделать по-настоящему открытое и бесплатное приложение, доступное всем!</p>\
-		<p>Пожалуйста, поддержите нашу инициативу и получите сувениры с символикой Art Challenge на память!</p>\
+		<p>Мы искренне благодарим всех, кто поддержал наш проект!</p>\
+		<p>Очень приятно, что среди Вас, господа, так много тех, кто готов поддерживать Art Challenge.</p>\
+		<p>Список меценатов скоро появится в игре и навсегда останется в ней!</p>\
+		<p>Если Вам нравится Art Challenge - у Вас остается всего несколько часов, чтобы помочь проекту.</p>\
+		<p>Даже малая сумма - 100 или 200 р. - значимый вклад в общее дело, и в конечном итоге - в культуру и искусство!</p>\
+		<p>Благодарим Вас, господа! Рады, что Вы с нами!</p>\
 		<br>\
 		<div style=''>\
-			<button id='promoBtnYes' class='btn btn-lg btn-primary'>Поддержать Art Challenge</button>\
+			<button id='promoBtnYes' class='btn btn-lg btn-success'>Поддержать Art Challenge</button>\
 			<button id='promoBtnNo' class='btn btn-lg btn-danger'>Мне не интересно</button>\
 		</div>\
 	</div>\
 	"
-	if (getCookie("promo") != 2) {
+	var date1 = new Date("6/18/2015");
+	var date2 = new Date();
+	var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+	var diffDays = Math.ceil(timeDiff / (1000 * 3600)) + 12; 
+	
+	// if (getCookie("promo") != 2) {
 	    window.msgPromo = new PNotify({
-	        title: "Поддержите разработку мобильного приложения!", //Господа, помогите нам с приложением!
+	        title: "До конца кампании осталось " + diffDays + " часов!", //"Поддержите разработку мобильного приложения!", //Господа, помогите нам с приложением!
 	        text: promoDiv,
 	        type: 'note',
 	        hide: false,
@@ -179,7 +184,7 @@ $( document ).ready(function() {
 	        addclass: "stack-promo",
 	        opacity: 0.95,
 	        buttons: {
-	          closer: true,
+	          closer: false,
 	          sticker: false
 	        },
 	        history: {
@@ -188,8 +193,8 @@ $( document ).ready(function() {
 	        }
 	    });
 		
-		setCookie('promo',2,360);
-	};
+	// 	setCookie('promo',2,360);
+	// };
 
 	$( "#promoBtnYes" ).click(function() {
 		window.msgPromo.remove(); 
