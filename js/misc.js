@@ -68,85 +68,8 @@ $('#mc-embedded-subscribe-form').submit(function () {
 
 //boomstarter
 
-var MOSCOW_OFF = 4; // hours
-var MONTHS = ["January", "February", "March", "April", "May", "June", "July", 
-              "August", "September", "October", "November", "December"];
-
-// desired format => November 1, 2011 21:31:00
-function getLocalTime(offset) {
-    var d = new Date();
-    d.setTime((new Date().getTime()) + 
-              (d.getTimezoneOffset() * 60 * 1000) + // local offset
-              (1000 * 60 * 60 * offset)); // target offset
-			  return MONTHS[d.getMonth()] + " " + d.getDate() + ";" + d.toTimeString().split(" ")[0];
-}
 
 $( document ).ready(function() {
-	//Верхний баннер
-	window.promoImg = [1,3,4,6,10][Math.floor(Math.random() * 5)];
-	window.promoBottomImg = [1,2,3,5,7,8,10,12,14][Math.floor(Math.random() * 9)];
-	window.promoTextId = Math.floor(( Math.random() * 5 )) + 1;
-	window.promoBottomTextId = Math.floor(( Math.random() * 7 )) + 1;
-	window.promoTextColorId = Math.floor(( Math.random() * 2 )) + 1;
-
-	switch(window.promoTextId) {
-	  case 1:
-		window.promoText = "Поддержите разработку мобильного приложения!";
-		break;
-	  case 2:
-  		window.promoText = "Мобильное приложение Art Challenge";
-  		break;
-	  case 3:
-		window.promoText = "Господа, мобильное приложение!";
-		break;
-	  case 4:
-		window.promoText = "Приложение не появится без Вашей помощи!";
-		break;
-	  case 5:
-		window.promoText = "Господа, помогите нам с приложением!";
-		break;
-	};
-
-	switch(window.promoBottomTextId) {
-	  case 1:
-		window.promoBottomText = "Без Вас приложение не появится!";
-		break;
-	  case 2:
-		window.promoBottomText = "Народное финансирование мобильного приложения";
-		break;
-	  case 3:
-		window.promoBottomText = "Сбор средств на мобильное приложение";
-		break;
-	  case 4:
-		window.promoBottomText = "Господа, давайте сделаем мобильное приложение!";
-		break;
-	  case 5:
-		window.promoBottomText = "Мобильное приложение ArtChallenge";
-		break;
-	  case 6:
-		window.promoBottomText = "Господа, помогите нам с приложением!";
-		break;
-	  case 7:
-		window.promoBottomText = "Господа, мобильное приложение!";
-		break;
-	};
-
-	
-	switch(window.promoTextColorId) {
-	  case 1:
-		window.promoTextColor = "black";
-		break;
-	  case 2:
-		window.promoTextColor = "#337ab7"; //blue
-  		break;
-	};
-
-	$( "#promo-text" ).text(window.promoText);
-	$( "#promo-bottom-text" ).html(window.promoBottomText);
-	$( "#promo-bottom-img" ).attr("src","pics/promo/bottom-banner" + window.promoBottomImg + ".png");
-	$( "#promo-img" ).attr("src","pics/promo/iphone" + window.promoImg + ".png");
-	$( "#promo-link" ).css( "color", window.promoTextColor );
-	// --Верхний баннер
 	
 	// Промо окно
     var promoDiv = "\
@@ -175,7 +98,7 @@ $( document ).ready(function() {
 	
 	// if (getCookie("promo") != 2) {
 	    window.msgPromo = new PNotify({
-	        title: "До конца кампании осталось " + diffDays + " часов!", //"Поддержите разработку мобильного приложения!", //Господа, помогите нам с приложением!
+	        title: "До конца кампании осталось " + diffDays + " часов!",
 	        text: promoDiv,
 	        type: 'note',
 	        hide: false,
@@ -215,37 +138,39 @@ $( document ).ready(function() {
 
 });
 
-$( "#promo-link" ).click(function() {
-	
-
-	var currentDate = new Date()
-
-	var data = "click="
-	+ getLocalTime(MOSCOW_OFF)
-	+ "; " + window.promoTextId
-	+ "; " + window.promoText
-	+ "; " + window.promoImg
-	+ "; " + window.promoTextColor
-	+ "; " + window.promoTextColorId;
-
-    $.ajax({
-        type: 'POST',
-        url: 'http://178.62.133.139/analytics/old/post.php',
-        data: data,
-        error: function()
-        {
-			console.log('error');
-        },
-        success: function(response)
-        {
-			console.log('success');
-        }});
-
-	
-  yaCounter24594722.reachGoal('PROMO-CLICK');
-});
 
 // Промо баннер нижний
+
+window.promoBottomImg = [1,2,3,5,7,8,10,12,14][Math.floor(Math.random() * 9)];
+		window.promoBottomTextId = Math.floor(( Math.random() * 7 )) + 1;
+		switch(window.promoBottomTextId) {
+		  case 1:
+			window.promoBottomText = "Без Вас приложение не появится!";
+			break;
+		  case 2:
+			window.promoBottomText = "Народное финансирование мобильного приложения";
+			break;
+		  case 3:
+			window.promoBottomText = "Сбор средств на мобильное приложение";
+			break;
+		  case 4:
+			window.promoBottomText = "Господа, давайте сделаем мобильное приложение!";
+			break;
+		  case 5:
+			window.promoBottomText = "Мобильное приложение ArtChallenge";
+			break;
+		  case 6:
+			window.promoBottomText = "Господа, помогите нам с приложением!";
+			break;
+		  case 7:
+			window.promoBottomText = "Господа, мобильное приложение!";
+			break;
+		};
+		
+		$( "#promo-bottom-text" ).html(window.promoBottomText);
+		$( "#promo-bottom-img" ).attr("src","pics/promo/bottom-banner" + window.promoBottomImg + ".png");
+		
+
 
 $( "#promo-bottom" ).hover(function() {
 	$( this).animate({ marginBottom: '-80px' }, 500);

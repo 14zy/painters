@@ -1,18 +1,29 @@
 /*Верхний баннер*/
 #promo {
-  display: inline;
-  padding-left: 50px;
-  font-size:  16px;
+	display: inline;
+	margin-left: 50px;
+	font-size:  18px;
+
 }
 
-#promo span{
-	margin-left: 50px;
+#promo-link:hover {
+	text-decoration: none;
+}
+
+#promo-text {
+	color: black;
+}
+
+
+#promo-text-sub {
+	font-size: 12px;
+	color: gray;
+	overflow: hidden;
 }
 
 #promo img{
-	position: absolute;
-	height: 65px;
-	margin-top: -20px;
+	height: 50px;
+	margin-top: -10px;
 }
 /* --Верхний баннер*/
 
