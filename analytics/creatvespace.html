@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Список самых узнаваемых(и не узнаваемых) художников в образовательной игре Art Challenge">
     <meta property="og:description" content="Список самых узнаваемых(и не узнаваемых) художников в образовательной игре Art Challenge" />
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="http://artchallenge.ru/favicon.ico">
     <link rel="image_src" href="http://artchallenge.ru/artchallenge-analytics.jpg">
     <title>Art Challenge - Самые узнаваемые художники на Art Challenge</title>
     <meta property="og:title" content="Самые узнаваемые художники на Art Challenge" />
@@ -69,9 +69,9 @@
       <br>
 
 		<div class='jumbotron'>
-			<h1>Статистика кликов для Creative Space</h1>
+			<h1>Статистика для Creative Space</h1>
 			<h3>Настройки кампании:</h3>
-			<br><b>Регион:</b> Ростовская область
+			<b>Регион:</b> Ростовская область
 			<br><b>Текст 1:</b> Выставка "Натяжение"
 			<br><b>Текст 2:</b> Инсталяции Крестовой Катерины
 			<br><b>Картинка 1:</b> <img src="http://artchallenge.ru/pics/promo/creativespace/1.jpg">
@@ -79,12 +79,14 @@
 		</div>
 		  
 		<div role="tabpanel">
+			<h2>Список всех кликов:</h2>
 			<!-- Tab panes -->
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane active" id="basicSet">
 					<table class="table" id="basicSetData">
 						<thead style='font-size: 14px;'>
 							<tr style='height: 60px'>
+
 								<th>Дата</th>
 								<th>Время</th>
 								<th>Страна</th> <!-- style='white-space: nowrap' -->
@@ -115,18 +117,11 @@
   <!-- /Yandex.Metrika counter -->
   
   <script>
-
-
-	var painter = "";
-	var painterId = 0;
-	var row = 0;
   
-  Papa.parse("http://artchallenge.me/creativespace.csv", { //http://artchallenge.me/creativespace.csv
+  Papa.parse("http://178.62.133.139/analytics/creativespace.csv", {
 	download: true,
   	complete: function(results) {
 		results.data.forEach(function(entry) {
-			row++;
-			console.log(entry);
 			if (entry[1] != undefined && entry[1] != "Time") {
 			$( "#basicSetData" ).append( $( "<tr class='' style=''>\
 					<td>" +entry[0]+ "</td>\
@@ -145,12 +140,8 @@
 
 		}); //forEach
 		
-		
-		
 	}
 	});
-
-	
 
   </script>
 </html>
