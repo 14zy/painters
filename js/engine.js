@@ -303,7 +303,7 @@ else {
 };
   
 yaCounter24594722.reachGoal('ANSWER-CLICK');
-recordData();
+// recordData();
 };
 
 function learnMore() {
