@@ -1,10 +1,18 @@
 /*Верхний баннер*/
 #promo {
-	display: inline;
+	display: inline-block;
 	margin-left: 50px;
+	margin-top: -3px;
 	font-size:  18px;
-
+/*	border: 1px dotted lightgray;*/
+/*	padding: 15px;*/
+/*	overflow: hidden;*/
+	position: absolute;
+	max-width: 500px;
+	height: 50px;
+/*	background: lightgray;*/
 }
+
 
 #promo-link:hover {
 	text-decoration: none;
@@ -22,7 +30,7 @@
 }
 
 #promo img{
-	height: 50px;
+	max-height: 50px;
 	margin-top: -10px;
 }
 /* --Верхний баннер*/

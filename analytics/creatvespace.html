@@ -1,0 +1,156 @@
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:type" content="website" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Список самых узнаваемых(и не узнаваемых) художников в образовательной игре Art Challenge">
+    <meta property="og:description" content="Список самых узнаваемых(и не узнаваемых) художников в образовательной игре Art Challenge" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="image_src" href="http://artchallenge.ru/artchallenge-analytics.jpg">
+    <title>Art Challenge - Самые узнаваемые художники на Art Challenge</title>
+    <meta property="og:title" content="Самые узнаваемые художники на Art Challenge" />
+    <meta property="og:url" content="http://artchallenge.ru/analytics.html" />
+    <meta property="og:image" content="http://artchallenge.ru/artchallenge-analytics.jpg" />
+    <meta property="og:site_name" content="Art Challenge"/>    
+    <link href="http://artchallenge.ru/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://artchallenge.ru/css/custom.css" rel="stylesheet">
+	
+    <link rel="alternate" hreflang="x-default" href="http://artchallenge.ru/" />
+    <link rel="alternate" hreflang="ru" href="http://artchallenge.ru/?lang=ru" />
+    <link rel="alternate" hreflang="en" href="http://artchallenge.ru/?lang=en" />
+    <link rel="alternate" hreflang="de" href="http://artchallenge.ru/?lang=de" />
+    <link rel="alternate" hreflang="fr" href="http://artchallenge.ru/?lang=fr" />
+    <link rel="alternate" hreflang="es" href="http://artchallenge.ru/?lang=es" />
+    <link rel="alternate" hreflang="it" href="http://artchallenge.ru/?lang=it" />
+	
+	<style>
+		.photo img {
+			width: 120px;
+		}
+		
+		.painter {
+			height: 200px;
+			
+		}
+		
+		.name {
+			font-size: 20px;
+		}
+		
+		.years {
+			white-space: nowrap
+		}
+		
+		.rate {
+			width: 250px;
+		}
+
+		.table > tbody > tr > td {
+			text-align: center;
+			vertical-align: middle;
+			
+		}
+
+		.table > thead > tr > th {
+			text-align: center;
+			vertical-align: middle;
+			font-size: 16px;
+		}
+	</style>	
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="header" style="height: 40px;"> 
+        <h3 class="text-muted logo"><a class="logo" href="http://www.artchallenge.ru" title="ArtChallenge">Art Challenge</a></h3>
+      </div>
+      <br>
+
+		<div class='jumbotron'>
+			<h1>Статистика кликов для Creative Space</h1>
+			<h3>Настройки кампании:</h3>
+			<br><b>Регион:</b> Ростовская область
+			<br><b>Текст 1:</b> Выставка "Натяжение"
+			<br><b>Текст 2:</b> Инсталяции Крестовой Катерины
+			<br><b>Картинка 1:</b> <img src="http://artchallenge.ru/pics/promo/creativespace/1.jpg">
+			<br><b>Картинка 2:</b> <img src="http://artchallenge.ru/pics/promo/creativespace/2.jpg">
+		</div>
+		  
+		<div role="tabpanel">
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="basicSet">
+					<table class="table" id="basicSetData">
+						<thead style='font-size: 14px;'>
+							<tr style='height: 60px'>
+								<th>Дата</th>
+								<th>Время</th>
+								<th>Страна</th> <!-- style='white-space: nowrap' -->
+								<th>Регион</th>
+								<th>Город</th>
+								<th>Картинка</th>
+								<th>Текст</th>
+								<th>Подтекст</th>
+								<th>Цвет текста</th>
+								<th>Ссылка</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div>
+		</div>
+		
+	</body>
+  
+
+  <script src="http://artchallenge.ru/js/jquery-1.11.0.min.js" type="text/javascript"></script>    
+  <script src="http://artchallenge.ru/analytics/js/papaparse.min.js" type="text/javascript"></script>
+  <script defer src="http://artchallenge.ru/js/misc.js" type="text/javascript"></script>
+  <script defer src="http://artchallenge.ru/js/bootstrap.min.js" type="text/javascript"></script>
+  
+  <noscript><div><img src="//mc.yandex.ru/watch/24594722" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  
+  <script>
+
+
+	var painter = "";
+	var painterId = 0;
+	var row = 0;
+  
+  Papa.parse("http://178.62.133.139/analytics/creativespace.csv", { //http://artchallenge.me/creativespace.csv
+	download: true,
+  	complete: function(results) {
+		results.data.forEach(function(entry) {
+			row++;
+			console.log(entry);
+			if (entry[1] != undefined && entry[1] != "Time") {
+			$( "#basicSetData" ).append( $( "<tr class='' style=''>\
+					<td>" +entry[0]+ "</td>\
+					<td>" +entry[1]+ "</td>\
+					<td>" +entry[2]+ "</td>\
+					<td>" +entry[3]+ "</td>\
+					<td>" +entry[4]+ "</td>\
+					<td><img src=http://artchallenge.ru/pics/promo/" +entry[5]+ "></td>\
+					<td>" +entry[6]+ "</td>\
+					<td>" +entry[7]+ "</td>\
+					<td>" +entry[8]+ "</td>\
+					<td><a href='>" + entry[10] + "' target='_blank'>Facebook</a></td>\
+				</tr>")
+			);
+			}
+
+		}); //forEach
+		
+		
+		
+	}
+	});
+
+	
+
+  </script>
+</html>
