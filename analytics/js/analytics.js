@@ -48,82 +48,82 @@ function recordData(type){
 };
 
 //// Выбираем промо в зависимости от региона
-setTimeout(function () {
+// setTimeout(function () {
 
-switch (geoplugin_region()) { //geoplugin_region()
-	case "Rostov":
-		window.promoCampaign = "creativespace";
-		window.promoImgId = [1,2][Math.floor(Math.random() * 2)];
-		window.promoImg = window.promoCampaign + "/" + window.promoImgId + ".jpg";
-
-		window.promoTextId = Math.floor(( Math.random() * 2 )) + 1;
-		switch(window.promoTextId) {
-		  case 1:
-			window.promoText = "Выставка \"Натяжение\""; // «Натяжение»
-			break;
-		  case 2:
-			window.promoText = "Инсталяции Крестовой Катерины";
-			break;
-		};
-
-		window.promoTextColor = "black";
-		window.promoTextHoverColor = "red";
-		
-		window.promoTextSub = "Ростов-на-Дону";
-		
-		window.promoLink = "https://www.facebook.com/groups/CreativeSpace.PRO/permalink/861037833969038/"
-		break;
-
-	default:
-		window.promoCampaign = "drawfox";
-		window.promoImgId = [2][Math.floor(Math.random() * 1)];
-		window.promoImg = window.promoCampaign + "/" + window.promoImgId + ".png";
-
-		window.promoTextId = Math.floor(( Math.random() * 3 )) + 1;
-		switch(window.promoTextId) {
-		  case 1:
-			window.promoText = "Бесплатные видеоуроки по рисованию";
-			break;
-		  case 2:
-			window.promoText = "Видеокурс «Акварельная живопись»";
-			break;
-		  case 3:
-			window.promoText = "Школа рисования онлайн";
-			break;
-		};
-
-		switch(Math.floor(( Math.random() * 2 )) + 1) {
-		  case 1:
-			window.promoTextColor = "black";
-			break;
-		  case 2:
-			window.promoTextColor = "#337ab7"; //blue
-			break;
-		};
-		window.promoTextHoverColor = "red";
-
-		window.promoTextSub = "";
-
-		window.promoLink = "http://drawfox.com/?utm_source=artchallenge"
-}; // switch
-
-//// Задаем значения верхнему промо
-$( "#promo-text" ).text(window.promoText);
-$( "#promo-text-sub" ).text(window.promoTextSub);
-$( "#promo-img" ).attr("src","pics/promo/" + window.promoImg);
-$( "#promo-text" ).css( "color", window.promoTextColor );
-$( "#promo-link" ).attr("href", window.promoLink);
-$( "#promo-link" ).hover(
-  function() {
-	  $( "#promo-text" ).css( "color", window.promoTextHoverColor );
-	  $( "#promo-text" ).css( "text-decoration","underline" );
-  }, function() {
-	  $( "#promo-text" ).css( "color", window.promoTextColor );
-	  $( "#promo-text" ).css( "text-decoration","none" );
-  }
-);
-
-}, 1000);
+// switch (geoplugin_region()) { //geoplugin_region()
+// 	case "Rostov":
+// 		window.promoCampaign = "creativespace";
+// 		window.promoImgId = [1,2][Math.floor(Math.random() * 2)];
+// 		window.promoImg = window.promoCampaign + "/" + window.promoImgId + ".jpg";
+//
+// 		window.promoTextId = Math.floor(( Math.random() * 2 )) + 1;
+// 		switch(window.promoTextId) {
+// 		  case 1:
+// 			window.promoText = "Выставка \"Натяжение\""; // «Натяжение»
+// 			break;
+// 		  case 2:
+// 			window.promoText = "Инсталяции Крестовой Катерины";
+// 			break;
+// 		};
+//
+// 		window.promoTextColor = "black";
+// 		window.promoTextHoverColor = "red";
+//
+// 		window.promoTextSub = "Ростов-на-Дону";
+//
+// 		window.promoLink = "https://www.facebook.com/groups/CreativeSpace.PRO/permalink/861037833969038/"
+// 		break;
+//
+// 	default:
+// 		window.promoCampaign = "drawfox";
+// 		window.promoImgId = [2][Math.floor(Math.random() * 1)];
+// 		window.promoImg = window.promoCampaign + "/" + window.promoImgId + ".png";
+//
+// 		window.promoTextId = Math.floor(( Math.random() * 3 )) + 1;
+// 		switch(window.promoTextId) {
+// 		  case 1:
+// 			window.promoText = "Бесплатные видеоуроки по рисованию";
+// 			break;
+// 		  case 2:
+// 			window.promoText = "Видеокурс «Акварельная живопись»";
+// 			break;
+// 		  case 3:
+// 			window.promoText = "Школа рисования онлайн";
+// 			break;
+// 		};
+//
+// 		switch(Math.floor(( Math.random() * 2 )) + 1) {
+// 		  case 1:
+// 			window.promoTextColor = "black";
+// 			break;
+// 		  case 2:
+// 			window.promoTextColor = "#337ab7"; //blue
+// 			break;
+// 		};
+// 		window.promoTextHoverColor = "red";
+//
+// 		window.promoTextSub = "";
+//
+// 		window.promoLink = "http://drawfox.com/?utm_source=artchallenge"
+// }; // switch
+//
+// //// Задаем значения верхнему промо
+// $( "#promo-text" ).text(window.promoText);
+// $( "#promo-text-sub" ).text(window.promoTextSub);
+// $( "#promo-img" ).attr("src","pics/promo/" + window.promoImg);
+// $( "#promo-text" ).css( "color", window.promoTextColor );
+// $( "#promo-link" ).attr("href", window.promoLink);
+// $( "#promo-link" ).hover(
+//   function() {
+// 	  $( "#promo-text" ).css( "color", window.promoTextHoverColor );
+// 	  $( "#promo-text" ).css( "text-decoration","underline" );
+//   }, function() {
+// 	  $( "#promo-text" ).css( "color", window.promoTextColor );
+// 	  $( "#promo-text" ).css( "text-decoration","none" );
+//   }
+// );
+//
+// }, 1000);
 
 $( "#promo-link" ).click(function() {
 	
