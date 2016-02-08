@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:type" content="website" /> 
+    <meta property="og:type" content="website" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta class="head-lang" data-i18n="[content]head.description" name="description" content="Try to guess 10 painters in a row and beat your friends!">
     <meta class="head-lang" data-i18n="[content]head.description" property="og:description" content="Try to guess 10 painters in a row and beat your friends!" />
@@ -13,10 +13,10 @@
     <meta class="head-lang" data-i18n="[content]head.title" property="og:title" content="Art Challenge – A Quiz Game of Famous Painters" />
     <meta property="og:url" content="http://artchallenge.ru/" />
     <meta property="og:image" content="http://artchallenge.ru/artchallenge-logo.jpg" />
-    <meta property="og:site_name" content="Art Challenge"/>    
+    <meta property="og:site_name" content="Art Challenge"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
-    
+
     <link rel="alternate" hreflang="x-default" href="http://artchallenge.ru/" />
     <link rel="alternate" hreflang="ru" href="http://artchallenge.ru/?lang=ru" />
     <link rel="alternate" hreflang="en" href="http://artchallenge.ru/?lang=en" />
@@ -24,13 +24,13 @@
     <link rel="alternate" hreflang="fr" href="http://artchallenge.ru/?lang=fr" />
     <link rel="alternate" hreflang="es" href="http://artchallenge.ru/?lang=es" />
     <link rel="alternate" hreflang="it" href="http://artchallenge.ru/?lang=it" />
-    
+
   </head>
   <body>
     <div class="container">
-      <div class="header" style="height: 40px;"> 
-        <ul class="nav nav-pills pull-right"> 
-          
+      <div class="header" style="height: 40px;">
+        <ul class="nav nav-pills pull-right">
+
           <span class="top-icons">
             <span id="icon1" class="glyphicon glyphicon-ok-sign"></span>
             <span id="icon2" class="glyphicon glyphicon-ok-sign"></span>
@@ -41,9 +41,9 @@
             <span id="icon7" class="glyphicon glyphicon-ok-sign"></span>
             <span id="icon8" class="glyphicon glyphicon-ok-sign"></span>
             <span id="icon9" class="glyphicon glyphicon-ok-sign"></span>
-            <span id="icon10" class="glyphicon glyphicon-gift"></span>   
+            <span id="icon10" class="glyphicon glyphicon-gift"></span>
           </span>
-          
+
           <div class="btn-group sets">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="border: none;">
               <img id="currentSetImg" src="" alt="">
@@ -125,10 +125,10 @@
         </ul>
         <h3 class="text-muted logo"><a class="logo" href="http://www.artchallenge.ru" title="ArtChallenge">Art Challenge</a>
           <div id="promo">
-            <a id="promo-link" href="#" target="_blank">
-              <img id="promo-img">
-              <text id="promo-text"></text>
-              <text id="promo-text-sub"></text>
+            <a id="promo-link" href="https://play.google.com/store/apps/details?id=com.ionicframework.artchallengeapp178051" target="_blank">
+              <img src='pics/promo/myfxbook-android-app.png' id="promo-img">
+              <text id="promo-text">Мобильное приложение Art Challenge</text>
+              <!-- <text id="promo-text-sub">Бесплатно</text> -->
             </a>
           </div>
         </h3>
@@ -144,7 +144,7 @@
           <a id ="btn1" onclick="checkAnswer('btn1');" class="btn btn-lg btn-success" role="button"></a>
           <a id ="btn2" onclick="checkAnswer('btn2');" class="btn btn-lg btn-success" role="button"></a>
           <a id ="btn3" onclick="checkAnswer('btn3');" class="btn btn-lg btn-success" role="button"></a>
-          <a id ="btn4" onclick="checkAnswer('btn4');" class="btn btn-lg btn-success" role="button"></a>        
+          <a id ="btn4" onclick="checkAnswer('btn4');" class="btn btn-lg btn-success" role="button"></a>
           <br><br>
 
           <!-- ArtChallenge.ru_responsive -->
@@ -152,7 +152,7 @@
                style="display:block"
                data-ad-client="ca-pub-2407992058828148"
                data-ad-slot="3910414450"
-               data-ad-format="auto"></ins>               
+               data-ad-format="auto"></ins>
           <br>
         </div> <!-- corner -->
       </div>
@@ -166,11 +166,11 @@
 
           <h3 data-i18n="desc.how">How does it work?</h3>
           <p data-i18n="[html]desc.how-desc">You need to guess the artists who made famous paintings.<br>You win if you manage to guess 10 painters in a row.</p>
-          
+
           <h3 data-i18n="desc.what-good">What’s the use of it?</h3>
           <p data-i18n="[html]desc.what-good-desc">Play in your free time and very soon you’ll be able to tell Claude Monet from Edouard Manet at a glance, let alone Alfred Sisley :)</p>
 		  <p>Еще Вы можете посмотреть на <a href='analytics.html'>статистику игр</a>, чтобы узнать кого угадывают другие.</p>
-          
+
           <h3 data-i18n="desc.press">Пресса о нас:</h3>
           <div class="press-div">
 			  <a target="_blank" href="http://tvrain.ru/articles/poslednij_vypusk_iskusstvennogo_otbora_v_ezhednevnom_formate_igra_v_prjamom_efire-367802/">
@@ -184,12 +184,12 @@
 			  </a>
 		  </div>
           <h3 data-i18n="desc.settings">Options:</h3>
-          
 
 
-          
+
+
           <span data-i18n="desc.swear">Swearing</span>: <span data-i18n="desc.swear-on" id="btnOn" onclick="begood(0); yaCounter24594722.reachGoal('PROFANITY-ON'); return true;">On</span> / <span data-i18n="desc.swear-off" id="btnOff" onclick="begood(1); yaCounter24594722.reachGoal('PROFANITY-OFF'); return true;">Off</span>
-          
+
           <div id="langMainDiv">
           <span data-i18n="desc.lang">Language</span>:
           <div class="btn-group">
@@ -206,15 +206,15 @@
               </ul>
             </div>
           </div>
-          
+
         </div>
-        
+
         <div class="col-lg-5 desc">
-          
+
           <h3 data-i18n="desc.how-help">How can I help?</h3>
           <span data-i18n="desc.how-help-desc">If you like this site, could you be so kind to share it with your friends?</span><br>
           <div style="margin-left: -5px;" data-i18n="[data-yashareTitle]head.title;[data-yashareDescription]head.description" class="yashare-auto-init" data-yashareL10n="ru"
-           data-yashareQuickServices="facebook,vkontakte,twitter,odnoklassniki,gplus,moimir" data-yashareTheme="counter" data-yashareImage="http://artchallenge.ru/artchallenge-logo.jpg" data-yashareLink="http://artchallenge.ru/"></div>           
+           data-yashareQuickServices="facebook,vkontakte,twitter,odnoklassniki,gplus,moimir" data-yashareTheme="counter" data-yashareImage="http://artchallenge.ru/artchallenge-logo.jpg" data-yashareLink="http://artchallenge.ru/"></div>
 
           <h3 data-i18n="desc.subscribe">Subscribe for news:</h3>
           <div id="subscribe">
@@ -229,7 +229,7 @@
             </div>
             <p style="padding: 5px 0 5px 0; color: gray; font-size: 12px;"><span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> Никакого спама. Только замечательные новости из мира искусства.</p>
           </div>
-          
+
           <a target="_blank" href="http://facebook.com/artchallenge.ru" title="Art Challenge Facebook page" onclick="yaCounter24594722.reachGoal('FB-CLICK'); return true;">
             <img src="pics/socialmedia/facebook.png" width="16"> Art Challenge в Facebook
           </a><br>
@@ -241,7 +241,7 @@
           <a target="_blank" href="https://twitter.com/ArtChallenge_ru" title="Аккаунт Art Challenge в Twitter" onclick="yaCounter24594722.reachGoal('TW-CLICK'); return true;">
             <img src="pics/socialmedia/twitter.png" width="16"> Art Challenge в Twitter
           </a>
-          
+
         </div>
 
       </div>
@@ -254,13 +254,13 @@
 
       </div>
     </div> <!-- /container -->
-	
+
 	<div id="promo-bottom">
 		<p id="promo-bottom-text"></p>
 		<img id="promo-bottom-img">
 	</div>
 
-    <script defer src="js/jquery-1.11.0.min.js" type="text/javascript"></script>    
+    <script defer src="js/jquery-1.11.0.min.js" type="text/javascript"></script>
     <script defer src="js/i18next-1.7.4.min.js" type="text/javascript"></script>
     <script defer src="js/engine.js" type="text/javascript"></script>
     <script defer src="js/bootstrap.min.js" type="text/javascript"></script>
@@ -269,20 +269,20 @@
     <script>
     (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
-    
+
     <script defer src="js/misc.js" type="text/javascript"></script>
     <script defer src="analytics/js/analytics.js" type="text/javascript"></script>
-	    
+
     <script defer type="text/javascript" src="http://yandex.st/share/share.js"
     charset="utf-8"></script>
-      
+
     <script defer src="js/pnotify.custom.min.js" type="text/javascript"></script>
     <link href="js/pnotify.custom.min.css" media="all" rel="stylesheet" type="text/css" />
     <script defer src="js/sweet-alert.min.js" type="text/javascript"></script>
     <link href="js/sweet-alert.css" media="all" rel="stylesheet" type="text/css" />
 
 	<!-- script defer src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script -->
-    
+
     <noscript><div><img src="//mc.yandex.ru/watch/24594722" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
   </body>
