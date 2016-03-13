@@ -1,0 +1,164 @@
+<ion-view hide-nav-bar="true">
+  <ion-content class="background">
+
+    <div id='navigation'>
+      <div class="row">
+        <div class="col col-10">
+          <div ng-click="openMenu();">
+            <i class="ion-navicon" id='menuIcon'></i>
+          </div>
+        </div>
+        <div class="col col-60" style='margin-top: 1px; font-size: 16px'>
+          {{lang.desc.statsTitle}}
+        </div>
+        <div class="col col-10"></div>
+      </div>
+    </div>
+
+    <div class="list card">
+      <div class="item item-divider">
+        {{lang.desc.statsMyProfile}}
+      </div>
+      <a class="item item-avatar" style='text-align:left; border: none; background: none;'>
+        <img src='img/avatar-dummy.png'>
+        <h2 style='color: '>{{userInfo.name}}</h2>
+        <p>{{userInfo.email}}</p>
+      </a>
+    </div>
+
+    <div class="list card">
+      <div class="item item-divider">
+        {{lang.desc.statsYourBestPainters}}
+      </div>
+      <a style='text-align: left' class="item item-icon-left" ng-click='showPainterInfoById(favoritePainter,false,true);'>
+        <div style='height: 40px; margin: 5px 0 0 0' class="icon circle"><img ng-src="img/painters/{{favoritePainter}}.jpg"></div>
+         <text style='padding-left: 10px'>{{lang.painters[favoritePainter]}}</text>
+         <span class="badge badge-positive">{{(painterStats[favoritePainter].trues / ((painterStats[favoritePainter].bads + painterStats[favoritePainter].trues)/100)).toFixed(0)}}% ({{painterStats[favoritePainter].trues}}:{{painterStats[favoritePainter].bads}})</span>
+       </a>
+       <a style='text-align: left' class="item item-icon-left" ng-click='showPainterInfoById(favoritePainter2,false,true);'>
+         <div style='height: 40px; margin: 5px 0 0 0' class="icon circle"><img ng-src="img/painters/{{favoritePainter2}}.jpg"></div>
+          <text style='padding-left: 10px'>{{lang.painters[favoritePainter2]}}</text>
+          <span class="badge badge-positive">{{(painterStats[favoritePainter2].trues / ((painterStats[favoritePainter2].bads + painterStats[favoritePainter2].trues)/100)).toFixed(0)}}% ({{painterStats[favoritePainter2].trues}}:{{painterStats[favoritePainter2].bads}})</span>
+        </a>
+        <a style='text-align: left' class="item item-icon-left" ng-click='showPainterInfoById(favoritePainter3,false,true);'>
+          <div style='height: 40px; margin: 5px 0 0 0' class="icon circle"><img ng-src="img/painters/{{favoritePainter3}}.jpg"></div>
+           <text style='padding-left: 10px'>{{lang.painters[favoritePainter3]}}</text>
+           <span class="badge badge-positive">{{(painterStats[favoritePainter3].trues / ((painterStats[favoritePainter3].bads + painterStats[favoritePainter3].trues)/100)).toFixed(0)}}% ({{painterStats[favoritePainter3].trues}}:{{painterStats[favoritePainter3].bads}})</span>
+         </a>
+    </div>
+
+    <div class="list card">
+      <div class="item item-divider">
+        {{lang.desc.statsYourWorstPainters}}
+      </div>
+      <a style='text-align: left' class="item item-icon-left" ng-click='showPainterInfoById(worsePainter,false,true);'>
+        <div style='height: 40px; margin: 5px 0 0 0' class="icon circle"><img ng-src="img/painters/{{worsePainter}}.jpg"></div>
+         <text style='padding-left: 10px'>{{lang.painters[worsePainter]}}</text>
+         <span class="badge badge-dark">{{(painterStats[worsePainter].trues / ((painterStats[worsePainter].bads + painterStats[worsePainter].trues)/100)).toFixed(0)}}% ({{painterStats[worsePainter].trues}}:{{painterStats[worsePainter].bads}})</span>
+       </a>
+       <a style='text-align: left' class="item item-icon-left" ng-click='showPainterInfoById(worsePainter2,false,true);'>
+         <div style='height: 40px; margin: 5px 0 0 0' class="icon circle"><img ng-src="img/painters/{{worsePainter2}}.jpg"></div>
+          <text style='padding-left: 10px'>{{lang.painters[worsePainter2]}}</text>
+          <span class="badge badge-dark">{{(painterStats[worsePainter2].trues / ((painterStats[worsePainter2].bads + painterStats[worsePainter2].trues)/100)).toFixed(0)}}% ({{painterStats[worsePainter2].trues}}:{{painterStats[worsePainter2].bads}})</span>
+        </a>
+        <a style='text-align: left' class="item item-icon-left" ng-click='showPainterInfoById(worsePainter3,false,true);'>
+          <div style='height: 40px; margin: 5px 0 0 0' class="icon circle"><img ng-src="img/painters/{{worsePainter3}}.jpg"></div>
+           <text style='padding-left: 10px'>{{lang.painters[worsePainter3]}}</text>
+           <span class="badge badge-dark">{{(painterStats[worsePainter3].trues / ((painterStats[worsePainter3].bads + painterStats[worsePainter3].trues)/100)).toFixed(0)}}% ({{painterStats[worsePainter3].trues}}:{{painterStats[worsePainter3].bads}})</span>
+         </a>
+    </div>
+
+    <div class="list card">
+      <div class="item item-divider">
+        {{lang.desc.statsCollectionKnow}}
+      </div>
+
+      <a style='text-align: left' class="item item-icon-left" ng-click='' ng-repeat='set in sets'>
+        <div style='height: 40px; margin: 10px 0 0 0' class="icon circle"><img ng-src="img/sets/{{set.id}}Set.png"></div>
+         <text style='padding-left: 10px'>{{lang.sets[set.id+'Set']}}</text>
+         <span ng-class="{'badge badge-assertive': userStats.stats[set.id] < 50, 'badge badge-positive': userStats.stats[set.id] >= 50, 'badge badge-dark': userStats.stats[set.id] == 0}" >{{userStats.stats[set.id]}}%</span>
+         <progress max="100" value="{{userStats.stats[set.id]}}"> </progress>
+      </a>
+    </div>
+
+
+    <div class="list card">
+      <div class="item item-divider">
+        {{lang.desc.statsAnswersByDays}}
+      </div>
+
+      <a style='text-align: center; height: 60px' class="item item-icon-left" ng-click='' ng-repeat='day in days track by $index'>
+        <i class="icon ">{{day}}</i>
+         <!-- <text style='margin-left: 50px'>{{lang.desc.statsYourAnswer}}:
+           <span class='assertive'>{{dataWrongAnswers[$index]}}</span>
+          <span class='balanced'>{{dataRightAnswers[$index]}}</span>
+          <span> ({{dataRightAnswers[$index]}}%)</span>
+        </text> -->
+
+        <!-- <div class="badge badge-dark">{{dataRightAnswers[$index] + dataWrongAnswers[$index]}} </div> -->
+        <!-- <div style='margin-right: 0px' class="badge badge-positive">{{dataRightAnswersPercent[$index]}}%</div>
+        <div style='margin-right: 70px' class="badge badge-assertive">{{dataWrongAnswers[$index]}} </div>
+        <div style='margin-right: 120px' class="badge badge-balanced">{{dataRightAnswers[$index]}} </div> -->
+
+        <span ng-class="{'badge badge-assertive': dataRightAnswersPercent[$index] < 50, 'badge badge-positive': dataRightAnswersPercent[$index] >= 50, 'badge badge-dark': dataRightAnswersPercent[$index] == 0}">{{dataRightAnswersPercent[$index]}}% ({{dataRightAnswers[$index]}}:{{dataWrongAnswers[$index]}})</span>
+
+
+
+         <!-- <div class="badge badge-assertive">{{dataWrongAnswers[$index]}}</div>
+         <div style='right: 80px' class="badge badge-balanced">{{dataRightAnswers[$index]}}</div> -->
+
+      </a>
+    </div>
+
+
+
+    <!-- <div class="list card">
+      <div class="item item-divider">
+        История игр
+      </div>
+      <div class="item item-text-wrap">
+
+        <div ng-repeat="day in days track by $index">
+          {{day}}
+          {{statGlobalDays[day]}}
+          [1].set
+        </div> -->
+
+
+
+        <!-- <div ng-repeat="answer in userStats.answersHistory track by $index">
+          {{answer.set}}
+          {{answer.painter}}
+          {{answer.painting}}
+          {{answer.answer}}
+          {{answer.date}}
+        </div> -->
+
+        <!-- <a class="picture-thumb item item-icon-left" href="#" ng-repeat="answer in userStats.answersHistory track by $index" style='border: none; margin: 0px 0 10px 0; height: 60px; background: #ffffff url("http://artchallenge.me/painters/{{answer.painter}}/{{answer.painting}}.jpg") no-repeat top center'>
+          <p class='icon players' style='font-size: 16px; color: black; font-weight: bold'>
+
+            <img class='picture-thumb' ng-src='img/painters/{{answer.painter}}.jpg' style='float: right; width: 44px; margin: -10px 0px 5px 0px'>
+
+          <text style='background-color: rgba(255,255,255,0.5); padding: 5px; margin-top: 12px'>
+              {{lang.painters[answer.painter]}}
+            </text>
+          </p>
+
+         <span ng-if="answer.answer==true" style='font-size: 18px;  color: green'>
+          <text style='color: #444; float: right; margin: 0 0px 0px 10px'>{{player.key}}
+              <i class='ion-checkmark balanced'></i>
+            </text>
+          </span>
+
+          <span ng-if="answer.answer==false" style='font-size: 18px;  color: green'>
+            <text style='color: #444; float: right; margin: 0 0px 0px 10px'>{{player.key}}
+              <i class='ion-close assertive'></i>
+            </text>
+          </span>
+        </a> -->
+
+
+      <!-- </div>
+    </div> -->
+
+  </ion-view>

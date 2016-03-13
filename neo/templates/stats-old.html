@@ -1,0 +1,70 @@
+<ion-view hide-nav-bar="true">
+  <ion-content class="background">
+
+    <div id='navigation'>
+      <div class="row">
+        <div class="col col-10">
+          <div ng-click="openMenu();">
+            <i class="ion-navicon" id='menuIcon'></i>
+          </div>
+        </div>
+        <div class="col col-60" style='margin-top: 1px; font-size: 16px'>
+          {{lang.desc.statsTitle}}
+        </div>
+        <div class="col col-10">
+        </div>
+      </div>
+    </div>
+    <h5 style='color: #444444'>{{lang.desc.setCurrent}}:<br>{{lang.sets[settings.currentSet.id+'Set']}}</h5>
+
+    <div ng-if="days.length > 1">
+      <div class="card">
+        <div class="item item-divider">
+          {{lang.desc.statsAnswersByDays}}
+        </div>
+        <canvas barchart data="statGlobal" height="500" options="options" responsive="true"></canvas>
+      </div>
+    </div>
+
+    <div class="card" ng-if="days.length <= 1">
+      <div class="item item-divider">
+        {{lang.desc.statsAnswersByDays}}
+      </div>
+      <div style='margin: 15px' ng-bind-html="lang.desc.statsNoDataText.replace('__setName__',lang.sets[settings.currentSet.id+'Set'])"></div>
+    </div>
+
+    <div class="card">
+      <div class="item item-divider">
+        {{lang.desc.statsCollectionKnow}} (%)
+      </div>
+      <canvas barchart data="statSets" height="900" options="options" responsive="true"></canvas>
+    </div>
+
+    <!-- Ваши последние ответы -->
+    <!-- <div class="card">
+      <div class="item item-divider">
+        {{lang.desc.statsLastAnswers}}
+      </div>
+      <div class="row">
+        <div class="col col-70">
+          {{lang.desc.statsPainting}}
+        </div>
+        <div class="col col-30">
+          {{lang.desc.statsYourAnswer}}
+        </div>
+      </div>
+      <div class="list" ng-repeat="answer in userStats.answersHistory | orderBy:'date':true | limitTo:10 track by $index" style='margin: 0'>
+        <div class="row item item-text-wrap" style='font-size: 12px;'>
+          <div class="col col-70">
+            <img alt="" class='picture-thumb' ng-src="painters/{{answer.painter}}/thumbnails/{{answer.painting}}.jpg" style='max-width: 100%; max-height: 60px'><br>
+            <span>{{lang.painters[answer.painter]}}</span>
+          </div>
+          <div class="col col-30 col-center">
+            <span ng-if="answer.answer"><img src='img/emoji/right0.png' style='width: 30%'><br>{{lang.message.right}}</span>
+            <span ng-if="!answer.answer"><img src='img/emoji/wrong0.png' style='width: 30%'><br>{{lang.message.wrong}}</span>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+  </ion-view>

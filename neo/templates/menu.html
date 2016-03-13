@@ -1,0 +1,136 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button></ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="right" > <!-- expose-aside-when="(min-width:1024px)" -->
+    <ion-content id='menu'>
+
+      <!-- <div ng-if="settings.registered">
+        <a href="#/app/stats" menu-close class="item item-avatar" style='border: none; background: none;'>
+          <img src='img/avatar-dummy.png'>
+          <h2 style='color: white'>{{userInfo.name}}</h2>
+          <p>{{userInfo.email}}</p>
+
+          <div style=' color: white; font-size: 16px; padding-top: 4px;'>
+            <i class="ion-ribbon-a balanced"></i>
+            {{userStats.wins[settings.currentSet.id]}}
+            /
+            <i class="ion-university positive"></i>
+            {{userStats.stats[settings.currentSet.id]}}% /
+            <i class="ion-arrow-graph-up-right energized"></i>
+            {{userStats.leaderboard[settings.currentSet.id]}}
+          </div>
+        </a>
+      </div>
+      <div ng-if="!settings.registered" style='width: 100%; margin: 0px'>
+        <span class="item item-avatar" ng-click="login()" style='border:none; background: none;'>
+          <img src='img/avatar-dummy.png'>
+          <h2 style='color: white'>{{lang.desc.loginUnregisteredPlayer}}</h2>
+          <p>{{lang.desc.loginClickToRegister}}</p>
+        </span>
+      </div> -->
+
+      <div id='menuItems'>
+
+        <div style='text-align: center; padding-top: 0px'>
+          <text style='font-size: 12px; color: gray'><i class='ion-arrow-left-b'></i> {{lang.desc.swipeCollections}} <i class='ion-arrow-right-b'></i></text>
+          <ion-slide-box active-slide="activeSlideId()" show-pager="false" does-continue='true' on-slide-changed="slideHasChanged($index)" style=''>
+            <ion-slide ng-repeat="set in sets">
+              <a href="#/app/changeSet" menu-close>
+                <img ng-src="img/sets/{{set.id}}Set-picture.jpg" style="max-width: 100%">
+                <div style='color: white; font-size: 14px; line-height: 20px;'>{{lang.sets[set.id+'Set']}}</div>
+              </a>
+            </ion-slide>
+          </ion-slide-box>
+        </div>
+
+
+
+        <a menu-close href="#/app/classic" id='btnSinglePlayer' class='menu-item'>
+          <i class='icon ion-person'></i>
+          <span>{{lang.desc.menuSinglePlayer}}</span>
+        </a>
+
+        <a ng-click='showLeaderboard();' id='leaderboardGame' class='menu-item' >
+          <i class='icon ion-podium'></i>
+          <span style='color: white'>{{lang.desc.menuTournament}}</span>
+        </a>
+
+        <a class='menu-item'>
+          <i class='icon ion-person-stalker'></i>
+          <span>Дуэль с друзьями</span>
+        </a>
+        <br>
+
+
+
+        <!-- <a href="#/app/settings" id='btnSettings' menu-close style='display: block; color: yellow; padding-top: 20px;'>
+          <i class='icon ion-settings'></i>
+          <span style='color: white'>{{lang.desc.settings}}</span>
+        </a> -->
+
+
+          <div class="item item-divider">
+            {{lang.desc.settings}}
+          </div>
+          <li class="item item-icon-left item-select" style='background: none; border: none'>
+            <i class="icon ion-earth"></i>
+            {{lang.desc.lang}}
+            <select ng-model="settings.langId" style='background: none; border: none'>
+              <option selected value="ru">Русский</option>
+              <option value="de">Deutsch</option>
+              <option value="en">English</option>
+              <option value="es">Español</option>
+              <option value="fr">Français</option>
+              <option value="it">Italiano</option>
+              <option value="zh">中文</option>
+            </select>
+          </li>
+          <li class="item item-icon-left item-toggle" style='background: none; border: none'>
+            <i class="icon ion-android-chat"></i>
+            {{lang.desc.swear}}
+            <label class="toggle toggle">
+              <input ng-model="settings.abuse" type="checkbox">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </li>
+          <li class="item item-icon-left item-toggle" style='background: none; border: none'>
+            <i class="icon ion-happy-outline"></i>
+            {{lang.desc.emoji}}
+            <label class="toggle toggle">
+              <input ng-model="settings.emoji" type="checkbox">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </li>
+          <li class="item item-icon-left item-toggle" style='background: none; border: none'>
+            <i class="icon ion-image"></i>
+            {{lang.desc.highQualityPictures}}
+            <label class="toggle toggle">
+              <input ng-model="settings.highQuality" type="checkbox">
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </li>
+          <!-- <p style='padding: 5px; color:#444444; font-size: 12px; font-weight: normal;'>{{lang.desc.highQualityPicturesDesc}}</p> -->
+
+          <!-- <button style='margin: 5%; width: 90%' class="button button-block button-positive" ng-click='unlogin();'>Выход</button> -->
+
+
+      </div>
+
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

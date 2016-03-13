@@ -1,0 +1,267 @@
+<ion-view hide-nav-bar="true">
+  <ion-content class="background" style='text-align: left'>
+
+    <div id='navigation'>
+      <div class="row">
+        <div class="col col-10" ng-click="openMenu();">
+          <div >
+            <i class="ion-navicon" id='menuIcon'></i>
+          </div>
+        </div>
+        <div class="col col-60" style='margin-top: 1px; font-size: 16px; text-align:center'>
+          {{lang.desc.settings}}
+        </div>
+        <div class="col col-10"></div>
+      </div>
+    </div>
+    <ul class="list card">
+      <div class="item item-divider">
+        {{lang.desc.settings}}
+      </div>
+      <li class="item item-icon-left item-select" style='background: none; border: none'>
+        <i class="icon ion-earth"></i>
+        {{lang.desc.lang}}
+        <select ng-model="settings.langId" style='background: none; border: none'>
+          <option selected value="ru">Русский</option>
+          <option value="de">Deutsch</option>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="it">Italiano</option>
+          <option value="zh">中文</option>
+        </select>
+      </li>
+      <li class="item item-icon-left item-toggle" style='background: none; border: none'>
+        <i class="icon ion-android-chat"></i>
+        {{lang.desc.swear}}
+        <label class="toggle toggle">
+          <input ng-model="settings.abuse" type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+      <li class="item item-icon-left item-toggle" style='background: none; border: none'>
+        <i class="icon ion-happy-outline"></i>
+        {{lang.desc.emoji}}
+        <label class="toggle toggle">
+          <input ng-model="settings.emoji" type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+      <li class="item item-icon-left item-toggle" style='background: none; border: none'>
+        <i class="icon ion-image"></i>
+        {{lang.desc.highQualityPictures}}
+        <label class="toggle toggle">
+          <input ng-model="settings.highQuality" type="checkbox">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+      <!-- <p style='padding: 5px; color:#444444; font-size: 12px; font-weight: normal;'>{{lang.desc.highQualityPicturesDesc}}</p> -->
+
+      <!-- <button style='margin: 5%; width: 90%' class="button button-block button-positive" ng-click='unlogin();'>Выход</button> -->
+    </ul>
+
+    <!-- <div class="list card">
+      <div class="item item-divider">
+        {{lang.desc["how-help"]}}
+      </div>
+      <div class="item item-text-wrap item-icon-left">
+        <i class="icon ion-ios-heart"></i>
+        Поставьте нам 5 звезд, чтобы другие люди смогли найти приложение быстрее
+      </div>
+    </div> -->
+
+
+    <div class="list card">
+      <div class="item item-divider">
+        {{lang.desc.reportError}}
+      </div>
+      <div class="item item-text-wrap item-icon-left">
+        <i class="icon ion-ios-chatbubble"></i>
+        {{lang.desc.reportEmail}}
+      </div>
+    </div>
+
+    <div class="list card">
+      <div class="item item-divider">
+        {{lang.desc.subscribe}}
+      </div>
+      <div class="item item-text-wrap">
+        <!-- <div class="item item-input-inset">
+          <label class="item-input-wrapper">
+            <i class="icon ion-ios-email-outline placeholder-icon"></i>
+            <input placeholder="{{userInfo.email}}" type="text">
+          </label>
+          <button class="button button-small button-positive" onclick="alert(0);">
+            OK
+          </button>
+        </div> -->
+        <div style='text-align: center'>
+          <!-- Art Challenge в социальных сетях: -->
+          <!-- <br><br> -->
+          <a href='fb://artchallenge.ru' class="button button-positive icon ion-social-facebook"></a>
+		  <a ng-click='openLink("http://vk.com/art.challenge")' class="button button-positive "><b>VK</b></a>
+          <a href='twitter://user?screen_name=artchallenge_ru' class="button button-positive icon ion-social-twitter"></a>
+          <!-- <button ng-click="window.open('https://twitter.com/artchallenge_ru', '_system', 'location=yes')" class="button button-positive icon ion-social-instagram-outline"></button> -->
+        </div>
+		<br>
+		<i class='ion ion-heart'></i> {{lang.desc.subscribeNoSpam}}
+      </div>
+    </div>
+
+    <div class="list card">
+      <div class="item item-divider">
+        <!-- <i class="icon ion-ios-people"></i> -->
+        {{lang.desc.about}}
+      </div>
+      <div class="item item-text-wrap">
+        {{lang.desc.aboutSponsors}}
+        <br><br>
+        <ul class="list">
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Nikolaj Chilingarov</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Aleksandr Lanin</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Aleksandr Gavrilov</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Irina Grigorovich</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Elena Dmitrienko</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Eugenia Baum</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Anonymous Anonymous</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Ekaterina Chernysheva</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Nana Bekguljan</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Tetjana Struk</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Max N</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Aleksandr Shevcov</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Jana Chajka</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Timofey Zakrevskiy</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Sergej Ermakov</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Sergej Manida</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Elena Kiseleva</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Olga Jakubovich</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Ekaterina Semigurskaja</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Anna Zubareva</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Ivetta Kuznecova</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Natali Shilova</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Irina Pudova</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Leon Argo</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Elmira Mikhailova</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Evgenij Adaev</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Vladislav Kaverznev</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Elena Lukina</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Natalia Konyakhina</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Jüri Annov</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Saymon Mankevich</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Olga Poljabina</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Annushka Fevraljova</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Vasilij Kurkov</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Pavel Vetrov</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Ekaterina Basenko</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Anna Chetvertkova</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Olga Shpagina</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Maria Saenko</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Maureen Knight</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Valeriya Balkova</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Mila Andr</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Marina Levenec</li>
+          <li class="item">
+            <i class="icon ion-person"></i>
+            Anton Androsov</li>
+        </ul>
+      </div>
+    </div>
+    <div class='item'>
+      {{lang.desc.gameVersion}} 0.8.9
+      <button ng-click='unlogin();' class='button button-assertive button-full'>{{lang.desc.exit}}</button>
+    </div>
+
+  </ion-content>
+</ion-modal-view>
