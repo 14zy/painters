@@ -2,21 +2,21 @@
 function getCookie(cname) {
   var name = cname + "=";
   var ca = document.cookie.split(';');
-  for(var i=0; i<ca.length; i++) 
+  for(var i=0; i<ca.length; i++)
     {
     var c = ca[i].trim();
-    if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+    if (c.indexOf(name)===0) return c.substring(name.length,c.length);
     }
   return "";
-};
+}
 
 function setLang(lang) {
-  if (window.lang != null) {
+  if (window.lang != null) { //Не менять на !==
     document.getElementById(window.lang).className="lang";
     setCookie('lang',lang,360);
     document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
     refresh("bad",false);
-  };
+  }
   window.lang = lang;
   i18n.init({ lng: lang });
   i18n.init(function(t) {
@@ -28,14 +28,14 @@ function setLang(lang) {
   });
   document.getElementById("langMain").src="pics/flags/" + lang.toUpperCase() + ".png";
   document.getElementById(lang).className="lang-active";
-  
+
   if (lang == "ru") {
     $("#subscribe")[0].style.display="block";
   } else {
     $("#subscribe")[0].style.display="none";
   }
 
-};
+}
 
 function load() {
   var lang = window.navigator.userLanguage || window.navigator.language;
@@ -45,45 +45,47 @@ function load() {
     lang = lang.substring(0, 2).toLowerCase();
   }
   langCookie = getCookie("lang");
-  if (langCookie != "") {
+  if (langCookie !== "") {
    lang = langCookie;
-  };
+  }
   if (lang == "ru" || lang == "en" || lang == "de" || lang == "fr" || lang == "it" || lang == "es" ) {
-    setLang(lang);    
+    setLang(lang);
   } else {
     lang = "en";
     setLang(lang);
-  };
+  }
 
   window.platform = "http://artchallenge.me/painters/"; //"http://artchallenge.me/painters/"; // "painters/";
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 
-  window.errorDelay = 6000;
+  window.errorDelay = 4000;
   window.pnotify = "";
   //js magic for mobiles
-  window.enviroment = "desktop"
+  window.enviroment = "desktop";
   if (window.innerWidth <= 600) {
-    window.errorDelay = 4000;
+    window.errorDelay = 3000;
     window.pnotify = "stack-mobile";
-	window.enviroment = "mobile"
-  };
+    $('#donate').css('display', "none");
+    $('#donate-mobile').css('display', "block");
+	   window.enviroment = "mobile";
+  }
 
-  if (getCookie("currentSet") == "") {
+  if (getCookie("currentSet") === "") {
     window.currentSetName="basicSet";
     window.currentSet = [1,4,7,9,14,15,17,19,21,22,24,26,27,28,29,30,32,33,34,35,36,39,40,41,42,43,45,46,49,50,53,54,55,57,58,61,62,63,69,73,75,77,79,80,82,83,94,95,112,118];
     document.getElementById("basicSet").className="lang-active";
   } else {
-    changeSet(getCookie("currentSet"));  
-  };
+    changeSet(getCookie("currentSet"));
+  }
   getart();
   begood(getCookie("begood"));
 
 
-};
+}
 
 load();
 
-function getart() { 
+function getart() {
   currentWins();
 
   var art = document.getElementById("art");
@@ -91,7 +93,7 @@ function getart() {
 
   $.getJSON(window.platform + window.truePainter + "/data.json")
     .done(function(json) {
-      
+
       $("#currentSetImg")[0].src="pics/sets/" + window.currentSetName + ".png";
       $("#currentSetTitle")[0].innerHTML = i18n.t("sets." + window.currentSetName, { lng: window.lang }); // Этому тут совсем не место, но больше нигде не работает T_T
 
@@ -102,29 +104,29 @@ function getart() {
         art.src = window.platform + truePainter + "/thumbnails/" + window.image + ".jpg";
       } else {
         art.src = window.platform + truePainter + "/" + window.image + ".jpg";
-      };
+      }
 
       window.link = json.link.local;
       if (window.lang == "ru") { //Временно, пока в json не будут ссылки на википедию на всех языках
         window.wiki = json.link.wikipedia.ru;
       } else {
         window.wiki = json.link.wikipedia.en;
-      };
+      }
       window.years = json.years;
       if (window.lang == "ru" || window.lang == "en") {
         window.bio = json.bio[window.lang];
       } else {
         window.bio = json.bio.ru;
-      };
-      if (window.bio == "") {
-        window.bio = "Просим не гневаться, но биография этого художника временно отсутствует; ежели Вам известен хороший источник, будьте так любезны, сообщите его нам: <a href='mailto:report@artchallenge.ru'>report@artchallenge.ru</a>.<br><br>We beg your pardon, but temporary this painter's biography is not available; if you know the good source, please contact us: <a href='mailto:report@artchallenge.ru'>report@artchallenge.ru</a>."
-      };
+      }
+      if (window.bio === "") {
+        window.bio = "Просим не гневаться, но биография этого художника временно отсутствует; ежели Вам известен хороший источник, будьте так любезны, сообщите его нам: <a href='mailto:report@artchallenge.ru'>report@artchallenge.ru</a>.<br><br>We beg your pardon, but temporary this painter's biography is not available; if you know the good source, please contact us: <a href='mailto:report@artchallenge.ru'>report@artchallenge.ru</a>.";
+      }
 
       window.truePainterName = i18n.t("painters." + truePainter, { lng: window.lang });
 
       window.nation = undefined;
       json.nationality.forEach(function(entry) {
-        if (window.nation == undefined) {
+        if (window.nation === undefined) {
           window.nation = i18n.t("nation." + entry, { lng: window.lang });
         } else {
           window.nation = window.nation + ", " + i18n.t("nation." + entry, { lng: window.lang });
@@ -132,20 +134,20 @@ function getart() {
       });
       window.genre = undefined;
       json.genre.forEach(function(entry) {
-        if (window.genre == undefined) {
+        if (window.genre === undefined) {
           window.genre = i18n.t("genre." + entry, { lng: window.lang });
         } else {
           window.genre = window.genre + ", " + i18n.t("genre." + entry, { lng: window.lang });
         }
       });
-	  
+
 	  //for analytics.js
   	  window.truePainterNameEn = json.name;
 	  window.nationEnSingle = json.nationality[0];
 	  //
-	  
-      if (window.truePainterName != "") {
-        putButtons(window.truePainterName);        
+
+      if (window.truePainterName !== "") {
+        putButtons(window.truePainterName);
       } else {
         console.log("Error: window.truePainterName is empty, sleep for 1000 and retry");
         art.src = "pics/loading.gif";
@@ -160,63 +162,63 @@ function getart() {
 
   puticons();
 
-};
+}
 
 
 function currentWins() {
   if (getCookie('wins') > 1) {
     window.counter = getCookie('wins');
   }
-  else {window.counter = 1}
-};
+  else {window.counter = 1;}
+}
 
 function putButtons(painter) {
-  
+
   function randomPainter() {
     var random = "painters." + window.currentSet[Math.floor((Math.random()*window.currentSet.length))];
     return i18n.t(random, { lng: window.lang });
-  };
-  
+  }
+
   var painters = [painter];
   for (var i=0;i<10;i++) {
     painters.push(randomPainter());
-    if (painters[1] == "") {
+    if (painters[1] === "") {
       console.log("Error from painters: do refresh(bad, false)");
       refresh("bad",false);
-    };
-  };
-   
+    }
+  }
+
   //unique
   painters = painters.reverse().filter(function (e, i, painters) {
      return painters.indexOf(e, i+1) === -1;
-  }).reverse(); 
+  }).reverse();
 
   var buttons = [];
   buttons.push(painters[0]);
   buttons.push(painters[1]);
   buttons.push(painters[2]);
   buttons.push(painters[3]);
-  
+
   function shuffle(o){ //v1.0
     for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
-  };
+  }
 
   shuffle(buttons);
   document.getElementById("btn1").innerHTML = buttons[0];
   document.getElementById("btn2").innerHTML = buttons[1];
   document.getElementById("btn3").innerHTML = buttons[2];
   document.getElementById("btn4").innerHTML = buttons[3];
-};
+}
 
 function puticons() {
   for (var i=1; i < window.counter; i++ ) {
     document.getElementById("icon"+i).style.color = "rgb(53,115,45)";
-  } 
-};
+  }
+}
 
 
-function checkAnswer(btn) { 
+function checkAnswer(btn) {
 var answer = document.getElementById(btn).innerHTML;
 
 if (answer == window.truePainterName) {
@@ -226,19 +228,19 @@ if (answer == window.truePainterName) {
   document.getElementById("btn3").onclick = function() { void(0);};
   document.getElementById("btn4").onclick = function() { void(0);};
   document.getElementById(btn).style.background = "blue";
-  document.getElementById(btn).style.borderColor = "blue";      
+  document.getElementById(btn).style.borderColor = "blue";
 
   var wins = parseInt(window.counter);
-        
+
   if (wins == 10) {
     winner();
   }
-  
+
   else {
   wins = 1 + wins;
   setCookie('wins',wins,"session");
-  setTimeout(function() {refresh("good");}, 1000)
-  
+  setTimeout(function() {refresh("good");}, 1000);
+
   new PNotify({
       title: goodPhrase(),
       text: i18n.t("message.right-desc", { lng: window.lang, count: parseInt(window.counter) }),
@@ -260,13 +262,13 @@ if (answer == window.truePainterName) {
   });
   yaCounter24594722.reachGoal('WIN');
   window.answer = 1;
-  };
-  
+  }
+
 }
 
 else {
 
-  setTimeout(function() {refresh("bad");}, 6000)
+  setTimeout(function() {refresh("bad");}, 4000);
   window.msgWrong = new PNotify({
       title: badPhrase(),
       text: "<div style='text-align: left'>" + "<img src='" + window.platform + window.truePainter + "/photo.jpg' style='width: 60%; margin: 10px 0 10px 0'><br><p style='font-size: 18px'>" + i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "!<hr style='margin: 5px'>"+i18n.t("message.years", { lng: window.lang })+ ": " + window.years + "<br>"+i18n.t("message.genre", { lng: window.lang })+": " + window.genre + "<br>"+i18n.t("message.nationality", { lng: window.lang })+": " + window.nation + "</p><a id='btnLearnMore' onTouchStart='learnMore();' onclick='learnMore();' class='btn btn-primary'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", { lng: window.lang }) + "</a><br></div>", //<hr><p>Обещаю выучить все произведения данного художника<br><br><a style='margin: 5px;' class='btn btn-success'><span class='glyphicon glyphicon-share-alt'></span> Дать обещание</a></p></div>
@@ -290,7 +292,7 @@ else {
   });
 
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-        
+
   document.getElementById("btn1").onclick = function() { void(0);};
   document.getElementById("btn2").onclick = function() { void(0);};
   document.getElementById("btn3").onclick = function() { void(0);};
@@ -298,13 +300,13 @@ else {
   document.getElementById(btn).style.background = "red";
   document.getElementById(btn).style.borderColor = "red";
 
-  yaCounter24594722.reachGoal('FAIL');      
+  yaCounter24594722.reachGoal('FAIL');
   window.answer = 0;
-};
-  
+}
+
 yaCounter24594722.reachGoal('ANSWER-CLICK');
 // recordData();
-};
+}
 
 function learnMore() {
   window.msgWrong.remove();
@@ -328,7 +330,7 @@ function learnMore() {
       </div>\
     </div>\
     ";
-  
+
   new PNotify({
       text: learnMoreText,
       type: 'info',
@@ -346,11 +348,11 @@ function learnMore() {
         menu: false
       }
   });
-  
+
   yaCounter24594722.reachGoal('LEARN-MORE'); return true;
-  
+
 };
-    
+
 function setCookie(cname,cvalue,exdays) {
   var d = new Date();
   d.setTime(d.getTime()+(exdays*24*60*60*1000));
@@ -366,14 +368,14 @@ function badPhrase() {
     var phrase = "badPhrases." + Math.floor((Math.random()*12)+1)
     phrase = i18n.t(phrase, { lng: window.lang });
   };
-  return phrase;      
+  return phrase;
 };
 
 
 function goodPhrase() {
     var phrase = "goodPhrases." + Math.floor((Math.random()*20)+1)
     phrase = i18n.t(phrase, { lng: window.lang });
-  return phrase;      
+  return phrase;
 };
 
 function winner() {
@@ -415,7 +417,7 @@ function winner() {
 };
 
 function getShares() {
-  
+
   switch (window.lang)
   {
   case "ru":
@@ -435,7 +437,7 @@ function getShares() {
     </button>\
     </div>";
     break;
-      
+
   default:
     shares_old = "<a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareTW();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> Twitter </a><br><a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> VKontakte </a>";
     shares = "<div style='padding: 15px'>\
@@ -451,12 +453,12 @@ function getShares() {
     </div>";
     break;
   };
-  
+
   return shares;
 };
 
 function ShareFB() {
-  url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=http://artchallenge.ru/?utm_source=fb-win&redirect_uri=http://artchallenge.ru/1.html&picture=http://artchallenge.ru/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareFB.png&source=http://artchallenge.ru/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareFB.png&name="+i18n.t("shares.title",{lng: window.lang})+"&caption="+i18n.t("shares.caption",{lng: window.lang})+"&description="+i18n.t("shares.description",{lng: window.lang});      
+  url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=http://artchallenge.ru/?utm_source=fb-win&redirect_uri=http://artchallenge.ru/1.html&picture=http://artchallenge.ru/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareFB.png&source=http://artchallenge.ru/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareFB.png&name="+i18n.t("shares.title",{lng: window.lang})+"&caption="+i18n.t("shares.caption",{lng: window.lang})+"&description="+i18n.t("shares.description",{lng: window.lang});
   window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24594722.reachGoal('WINNER-SHARE-FB');
 };
@@ -471,7 +473,7 @@ function ShareVK() {
   url = "http://vk.com/share.php?url=http://artchallenge.ru/?utm_source=vk-win&title="+i18n.t("shares.title",{lng: window.lang})+" %23ArtChallenge&description="+i18n.t("shares.description",{lng: window.lang})+"&image=http://artchallenge.ru/pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareVK.png&noparse=true";
   window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24594722.reachGoal('WINNER-SHARE-VK');
-};  
+};
 
 function ShareOD() {
   url = "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st.comments=Господа, я отлично разбираюсь в искусстве!&st._surl=http://artchallenge.ru/?utm_source=od-win";
@@ -484,7 +486,7 @@ function ShareMM() {
   window.open(url,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24594722.reachGoal('WINNER-SHARE-MM');
 };
-    
+
 function refresh(sign,scroll){
 
   document.getElementById("btn1").onclick = function() { checkAnswer('btn1'); };
@@ -505,12 +507,12 @@ function refresh(sign,scroll){
     $("html, body").animate({ scrollTop: 90 }, "slow");
   }
   getart();
-  
+
   if (sign == "bad") {
     window.counter=1;
     for (var i=1; i <= 10; i++ ) {
       document.getElementById("icon"+i).style.color = "lightgray";
-    }; 
+    };
   };
 }
 
@@ -525,7 +527,7 @@ function begood(value){
     document.getElementById("btnOn").style.fontWeight="normal";
     document.getElementById("btnOn").style.cursor="pointer";
   };
-  
+
   if (value == 0) {
     setCookie('begood',0,360);
     window.goodboy = 0;
@@ -561,7 +563,7 @@ function changeSet(value) {
         window.currentSet = [5,8,18,25,37,47,48,58,85,113,116,117];
         setCookie('currentSet',value,360);
         break;
-      
+
       case "russianSet":
         window.currentSet = [3,4,5,6,8,10,11,12,13,16,19,20,23,25,26,27,31,37,38,44,47,48,76,81,84,85,86,103,105,107,109,113,115];
         setCookie('currentSet',value,360);
@@ -591,4 +593,3 @@ function changeSet(value) {
       location.reload();
     }
   };
-
