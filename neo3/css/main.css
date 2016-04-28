@@ -169,7 +169,7 @@ ul li {
 	color: #808080;
 	font-size: 13px;
 	font-weight: 300;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	margin-left: 40px;
 }
 .navigation a:hover, .navigation a.active {
@@ -363,9 +363,9 @@ ul li {
 	text-transform: uppercase;
 }
 .intro-content p {
-	font-size: 12px;
-	letter-spacing: 1px;
-	line-height: 19px;
+	font-size: 16px;
+	/*letter-spacing: 1px;*/
+	/*line-height: 19px;*/
 }
 .intro-content li {
 	line-height: 30px;
@@ -476,9 +476,9 @@ ul li {
 	padding-bottom: 7%;
 }
 .footer h4 {
-	font-size: 14px;
+	font-size: 16px;
 	color: #000;
-	letter-spacing: 1px;
+	/*letter-spacing: 1px;*/
 	margin: 0 0 15px 0;
 	padding: 0px;
 }
