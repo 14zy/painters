@@ -617,7 +617,7 @@ function changeSet(value) {
     document.getElementById(value).className="lang-active";
 
     if (window.currentSetName != null) {
-      document.getElementById(window.currentSetName).className="lang";
+      document.getElementById(window.currentSetName).className="btn btn-success";
       window.currentSetName =value;
       refresh("bad", false);
     } else {

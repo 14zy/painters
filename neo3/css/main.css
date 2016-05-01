@@ -546,6 +546,10 @@ ul li {
   width: 32px;
 }
 
+.lang-active {
+  display: none
+}
+
 .lang-active img {
   width: 32px;
 }
