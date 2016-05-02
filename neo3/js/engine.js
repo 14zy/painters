@@ -68,6 +68,11 @@ function load() {
     $('#donate').css('display', "none");
     $('#donate-mobile').css('display', "block");
 	   window.enviroment = "mobile";
+
+     $('#btn1').addClass('btn-block');
+     $('#btn2').addClass('btn-block');
+     $('#btn3').addClass('btn-block');
+     $('#btn4').addClass('btn-block');
   }
 
   if (getCookie("currentSet") === "") {
@@ -95,7 +100,7 @@ function getart() {
     .done(function(json) {
 
       $("#currentSetImg")[0].src="pics/sets/" + window.currentSetName + ".png";
-      $("#currentSetTitle")[0].innerHTML = i18n.t("sets." + window.currentSetName, { lng: window.lang }); // Этому тут совсем не место, но больше нигде не работает T_T
+      $(".currentSetTitle").html(i18n.t("sets." + window.currentSetName, { lng: window.lang })); // Этому тут совсем не место, но больше нигде не работает T_T
 
       window.paintings = json.paintings;
       window.image = Math.floor((Math.random()*window.paintings)+1);
@@ -281,7 +286,7 @@ else {
   setTimeout(function() {refresh("bad");}, 4200);
   window.msgWrong = new PNotify({
       title: badPhrase(),
-      text: "<div style='text-align: left'>" + "<img src='" + window.platform + window.truePainter + "/photo.jpg' style='width: 60%; margin: 5px 0 10px 0'><br><p class='painter-name'>" + i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "!</p><hr style='margin: 5px'>" + window.nation + ", " + window.years + "<br>" + window.genre+"<a id='btnLearnMore' onTouchStart='learnMore();' onclick='learnMore();' class='btn btn-large' style='width: 100%' role='button'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", { lng: window.lang }) + "</a><br></div>",
+      text: "<div style='text-align: left'>" + "<img src='" + window.platform + window.truePainter + "/photo.jpg' style='width: 60%; margin: 5px 0 10px 0'><br><p class='painter-name'>" + i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "!</p><hr style='margin: 5px'>" + window.nation + ", " + window.years + "<br>" + window.genre+"<a id='btnLearnMore' onclick='learnMore();' class='btn btn-large' style='width: 100%' role='button'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", { lng: window.lang }) + "</a><br></div>",
       type: 'error',
       icon: '',
       hide: true,
@@ -521,7 +526,6 @@ function refresh(sign,scroll){
   // document.getElementById("btn2").style.color = "#2a2a2a";
   $("#btn2").removeClass('btn-success');
   $("#btn2").removeClass('btn-danger');
-
   document.getElementById("btn3").onclick = function() { checkAnswer('btn3'); };
   // document.getElementById("btn3").style.background = "";
   // document.getElementById("btn3").style.borderColor = "";

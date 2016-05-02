@@ -39,17 +39,27 @@
         <div class="header-content clearfix">
           <a class="logo" href="#">Art Challenge</a>
           <nav class="navigation" role="navigation">
-            <ul class="primary-nav">
-              <!-- <li>
-                <a href="#introduction">About Me</a>
-              </li>
+            <ul class="primary-nav" id='mobile-nav' style='display: none'>
               <li>
-                <a href="#works">Latest Works</a>
-              </li> -->
+                <a class="promo-link" href="https://itunes.apple.com/us/app/art-challenge/id1088982103">
+                  <img style='width: 80%; padding: 10px' src='pics/promo/appstore.svg'>
+                </a>
+                <a class="promo-link" href="https://play.google.com/store/apps/details?id=com.ionicframework.artchallengeapp178051">
+                  <img style='width: 80%; padding: 10px' src='pics/promo/myfxbook-android-app.png'>
+                </a>
+              </li>
+              <li style='text-align: center; padding-top: 30px'>
+                <a href="#works">Текущая коллекция:<br>
+                  <h5 class="currentSetTitle"></h5>
+                </a>
+              </li>
+
+            </ul>
+            <ul class="primary-nav" id='desktop-nav'>
               <li>
                 <a href="#works">
                   <span class="glyphicon glyphicon-book"></span>
-                  <span id="currentSetTitle"></span>
+                  <span class="currentSetTitle"></span>
                 </a>
               </li>
 
@@ -216,7 +226,7 @@
               <p data-i18n="desc.donate">Сделайте пожертвование, чтобы мы могли развивать игру и оплачивать сервер.</p>
               <iframe frameborder="0" allowtransparency="true" scrolling="no" src="https://money.yandex.ru/embed/shop.xml?account=41001585423948&quickpay=shop&payment-type-choice=on&mobile-payment-type-choice=on&writer=seller&targets=%D0%9D%D0%B0+%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D0%B5+Art+Challenge&targets-hint=&default-sum=&button-text=03&successURL=" width="450" height="198"></iframe>
               <p data-i18n="[html]desc.donate-apps">Еще у нас есть <b>бесплатное мобильные приложение</b> на <a href="https://itunes.apple.com/us/app/art-challenge/id1088982103" target="_blank">iOS</a> и <a href="https://play.google.com/store/apps/details?id=com.ionicframework.artchallengeapp178051" target="_blank">Android</a></p>
-              
+
             </div>
 
             <div id='donate-mobile' style='display: none'>
@@ -420,7 +430,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/jquery.fancybox.pack.js"></script>
-  <script src="js/retina.min.js"></script>
+  <!-- <script src="js/retina.min.js"></script> -->
   <script src="js/modernizr.js"></script>
   <script src="js/main.js"></script>
 
