@@ -1,0 +1,1000 @@
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:type" content="website" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Список самых узнаваемых(и не узнаваемых) художников в образовательной игре Art Challenge">
+    <meta property="og:description" content="Список самых узнаваемых(и не узнаваемых) художников в образовательной игре Art Challenge" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="image_src" href="http://artchallenge.ru/artchallenge-analytics.jpg">
+    <title>Art Challenge - Самые узнаваемые художники на Art Challenge</title>
+    <meta property="og:title" content="Самые узнаваемые художники на Art Challenge" />
+    <meta property="og:url" content="http://artchallenge.ru/analytics.html" />
+    <meta property="og:image" content="http://artchallenge.ru/artchallenge-analytics.jpg" />
+    <meta property="og:site_name" content="Art Challenge"/>    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+	
+    <link rel="alternate" hreflang="x-default" href="http://artchallenge.ru/" />
+    <link rel="alternate" hreflang="ru" href="http://artchallenge.ru/?lang=ru" />
+    <link rel="alternate" hreflang="en" href="http://artchallenge.ru/?lang=en" />
+    <link rel="alternate" hreflang="de" href="http://artchallenge.ru/?lang=de" />
+    <link rel="alternate" hreflang="fr" href="http://artchallenge.ru/?lang=fr" />
+    <link rel="alternate" hreflang="es" href="http://artchallenge.ru/?lang=es" />
+    <link rel="alternate" hreflang="it" href="http://artchallenge.ru/?lang=it" />
+	
+	<style>
+		.photo img {
+			width: 120px;
+		}
+		
+		.painter {
+			height: 200px;
+			
+		}
+		
+		.name {
+			font-size: 20px;
+		}
+		
+		.years {
+			white-space: nowrap
+		}
+		
+		.rate {
+			width: 250px;
+		}
+
+		.table > tbody > tr > td {
+			text-align: center;
+			vertical-align: middle;
+			
+		}
+
+		.table > thead > tr > th {
+			text-align: center;
+			vertical-align: middle;
+			font-size: 16px;
+		}
+	</style>	
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="header" style="height: 40px;"> 
+        <ul class="nav nav-pills pull-right" style='display: none'> 
+                    
+          <div class="btn-group sets">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="border: none;">
+              <img id="currentSetImg" src="" alt="">
+              <span id="currentSetTitle"></span> <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu pull-right sets-ul" role="menu">
+              <li>
+                <a class="lang" id="" onclick="changeSet('basicSet');" title="">
+                  <img src="pics/sets/basicSet.png" alt="">
+                  <span data-i18n="sets.basicSet"></span>
+                  <br><span data-i18n="sets.basicSet-desc" class="text-muted small"></span>
+                  <br>
+                  <span data-i18n="sets.basicSet-count" class="text-muted small allSet-count"></span>
+                  <br>
+                </a>
+              </li>
+              <li>
+                <a class="lang" id="" onclick="changeSet('renaissanceSet');" title="">
+                  <img src="pics/sets/renaissanceSet.png" alt="">
+                  <span data-i18n="sets.renaissanceSet"></span>
+                  <br><span data-i18n="sets.renaissanceSet-desc" class="text-muted small"></span>
+                  <br>
+                  <span data-i18n="sets.renaissanceSet-count" class="text-muted small allSet-count"></span>
+                  <br>
+                </a>
+              </li>
+              <li>
+                <a class="lang" id="" onclick="changeSet('impressionismSet');" title="">
+                  <img src="pics/sets/impressionismSet.png" alt="">
+                  <span data-i18n="sets.impressionismSet"></span>
+                  <br><span data-i18n="sets.impressionismSet-desc" class="text-muted small"></span>
+                  <br>
+                  <span data-i18n="sets.impressionismSet-count" class="text-muted small allSet-count"></span>
+                  <br>
+                </a>
+              </li>
+              <li>
+                <a class="lang" id="" onclick="changeSet('realismSet');" title="">
+                  <img src="pics/sets/realismSet.png" alt="">
+                  <span data-i18n="sets.realismSet"></span>
+                  <br><span data-i18n="sets.realismSet-desc" class="text-muted small"></span>
+                  <br>
+                  <span data-i18n="sets.realismSet-count" class="text-muted small allSet-count"></span>
+                  <br>
+                </a>
+              </li>
+              <li>
+                <a class="lang" id="" onclick="changeSet('russianSet');" title="">
+                  <img src="pics/sets/russianSet.png" alt="">
+                  <span data-i18n="sets.russianSet"></span>
+                  <br><span data-i18n="sets.russianSet-desc" class="text-muted small"></span>
+                  <br>
+                  <span data-i18n="sets.russianSet-count" class="text-muted small allSet-count"></span>
+                  <br>
+                </a>
+              </li>
+              <li>
+                <a class="lang" id="" onclick="changeSet('frenchSet');" title="">
+                  <img src="pics/sets/frenchSet.png" alt="">
+                  <span data-i18n="sets.frenchSet"></span>
+                  <br><span data-i18n="sets.frenchSet-desc" class="text-muted small"></span>
+                  <br>
+                  <span data-i18n="sets.frenchSet-count" class="text-muted small allSet-count"></span>
+                  <br>
+                </a>
+              </li>
+              <li>
+                <a class="lang" id="" onclick="changeSet('allSet');" title="">
+                  <img src="pics/sets/allSet.png" alt="">
+                  <span data-i18n="sets.allSet"></span>
+                  <br><span data-i18n="sets.allSet-desc" class="text-muted small"></span>
+                  <br>
+                  <span data-i18n="sets.allSet-count" class="text-muted small allSet-count"></span>
+                  <br>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </ul>
+        <h3 class="text-muted logo"><a class="logo" href="http://www.artchallenge.ru" title="ArtChallenge"><span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span> Играть в Art Challenge</a>
+          <div id="promo">
+            <a id="promo-link" href="https://boomstarter.ru/projects/90794/art_challenge_-_igra_na_znanie_populyarnyh_hudozhnikov" target="_blank">
+              <img id="promo-img" src="">
+              <span id="promo-text"></span>
+            </a>
+          </div>
+        </h3>
+      </div>
+      <br>
+	  <div>
+		<div class='jumbotron'>
+			<h1>Самые узнаваемые художники</h1>
+			<p>Господа, каждый месяц в Art Challenge играет почти 50 000 человек, совершается более 1 000 0000 действий по отгадыванию картин. Это колоссальный объем информации, господа!
+			<p>Мы решили проанализировать эти данные, и на их основе составили рейтинг самых узнаваемых художников – по коллекциям.</p>
+			<p>Надеемся, Вам будет столь же интересно изучать эти данные, как и нам =)</p>
+		</div>
+		  
+		<div role="tabpanel">
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist" style='font-size: 16px;'>
+				<li role="presentation" class="active"><a id="basic" href="#basicSet" aria-controls="basicSet" role="tab" data-toggle="tab">Популярные художникики</a></li>
+				<li role="presentation"><a id="renaissance" href="#renaissanceSet" aria-controls="renaissanceSet" role="tab" data-toggle="tab">Эпоха Возрождения</a></li>
+				<li role="presentation"><a id="impressionism" href="#impressionismSet" aria-controls="impressionismSet" role="tab" data-toggle="tab">Импрессионизм и Постимпрессионизм</a></li>
+				<li role="presentation"><a id="realism" href="#realismSet" aria-controls="realismSet" role="tab" data-toggle="tab">Реализм</a></li>
+				<li role="presentation"><a id="russian" href="#russianSet" aria-controls="russianSet" role="tab" data-toggle="tab">Русские</a></li>
+				<li role="presentation"><a id="french" href="#frenchSet" aria-controls="frenchSet" role="tab" data-toggle="tab">Французские</a></li>
+				<li role="presentation"><a id="all" href="#allSet" aria-controls="allSet" role="tab" data-toggle="tab">Полная коллекция</a></li>
+			</ul> 
+			<div id="corner" class="panel panel-default" style='border-top: 0px; border-radius: 0'>
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="basicSet">
+					<table class="table" id="basicSetData">
+						<thead style='font-size: 14px;'>
+							<tr style='height: 60px'>
+								<th>Фото</th>
+								<th>Имя</th>
+								<th style='white-space: nowrap'>Годы жизни</th>
+								<th>Жанр</th>
+								<th>Национальность</th>
+								<th>Узнаваемость</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="renaissanceSet">
+					<table class="table" id="renaissanceSetData">
+						<thead style='font-size: 14px;'>
+							<tr style='height: 60px'>
+								<th>Фото</th>
+								<th>Имя</th>
+								<th style='white-space: nowrap'>Годы жизни</th>
+								<th>Жанр</th>
+								<th>Национальность</th>
+								<th>Узнаваемость</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="impressionismSet">
+					<table class="table" id="impressionismSetData">
+						<thead style='font-size: 14px;'>
+							<tr style='height: 60px'>
+								<th>Фото</th>
+								<th>Имя</th>
+								<th style='white-space: nowrap'>Годы жизни</th>
+								<th>Жанр</th>
+								<th>Национальность</th>
+								<th>Узнаваемость</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="realismSet">
+					<table class="table" id="realismSetData">
+						<thead style='font-size: 14px;'>
+							<tr style='height: 60px'>
+								<th>Фото</th>
+								<th>Имя</th>
+								<th style='white-space: nowrap'>Годы жизни</th>
+								<th>Жанр</th>
+								<th>Национальность</th>
+								<th>Узнаваемость</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="russianSet">
+					<table class="table" id="russianSetData">
+						<thead style='font-size: 14px;'>
+							<tr style='height: 60px'>
+								<th>Фото</th>
+								<th>Имя</th>
+								<th style='white-space: nowrap'>Годы жизни</th>
+								<th>Жанр</th>
+								<th>Национальность</th>
+								<th>Узнаваемость</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="frenchSet">
+					<table class="table" id="frenchSetData">
+						<thead style='font-size: 14px;'>
+							<tr style='height: 60px'>
+								<th>Фото</th>
+								<th>Имя</th>
+								<th style='white-space: nowrap'>Годы жизни</th>
+								<th>Жанр</th>
+								<th>Национальность</th>
+								<th>Узнаваемость</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="allSet">
+					<table class="table" id="allSetData">
+						<thead style='font-size: 14px;'>
+							<tr style='height: 60px'>
+								<th>Фото</th>
+								<th>Имя</th>
+								<th style='white-space: nowrap'>Годы жизни</th>
+								<th>Жанр</th>
+								<th>Национальность</th>
+								<th>Узнаваемость</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="row desc">
+			<div class="col-lg-4">        
+				<h3 data-i18n="desc.how-help">How can I help?</h3>
+		        <span>Если вам понравился данный рейтинг, будьте добры, расскажите о нём друзьям:</span><br>
+		        <div style="margin-left: -5px;" class="yashare-auto-init" data-yashareL10n="ru" data-yashareTitle="Самые узнаваемые художники на Art Challenge" data-yashareDescription="Список самых узнаваемых(и не узнаваемых) художников в образовательной игре Art Challenge"
+		         data-yashareQuickServices="facebook,vkontakte,twitter,odnoklassniki,gplus,moimir" data-yashareTheme="counter" data-yashareImage="http://artchallenge.ru/artchallenge-analytics.jpg" data-yashareLink="http://artchallenge.ru/analytics.html"></div>
+			</div>
+			
+			<div class="col-lg-4">
+				<h3>Ещё больше интересного:</h3>
+	         <a target="_blank" href="http://facebook.com/artchallenge.ru" title="Art Challenge Facebook page" onclick="yaCounter24594722.reachGoal('FB-CLICK'); return true;">
+	           <img src="pics/socialmedia/facebook.png" width="16"> Art Challenge в Facebook
+	         </a><br>
+
+	         <a target="_blank" href="http://vk.com/art.challenge" title="Сообщество Art Challenge ВКонтакте" onclick="yaCounter24594722.reachGoal('VK-CLICK'); return true;">
+	           <img src="pics/socialmedia/vkontakte.png" width="16"> Art Challenge в ВКонтакте
+	         </a><br>
+	         <a target="_blank" href="https://twitter.com/ArtChallenge_ru" title="Аккаунт Art Challenge в Twitter" onclick="yaCounter24594722.reachGoal('TW-CLICK'); return true;">
+	           <img src="pics/socialmedia/twitter.png" width="16"> Art Challenge в Twitter
+	         </a>
+			 </div>
+			 
+ 			<div class="col-lg-4">        
+ 			</div>
+			 
+		</div>
+		
+		<br><br>
+	</div>
+	</body>
+  
+
+  <script src="js/jquery-1.11.0.min.js" type="text/javascript"></script>    
+  <script src="js/i18next-1.7.4.min.js" type="text/javascript"></script>
+  <script src="analytics/js/papaparse.min.js" type="text/javascript"></script>
+  <script defer src="analytics/js/analytics.js" type="text/javascript"></script>
+  <script defer src="js/misc.js" type="text/javascript"></script>
+  <script defer src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script defer type="text/javascript" src="http://yandex.st/share/share.js" charset="utf-8"></script>
+  
+  <noscript><div><img src="//mc.yandex.ru/watch/24594722" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+  
+  <script>
+  
+  var loaded = {};
+  i18n.init({ lng: "ru" });
+    i18n.init(function(t) {
+		$(".desc").i18n({lng: "ru"});
+	});
+  
+  $('li > a').click(function (e) {
+	  if (loaded[this.id] == 1) {
+		  console.log("already loaded");
+	  } else {
+		  loaded[this.id] = 1;
+		  loaddata(this.id);
+	  }
+  });
+  
+  function loaddata(filename) {
+
+	  var painter = "";
+	  var painterId = 0;
+	  var row = 0;
+
+  
+  Papa.parse("http://artchallenge.ru/analytics/data/awareness-" + filename + ".csv", {
+	download: true,
+  	complete: function(results) {
+		results.data.forEach(function(entry) {
+			row++;
+			
+			// console.log(entry);
+
+			switch(entry[0]) {
+
+				case "Amedeo Modigliani":
+				painter = "Амедео Модильяни";
+				painterId = 1;
+				break;
+
+				case "Henri Lebasque":
+				painter = "Анри Лебаск";  
+				painterId = 2;
+				break;
+
+				case "Arkhip Kuinji":
+				painter = "Архип Куинджи";  
+				painterId = 3;
+				break;
+
+				case "Vasiliy Kandinskiy":
+				painter = "Василий Кандинский";  
+				painterId = 4;
+				break;
+
+				case "Vasily Surikov":
+				painter = "Василий Суриков";  
+				painterId = 5;
+				break;
+
+				case "Victor Borisov-Musatov":
+				painter = "Виктор Борисов-Мусатов";  
+				painterId = 6;
+				break;
+
+				case "Diego Rivera":
+				painter = "Диего Ривера";  
+				painterId = 7;
+				break;
+
+				case "Ivan Shishkin":
+				painter = "Иван Шишкин";  
+				painterId = 8;
+				break;
+
+				case "Claude Monet":
+				painter = "Клод Моне";  
+				painterId = 9;
+				break;
+
+				case "Konstantin Yuon":
+				painter = "Константин Юон";  
+				painterId = 10;
+				break;
+
+				case "Nicholas Roerich":
+				painter = "Николай Рерих";  
+				painterId = 11;
+				break;
+
+				case "Orest Kiprensky":
+				painter = "Орест Кипренский";  
+				painterId = 12;
+				break;
+
+				case "Kuzma Petrov-Vodkin":
+				painter = "Кузьма Петров-Водкин";  
+				painterId = 13;
+				break;
+
+				case "Rene Magritte":
+				painter = "Рене Магритт";  
+				painterId = 14;
+				break;
+
+				case "Salvador Dali":
+				painter = "Сальвадор Дали";  
+				painterId = 15;
+				break;
+
+				case "Sergei Vinogradov":
+				painter = "Сергей Виноградов";  
+				painterId = 16;
+				break;
+
+				case "Edouard Manet":
+				painter = "Эдуард Мане";  
+				painterId = 17;
+				break;
+
+				case "Andrew Wyeth":
+				painter = "Эндрю Уайет";  
+				painterId = 18;
+				break;
+
+				case "Andrei Rublev":
+				painter = "Андрей Рублёв";  
+				painterId = 19;
+				break;
+
+				case "Viktor Vasnetsov":
+				painter = "Виктор Васнецов";  
+				painterId = 20;
+				break;
+
+				case "Vincent van Gogh":
+				painter = "Винсент Ван Гог";  
+				painterId = 21;
+				break;
+
+				case "Gustav Klimt":
+				painter = "Густав Климт";  
+				painterId = 22;
+				break;
+
+				case "Ivan Aivazovsky":
+				painter = "Иван Айвазовский";  
+				painterId = 23;
+				break;
+
+				case "Hieronymus Bosch":
+				painter = "Иероним Босх";  
+				painterId = 24;
+				break;
+
+				case "Ilya Repin":
+				painter = "Илья Репин";  
+				painterId = 25;
+				break;
+
+				case "Kazimir Malevich":
+				painter = "Казимир Малевич";  
+				painterId = 26;
+				break;
+
+				case "Mikhail Vrubel":
+				painter = "Михаил Врубель";  
+				painterId = 27;
+				break;
+
+				case "Pablo Picasso":
+				painter = "Пабло Пикассо";  
+				painterId = 28;
+				break;
+
+				case "Peter Paul Rubens":
+				painter = "Питер Рубенс";  
+				painterId = 29;
+				break;
+
+				case "Pierre-Auguste Renoir":
+				painter = "Пьер Огюст Ренуар";  
+				painterId = 30;
+				break;
+
+				case "Theophanes the Greek":
+				painter = "Феофан Грек";  
+				painterId = 31;
+				break;
+
+				case "Francisco Goya":
+				painter = "Франсиско Гойя";  
+				painterId = 32;
+				break;
+
+				case "Frida Kahlo":
+				painter = "Фрида Кало";  
+				painterId = 33;
+				break;
+
+				case "El Greco":
+				painter = "Эль Греко";  
+				painterId = 34;
+				break;
+
+				case "Albrecht Dürer":
+				painter = "Альбрехт Дюрер";  
+				painterId = 35;
+				break;
+
+				case "Alfred Sisley":
+				painter = "Альфред Сислей";  
+				painterId = 36;
+				break;
+
+				case "Boris Kustodiev":
+				painter = "Борис Кустодиев";  
+				painterId = 37;
+				break;
+
+				case "Karl Bryullov":
+				painter = "Карл Брюллов";  
+				painterId = 38;
+				break;
+
+				case "Pieter Bruegel":
+				painter = "Питер Брейгель";  
+				painterId = 39;
+				break;
+
+				case "Marc Chagall":
+				painter = "Марк Шагал";  
+				painterId = 40;
+				break;
+
+				case "Giotto di Bondone":
+				painter = "Джотто ди Бондоне";  
+				painterId = 41;
+				break;
+
+				case "Sandro Botticelli":
+				painter = "Сандро Боттичелли";  
+				painterId = 42;
+				break;
+
+				case "Caravaggio":
+				painter = "Караваджо";  
+				painterId = 43;
+				break;
+
+				case "Zinaida Serebriakova":
+				painter = "Зинаида Серебрякова";  
+				painterId = 44;
+				break;
+
+				case "Leonardo da Vinci":
+				painter = "Леонардо да Винчи";  
+				painterId = 45;
+				break;
+
+				case "Diego Velazquez":
+				painter = "Диего Веласкес";  
+				painterId = 46;
+				break;
+
+				case "Vasily Vereshchagin":
+				painter = "Василий Верещагин";  
+				painterId = 47;
+				break;
+
+				case "Isaac Levitan":
+				painter = "Исаак Левитан";  
+				painterId = 48;
+				break;
+
+				case "Henri Matisse":
+				painter = "Анри Матисс";  
+				painterId = 49;
+				break;
+
+				case "Jan van Eyck":
+				painter = "Ян ван Эйк";  
+				painterId = 50;
+				break;
+
+				case "John Waterhouse":
+				painter = "Джон Уотерхаус";  
+				painterId = 51;
+				break;
+
+				case "Egon Schiele":
+				painter = "Эгон Шиле";  
+				painterId = 52;
+				break;
+
+				case "Edgar Degas":
+				painter = "Эдгар Дега";  
+				painterId = 53;
+				break;
+
+				case "Rembrandt":
+				painter = "Рембрандт";  
+				painterId = 54;
+				break;
+
+				case "Titian":
+				painter = "Тициан";  
+				painterId = 55;
+				break;
+
+				case "Alphonse Mucha":
+				painter = "Альфонс Муха";  
+				painterId = 56;
+				break;
+
+				case "Henri de Toulouse-Lautrec":
+				painter = "Анри Тулуз-Лотрек";  
+				painterId = 57;
+				break;
+
+				case "Gustave Courbet":
+				painter = "Гюстав Курбе";  
+				painterId = 58;
+				break;
+
+				case "Dante Gabriel Rossetti":
+				painter = "Данте Габриэль Россетти";  
+				painterId = 59;
+				break;
+
+				case "John Singer Sargent":
+				painter = "Джон Сингер Сарджент";  
+				painterId = 60;
+				break;
+
+				case "Camille Pissarro":
+				painter = "Камиль Писсарро";  
+				painterId = 61;
+				break;
+
+				case "William Turner":
+				painter = "Уильям Тернер";  
+				painterId = 62;
+				break;
+
+				case "Edvard Munch":
+				painter = "Эдвард Мунк";  
+				painterId = 63;
+				break;
+
+				case "Antoine Watteau":
+				painter = "Антуан Ватто";  
+				painterId = 64;
+				break;
+
+				case "William-Adolphe Bouguereau":
+				painter = "Вильям Бугро";  
+				painterId = 65;
+				break;
+
+				case "John Constable":
+				painter = "Джон Констебл";  
+				painterId = 66;
+				break;
+
+				case "John Everett Millais":
+				painter = "Джон Эверетт Милле";  
+				painterId = 67;
+				break;
+
+				case "Pieter de Hooch":
+				painter = "Питер де Хох";  
+				painterId = 68;
+				break;
+
+				case "Paul Cezanne":
+				painter = "Поль Сезанн";  
+				painterId = 69;
+				break;
+
+				case "Theodore Gericault":
+				painter = "Теодор Жерико";  
+				painterId = 70;
+				break;
+
+				case "Thomas Gainsborough":
+				painter = "Томас Гейнсборо";  
+				painterId = 71;
+				break;
+
+				case "William Blake":
+				painter = "Уильям Блейк";  
+				painterId = 72;
+				break;
+
+				case "Eugene Delacroix":
+				painter = "Эжен Делакруа";  
+				painterId = 73;
+				break;
+
+				case "Johannes Vermeer":
+				painter = "Ян Вермеер";  
+				painterId = 74;
+				break;
+
+				case "Henri Rousseau":
+				painter = "Анри Руссо";  
+				painterId = 75;
+				break;
+
+				case "Vladimir Borovikovsky":
+				painter = "Владимир Боровиковский";  
+				painterId = 76;
+				break;
+
+				case "Georges Seurat":
+				painter = "Жорж-Пьер Сёра";  
+				painterId = 77;
+				break;
+
+				case "Lucian Freud":
+				painter = "Люсьен Фрейд";  
+				painterId = 78;
+				break;
+
+				case "Paul Klee":
+				painter = "Пауль Клее";  
+				painterId = 79;
+				break;
+
+				case "Piet Mondrian":
+				painter = "Пит Мондриан";  
+				painterId = 80;
+				break;
+
+				case "Pavel Filonov":
+				painter = "Павел Филонов";  
+				painterId = 81;
+				break;
+
+				case "Joan Miro":
+				painter = "Жоан Миро";  
+				painterId = 82;
+				break;
+
+				case "Andy Warhol":
+				painter = "Энди Уорхол";  
+				painterId = 83;
+				break;
+
+				case "Valentin Serov":
+				painter = "Валентин Серов";  
+				painterId = 84;
+				break;
+
+				case "Alexei Harlamov":
+				painter = "Алексей Харламов";  
+				painterId = 85;
+				break;
+
+				case "Vasily Tropinin":
+				painter = "Василий Тропинин";  
+				painterId = 86;
+				break;
+
+				case "Fra Angelico":
+				painter = "Фра Анджелико";  
+				painterId = 87;
+				break;
+
+				case "Edward Burne-Jones":
+				painter = "Эдвард Бёрн-Джонс";  
+				painterId = 88;
+				break;
+
+				case "Martin Schongauer":
+				painter = "Мартин Шонгауэр";  
+				painterId = 89;
+				break;
+
+				case "Rogier van der Weyden":
+				painter = "Рогир ван дер Вейден";  
+				painterId = 90;
+				break;
+
+				case "Giovanni di Paolo":
+				painter = "Джованни ди Паоло";  
+				painterId = 91;
+				break;
+
+				case "Hans Baldung":
+				painter = "Ханс Бальдунг";  
+				painterId = 92;
+				break;
+
+				case "Gustave Moreau":
+				painter = "Гюстав Моро";  
+				painterId = 93;
+				break;
+
+				case "Paul Gauguin":
+				painter = "Поль Гоген";  
+				painterId = 94;
+				break;
+
+				case "Raphael":
+				painter = "Рафаэль Санти";  
+				painterId = 95;
+				break;
+
+				case "Paul Signac":
+				painter = "Поль Синьяк";  
+				painterId = 96;
+				break;
+
+				case "Nicolas Poussin":
+				painter = "Никола Пуссен";  
+				painterId = 97;
+				break;
+
+				case "Hans Holbein":
+				painter = "Ганс Гольбейн";  
+				painterId = 98;
+				break;
+
+				case "William Holman Hunt":
+				painter = "Уильям Холман Хант";  
+				painterId = 99;
+				break;
+
+				case "Albrecht Altdorfer":
+				painter = "Альбрехт Альтдорфер";  
+				painterId = 100;
+				break;
+
+				case "Antonello da Messina":
+				painter = "Антонелло да Мессина";  
+				painterId = 101;
+				break;
+
+				case "Arthur Hughes":
+				painter = "Артур Хьюз";  
+				painterId = 102;
+				break;
+
+				case "Alexandre Benois":
+				painter = "Бенуа Александр";  
+				painterId = 103;
+				break;
+
+				case "Hans Memling":
+				painter = "Ганс Мемлинг";  
+				painterId = 104;
+				break;
+
+				case "Aleksandr Deyneka":
+				painter = "Александр Дейнека";  
+				painterId = 105;
+				break;
+
+				case "Giorgione":
+				painter = "Джорджоне";  
+				painterId = 106;
+				break;
+
+				case "Alexander Ivanov":
+				painter = "Александр Иванов";  
+				painterId = 107;
+				break;
+
+				case "Correggio":
+				painter = "Корреджо";  
+				painterId = 108;
+				break;
+
+				case "Dmitry Levitzky":
+				painter = "Дмитрий Левицкий";  
+				painterId = 109;
+				break;
+
+				case "Lucas van Leyden":
+				painter = "Лукас ван Лейден";  
+				painterId = 110;
+				break;
+
+				case "Lucas Cranach the Elder":
+				painter = "Лукас Кранах";  
+				painterId = 111;
+				break;
+
+				case "Michelangelo":
+				painter = "Микеланджело Буонарроти";  
+				painterId = 112;
+				break;
+
+				case "Nikolai Ge":
+				painter = "Николай Ге";  
+				painterId = 113;
+				break;
+
+				case "Robert Campin":
+				painter = "Робер Кампен";  
+				painterId = 114;
+				break;
+
+				case "Fyodor Rokotov":
+				painter = "Фёдор Рокотов";  
+				painterId = 115;
+				break;
+
+				case "Rockwell Kent":
+				painter = "Рокуэлл Кент";  
+				painterId = 116;
+				break;
+
+				case "Martiros Saryan":
+				painter = "Мартирос Сарьян";  
+				painterId = 117;
+				break;
+
+				case "Jackson Pollock":
+				painter = "Джексон Поллок";  
+				painterId = 118;
+				break;
+			}; //switch
+		
+			$( "#"+filename+"SetData" ).append( $( "<tr id='" + painterId + "' class='painter' style=''>\
+				 <td class='photo'><img src='http://178.62.133.139/painters/" + painterId + "/photo.jpg'></td>\
+				 <td class='name'>"+painter+"</td>\
+				 <td class='years' id='"+filename+"-years-"+painterId+"'></td>\
+				 <td class='genre' id='"+filename+"-genre-"+painterId+"'></td>\
+				 <td class='nation' id='"+filename+"-nation-"+painterId+"'></td>\
+				 <td class='rate'><div class='progress' style='height: 30px; margin-top: 20px;'><div class='progress-bar progress-bar-success progress-bar-striped' role='progressbar' aria-valuenow='" + entry[4] + "' aria-valuemin='0' aria-valuemax='100' style='padding-top: 5px; font-size: 20px; width: " + entry[4] + "%;'>" + entry[4] + "</div></div></td>\
+				</tr>")
+			);
+		}); //forEach
+		
+		Array.apply(null, {length: 119}).map(Number.call, Number).forEach(function(entry) {
+
+		$.getJSON("http://artchallenge.me/painters/" + entry + "/data.json")
+			.done(function(json) {
+
+		        window.nation = undefined;
+		        json.nationality.forEach(function(entry) {
+		          if (window.nation == undefined) {
+		            window.nation = i18n.t("nation." + entry, { lng: window.lang });
+		          } else {
+		            window.nation = window.nation + ", " + i18n.t("nation." + entry, { lng: window.lang });
+		          }
+		        });				
+				
+		        window.genre = undefined;
+		        json.genre.forEach(function(entry) {
+		          if (window.genre == undefined) {
+		            window.genre = i18n.t("genre." + entry, { lng: window.lang });
+		          } else {
+		            window.genre = window.genre + ", " + i18n.t("genre." + entry, { lng: window.lang });
+		          }
+		        });
+				$( "#"+filename+"-years-" + entry ).html(json.years);
+				$( "#"+filename+"-nation-" + entry ).html(window.nation);
+				$( "#"+filename+"-genre-" + entry ).html(window.genre);
+			})
+			.fail(function() {
+				console.log('fails');
+			});
+		});
+		
+	}
+	});
+	};
+	
+	loaddata("basic");
+    loaded["basic"] = 1;
+
+  </script>
+</html>

@@ -29,11 +29,11 @@ function setLang(lang) {
   document.getElementById("langMain").src="pics/flags/" + lang.toUpperCase() + ".png";
   document.getElementById(lang).className="lang-active";
 
-  // if (lang == "ru") {
-  //   $("#subscribe")[0].style.display="block";
-  // } else {
-  //   $("#subscribe")[0].style.display="none";
-  // }
+  if (lang == "ru") {
+    $("#subscribe")[0].style.display="block";
+  } else {
+    $("#subscribe")[0].style.display="none";
+  }
 
 }
 
@@ -58,7 +58,7 @@ function load() {
   window.platform = "http://artchallenge.me/painters/"; //"http://artchallenge.me/painters/"; // "painters/";
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 
-  window.errorDelay = 3800;
+  window.errorDelay = 4000;
   window.pnotify = "";
   //js magic for mobiles
   window.enviroment = "desktop";
@@ -68,11 +68,6 @@ function load() {
     $('#donate').css('display', "none");
     $('#donate-mobile').css('display', "block");
 	   window.enviroment = "mobile";
-
-     $('#btn1').addClass('btn-block');
-     $('#btn2').addClass('btn-block');
-     $('#btn3').addClass('btn-block');
-     $('#btn4').addClass('btn-block');
   }
 
   if (getCookie("currentSet") === "") {
@@ -100,7 +95,7 @@ function getart() {
     .done(function(json) {
 
       $("#currentSetImg")[0].src="pics/sets/" + window.currentSetName + ".png";
-      $(".currentSetTitle").html(i18n.t("sets." + window.currentSetName, { lng: window.lang })); // Этому тут совсем не место, но больше нигде не работает T_T
+      $("#currentSetTitle")[0].innerHTML = i18n.t("sets." + window.currentSetName, { lng: window.lang }); // Этому тут совсем не место, но больше нигде не работает T_T
 
       window.paintings = json.paintings;
       window.image = Math.floor((Math.random()*window.paintings)+1);
@@ -155,7 +150,7 @@ function getart() {
         putButtons(window.truePainterName);
       } else {
         console.log("Error: window.truePainterName is empty, sleep for 1000 and retry");
-        // art.src = "pics/loading.gif";
+        art.src = "pics/loading.gif";
         setTimeout(function () {
           refresh("bad",false);
         }, 1000);
@@ -219,7 +214,6 @@ function putButtons(painter) {
 function puticons() {
   for (var i=1; i < window.counter; i++ ) {
     document.getElementById("icon"+i).style.color = "rgb(53,115,45)";
-    $("#icon"+i).removeClass('animated tada');
   }
 }
 
@@ -233,33 +227,29 @@ if (answer == window.truePainterName) {
   document.getElementById("btn2").onclick = function() { void(0);};
   document.getElementById("btn3").onclick = function() { void(0);};
   document.getElementById("btn4").onclick = function() { void(0);};
-  $("#"+btn).addClass('btn-success');
+  document.getElementById(btn).style.background = "blue";
+  document.getElementById(btn).style.borderColor = "blue";
 
   var wins = parseInt(window.counter);
 
   if (wins == 10) {
     winner();
-  } else {
-    wins = 1 + wins;
-    setCookie('wins',wins,"session");
+  }
 
-    setTimeout(function() {refresh("good");}, 2000);
+  else {
+  wins = 1 + wins;
+  setCookie('wins',wins,"session");
+  setTimeout(function() {refresh("good");}, 1000);
 
-    new PNotify({
+  new PNotify({
       title: goodPhrase(),
-      text: i18n.t("message.right-desc", { lng: window.lang, count: parseInt(window.counter) }) + "!",
+      text: i18n.t("message.right-desc", { lng: window.lang, count: parseInt(window.counter) }),
       type: 'success',
       hide: true,
       animate_speed: "normal",
-      icon: "",
       delay: 2000,
       remove: true,
       addclass: window.pnotify,
-      animate: {
-        animate: true,
-        in_class: "fadeInDown",
-        out_class: "bounceOutUp"
-      },
       buttons: {
         closer: false,
         sticker: false
@@ -272,21 +262,16 @@ if (answer == window.truePainterName) {
   });
   yaCounter24594722.reachGoal('WIN');
   window.answer = 1;
-
-  //putincos повтор
-  document.getElementById("icon"+(wins-1)).style.color = "rgb(53,115,45)";
-  $("#icon"+(wins-1)).addClass('animated tada');
-
   }
 
 }
 
 else {
 
-  setTimeout(function() {refresh("bad");}, 4200);
+  setTimeout(function() {refresh("bad");}, 4000);
   window.msgWrong = new PNotify({
       title: badPhrase(),
-      text: "<div style='text-align: left'>" + "<img src='" + window.platform + window.truePainter + "/photo.jpg' style='width: 60%; margin: 5px 0 10px 0'><br><p class='painter-name'>" + i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "!</p><hr style='margin: 5px'>" + window.nation + ", " + window.years + "<br>" + window.genre+"<a id='btnLearnMore' onclick='learnMore();' class='btn btn-large' style='width: 100%' role='button'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", { lng: window.lang }) + "</a><br></div>",
+      text: "<div style='text-align: left'>" + "<img src='" + window.platform + window.truePainter + "/photo.jpg' style='width: 60%; margin: 10px 0 10px 0'><br><p style='font-size: 18px'>" + i18n.t("message.wrong-desc", { lng: window.lang }) + " " + window.truePainterName + "!<hr style='margin: 5px'>"+i18n.t("message.years", { lng: window.lang })+ ": " + window.years + "<br>"+i18n.t("message.genre", { lng: window.lang })+": " + window.genre + "<br>"+i18n.t("message.nationality", { lng: window.lang })+": " + window.nation + "</p><a id='btnLearnMore' onTouchStart='learnMore();' onclick='learnMore();' class='btn btn-primary'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", { lng: window.lang }) + "</a><br></div>", //<hr><p>Обещаю выучить все произведения данного художника<br><br><a style='margin: 5px;' class='btn btn-success'><span class='glyphicon glyphicon-share-alt'></span> Дать обещание</a></p></div>
       type: 'error',
       icon: '',
       hide: true,
@@ -294,11 +279,6 @@ else {
       delay: window.errorDelay,
       remove: true,
       addclass: window.pnotify,
-      animate: {
-        animate: true,
-        in_class: "bounceInDown",
-        out_class: "flipOutY"
-      },
       mouse_reset: false,
       buttons: {
         closer: true,
@@ -317,46 +297,47 @@ else {
   document.getElementById("btn2").onclick = function() { void(0);};
   document.getElementById("btn3").onclick = function() { void(0);};
   document.getElementById("btn4").onclick = function() { void(0);};
-  // document.getElementById(btn).style.background = "red";
-  // document.getElementById(btn).style.borderColor = "red";
-  // document.getElementById(btn).style.color = 'white';
-  $("#"+btn).addClass('btn-danger');
+  document.getElementById(btn).style.background = "red";
+  document.getElementById(btn).style.borderColor = "red";
 
   yaCounter24594722.reachGoal('FAIL');
   window.answer = 0;
 }
 
-// yaCounter24594722.reachGoal('ANSWER-CLICK');
+yaCounter24594722.reachGoal('ANSWER-CLICK');
 // recordData();
 }
 
 function learnMore() {
   window.msgWrong.remove();
   var learnMoreText = "\
-    <div id='learnMoreDiv' style='text-align: center; max-height: 550px; overflow: scroll;'>\
-      <div id='learnMoreInfo'><p><img style='width: 60%; margin: 5px 0 10px 0' src='" + window.platform + window.truePainter + "/photo.jpg'></p>\
-      <a style='width: 100%; margin: 0px 0 15px 0' target='_blank' href='"+window.wiki+"' class='btn btn-large'>Wikipedia <span class='glyphicon glyphicon-share-alt'></span></a>\
+    <div id='learnMoreDiv' style='max-height: 570px; overflow: scroll;'>\
+      <div id='learnMoreInfo'><p><img style='height: 200px; max-width: 170px;' src='" + window.platform + window.truePainter + "/photo.jpg'></p>\
+      <p>"+window.years+"<br>"+window.nation+"</p>\
+      <p><strong>"+i18n.t("message.genre", { lng: window.lang })+":</strong><br>"+window.genre+"</p>\
+      <p><a style='' target='_blank' href='"+window.wiki+"' class='btn btn-primary'>Wikipedia <span class='glyphicon glyphicon-share-alt'></span></a></p>\
       </div>\
+      <h2 style='margin: 5px 0 0 0; padding-bottom: 10px;'>"+window.truePainterName+"</h2>\
       <div id='learnMoreBio'>\
       "+window.bio+"\
+      </div>\
+      <div style='text-align: center; padding-top: 25px;'>\
+        <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
+        <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
+        <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
+        <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
+        <img class='thumbnail' style='display: inline; max-width: 150px; height: 150px;' src='" + window.platform + window.truePainter + "/"+Math.floor((Math.random()*window.paintings)+1)+".jpg'>\
       </div>\
     </div>\
     ";
 
   new PNotify({
-      title: window.truePainterName,
       text: learnMoreText,
       type: 'info',
       hide: false,
       animate_speed: "normal",
       icon: "",
       addclass: "stack-learnMore",
-      animate: {
-        animate: true,
-        in_class: "bounceIn",
-        out_class: "bounceOutUp"
-      },
-      width: "350px",
       buttons: {
         closer: true,
         closer_hover: false,
@@ -370,42 +351,42 @@ function learnMore() {
 
   yaCounter24594722.reachGoal('LEARN-MORE'); return true;
 
-}
+};
 
 function setCookie(cname,cvalue,exdays) {
   var d = new Date();
   d.setTime(d.getTime()+(exdays*24*60*60*1000));
   var expires = "expires="+d.toGMTString();
   document.cookie = cname + "=" + cvalue + "; " + expires;
-}
+};
 
 function badPhrase() {
   if (window.goodboy == 1) {
     phrase = i18n.t("message.wrong", { lng: window.lang });
   }
   else {
-    var phrase = "badPhrases." + Math.floor((Math.random()*12)+1);
+    var phrase = "badPhrases." + Math.floor((Math.random()*12)+1)
     phrase = i18n.t(phrase, { lng: window.lang });
   };
   return phrase;
-}
+};
 
 
 function goodPhrase() {
     var phrase = "goodPhrases." + Math.floor((Math.random()*20)+1)
     phrase = i18n.t(phrase, { lng: window.lang });
   return phrase;
-}
+};
 
 function winner() {
 
   var winnerDiv = "\
-  <p class='winner-text'>"+i18n.t("message.winner-desc", { lng: window.lang, setName: i18n.t("sets." + window.currentSetName, { lng: window.lang }) })+"</p>\
+  <p>"+i18n.t("message.winner-desc", { lng: window.lang, setName: i18n.t("sets." + window.currentSetName, { lng: window.lang }) })+"</p>\
   <p><a onclick='ShareFB();' href='#'>\
-    <img style='width: 100%;' src=pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareFB.png>\
+    <img style='width: 80%; max-height: 350px' src=pics/badges/" + window.currentSetName + "/winner-badge-"+window.lang+"-shareFB.png>\
   </a></p>\
-  <p class='winner-text'>" + i18n.t("message.winner-desc-old", { lng: window.lang }) + "</p>\
-  <p class='winner-text'>" + i18n.t("message.share", { lng: window.lang }) + "</p>" + getShares();
+  <p>" + i18n.t("message.winner-desc-old", { lng: window.lang }) + "</p>\
+  <p>" + i18n.t("message.share", { lng: window.lang }) + "</p>" + getShares();
 
   window.msgWinner = new PNotify({
       title: i18n.t("message.winner", { lng: window.lang }),
@@ -413,17 +394,11 @@ function winner() {
       type: 'note',
       hide: false,
       animate_speed: "normal",
-      icon: "",
+      icon: false,
       addclass: "stack-winner",
-      animate: {
-        animate: true,
-        in_class: "bounceIn",
-        out_class: "bounceOutUp"
-      },
-      width: "350px",
+      opacity: 0.95,
       buttons: {
         closer: true,
-        closer_hover: false,
         sticker: false
       },
       history: {
@@ -432,7 +407,7 @@ function winner() {
       }
   });
   document.getElementById("icon10").style.color = "rgb(53,115,45)";
-  // yaCounter24594722.reachGoal('WINNER');
+  yaCounter24594722.reachGoal('WINNER');
 
   document.getElementById("btn1").onclick = function() { void(0);};
   document.getElementById("btn2").onclick = function() { void(0);};
@@ -447,17 +422,17 @@ function getShares() {
   {
   case "ru":
     shares_old = "<a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> ВКонтакте </a><br><a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareOD();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Одноклассники </a><br><a onclick='ShareMM();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Мой Мир </a>";
-    shares = "<div style='padding: 0px'>\
-    <button type='button' class='btn btn-danger btn-share' aria-label='ВКонтакте' onclick='ShareVK();'>\
+    shares = "<div style='padding: 15px'>\
+    <button type='button' class='btn btn-lg btn-primary btn-share' aria-label='ВКонтакте' onclick='ShareVK();'>\
      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> ВКонтакте\
     </button>\
-    <button type='button' class='btn btn-danger btn-share' aria-label='Facebook' onclick='ShareFB();'>\
+    <button type='button' class='btn btn-lg btn-primary btn-share' aria-label='Facebook' onclick='ShareFB();'>\
       <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Facebook\
     </button>\
-    <button style='display: none' type='button' class='btn btn-lg btn-info btn-share' aria-label='Одноклассники' onclick='ShareOD();'>\
+    <button type='button' class='btn btn-lg btn-warning btn-share' aria-label='Одноклассники' onclick='ShareOD();'>\
       <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Одноклассники\
     </button>\
-    <button style='display: none' type='button' class='btn btn-lg btn-info btn-share' aria-label='Twitter' onclick='ShareTW();'>\
+    <button type='button' class='btn btn-lg btn-info btn-share' aria-label='Twitter' onclick='ShareTW();'>\
       <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Twitter\
     </button>\
     </div>";
@@ -515,36 +490,22 @@ function ShareMM() {
 function refresh(sign,scroll){
 
   document.getElementById("btn1").onclick = function() { checkAnswer('btn1'); };
-  // document.getElementById("btn1").style.background = "";
-  // document.getElementById("btn1").style.borderColor = "";
-  // document.getElementById("btn1").style.color = "#2a2a2a";
-  $("#btn1").removeClass('btn-success');
-  $("#btn1").removeClass('btn-danger');
+  document.getElementById("btn1").style.background = "";
+  document.getElementById("btn1").style.borderColor = "";
   document.getElementById("btn2").onclick = function() { checkAnswer('btn2'); };
-  // document.getElementById("btn2").style.background = "";
-  // document.getElementById("btn2").style.borderColor = "";
-  // document.getElementById("btn2").style.color = "#2a2a2a";
-  $("#btn2").removeClass('btn-success');
-  $("#btn2").removeClass('btn-danger');
+  document.getElementById("btn2").style.background = "";
+  document.getElementById("btn2").style.borderColor = "";
   document.getElementById("btn3").onclick = function() { checkAnswer('btn3'); };
-  // document.getElementById("btn3").style.background = "";
-  // document.getElementById("btn3").style.borderColor = "";
-  // document.getElementById("btn3").style.color = "#2a2a2a";
-  $("#btn3").removeClass('btn-success');
-  $("#btn3").removeClass('btn-danger');
-
+  document.getElementById("btn3").style.background = "";
+  document.getElementById("btn3").style.borderColor = "";
   document.getElementById("btn4").onclick = function() { checkAnswer('btn4'); };
-  // document.getElementById("btn4").style.background = "";
-  // document.getElementById("btn4").style.borderColor = "";
-  // document.getElementById("btn4").style.color = "#2a2a2a";
-  $("#btn4").removeClass('btn-success');
-  $("#btn4").removeClass('btn-danger');
+  document.getElementById("btn4").style.background = "";
+  document.getElementById("btn4").style.borderColor = "";
 
-
-  // document.getElementById("art").src = "pics/loading.gif";
-  // if (scroll != false) {
-  //   $("html, body").animate({ scrollTop: 90 }, "slow");
-  // }
+  document.getElementById("art").src = "pics/loading.gif";
+  if (scroll != false) {
+    $("html, body").animate({ scrollTop: 90 }, "slow");
+  }
   getart();
 
   if (sign == "bad") {
@@ -621,7 +582,7 @@ function changeSet(value) {
     document.getElementById(value).className="lang-active";
 
     if (window.currentSetName != null) {
-      document.getElementById(window.currentSetName).className="btn btn-success";
+      document.getElementById(window.currentSetName).className="lang";
       window.currentSetName =value;
       refresh("bad", false);
     } else {
@@ -631,6 +592,4 @@ function changeSet(value) {
     if (window.msgWinner) { // Временно. Если была победа, а потом чувак выбирает новую коллекцию - просто перезагрузка страницы
       location.reload();
     }
-
-      $("html, body").animate({ scrollTop: 0 }, "slow");
   };
