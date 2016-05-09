@@ -48,7 +48,7 @@ function load() {
   if (langCookie !== "") {
    lang = langCookie;
   }
-  if (lang == "ru" || lang == "en" || lang == "de" || lang == "fr" || lang == "it" || lang == "es" ) {
+  if (lang == "ru" || lang == "en" || lang == "de" || lang == "fr" || lang == "it" || lang == "es" || lang == "zh") {
     setLang(lang);
   } else {
     lang = "en";
@@ -77,7 +77,7 @@ function load() {
 
   if (getCookie("currentSet") === "") {
     window.currentSetName="basicSet";
-    window.currentSet = [1,4,7,9,14,15,17,19,21,22,24,26,27,28,29,30,32,33,34,35,36,39,40,41,42,43,45,46,49,50,53,54,55,57,58,61,62,63,69,73,75,77,79,80,82,83,94,95,112,118];
+    window.currentSet = [1, 4, 7, 9, 14, 15, 17, 19, 21, 22, 24, 26, 27, 28, 29, 30, 32, 33, 34, 35, 36, 39, 40, 41, 42, 43, 45, 46, 49, 50, 53, 54, 55, 57, 58, 61, 62, 63, 69, 72, 73, 75, 77, 79, 80, 82, 83, 94, 95, 112, 118];
     document.getElementById("basicSet").className="lang-active";
   } else {
     changeSet(getCookie("currentSet"));
@@ -465,7 +465,7 @@ function getShares() {
 
   default:
     shares_old = "<a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareTW();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> Twitter </a><br><a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> VKontakte </a>";
-    shares = "<div style='padding: 15px'>\
+    shares_old_en = "<div style='padding: 15px'>\
     <button type='button' class='btn btn-lg btn-primary btn-share' aria-label='Facebook' onclick='ShareFB();'>\
       <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Facebook\
     </button>\
@@ -473,6 +473,20 @@ function getShares() {
      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> VKontakte\
     </button>\
     <button type='button' class='btn btn-lg btn-info btn-share' aria-label='Мой Мир' onclick='ShareTW();'>\
+      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Twitter\
+    </button>\
+    </div>";
+    shares = "<div style='padding: 0px'>\
+    <button type='button' style='display: none' class='btn btn-danger btn-share' aria-label='ВКонтакте' onclick='ShareVK();'>\
+     <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> ВКонтакте\
+    </button>\
+    <button type='button' class='btn btn-primary btn-share' aria-label='Facebook' onclick='ShareFB();'>\
+      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Facebook\
+    </button><br>\
+    <button style='display: none' type='button' class='btn btn-lg btn-info btn-share' aria-label='Одноклассники' onclick='ShareOD();'>\
+      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Одноклассники\
+    </button>\
+    <button style='display: none' type='button' class='btn btn-lg btn-info btn-share' aria-label='Twitter' onclick='ShareTW();'>\
       <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Twitter\
     </button>\
     </div>";
@@ -589,32 +603,32 @@ function changeSet(value) {
         break;
 
       case "impressionismSet":
-        window.currentSet = [2,3,9,16,17,21,30,36,49,53,57,60,61,69,77,84,94,96];
+        window.currentSet = [2, 3, 9, 16, 17, 21, 30, 36, 49, 53, 57, 60, 61, 69, 77, 84, 94, 96];
         setCookie('currentSet',value,360);
         break;
 
       case "renaissanceSet":
-        window.currentSet = [24,35,39,41,42,45,50,55,87,89,90,91,92,95,98,100,101,104,106,108,110,111,112,114];
+        window.currentSet = [24, 35, 39, 41, 42, 45, 50, 55, 87, 89, 90, 91, 92, 95, 98, 100, 101, 104, 106, 108, 110, 111, 112, 114];
         setCookie('currentSet',value,360);
         break;
 
       case "realismSet":
-        window.currentSet = [5,8,18,25,37,47,48,58,85,113,116,117];
+        window.currentSet = [5, 8, 18, 25, 37, 47, 48, 58, 85, 113, 116, 117];
         setCookie('currentSet',value,360);
         break;
 
       case "russianSet":
-        window.currentSet = [3,4,5,6,8,10,11,12,13,16,19,20,23,25,26,27,31,37,38,44,47,48,76,81,84,85,86,103,105,107,109,113,115];
+        window.currentSet = [3, 4, 5, 6, 8, 10, 11, 12, 13, 16, 19, 20, 23, 25, 26, 27, 37, 38, 44, 47, 48, 76, 81, 84, 85, 86, 103, 105, 107, 109, 113, 115];
         setCookie('currentSet',value,360);
         break;
 
       case "frenchSet":
-        window.currentSet = [2,9,17,30,36,40,49,53,57,58,61,64,65,69,70,73,75,77,93,94,96,97];
+        window.currentSet = [2, 9, 17, 30, 36, 40, 49, 53, 57, 58, 61, 64, 65, 69, 70, 73, 75, 77, 93, 94, 96, 97];
         setCookie('currentSet',value,360);
         break;
 
       default:
-        window.currentSet = [1,4,7,9,14,15,17,19,21,22,24,26,27,28,29,30,32,33,34,35,36,39,40,41,42,43,45,46,49,50,53,54,55,57,58,61,62,63,69,73,75,77,79,80,82,83,94,95,112,118];
+        window.currentSet = [1, 4, 7, 9, 14, 15, 17, 19, 21, 22, 24, 26, 27, 28, 29, 30, 32, 33, 34, 35, 36, 39, 40, 41, 42, 43, 45, 46, 49, 50, 53, 54, 55, 57, 58, 61, 62, 63, 69, 72, 73, 75, 77, 79, 80, 82, 83, 94, 95, 112, 118];
         document.cookie = "currentSet=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
     };
 
