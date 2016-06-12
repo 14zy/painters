@@ -35,6 +35,7 @@ function setLang(lang) {
   //   $("#subscribe")[0].style.display="none";
   // }
 
+
 }
 
 function load() {
@@ -648,3 +649,29 @@ function changeSet(value) {
 
       $("html, body").animate({ scrollTop: 0 }, "slow");
   };
+
+
+window.onload = function() {
+
+  if (window.lang == "ru") {
+    $("#paintersLinksTitle").html('Художники, доступные в игре:')
+    for (var i=1; i<=118; i++) {
+        var painterName = "painters." +i;
+        if (i == 118) {
+          $("#paintersLinks").append("<a href='http://gallery.artchallenge.ru/"+window.lang+"/"+i+".html'>" + i18n.t(painterName, { lng: window.lang }) + "</a>");
+      } else {
+          $("#paintersLinks").append("<a href='http://gallery.artchallenge.ru/"+window.lang+"/"+i+".html'>" + i18n.t(painterName, { lng: window.lang }) + "</a> | ");
+        }
+    }
+  } else {
+    for (var i=1; i<=118; i++) {
+        var painterName = "painters." +i;
+        if (i == 118) {
+          $("#paintersLinks").append("<a href='http://gallery.artchallenge.ru/"+window.lang+"/"+i+".html'>" + i18n.t(painterName, { lng: window.lang }) + "</a>");
+      } else {
+          $("#paintersLinks").append("<a href='http://gallery.artchallenge.ru/"+window.lang+"/"+i+".html'>" + i18n.t(painterName, { lng: window.lang }) + "</a> | ");
+        }
+    }
+  }
+
+};
