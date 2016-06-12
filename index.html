@@ -137,7 +137,7 @@
                     </a>
                   </li>
                   <li>
-                    <a class="lang" id="allSet" onclick="changeSet('allSet');" title="">
+                    <a class="lang" onclick="changeSet('allSet');" title="">
                       <img src="pics/sets/allSet.png" alt="">
                       <span data-i18n="sets.allSet"></span>
                       <br>
@@ -345,21 +345,42 @@
           </a>
         </div>
 
+        <div class="col-lg-4 col-md-4 col-sm-4 work">
+          <a onclick="changeSet('allSet');" class="work-box">
+            <img src="pics/sets/allSet-picture.jpg" alt="">
+            <div class="overlay">
+              <div class="overlay-caption">
+                <h3 data-i18n="sets.allSet"></h3>
+                <p data-i18n="sets.allSet-desc" class=""></p>
+                <p data-i18n="sets.allSet-count" class="allSet-count"></p>
+                <text id="allSet" data-i18n="desc.setChooseBtn" class="btn btn-success">Играть</text>
+              </div>
+            </div>
+            <!-- overlay -->
+          </a>
+        </div>
+
       </div>
     </div>
 
   </section>
   <!-- work section -->
 
+  <section id="painters" class="works section no-padding">
+    <div class="container-fluid">
+      <div class='text-center'>
+        <br><br><br><br>
+        <h3 id='paintersLinksTitle'>Art Challenge painters:</h3>
+        <br><br>
+      </div>
+      <div id='paintersLinks' class="row no-gutter"></div>
+    </div>
+  </section>
+
+
   <!-- footer section -->
   <footer id="contact" class="footer">
     <div class="container">
-
-      <div class="col-md-12 text-center" style='padding: 0px 40px 60px 40px'>
-        <h3 id='paintersLinksTitle'>Painters, available in the game:</h3>
-        <br>
-        <div id='paintersLinks'></div>
-      </div>
 
       <div class="col-md-4">
         <h4>ArtChallenge.ru</h4>
@@ -457,6 +478,7 @@
   <script defer src="js/misc.js" type="text/javascript"></script>
 
   <script defer type="text/javascript" src="http://yandex.st/share/share.js" charset="utf-8"></script>
+
 
   <script defer src="js/pnotify.custom.min.js" type="text/javascript"></script>
   <link href="js/pnotify.custom.min.css" media="all" rel="stylesheet" type="text/css"/>
