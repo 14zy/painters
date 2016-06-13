@@ -760,7 +760,7 @@ window.onload = function() {
   $.each(foo, function(i, value) {
     var painterName = "painters." + (i + 1);
     painterDiv = '<div class="col-lg-2 col-md-4 col-sm-4 work2">' +
-      '<a href="http://gallery.artchallenge.ru/' + window.lang + '/' + (i + 1) + '.html" class="work-box">' +
+      '<a href="http://artchallenge.ru/gallery/' + window.lang + '/' + (i + 1) + '.html" class="work-box">' +
       '<img  style="width:250px" src="pics/painters/' + (i + 1) + '.jpg" alt="' + i18n.t(painterName, {
         lng: window.lang
       }) + ' photo">' +
