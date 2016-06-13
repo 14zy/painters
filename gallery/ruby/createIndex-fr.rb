@@ -2,7 +2,7 @@ require "json"
 
 
 ## Берем всю инфу по языку из CouchDB
-lang = "ru";
+lang = "fr";
 # lang = JSON.parse `curl -X GET http://178.62.133.139:5994/lang/ru`
 #print lang["head"]["title"]
 
@@ -22,12 +22,12 @@ lang = "ru";
   # Генерим страницу
   html =  %{
     <!doctype html>
-    <html lang="en">
+    <html lang="#{lang}">
       <head>
         <meta charset="utf-8">
-        <meta name="description" content="">
+        <meta name="description" content="Catalog of painters">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Art Challenge</title>
+        <title>Art Challenge painters</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/jquery.fancybox.css">
         <link rel="stylesheet" href="css/main.css">
@@ -36,6 +36,13 @@ lang = "ru";
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
         <meta name="apple-itunes-app" content="app-id=1088982103">
+        <link rel="alternate" hreflang="ru" href="http://artchallenge.ru/gallery/ru/index-ru.html"/>
+        <link rel="alternate" hreflang="en" href="http://artchallenge.ru/gallery/en/index-en.html"/>
+        <link rel="alternate" hreflang="de" href="http://artchallenge.ru/gallery/de/index-de.html"/>
+        <link rel="alternate" hreflang="es" href="http://artchallenge.ru/gallery/es/index-es.html"/>
+        <link rel="alternate" hreflang="fr" href="http://artchallenge.ru/gallery/fr/index-fr.html"/>
+        <link rel="alternate" hreflang="zh" href="http://artchallenge.ru/gallery/zh/index-zh.html"/>
+        <link rel="alternate" hreflang="it" href="http://artchallenge.ru/gallery/it/index-it.html"/>
       </head>
       <body>
         <!-- Yandex.Metrika counter -->
@@ -74,13 +81,13 @@ lang = "ru";
               <nav class="navigation" role="navigation">
                 <ul class="primary-nav">
                   <li>
-                    <a href="http://artchallenge.ru">Вернуться в Игру</a>
+                    <a href="http://artchallenge.ru">Back to Game</a>
                   </li>
                   <li>
-                    <a href="http://artchallenge.ru/gallery/index-ru.html">Обзор Художников</a>
+                    <a href="http://artchallenge.ru/gallery/index-#{ lang }.html">Browse Painters</a>
                   </li>
                   <li>
-                    <a href="http://artchallenge.ru/#introduction">Поддержать проект</a>
+                    <a href="http://artchallenge.ru/#introduction">Donate</a>
                   </li>
                 </ul>
               </nav>
@@ -110,7 +117,7 @@ lang = "ru";
 
       gallery = gallery + %{
         <div class="col-lg-2 col-md-4 col-sm-4 work">
-          <a href="http://artchallenge.ru/gallery/ru/#{ i }.html" class="work-box">
+          <a href="http://artchallenge.ru/gallery/#{ lang }/#{ i }.html" class="work-box">
             <img style='width:250px' src="images/painters/#{ i }.jpg" alt="#{painter['name']} photo">
             <div class="overlay">
               <div class="overlay-caption">
@@ -183,6 +190,6 @@ lang = "ru";
 
 
 
-  File.open("../index-ru.html", 'w+') do |file|
+  File.open("../index-" + lang + ".html", 'w+') do |file|
       file.write html
   end

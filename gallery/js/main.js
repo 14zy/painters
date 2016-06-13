@@ -82,14 +82,17 @@ $('#editBtn').on('click', function() {
 
 
 $('#saveBtn').on('click', function() {
-	// console.log('painterid ' + window.painterID + nicEditors.findEditor('txtBio').elm.innerHTML );	
+	// console.log('painterid ' + window.painterID + nicEditors.findEditor('txtBio').elm.innerHTML );
+  if (nicEditors.findEditor('txtBio').elm.innerHTML.length > 10) {
+
+
 	$.couch.db("painters").openDoc(window.painterID.toString(), {
 	        success: function(data) {
-				data.bio.ru = nicEditors.findEditor('txtBio').elm.innerHTML;
-				
+				data.bio[window.lang] = nicEditors.findEditor('txtBio').elm.innerHTML;
+
 				$.couch.db("painters").saveDoc(data, {
 				                success: function(data2) {
-				                	$('#myModal').modal({show: true})
+				                	$('#myModal').modal({show: true});
 				                },
 				                error: function(status) {
 				                  if (status == 409) {
@@ -99,33 +102,36 @@ $('#saveBtn').on('click', function() {
 				                  }
 				                  console.log(status);
 				                }
-				              });	
+				              });
 	        },
 	        error: function(status) {
 	          console.log(status);
 	        }
 	 });
-	
+ }  else {
+   alert('Error: Слишком мало символов');
+ }
+
 	$('#text').css('display', "block");
 	$('#editor').css('display', "none");
 });
 
 save = function(id){
-	
-	console.log('painterid ' + window.painterID + ', pictureID '  + id, ', name ' + $('#txtName-' + id).val() + ', year ' + $('#txtYear-' + id).val() + ', location ' + $('#txtLocation-' + id).val())
-	
+
+	//console.log('painterid ' + window.painterID + ', pictureID '  + id, ', name ' + $('#txtName-' + id).val() + ', year ' + $('#txtYear-' + id).val() + ', location ' + $('#txtLocation-' + id).val())
+
 	var index = id -1;
-	
+
 	$.couch.db("painters").openDoc(window.painterID.toString(), {
 	        success: function(data) {
-				
-				data.paintings[index].name.ru = $('#txtName-' + id).val();
+
+				data.paintings[index].name[window.lang] = $('#txtName-' + id).val();
 				data.paintings[index].year = $('#txtYear-' + id).val();
 				data.paintings[index].place = $('#txtLocation-' + id).val();
-				
+
 				$.couch.db("painters").saveDoc(data, {
 				                success: function(data2) {
-				                	$('#myModal').modal({show: true})
+				                	$('#myModal').modal({show: true});
 				                },
 				                error: function(status) {
 				                  if (status == 409) {
@@ -135,18 +141,18 @@ save = function(id){
 				                  }
 				                  console.log(status);
 				                }
-				              });	
+				              });
 	        },
 	        error: function(status) {
 	          console.log(status);
 	        }
 	 });
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
   $('#name-' + id).css('display', "block");
   $('#editName-' + id).css('display', "none");
 
@@ -158,4 +164,3 @@ save = function(id){
 };
 
 niceeditor = new nicEditor({fullPanel : true}).panelInstance('txtBio');
-

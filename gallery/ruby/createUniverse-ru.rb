@@ -17,9 +17,8 @@ for n in 1..118
   ## Обрабатываем немного
   description =  painter["bio"][lang].sub("<p>","")[0..150].gsub(/\s\w+\s*$/, '...')
 
-  if painter["bio"]['ru'] == ""
-    painter["bio"]['ru'] = "<p>Просим не гневаться, но биография этого художника временно отсутствует.</p><p>Ежели Вам известен хороший источник, будьте так любезны, добавьте биографию художника на сайт.</p>"
-    allowEdit = %{<button id='editBtn' class='btn btn-clear'>Редактировать</button>}
+  if painter["bio"][lang] == ""
+    allowEdit = %{<p>Просим не гневаться, но биография этого художника временно отсутствует.</p><p>Ежели Вам известен хороший источник, будьте так любезны, добавьте биографию художника на сайт.</p><button id='editBtn' class='btn btn-clear'>Редактировать</button>}
   end
 
   painterName = langDB['painters'][painter['_id']]
@@ -33,6 +32,8 @@ for n in 1..118
   painter["genre"].each do |genre|
     painterGenres.push(langDB['genre'][genre])
   end
+
+  painter["link"]['wikipedia'][lang] = painter["link"]['wikipedia']["ru"]
 
   # Генерим страницу
   html =  %{
@@ -53,6 +54,11 @@ for n in 1..118
         <meta name="apple-itunes-app" content="app-id=1088982103">
         <link rel="alternate" hreflang="ru" href="http://artchallenge.ru/gallery/ru/#{ painter["id"] }.html"/>
         <link rel="alternate" hreflang="en" href="http://artchallenge.ru/gallery/en/#{ painter["id"] }.html"/>
+        <link rel="alternate" hreflang="de" href="http://artchallenge.ru/gallery/de/#{ painter["id"] }.html"/>
+        <link rel="alternate" hreflang="es" href="http://artchallenge.ru/gallery/es/#{ painter["id"] }.html"/>
+        <link rel="alternate" hreflang="fr" href="http://artchallenge.ru/gallery/fr/#{ painter["id"] }.html"/>
+        <link rel="alternate" hreflang="zh" href="http://artchallenge.ru/gallery/zh/#{ painter["id"] }.html"/>
+        <link rel="alternate" hreflang="it" href="http://artchallenge.ru/gallery/it/#{ painter["id"] }.html"/>
 
       </head>
       <body>
@@ -96,7 +102,7 @@ for n in 1..118
                     <a href="http://artchallenge.ru">Вернуться в Игру</a>
                   </li>
                   <li>
-                    <a href="http://artchallenge.ru/gallery/index-ru.html">Обзор Художников</a>
+                    <a href="http://artchallenge.ru/gallery/index-#{ lang }.html">Обзор Художников</a>
                   </li>
                   <li>
                     <a href="http://artchallenge.ru/#introduction">Поддержать проект</a>
@@ -156,8 +162,8 @@ for n in 1..118
 
     index = i -1
 
-    if painter["paintings"][index]["name"]["ru"] == ""
-      painter["paintings"][index]["name"]["ru"] = "Неизвестно"
+    if painter["paintings"][index]["name"][lang] == ""
+      painter["paintings"][index]["name"][lang] = "Неизвестно"
     end
 
     if painter["paintings"][index]["year"] == ""
@@ -203,9 +209,9 @@ for n in 1..118
 
           <div class="col-md-3 col-sm-3" style='padding-left: 20px'>
             <h4 style='margin-top:0'>Название</h4>
-            <text id='name-#{i}'>#{painter["paintings"][index]["name"]["ru"]} <i style='cursor: pointer' onclick="$('#name-#{i}').css('display', 'none'); $('#editName-#{i}').css('display', 'block');" class="fa fa-edit"></i></text>
+            <text id='name-#{i}'>#{painter["paintings"][index]["name"][lang]} <i style='cursor: pointer' onclick="$('#name-#{i}').css('display', 'none'); $('#editName-#{i}').css('display', 'block');" class="fa fa-edit"></i></text>
 
-            <div id='editName-#{i}' style='display:none'><textarea style='width: 90%' id='txtName-#{i}'>#{painter["paintings"][index]["name"]["ru"]}</textarea>
+            <div id='editName-#{i}' style='display:none'><textarea style='width: 90%' id='txtName-#{i}'>#{painter["paintings"][index]["name"][lang]}</textarea>
               <button style='margin-top: 0' id='saveName-#{i}' onclick='save("#{i}")' class='btn btn-xs btn-success'>Сохранить</button>
             </div>
 
@@ -306,7 +312,10 @@ for n in 1..118
 
         <script src="../js/jquery.lazy.min.js"></script>
         <script defer id="cid0020000126794164978" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 302px;height: 373px;">{"handle":"artchallenge","arch":"js","styles":{"a":"000000","b":100,"c":"FFFFFF","d":"FFFFFF","k":"000000","l":"000000","m":"000000","n":"FFFFFF","p":"10","q":"000000","r":100,"pos":"br","cv":1,"cvfnt":"'Helvetica Neue', Helvetica, Arial, sans-serif, sans-serif","cvbg":"000000","cvw":180,"cvh":30,"ticker":1,"fwtickm":1,"allowpm":0, "surl":0}}</script>
-        <script>window.painterID = #{ painter["_id"] }</script>
+        <script>
+          window.painterID = #{ painter["_id"] };
+          window.lang = "#{ lang }";
+        </script>
 
         <script src="http://178.62.133.139:5994/_utils/script/json2.js"></script>
         <script src="http://178.62.133.139:5994/_utils/script/sha1.js"></script>

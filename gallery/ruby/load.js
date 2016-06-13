@@ -12,7 +12,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Amedeo_Modigliani.html",
@@ -22,7 +23,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 193
@@ -38,7 +40,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Henri_Lebasque.html",
@@ -48,7 +51,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 119
@@ -65,7 +69,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Arkhip_Kuindzhi.html",
@@ -75,7 +80,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 179
@@ -92,7 +98,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Wassily_Kandinsky.html",
@@ -102,7 +109,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 88
@@ -119,7 +127,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Vasily_Surikov.html",
@@ -129,7 +138,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 165
@@ -146,7 +156,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Victor_Borisov-Musatov.html",
@@ -156,7 +167,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 77
@@ -173,7 +185,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Diego_Rivera.html",
@@ -183,7 +196,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 70
@@ -200,7 +214,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Ivan_Shishkin.html",
@@ -210,7 +225,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 409
@@ -227,7 +243,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Claude_Monet.html",
@@ -237,7 +254,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 73
@@ -254,7 +272,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Konstantin_Yuon.html",
@@ -264,7 +283,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 174
@@ -281,7 +301,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Nicholas_Roerich.html",
@@ -291,7 +312,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 204
@@ -308,7 +330,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Orest_Kiprensky.html",
@@ -318,7 +341,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 68
@@ -335,7 +359,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Kuzma_Petrov-Vodkin.html",
@@ -345,7 +370,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 46
@@ -362,7 +388,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Rene_Magritte.html",
@@ -372,7 +399,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 194
@@ -389,7 +417,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Salvador_Dali.html",
@@ -399,7 +428,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 139
@@ -416,7 +446,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Sergei_Vinogradov.html",
@@ -426,7 +457,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 102
@@ -443,7 +475,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Edouard_Manet.html",
@@ -453,7 +486,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 90
@@ -470,7 +504,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Andrew_Wyeth.html",
@@ -480,7 +515,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 260
@@ -497,7 +533,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Andrei_Rublev.html",
@@ -507,7 +544,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 99
@@ -524,7 +562,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Viktor_Vasnetsov.html",
@@ -534,7 +573,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 174
@@ -551,7 +591,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Vincent_van_Gogh.html",
@@ -561,7 +602,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 877
@@ -578,7 +620,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Gustav_Klimt.html",
@@ -588,7 +631,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 117
@@ -605,7 +649,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Ivan_Aivazovsky.html",
@@ -615,7 +660,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 416
@@ -632,7 +678,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Hieronymus_Bosch.html",
@@ -642,7 +689,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 137
@@ -659,7 +707,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Ilya_Repin.html",
@@ -669,7 +718,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 91
@@ -686,7 +736,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Kazimir_Malevich.html",
@@ -696,7 +747,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 126
@@ -713,7 +765,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Mikhail_Vrubel.html",
@@ -723,7 +776,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 171
@@ -740,7 +794,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Pablo_Picasso.html",
@@ -750,7 +805,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 439
@@ -767,7 +823,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Peter_Paul_Rubens.html",
@@ -777,7 +834,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 141
@@ -794,7 +852,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Pierre-Auguste_Renoir.html",
@@ -804,7 +863,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 336
@@ -821,7 +881,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Theophanes_the_Greek.html",
@@ -831,7 +892,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 174
@@ -848,7 +910,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Francisco_Goya.html",
@@ -858,7 +921,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 291
@@ -875,7 +939,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Frida_Kahlo.html",
@@ -885,7 +950,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 120
@@ -902,7 +968,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "El_Greco.html",
@@ -912,7 +979,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 87
@@ -929,7 +997,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Albrecht_Durer.html",
@@ -939,7 +1008,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 328
@@ -956,7 +1026,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Alfred_Sisley.html",
@@ -966,7 +1037,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 259
@@ -983,7 +1055,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Boris_Kustodiev.html",
@@ -993,7 +1066,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 160
@@ -1010,7 +1084,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Karl_Bryullov.html",
@@ -1020,7 +1095,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 169
@@ -1037,7 +1113,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Pieter_Bruegel_the_Elder.html",
@@ -1047,7 +1124,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 134
@@ -1064,7 +1142,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Marc_Chagall.html",
@@ -1074,7 +1153,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 239
@@ -1091,7 +1171,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Giotto.html",
@@ -1101,7 +1182,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 119
@@ -1118,7 +1200,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Sandro_Botticelli.html",
@@ -1128,7 +1211,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 164
@@ -1145,7 +1229,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Caravaggio.html",
@@ -1155,7 +1240,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 55
@@ -1172,7 +1258,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Zinaida_Serebriakova.html",
@@ -1182,7 +1269,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 368
@@ -1199,7 +1287,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Leonardo_da_Vinci.html",
@@ -1209,7 +1298,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 143
@@ -1226,7 +1316,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Diego_Velazquez.html",
@@ -1236,7 +1327,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 128
@@ -1253,7 +1345,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Vasily_Vereshchagin.html",
@@ -1263,7 +1356,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 181
@@ -1280,7 +1374,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Isaac_Levitan.html",
@@ -1290,7 +1385,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 86
@@ -1307,7 +1403,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Henri_Matisse.html",
@@ -1317,7 +1414,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 186
@@ -1334,7 +1432,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Jan_van_Eyck.html",
@@ -1344,7 +1443,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 81
@@ -1361,7 +1461,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "John_William_Waterhouse.html",
@@ -1371,7 +1472,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 168
@@ -1388,7 +1490,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Egon_Schiele.html",
@@ -1398,7 +1501,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 244
@@ -1415,7 +1519,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Edgar_Degas.html",
@@ -1425,7 +1530,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 702
@@ -1442,7 +1548,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Rembrandt.html",
@@ -1452,7 +1559,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 262
@@ -1469,7 +1577,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Titian.html",
@@ -1479,7 +1588,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 255
@@ -1496,7 +1606,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Alphonse_Mucha.html",
@@ -1506,7 +1617,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 252
@@ -1523,7 +1635,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Henri_de_Toulouse-Lautrec.html",
@@ -1550,7 +1663,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Gustave_Courbet",
@@ -1577,7 +1691,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Dante_Gabriel_Rossetti.html",
@@ -1604,7 +1719,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "John_Singer_Sargent.html",
@@ -1631,7 +1747,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Camille_Pissarro.html",
@@ -1658,7 +1775,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "J._M._W._Turner.html",
@@ -1685,7 +1803,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Edvard_Munch.html",
@@ -1712,7 +1831,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "Jean-Antoine_Watteau.html",
@@ -1739,7 +1859,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "William-Adolphe_Bouguereau.html",
@@ -1766,7 +1887,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -1793,7 +1915,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -1820,7 +1943,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -1847,7 +1971,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -1874,7 +1999,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -1901,7 +2027,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -1911,7 +2038,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 28
@@ -1928,7 +2056,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -1938,7 +2067,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 42
@@ -1955,7 +2085,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -1965,7 +2096,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 31
@@ -1982,7 +2114,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -1992,7 +2125,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 26
@@ -2009,7 +2143,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2019,7 +2154,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 70
@@ -2036,7 +2172,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2046,7 +2183,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 45
@@ -2063,7 +2201,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2073,7 +2212,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 43
@@ -2090,7 +2230,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2100,7 +2241,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 114
@@ -2117,7 +2259,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2127,7 +2270,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 188
@@ -2144,7 +2288,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2154,7 +2299,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 84
@@ -2171,7 +2317,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2181,7 +2328,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 53
@@ -2198,7 +2346,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2208,7 +2357,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 102
@@ -2225,7 +2375,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2235,7 +2386,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 181
@@ -2252,7 +2404,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2262,7 +2415,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 149
@@ -2279,7 +2433,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2289,7 +2444,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 133
@@ -2306,7 +2462,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2316,7 +2473,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 159
@@ -2333,7 +2491,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2343,7 +2502,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 91
@@ -2360,7 +2520,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2370,7 +2531,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 241
@@ -2387,7 +2549,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2397,7 +2560,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 22
@@ -2414,7 +2578,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2424,7 +2589,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 91
@@ -2441,7 +2607,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2451,7 +2618,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 79
@@ -2468,7 +2636,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2478,7 +2647,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 46
@@ -2495,7 +2665,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2505,7 +2676,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 257
@@ -2532,7 +2704,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 311
@@ -2549,7 +2722,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2559,7 +2733,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 109
@@ -2576,7 +2751,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2586,7 +2762,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 522
@@ -2603,7 +2780,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2613,7 +2791,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 135
@@ -2630,7 +2809,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2640,7 +2820,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 117
@@ -2657,7 +2838,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2667,7 +2849,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 47
@@ -2684,7 +2867,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2694,7 +2878,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 75
@@ -2711,7 +2896,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2721,7 +2907,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 33
@@ -2738,7 +2925,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2748,7 +2936,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 63
@@ -2765,7 +2954,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2775,7 +2965,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 202
@@ -2792,7 +2983,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2802,7 +2994,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 149
@@ -2819,7 +3012,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2829,7 +3023,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 440
@@ -2846,7 +3041,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2856,7 +3052,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 34
@@ -2873,7 +3070,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2883,7 +3081,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 132
@@ -2900,7 +3099,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2910,7 +3110,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 78
@@ -2927,7 +3128,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2937,7 +3139,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 27
@@ -2954,7 +3157,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2964,7 +3168,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 30
@@ -2981,7 +3186,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -2991,7 +3197,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 358
@@ -3008,7 +3215,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -3018,7 +3226,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 49
@@ -3035,7 +3244,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -3045,7 +3255,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 43
@@ -3062,7 +3273,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -3072,7 +3284,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 42
@@ -3089,7 +3302,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -3099,7 +3313,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 32
@@ -3116,7 +3331,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -3126,7 +3342,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 51
@@ -3143,7 +3360,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -3153,7 +3371,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 444
@@ -3170,7 +3389,8 @@ var request = require('request');
 			"de": "",
 			"fr": "",
 			"es": "",
-			"it": ""
+			"it": "",
+"zh": ""
 		},
 		"link": {
 			"local": "",
@@ -3180,7 +3400,8 @@ var request = require('request');
 				"de": "",
 				"fr": "",
 				"es": "",
-				"it": ""
+				"it": "",
+"zh": ""
 			}
 		},
 		"paintings": 24
@@ -3207,7 +3428,8 @@ var request = require('request');
 					"fr": "",
 					"es": "",
 					"it": "",
-					"zn": ""
+"zh": "",
+					"zh": ""
 				},
 				year: "",
 				genre: "",

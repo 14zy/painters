@@ -1,28 +1,42 @@
 require "json"
 
-
-## Берем всю инфу по языку из CouchDB
+## Берем всю инфу по текущему языку из CouchDB
 lang = "en";
-# lang = JSON.parse `curl -X GET http://178.62.133.139:5994/lang/ru`
-#print lang["head"]["title"]
+langDB = JSON.parse `curl -X GET http://178.62.133.139:5994/lang/#{lang}`
 
 
+##Проходимся по всем 118 художникам
 for n in 1..118
 
-  ## Берем всю инфу по художнику из CouchDB
-  painter = JSON.parse `curl -X GET http://178.62.133.139:5994/painters/#{n}`
-  # print painter["name"]
+  allowEdit = ""
 
+  ## Берем инфу по художнику из CouchDB
+  painter = JSON.parse `curl -X GET http://178.62.133.139:5994/painters/#{n}`
+
+
+  ## Обрабатываем немного
   description =  painter["bio"][lang].sub("<p>","")[0..150].gsub(/\s\w+\s*$/, '...')
 
-  if painter["bio"]['en'] == ""
-    painter["bio"]['en'] = "<p>We beg your pardon, but temporary this painter's biography is not available</p><p>If you know the good source, please contact us: <a href='mailto:report@artchallenge.ru'>report@artchallenge.ru</a>.</p>"
+  if painter["bio"][lang] == ""
+    allowEdit = %{<p>We beg your pardon, but temporary this painter's biography is not available</p><p>If you know the good source, please feel free to add biography of the painter to the site</p><button id='editBtn' class='btn btn-clear'>Edit</button>}
+  end
+
+  painterName = langDB['painters'][painter['_id']]
+
+  painterNations = []
+  painter["nationality"].each do |nationality|
+    painterNations.push(langDB['nation'][nationality])
+  end
+
+  painterGenres = []
+  painter["genre"].each do |genre|
+    painterGenres.push(langDB['genre'][genre])
   end
 
   # Генерим страницу
   html =  %{
     <!doctype html>
-    <html lang="en">
+    <html lang="#{lang}">
       <head>
         <meta charset="utf-8">
         <meta name="description" content="#{ description }">
@@ -38,6 +52,11 @@ for n in 1..118
         <meta name="apple-itunes-app" content="app-id=1088982103">
         <link rel="alternate" hreflang="ru" href="http://artchallenge.ru/gallery/ru/#{ painter["id"] }.html"/>
         <link rel="alternate" hreflang="en" href="http://artchallenge.ru/gallery/en/#{ painter["id"] }.html"/>
+        <link rel="alternate" hreflang="de" href="http://artchallenge.ru/gallery/de/#{ painter["id"] }.html"/>
+        <link rel="alternate" hreflang="es" href="http://artchallenge.ru/gallery/es/#{ painter["id"] }.html"/>
+        <link rel="alternate" hreflang="fr" href="http://artchallenge.ru/gallery/fr/#{ painter["id"] }.html"/>
+        <link rel="alternate" hreflang="zh" href="http://artchallenge.ru/gallery/zh/#{ painter["id"] }.html"/>
+        <link rel="alternate" hreflang="it" href="http://artchallenge.ru/gallery/it/#{ painter["id"] }.html"/>
 
       </head>
       <body>
@@ -70,17 +89,18 @@ for n in 1..118
         </script>
         <noscript><div><img src="https://mc.yandex.ru/watch/24594722" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
         <!-- /Yandex.Metrika counter -->
+
         <section class="banner" role="banner">
           <header id="header">
             <div class="header-content clearfix">
-              <a class="logo" href="http://artchallenge.ru/gallery/#{lang}/#{ painter["id"] }.html">#{ painter["name"] }</a>
+              <a class="logo" href="http://artchallenge.ru/gallery/#{lang}/#{ painter["id"] }.html">#{ painterName }</a>
               <nav class="navigation" role="navigation">
                 <ul class="primary-nav">
                   <li>
                     <a href="http://artchallenge.ru">Back to Game</a>
                   </li>
                   <li>
-                    <a href="http://artchallenge.ru/gallery/">Browse Painters</a>
+                    <a href="http://artchallenge.ru/gallery/index-#{ lang }.html">Browse Painters</a>
                   </li>
                   <li>
                     <a href="http://artchallenge.ru/#introduction">Donate</a>
@@ -101,16 +121,21 @@ for n in 1..118
                 </div>
               </div>
               <div class="col-md-5 col-sm-6">
-                <div class="intro-content">
+                <div class="intro-content" id='text'>
                   #{ painter["bio"][lang] }
+                  #{ allowEdit }
+                </div>
+                <div class="intro-content" id='editor' style='display:none;'>
+                  <textarea id='txtBio' style='width: 450px; height: 500px'>#{ painter["bio"][lang] }</textarea>
+                  <button id='saveBtn' class='btn btn-success'>Save</button>
                 </div>
               </div>
               <div class="col-md-3 col-sm-6">
                 <div class="intro-content">
                 <h4>Nationality</h4>
-                #{ painter["nationality"].join(', ') }
+                #{ painterNations.join(', ') }
                 <h4>Genres</h4>
-                #{ painter["genre"].join(', ') }
+                #{ painterGenres.join(', ') }
                 <h4>Years</h4>
                 #{ painter["years"] }
                 <h4>Wikipedia</h4>
@@ -127,20 +152,85 @@ for n in 1..118
   }
 
 
+  ## Генерим галлерейку
   gallery = ""
-  for i in 1..painter["paintings"].count
+
+  for i in 1..(painter["paintings"].count)
+
+
+    index = i -1
+
+    if painter["paintings"][index]["name"][lang] == ""
+      painter["paintings"][index]["name"][lang] = "Unknown"
+    end
+
+    if painter["paintings"][index]["year"] == ""
+      painter["paintings"][index]["year"] = "Unknown"
+    end
+
+    if painter["paintings"][index]["place"] == ""
+      painter["paintings"][index]["place"] = "Unknown"
+    end
+
+
+
+
+
+      # gallery = gallery + %{
+      #   <div class="col-lg-2 col-md-4 col-sm-4 work">
+      #     <a rel='gallery-examples' href="http://artchallenge.me/painters/#{ painter["id"] }/#{i}.jpg" class="work-box">
+      #       <img class='lazy' data-src="http://artchallenge.me/painters/#{ painter["id"] }/#{i}.jpg" alt="Картина #{ painterName }">
+      #       <div class="overlay">
+      #         <div class="overlay-caption">
+      #           <p>
+      #             <i class="fa fa-search-plus fa-2x"></i>
+      #           </p>
+      #         </div>
+      #       </div>
+      #     </a>
+      #   </div>
+      # }
+
       gallery = gallery + %{
-        <div class="col-lg-2 col-md-4 col-sm-4 work">
-          <a rel='gallery-examples' href="http://artchallenge.me/painters/#{ painter["id"] }/#{i}.jpg" class="work-box">
-            <img class='lazy' data-src="http://artchallenge.me/painters/#{ painter["id"] }/#{i}.jpg" alt="#{ painter["name"] } painting">
-            <div class="overlay">
-              <div class="overlay-caption">
-                <p>
-                  <i class="fa fa-search-plus fa-2x"></i>
-                </p>
-              </div>
+        <div class='row'>
+          <div class="col-md-2 col-sm-2">
+          </div>
+
+          <div class="col-md-7 col-sm-7 text-right">
+            <a rel='gallery-examples' href="http://artchallenge.me/painters/#{ painter["id"] }/#{i}.jpg" class="work-box-no-css">
+              <img style='max-width: 100%' class='lazy' data-src="http://artchallenge.me/painters/#{ painter["id"] }/#{i}.jpg" alt="#{ painterName } painting">
+            </a>
+            <br><br><br><br>
+          </div>
+
+
+
+          <div class="col-md-3 col-sm-3" style='padding-left: 20px'>
+            <h4 style='margin-top:0'>Title</h4>
+            <text id='name-#{i}'>#{painter["paintings"][index]["name"][lang]} <i style='cursor: pointer' onclick="$('#name-#{i}').css('display', 'none'); $('#editName-#{i}').css('display', 'block');" class="fa fa-edit"></i></text>
+
+            <div id='editName-#{i}' style='display:none'><textarea style='width: 90%' id='txtName-#{i}'>#{painter["paintings"][index]["name"][lang]}</textarea>
+              <button style='margin-top: 0' id='saveName-#{i}' onclick='save("#{i}")' class='btn btn-xs btn-success'>Save</button>
             </div>
-          </a>
+
+            <br>
+            <h4>Date</h4>
+
+            <text id='year-#{i}'>#{painter["paintings"][index]["year"]} <i style='cursor: pointer' onclick="$('#year-#{i}').css('display', 'none'); $('#editYear-#{i}').css('display', 'block') " class="fa fa-edit"></i></text>
+
+            <div id='editYear-#{i}' style='display:none'><textarea style='width: 90%' id='txtYear-#{i}'>#{painter["paintings"][index]["year"]}</textarea>
+              <button style='margin-top: 0' id='saveYear-#{i}' onclick='save("#{i}")' class='btn btn-xs btn-success'>Save</button>
+            </div>
+
+            <br>
+            <h4>Current Place</h4>
+            <text id='location-#{i}'>#{painter["paintings"][index]["place"]} <i style='cursor: pointer' onclick="$('#location-#{i}').css('display', 'none'); $('#editLocation-#{i}').css('display', 'block') " class="fa fa-edit"></i></text>
+
+            <div id='editLocation-#{i}' style='display:none'><textarea style='width: 90%' id='txtLocation-#{i}'>#{painter["paintings"][index]["place"]}</textarea>
+              <button style='margin-top: 0' id='saveLocation-#{i}' onclick='save("#{i}")' class='btn btn-xs btn-success'>Save</button>
+            </div>
+          </div>
+
         </div>
       }
   end
@@ -193,13 +283,44 @@ for n in 1..118
             </div>
           </div>
         </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+        <div class="modal fade" id='myModal' tabindex="-1" role="dialog" >
+          <div class="modal-dialog ">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title">Done!</h4>
+                </div>
+              <div class="modal-body">
+                Thank you! We will check this information and update Art Challenge database as soon as possible.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal">Ok</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script src="//yastatic.net/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/jquery.fancybox.pack.js"></script>
-        <script src="../js/main.js"></script>
-        <script src="../js/jquery.lazy.min.js"></script>
+        <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
 
-        <script>$(function() {$('.lazy').Lazy();});</script>
+        <script src="../js/jquery.lazy.min.js"></script>
+        <script defer id="cid0020000126794164978" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 302px;height: 373px;">{"handle":"artchallenge","arch":"js","styles":{"a":"000000","b":100,"c":"FFFFFF","d":"FFFFFF","k":"000000","l":"000000","m":"000000","n":"FFFFFF","p":"10","q":"000000","r":100,"pos":"br","cv":1,"cvfnt":"'Helvetica Neue', Helvetica, Arial, sans-serif, sans-serif","cvbg":"000000","cvw":180,"cvh":30,"ticker":1,"fwtickm":1,"allowpm":0, "surl":0}}</script>
+        <script>
+          window.painterID = #{ painter["_id"] };
+          window.lang = "#{ lang }";
+        </script>
+
+        <script src="http://178.62.133.139:5994/_utils/script/json2.js"></script>
+        <script src="http://178.62.133.139:5994/_utils/script/sha1.js"></script>
+        <script src="http://178.62.133.139:5994/_utils/script/jquery.couch.js?0.11.0"></script>
+        <script src="http://178.62.133.139:5994/_utils/script/jquery.dialog.js?0.11.0"></script>
+
+        <script src="../js/main.js"></script>
       </body>
     </html>
   }
@@ -207,6 +328,9 @@ for n in 1..118
 
 
 
+
+
+  ##Записываем в html файл
   File.open("../"+lang+"/"+painter["_id"] +".html", 'w+') do |file|
       file.write html
   end
