@@ -41,7 +41,7 @@ for n in 1..118
         <meta charset="utf-8">
         <meta name="description" content="#{ description }">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>#{ painter["name"] }, #{ painter["nationality"].join(', ') } #{ painter["genre"].join(', ') } painter – Art Challenge</title>
+        <title>#{ painterName }, #{ painterNations.join(', ') } #{ painterGenres.join(', ') } painter – Art Challenge</title>
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/jquery.fancybox.css">
         <link rel="stylesheet" href="../css/main.css">

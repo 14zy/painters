@@ -18,7 +18,7 @@ for n in 1..118
   description =  painter["bio"][lang].sub("<p>","")[0..150].gsub(/\s\w+\s*$/, '...')
 
   if painter["bio"][lang] == ""
-    allowEdit = %{<p>We beg your pardon, but temporary this painter's biography is not available</p><p>If you know the good source, please feel free to add biography of the painter to the site</p><button id='editBtn' class='btn btn-clear'>Edit</button>}
+    allowEdit = %{<p>We beg your pardon, but temporary this painter's biography is not available in your language</p><p>If you know the good source, please feel free to add biography of the painter to the site</p><button id='editBtn' class='btn btn-clear'>Edit</button>}
   end
 
   painterName = langDB['painters'][painter['_id']]
@@ -43,7 +43,7 @@ for n in 1..118
         <meta charset="utf-8">
         <meta name="description" content="#{ description }">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>#{ painter["name"] }, #{ painter["nationality"].join(', ') } #{ painter["genre"].join(', ') } painter – Art Challenge</title>
+        <title>#{ painterName }, #{ painterNations.join(', ') } #{ painterGenres.join(', ') } painter – Art Challenge</title>
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/jquery.fancybox.css">
         <link rel="stylesheet" href="../css/main.css">
