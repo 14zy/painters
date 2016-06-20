@@ -752,22 +752,26 @@ function changeSet(value) {
 
 
 window.onload = function() {
-  if (window.lang == "ru") {
-    $("#paintersLinksTitle").html('Каталог художников и их работ:')
-  }
+  if (window.enviroment != "mobile") {
+    if (window.lang == "ru") {
+      $("#paintersLinksTitle").html('Каталог художников и их работ:')
+    }
 
-  var foo = new Array(118)
-  $.each(foo, function(i, value) {
-    var painterName = "painters." + (i + 1);
-    painterDiv = '<div class="col-lg-2 col-md-4 col-sm-4 work2">' +
-      '<a href="http://artchallenge.ru/gallery/' + window.lang + '/' + (i + 1) + '.html" class="work-box">' +
-      '<img  style="width:250px" src="pics/painters/' + (i + 1) + '.jpg" alt="' + i18n.t(painterName, {
-        lng: window.lang
-      }) + ' photo">' +
-      '<div class="overlay"><div class="overlay-caption">' +
-      '<p>' + i18n.t(painterName, {
-        lng: window.lang
-      }) + '</p></div></div></a></div>';
-    $("#paintersLinks").append(painterDiv);
-  });
+    $("#paintersLinks").html('');
+
+    var foo = new Array(118)
+    $.each(foo, function(i, value) {
+      var painterName = "painters." + (i + 1);
+      painterDiv = '<div class="col-lg-2 col-md-4 col-sm-4 work2">' +
+        '<a title=' + i18n.t(painterName, {lng: window.lang}) + ' href="http://artchallenge.ru/gallery/' + window.lang + '/' + (i + 1) + '.html" class="work-box">' +
+        '<img  style="width:250px" src="pics/painters/' + (i + 1) + '.jpg" alt="' + i18n.t(painterName, {lng: window.lang}) + '">' +
+        '<div class="overlay"><div class="overlay-caption">' +
+        '<p>' + i18n.t(painterName, {
+          lng: window.lang
+        }) + '</p></div></div></a></div>';
+      $("#paintersLinks").append(painterDiv);
+    });
+  } else {
+    $("#painters").css('display', 'none');
+  }
 };
