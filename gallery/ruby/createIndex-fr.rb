@@ -36,13 +36,13 @@ lang = "fr";
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
         <meta name="apple-itunes-app" content="app-id=1088982103">
-        <link rel="alternate" hreflang="ru" href="http://artchallenge.ru/gallery/ru/index-ru.html"/>
-        <link rel="alternate" hreflang="en" href="http://artchallenge.ru/gallery/en/index-en.html"/>
-        <link rel="alternate" hreflang="de" href="http://artchallenge.ru/gallery/de/index-de.html"/>
-        <link rel="alternate" hreflang="es" href="http://artchallenge.ru/gallery/es/index-es.html"/>
-        <link rel="alternate" hreflang="fr" href="http://artchallenge.ru/gallery/fr/index-fr.html"/>
-        <link rel="alternate" hreflang="zh" href="http://artchallenge.ru/gallery/zh/index-zh.html"/>
-        <link rel="alternate" hreflang="it" href="http://artchallenge.ru/gallery/it/index-it.html"/>
+        <link rel="alternate" hreflang="ru" href="http://artchallenge.ru/gallery/index-ru.html"/>
+        <link rel="alternate" hreflang="en" href="http://artchallenge.ru/gallery/index-en.html"/>
+        <link rel="alternate" hreflang="de" href="http://artchallenge.ru/gallery/index-de.html"/>
+        <link rel="alternate" hreflang="es" href="http://artchallenge.ru/gallery/index-es.html"/>
+        <link rel="alternate" hreflang="fr" href="http://artchallenge.ru/gallery/index-fr.html"/>
+        <link rel="alternate" hreflang="zh" href="http://artchallenge.ru/gallery/index-zh.html"/>
+        <link rel="alternate" hreflang="it" href="http://artchallenge.ru/gallery/index-it.html"/>
       </head>
       <body>
         <!-- Yandex.Metrika counter -->
