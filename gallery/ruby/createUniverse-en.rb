@@ -97,13 +97,30 @@ for n in 1..118
               <nav class="navigation" role="navigation">
                 <ul class="primary-nav">
                   <li>
-                    <a href="http://artchallenge.ru">Back to Game</a>
+                    <a href="http://artchallenge.ru">Play the Game</a>
                   </li>
                   <li>
                     <a href="http://artchallenge.ru/gallery/index-#{ lang }.html">Browse Painters</a>
                   </li>
                   <li>
                     <a href="http://artchallenge.ru/#introduction">Donate</a>
+                  </li>
+                  <li>
+                    <div class="dropdown">
+                      <a style='cursor:pointer' class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                            Language
+                            <span class="caret"></span>
+                          </a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <a role="menuitem" tabindex="-1" href="http://artchallenge.ru/gallery/ru/#{ painter["id"] }.html">Русский</a>
+                        <a role="menuitem" tabindex="-1" href="http://artchallenge.ru/gallery/en/#{ painter["id"] }.html">English</a>
+                        <a role="menuitem" tabindex="-1" href="http://artchallenge.ru/gallery/de/#{ painter["id"] }.html">Deutsch</a>
+                        <a role="menuitem" tabindex="-1" href="http://artchallenge.ru/gallery/es/#{ painter["id"] }.html">Español</a>
+                        <a role="menuitem" tabindex="-1" href="http://artchallenge.ru/gallery/fr/#{ painter["id"] }.html">Français</a>
+                        <a role="menuitem" tabindex="-1" href="http://artchallenge.ru/gallery/it/#{ painter["id"] }.html">Italiano</a>
+                        <a role="menuitem" tabindex="-1" href="http://artchallenge.ru/gallery/zh/#{ painter["id"] }.html">Chinese</a>
+                      </ul>
+                    </div>
                   </li>
                 </ul>
               </nav>
