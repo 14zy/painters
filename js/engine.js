@@ -327,7 +327,7 @@ function checkAnswer(btn) {
       title: badPhrase(),
       text: "<div style='text-align: left'>" + "<img src='" + window.platform + window.truePainter + "/photo.jpg' style='width: 60%; margin: 5px 0 10px 0'><br><p class='painter-name'>" + i18n.t("message.wrong-desc", {
         lng: window.lang
-      }) + " " + window.truePainterName + "!</p><hr style='margin: 5px'>" + window.nation + ", " + window.years + "<br>" + window.genre + "<a id='btnLearnMore' onclick='learnMore();' class='btn btn-large' style='width: 100%' role='button'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", {
+      }) + " " + window.truePainterName + "!</p><hr style='margin: 5px'>" + window.nation + ", " + window.years + "<br>" + window.genre + "<a target='_blank' id='btnLearnMore' href='gallery/" + window.lang + "/" + window.truePainter + ".html' onclick='learnMore();' class='btn btn-large' style='width: 100%' role='button'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", {
         lng: window.lang
       }) + "</a><br></div>",
       type: 'error',
@@ -382,42 +382,43 @@ function checkAnswer(btn) {
 }
 
 function learnMore() {
-  window.msgWrong.remove();
-  var learnMoreText = "\
-    <div id='learnMoreDiv' style='text-align: center; max-height: 550px; overflow: scroll;'>\
-      <div id='learnMoreInfo'><p><img style='width: 60%; margin: 5px 0 10px 0' src='" + window.platform + window.truePainter + "/photo.jpg'></p>\
-      <a style='width: 100%; margin: 0px 0 15px 0' target='_blank' href='" + window.wiki + "' class='btn btn-large'>Wikipedia <span class='glyphicon glyphicon-share-alt'></span></a>\
-      </div>\
-      <div id='learnMoreBio'>\
-      " + window.bio + "\
-      </div>\
-    </div>\
-    ";
-
-  new PNotify({
-    title: window.truePainterName,
-    text: learnMoreText,
-    type: 'info',
-    hide: false,
-    animate_speed: "normal",
-    icon: "",
-    addclass: "stack-learnMore",
-    animate: {
-      animate: true,
-      in_class: "bounceIn",
-      out_class: "bounceOutUp"
-    },
-    width: "350px",
-    buttons: {
-      closer: true,
-      closer_hover: false,
-      sticker: false
-    },
-    history: {
-      history: true,
-      menu: false
-    }
-  });
+  // location.href='gallery/' + window.lang +'/' + window.truePainter + ".html";
+  // window.msgWrong.remove();
+  // var learnMoreText = "\
+  //   <div id='learnMoreDiv' style='text-align: center; max-height: 550px; overflow: scroll;'>\
+  //     <div id='learnMoreInfo'><p><img style='width: 60%; margin: 5px 0 10px 0' src='" + window.platform + window.truePainter + "/photo.jpg'></p>\
+  //     <a style='width: 100%; margin: 0px 0 15px 0' target='_blank' href='" + window.wiki + "' class='btn btn-large'>Wikipedia <span class='glyphicon glyphicon-share-alt'></span></a>\
+  //     </div>\
+  //     <div id='learnMoreBio'>\
+  //     " + window.bio + "\
+  //     </div>\
+  //   </div>\
+  //   ";
+  //
+  // new PNotify({
+  //   title: window.truePainterName,
+  //   text: learnMoreText,
+  //   type: 'info',
+  //   hide: false,
+  //   animate_speed: "normal",
+  //   icon: "",
+  //   addclass: "stack-learnMore",
+  //   animate: {
+  //     animate: true,
+  //     in_class: "bounceIn",
+  //     out_class: "bounceOutUp"
+  //   },
+  //   width: "350px",
+  //   buttons: {
+  //     closer: true,
+  //     closer_hover: false,
+  //     sticker: false
+  //   },
+  //   history: {
+  //     history: true,
+  //     menu: false
+  //   }
+  // });
 
   yaCounter24594722.reachGoal('LEARN-MORE');
   return true;
