@@ -224,7 +224,7 @@ for n in 1..118
 
           <div class="col-md-3 col-sm-3" style='padding-left: 20px'>
             <h4 style='margin-top:0'>Title</h4>
-            <text id='name-#{i}'>#{painter["paintings"][index]["name"][lang]} <i style='cursor: pointer' onclick="$('#name-#{i}').css('display', 'none'); $('#editName-#{i}').css('display', 'block');" class="fa fa-edit"></i></text>
+            <text title='Edit' id='name-#{i}'>#{painter["paintings"][index]["name"][lang]} <i style='cursor: pointer' onclick="$('#name-#{i}').css('display', 'none'); $('#editName-#{i}').css('display', 'block');" class="fa fa-edit"></i></text>
 
             <div id='editName-#{i}' style='display:none'><textarea style='width: 90%' id='txtName-#{i}'>#{painter["paintings"][index]["name"][lang]}</textarea>
               <button style='margin-top: 0' id='saveName-#{i}' onclick='save("#{i}")' class='btn btn-xs btn-success'>Save</button>
@@ -233,19 +233,19 @@ for n in 1..118
             <br>
             <h4>Date</h4>
 
-            <text id='year-#{i}'>#{painter["paintings"][index]["year"]} <i style='cursor: pointer' onclick="$('#year-#{i}').css('display', 'none'); $('#editYear-#{i}').css('display', 'block') " class="fa fa-edit"></i></text>
+            <text title='Edit' id='year-#{i}'>#{painter["paintings"][index]["year"]} <i style='cursor: pointer' onclick="$('#year-#{i}').css('display', 'none'); $('#editYear-#{i}').css('display', 'block') " class="fa fa-edit"></i></text>
 
             <div id='editYear-#{i}' style='display:none'><textarea style='width: 90%' id='txtYear-#{i}'>#{painter["paintings"][index]["year"]}</textarea>
               <button style='margin-top: 0' id='saveYear-#{i}' onclick='save("#{i}")' class='btn btn-xs btn-success'>Save</button>
             </div>
 
-            <br>
+            <!-- <br>
             <h4>Current Place</h4>
             <text id='location-#{i}'>#{painter["paintings"][index]["place"]} <i style='cursor: pointer' onclick="$('#location-#{i}').css('display', 'none'); $('#editLocation-#{i}').css('display', 'block') " class="fa fa-edit"></i></text>
 
             <div id='editLocation-#{i}' style='display:none'><textarea style='width: 90%' id='txtLocation-#{i}'>#{painter["paintings"][index]["place"]}</textarea>
               <button style='margin-top: 0' id='saveLocation-#{i}' onclick='save("#{i}")' class='btn btn-xs btn-success'>Save</button>
-            </div>
+            </div> -->
           </div>
 
         </div>

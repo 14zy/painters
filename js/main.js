@@ -1,11 +1,14 @@
 $(document).ready(function() {
+  // $('#header').css('display', 'none');
 	// Header Scroll
 	$(window).on('scroll', function() {
 		var scroll = $(window).scrollTop();
 
-		if (scroll >= 50) {
+		if (scroll >= 20) {
+      // $('#header').css('display', 'block');
 			$('#header').addClass('fixed');
 		} else {
+      // $('#header').css('display', 'none');
 			$('#header').removeClass('fixed');
 		}
 	});
