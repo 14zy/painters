@@ -184,6 +184,18 @@
 
         <div class="banner-text">
           <img id="art">
+          <div onclick="$('#edit').css('display','block'); $('#description').css('display','none');" id="description"></div>
+
+          <div id="edit" style='display:none' class='well'>
+
+            <textarea style='width: 400px; height: 35px;  display: inline' class='form-control' id='txtName' placeholder='Название картины'></textarea>
+            <textarea style='width: 130px; height: 35px; display: inline' class='form-control' id='txtYear' placeholder='Год создания'></textarea>
+            <br>
+            <a class='btn btn-default' id='btnSave' onclick="$('#edit').css('display','none'); $('#description').css('display','block'); saveInfo();"><i class='fa fa-save'></i> Сохранить</a>
+            <a class='btn btn-default' onclick="$('#edit').css('display','none'); $('#description').css('display','block');"><i class='fa fa-close'></i> Закрыть</a>
+            <br>
+          </div>
+
           <div>
             <a id="btn1" onclick="checkAnswer('btn1');" class="btn" role="button"></a>
             <a id="btn2" onclick="checkAnswer('btn2');" class="btn" role="button"></a>
@@ -1565,6 +1577,11 @@
 
   <noscript><div><img src="//mc.yandex.ru/watch/24594722" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
   <!-- /Yandex.Metrika counter -->
+
+  <script src="http://178.62.133.139:5994/_utils/script/json2.js"></script>
+  <script src="http://178.62.133.139:5994/_utils/script/sha1.js"></script>
+  <script src="http://178.62.133.139:5994/_utils/script/jquery.couch.js?0.11.0"></script>
+  <script src="http://178.62.133.139:5994/_utils/script/jquery.dialog.js?0.11.0"></script>
 
 </body>
 </html>
