@@ -1,4 +1,15 @@
+.pictureDiv {
+ text-align: right;
+}
+
+
  @media screen and (max-width: 1024px) {
+	 
+	 .pictureDiv {
+	  text-align: center;
+	 }
+	 
+	 
    .banner {
      min-height: 450px;
    }
@@ -61,6 +72,8 @@
    }
  }
  @media screen and (max-width: 768px) {
+	 
+	 
 
    .header-content{
       padding: 0px!important;

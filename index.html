@@ -67,6 +67,7 @@
                 <a href="#works">
                   <span class="glyphicon glyphicon-book"></span>
                   <span class="currentSetTitle"></span>
+				                    <span class="caret"></span>
                 </a>
               </li>
 
@@ -167,46 +168,56 @@
     <!-- Banner Section -->
     <div class="container">
       <div class="col-md-12 banner-inner-wrapper">
-
-        <span class="top-icons">
-          <span id="icon1" class="glyphicon glyphicon-ok-circle"></span>
-          <span id="icon2" class="glyphicon glyphicon-ok-circle"></span>
-          <span id="icon3" class="glyphicon glyphicon-ok-circle"></span>
-          <span id="icon4" class="glyphicon glyphicon-ok-circle"></span>
-          <span id="icon5" class="glyphicon glyphicon-ok-circle"></span>
-          <span id="icon6" class="glyphicon glyphicon-ok-circle"></span>
-          <span id="icon7" class="glyphicon glyphicon-ok-circle"></span>
-          <span id="icon8" class="glyphicon glyphicon-ok-circle"></span>
-          <span id="icon9" class="glyphicon glyphicon-ok-circle"></span>
-          <!-- <span id="icon10" class="glyphicon glyphicon-ok-circle"></span> -->
-          <span id="icon10" class="glyphicon glyphicon-gift"></span>
-        </span>
-
         <div class="banner-text">
-          <img id="art">
-          <div onclick="$('#edit').css('display','block'); $('#description').css('display','none');" id="description"></div>
+			<div class='col-lg-8 pictureDiv'>
+			<br><br>
+      		 <img id="art">
 
-          <div id="edit" style='display:none' class='well'>
+	          <div class='hidden-xs' onclick="$('#edit').css('display','block'); $('#description').css('display','none');" id="description"></div>
+	          <div id="edit" style='display:none' class='well'>
+	            <textarea style='width: 400px; height: 35px;  display: inline' class='form-control' id='txtName' placeholder='Название картины'></textarea>
+	            <textarea style='width: 130px; height: 35px; display: inline' class='form-control' id='txtYear' placeholder='Год создания'></textarea>
+	            <br>
+	            <a class='btn btn-default' id='btnSave' onclick="$('#edit').css('display','none'); $('#description').css('display','block'); saveInfo();"><i class='fa fa-save'></i> Сохранить</a>
+	            <a class='btn btn-default' onclick="$('#edit').css('display','none'); $('#description').css('display','block');"><i class='fa fa-close'></i> Закрыть</a>
+	            <br>
+	          </div>
+		  
+		  </div>
+					
+		  <div class='col-lg-4' style='text-align: center'>
+			  <br>	
+			  <br>
+				
+	        <span class="top-icons">
+	          <span id="icon1" class="glyphicon glyphicon-ok-circle"></span>
+	          <span id="icon2" class="glyphicon glyphicon-ok-circle"></span>
+	          <span id="icon3" class="glyphicon glyphicon-ok-circle"></span>
+	          <span id="icon4" class="glyphicon glyphicon-ok-circle"></span>
+	          <span id="icon5" class="glyphicon glyphicon-ok-circle"></span>
+	          <span id="icon6" class="glyphicon glyphicon-ok-circle"></span>
+	          <span id="icon7" class="glyphicon glyphicon-ok-circle"></span>
+	          <span id="icon8" class="glyphicon glyphicon-ok-circle"></span>
+	          <span id="icon9" class="glyphicon glyphicon-ok-circle"></span>
+	          <span id="icon10" class="glyphicon glyphicon-gift"></span>
+	        </span>
+		
+			<br>
 
-            <textarea style='width: 400px; height: 35px;  display: inline' class='form-control' id='txtName' placeholder='Название картины'></textarea>
-            <textarea style='width: 130px; height: 35px; display: inline' class='form-control' id='txtYear' placeholder='Год создания'></textarea>
-            <br>
-            <a class='btn btn-default' id='btnSave' onclick="$('#edit').css('display','none'); $('#description').css('display','block'); saveInfo();"><i class='fa fa-save'></i> Сохранить</a>
-            <a class='btn btn-default' onclick="$('#edit').css('display','none'); $('#description').css('display','block');"><i class='fa fa-close'></i> Закрыть</a>
-            <br>
-          </div>
-
-          <div>
-            <a id="btn1" onclick="checkAnswer('btn1');" class="btn" role="button"></a>
-            <a id="btn2" onclick="checkAnswer('btn2');" class="btn" role="button"></a>
-            <a id="btn3" onclick="checkAnswer('btn3');" class="btn" role="button"></a>
-            <a id="btn4" onclick="checkAnswer('btn4');" class="btn" role="button"></a>
-          </div>
-
-          <br><br>
+	          <div>
+	            <a id="btn1" onclick="checkAnswer('btn1');" class="btn btn-lg" style='padding: 10px 16px; font-size: 18px; width: 100%; margin-top: 10px' role="button"></a>
+	            <a id="btn2" onclick="checkAnswer('btn2');" class="btn btn-lg" style='padding: 10px 16px; font-size: 18px; width: 100%; margin-top: 10px' role="button"></a>
+	            <a id="btn3" onclick="checkAnswer('btn3');" class="btn btn-lg" style='padding: 10px 16px; font-size: 18px; width: 100%; margin-top: 10px' role="button"></a>
+	            <a id="btn4" onclick="checkAnswer('btn4');" class="btn btn-lg" style='padding: 10px 16px; font-size: 18px; width: 100%; margin-top: 10px' role="button"></a>
+	          </div>
+		  
+          <br>
+		  <br>
+		  
           <!-- ArtChallenge.ru_responsive -->
           <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2407992058828148" data-ad-slot="3910414450" data-ad-format="auto"></ins>
-          <br><br>
+		  
+		  </div>
 
         </div>
         <!-- banner text -->

@@ -209,11 +209,11 @@ function getart() {
                 if (image.name[window.lang] === "") {
 
                   if (window.lang == "ru") {
-                    message = "Картина не подписана (<a style='cursor:pointer'>Указать название</a>)";
+                    message = "Картина не подписана (<a style='cursor:pointer'>Добавить название</a>)";
                   }
 
                   if (window.lang != "ru") {
-                    message = "Untitled (<a style='cursor:pointer'>Edit</a>)";
+                    message = "Untitled painting (<a style='cursor:pointer'>Add description</a>)";
                     $('#txtName').attr("placeholder",'Painting title');
                     $('#txtYear').attr("placeholder",'Year');
                   }
@@ -619,10 +619,10 @@ function getShares() {
     case "ru":
       shares_old = "<a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> ВКонтакте </a><br><a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareOD();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Одноклассники </a><br><a onclick='ShareMM();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Мой Мир </a>";
       shares = "<div style='padding: 0px'>\
-    <button type='button' class='btn btn-danger btn-share' aria-label='ВКонтакте' onclick='ShareVK();'>\
+    <button type='button' class='btn btn-info btn-share' aria-label='ВКонтакте' onclick='ShareVK();'>\
      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> ВКонтакте\
     </button>\
-    <button type='button' class='btn btn-danger btn-share' aria-label='Facebook' onclick='ShareFB();'>\
+    <button type='button' class='btn btn-info btn-share' aria-label='Facebook' onclick='ShareFB();'>\
       <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Facebook\
     </button>\
     <button style='display: none' type='button' class='btn btn-lg btn-info btn-share' aria-label='Одноклассники' onclick='ShareOD();'>\
