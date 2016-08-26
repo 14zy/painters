@@ -1,17 +1,33 @@
 .pictureDiv {
  text-align: right;
+ padding-top: 70px;
+}
+
+#introduction {
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+
+.top-icons {
+  padding-top: 40px;
 }
 
 
+
  @media screen and (max-width: 1024px) {
-	 
+
+   .top-icons {
+     padding-top: 10px;
+   }
+
 	 .pictureDiv {
+    padding-top: 0px;
 	  text-align: center;
 	 }
-	 
-	 
+
+
    .banner {
-     min-height: 450px;
+     /*min-height: 450px;*/
    }
    #header .header-content {
      width: 90%;
@@ -72,8 +88,8 @@
    }
  }
  @media screen and (max-width: 768px) {
-	 
-	 
+
+
 
    .header-content{
       padding: 0px!important;
@@ -114,7 +130,7 @@
     }
 
     #introduction {
-      padding-top: 250px;
+      /*padding-top: 100px;*/
       padding-bottom: 0px;
     }
 
@@ -152,7 +168,7 @@
      font-size: 13px;
    }
    .banner {
-     height: 30px!important;
+     /*height: 30px!important;*/
    }
  }
  @media screen and (max-width: 320px) {
