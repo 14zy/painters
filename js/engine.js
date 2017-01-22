@@ -82,7 +82,7 @@ function load() {
   window.platform = "http://artchallenge.me/painters/"; //"http://artchallenge.me/painters/"; // "painters/";
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 
-  window.errorDelay = 3800;
+  window.errorDelay = 3000;
   window.pnotify = "";
   //js magic for mobiles
   window.enviroment = "desktop";
@@ -213,9 +213,12 @@ function getart() {
                   }
 
                   if (window.lang != "ru") {
-                    message = "Untitled painting (<a style='cursor:pointer'>Add description</a>)";
+                    message = "Undefined painting (<a style='cursor:pointer'>Add details</a>)";
                     $('#txtName').attr("placeholder",'Painting title');
                     $('#txtYear').attr("placeholder",'Year');
+
+                    $('#btnSave').html("<i class='fa fa-save'></i> Save");
+                    $('#btnEdit').html("<i class='fa fa-close'></i> Close");
                   }
 
                   $('#txtName').val("");

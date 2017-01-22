@@ -1,5 +1,5 @@
 .pictureDiv {
- text-align: right;
+ text-align: center;
  padding-top: 70px;
 }
 
@@ -172,9 +172,9 @@
    }
  }
  @media screen and (max-width: 320px) {
-   .banner {
+   /*.banner {
      height: 30px!important;
-   }
+   }*/
    .banner-text {
      padding-top: 55%;
      text-align: center;
