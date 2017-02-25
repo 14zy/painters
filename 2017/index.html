@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+
+  <title>Art Challenge – A Quiz Game of Famous Painters</title>
+  <meta name="description" content="Try to guess 10 painters in a row and beat your friends!">
+  <meta name="author" content="Ruben Babaev">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="image_src" href="http://artchallenge.ru/logo-text.jpg">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://artchallenge.ru/" />
+  <meta property="og:image" content="http://artchallenge.ru/logo-text.jpg" />
+  <meta property="og:site_name" content="Art Challenge"/>
+  <meta property="og:title" content="Art Challenge – A Quiz Game of Famous Painters" />
+  <meta property="og:description" content="Try to guess 10 painters in a row and beat your friends! " />
+
+  <link href="css/bootstrap.min.css" rel="stylesheet" >
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/app.css?v=1.0" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/sweetalert2.min.css" rel="stylesheet">
+
+  <meta name="apple-itunes-app" content="app-id=1088982103">
+
+  <link rel="alternate" hreflang="x-default" href="http://artchallenge.ru/"/>
+  <link rel="alternate" hreflang="ru" href="http://artchallenge.ru/?lang=ru"/>
+  <link rel="alternate" hreflang="en" href="http://artchallenge.ru/?lang=en"/>
+  <link rel="alternate" hreflang="de" href="http://artchallenge.ru/?lang=de"/>
+  <link rel="alternate" hreflang="fr" href="http://artchallenge.ru/?lang=fr"/>
+  <link rel="alternate" hreflang="es" href="http://artchallenge.ru/?lang=es"/>
+  <link rel="alternate" hreflang="it" href="http://artchallenge.ru/?lang=it"/>
+
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#" style='margin-top: -15px'>
+          <img class='logo' src='logo.png' style='display: inline; width: 50px; padding: 5px;'>Art Challenge </a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class='active'>
+            <a href="#"><i class="fa fa-play"></i> Play</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-image"></i> Gallery</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-film"></i> Videos</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-mobile"></i> Mobile</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-shopping-basket"></i> Shop</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-info"></i> About</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+
+    <div class="container">
+      <br>
+      <br>
+      <br>
+      <div class='row'>
+        <div id='divGame' class='col-lg-6' style='text-align: center; padding: 30px 20px 20px 20px'>
+          <img id='art' src='' style='max-height: 700px'>
+          <h3>Fallen Angel (1975)</h3>
+        </div>
+
+        <div id='divButtons' class='col-lg-4' style='text-align: center; padding: 30px 30px 20px 30px'>
+          <div id='screenAnswers'>
+            <div id='score' style='text-align: center; padding: 0px 0 0px 0; font-size: 18px'>
+              <i class='fa fa-star-o'></i>
+              <i class='fa fa-star-o'></i>
+              <i class='fa fa-star-o'></i>
+              <i class='fa fa-star-o'></i>
+              <i class='fa fa-star-o'></i>
+              <i class='fa fa-star-o'></i>
+              <i class='fa fa-star-o'></i>
+              <i class='fa fa-star-o'></i>
+              <i class='fa fa-star-o'></i>
+              <i class='fa fa-gift'></i>
+            </div>
+
+            <h3>Do you know the author of this painting?</h3>
+
+            <div id='buttons' class='row'>
+              <a onclick='answer(1)' style='text-align: left; font-size: 20px; padding: 5px 20px 5px 20px' class='btn btn-default btn-block'>
+                <img class='img-circle' style='width: 48px; padding-right: 5px' src='http://artchallenge.me/painters/1/photo.jpg'>
+                <lable>Amedeo Modigliani</lable>
+              </a>
+              <a onclick='answer(2)'style='text-align: left; font-size: 20px; padding: 5px 20px 5px 20px' class='btn btn-default btn-block'>
+                <img class='img-circle' style='width: 48px; padding-right: 5px' src='http://artchallenge.me/painters/2/photo.jpg'>
+                <lable>Henri Lebasque</lable>
+              </a>
+              <a onclick='answer(3)' style='text-align: left; font-size: 20px; padding: 5px 20px 5px 20px' class='btn btn-default btn-block'>
+                <img class='img-circle' style='width: 48px; padding-right: 5px' src='http://artchallenge.me/painters/3/photo.jpg'>
+                <lable>Arkhip Kuinji</lable>
+              </a>
+              <a onclick='answer(4)' style='text-align: left; font-size: 20px; padding: 5px 20px 5px 20px' class='btn btn-default btn-block'>
+                <img class='img-circle' style='width: 48px; padding-right: 5px' src='http://artchallenge.me/painters/4/photo.jpg'>
+                <lable>Vasiliy Kandinskiy</lable>
+              </a>
+            </div>
+
+            <p>
+            <li class="dropdown" style='display:inline-block; padding-top: 20px'>
+              <a style='color: #333' class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-lightbulb-o"></i> Level 1: Popular painters
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#"><b>Уровень 2:</b> Эпоха Возрождения</a></li>
+                  <li><a href="#"><b>Уровень 3:</b> Художники-реалисты</a></li>
+                  <li><a href="#"><b>Уровень 4:</b> Французские художники</a></li>
+                  <li><a href="#"><b>Уровень 5:</b> Импрессионизм и Пост-Импрессионизм</a></li>
+                  <li><a href="#"><b>Уровень 6:</b> Русские художники</a></li>
+                </ul>
+              </li>
+            </p>
+          </div>
+
+          <div id='screenRight' style='display: none; text-align: center;'>
+            <h3 class='text-success'><i class='fa fa-check'></i> Wonderful!</h3>
+            <img class='img-thumbnail' style='width: 50%; padding: 5px' src='http://artchallenge.me/painters/2/photo.jpg'>
+            <h4>– It was me, Henri Lebasque</h4>
+            <a class='btn btn-large'>Learn More</a>
+          </div>
+
+          <div id='screenWrong' style='display: none; text-align: center;'>
+            <h3 class='text-warning'><i class='fa fa-close'></i> You are nuts!</h3>
+            <img class='img-thumbnail' style='width: 50%; padding: 5px' src='http://artchallenge.me/painters/4/photo.jpg'>
+            <h4>– It was me, Vasiliy Kandinskiy!</h4>
+            <a class='btn btn-large'>Learn More</a>
+          </div>
+
+        </div>
+
+        <div class='col-lg-2' id='life' style='text-align: center; padding: 30px'>
+          <div class='row'>
+            <!-- ArtChallenge.ru_responsive -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2407992058828148" data-ad-slot="3910414450" data-ad-format="auto"></ins>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer -->
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>&copy; Art Challenge 2017</p>
+          </div>
+        </div>
+        <!-- /.row -->
+      </footer>
+      <!-- /.container -->
+    </div>
+
+    <noscript><div><img src="//mc.yandex.ru/watch/24594722" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="http://178.62.133.139:5994/_utils/script/json2.js"></script>
+    <script src="http://178.62.133.139:5994/_utils/script/sha1.js"></script>
+    <script src="http://178.62.133.139:5994/_utils/script/jquery.couch.js?0.11.0"></script>
+    <script src="http://178.62.133.139:5994/_utils/script/jquery.dialog.js?0.11.0"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/14functions.js"></script>
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+  </body>
+  </html>
