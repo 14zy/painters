@@ -18,6 +18,16 @@ getToday = function() {
     return today;
 };
 
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i].trim();
+    if (c.indexOf(name) === 0) return c.substring(name.length, c.length);
+  }
+  return "";
+}
+
 $.fn.extend({
     animateCss: function (animationName) {
         var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -26,3 +36,13 @@ $.fn.extend({
         });
     }
 });
+
+jQuery.browser = {};
+(function () {
+   jQuery.browser.msie = false;
+   jQuery.browser.version = 0;
+   if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+      jQuery.browser.msie = true;
+      jQuery.browser.version = RegExp.$1;
+ }
+})();
