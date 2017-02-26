@@ -112,34 +112,45 @@
           </div>
 
           <div id='screenRight' style='display: none; text-align: center; padding-bottom: 20px'>
-            <h3 class='text-success'><i class='fa fa-check'></i> Wonderful!</h3>
+            <br>
             <img id='rightPhoto' class='img-thumbnail' style='width: 50%; padding: 5px'>
-            <h4 class='currentName'></h4>
-            <p>
+
+            <h3 style="font-size: 20px; font-family: 'Open Sans';" class='currentName'></h3>
+            <h3 class=''><i class='fa fa-check text-success'></i> <text id='goodPhrase'>Right!</text></h3>
+            <br>
+
+            <div style='max-height: 300px; overflow: scroll'>
               <span class="bioMini"></span>
               <span class="collapse bio"></span>
-            </p>
-            <a href='#' data-toggle="collapse" data-target=".bio" style='color: #333'>Read more ...</a>
-            <a onclick='newRound();' class='btn btn-block btn-large btn-success'>Next (<text id='js-counter'>3</text>)></a>
+              <a href='#' data-toggle="collapse" data-target=".bio" style='color: #333'>Читать дальше ...</a>
+            </div>
+
+            <a onclick='newRound();' class='btn btn-block btn-large btn-success'>Пропустить</a>(2 сек)
           </div>
 
           <div id='screenWrong' style='display: none; text-align: center; padding-bottom: 20px'>
-            <h3 class='text-danger'><i class='fa fa-close'></i> You are nuts!</h3>
+            <br>
             <img id='wrongPhoto' class='img-thumbnail' style='width: 50%; padding: 5px'>
-            <h4 class='currentName'></h4>
-            <p>
-              <div class="bioMini"></div>
-              <div class="collapse bio">
-              </div>
-            </p>
 
-            <a href='#' data-toggle="collapse" data-target=".bio" style='color: #333'>Read more ...</a>
-            <a onclick='newRound();' class='btn btn-block btn-large btn-danger'>Close X</a>
+            <h3 style="font-size: 20px; font-family: 'Open Sans';" class='currentName'></h3>
+            <h3 class=''><i class='fa fa-close text-danger'></i> <text id='badPhrase'>Wrong!</text></h3>
+            <br>
+
+            <div style='max-height: 300px; overflow: scroll'>
+              <span class="bioMini"></span>
+              <span class="collapse bio"></span>
+              <a href='#' data-toggle="collapse" data-target=".bio" style='color: #333'>Читать дальше ...</a>
+            </div>
+
+            <a onclick='newRound();' class='btn btn-block btn-large btn-danger'>Закрыть</a>(3 сек)
           </div>
 
           <div id='screenQuestion'>
 
-            <h3 id='message' style='margin-top: 10px; margin-bottom: 0px'>Do you know the author of this painting?</h3>
+            <h3 id='message' style='margin-top: 10px; margin-bottom: 0px'>
+              <!-- Do you know the author of this painting? -->
+              Сможете отгадать автора этой картины?
+            </h3>
 
             <div id='buttons' class='row'>
               <a id='btn1' onclick='answer(1)' style='text-align: left; font-size: 20px; padding: 5px 20px 5px 20px' class='btn btn-default btn-block'>
@@ -177,7 +188,7 @@
 
         </div>
 
-        <div class='col-lg-2' id='divLife' style='text-align: center; padding: 40px'>
+        <div class='col-lg-2' id='divLife' style='text-align: center; padding-top: 40px'>
           <div class='row'>
             <!-- ArtChallenge.ru_responsive -->
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2407992058828148" data-ad-slot="3910414450" data-ad-format="auto"></ins>

@@ -1,11 +1,26 @@
 var painters=[];
 var currentPainter="";
 var answers=[];
-var Lang = "en";
+var Lang = "ru";
 var langDB = "";
 var scores = 0;
 
 $.couch.urlPrefix = "http://178.62.133.139:5994";
+$.couch.db("lang").allDocs({
+  include_docs: true,
+  success: function(data) {
+    console.log(data);
+    langDB = data.rows;
+
+    if (Lang == "ru"){
+      langDB = langDB[5].doc;
+    } else {
+      langDB = langDB[1].doc;
+    }
+
+  }
+});
+
 $.couch.db("painters").allDocs({
   include_docs: true,
   success: function(data) {
@@ -16,13 +31,7 @@ $.couch.db("painters").allDocs({
   }
 });
 
-$.couch.db("lang").allDocs({
-  include_docs: true,
-  success: function(data) {
-    // console.log(data);
-    langDB = data.rows;
-  }
-});
+
 
 function randomPainter() {
   return Math.floor((Math.random() * Object.keys(painters).length));
@@ -35,14 +44,18 @@ function getRandomPicture() {
   picture = Math.floor((Math.random() * Object.keys(currentPainter.paintings).length )) + 1;
   $('#art').attr('src', 'http://artchallenge.me/painters/' + currentPainter._id + '/' + picture + '.jpg');
 
+  $('#title').html("");
+  $('#year').html("");
   if(currentPainter.paintings[picture].name[Lang]){
     $('#title').html(currentPainter.paintings[picture].name[Lang]);
     $('#year').html(" "+currentPainter.paintings[picture].year+ " ");
   }
 
-  $('.currentName').html(currentPainter.name);
-  $('.bioMini').html(currentPainter.bio[Lang].slice(0,100));
-  $('.bio').html(currentPainter.bio[Lang].slice(100,-1));
+  console.log(currentPainter._id);
+  console.log(langDB.painters);
+  $('.currentName').html( langDB.painters[currentPainter._id] );
+  $('.bioMini').html(currentPainter.bio[Lang].slice(0,200));
+  $('.bio').html(currentPainter.bio[Lang].slice(200,-1));
 }
 
 function newRound() {
@@ -82,7 +95,7 @@ function generateAnswers() {
   shuffle(answers);
 
   for (i = 1; i <= 4; i++) {
-    $('#btn-'+i+'-text').html(answers[i-1].name);
+    $('#btn-'+i+'-text').html( langDB.painters[answers[i-1]._id] );
     $('#btn-'+i+'-img').attr("src","http://artchallenge.me/painters/" + answers[i-1]._id + "/photo.jpg");
     $('#btn'+i).attr("painterId",answers[i-1]._id);
   }
@@ -91,33 +104,39 @@ function generateAnswers() {
 function answer(btn){
   if ($('#btn'+btn).attr("painterId") == currentPainter._id) {
     rightAnswer();
-    ++scores;
-    $("#star"+scores).css("color","green").attr('class', 'fa fa-star stars');
-
   } else {
     wrongAnswer();
-    scores = 0;
-    $(".stars").css("color","#6c7279").attr('class', 'fa fa-star-o stars');
-
   }
   $('#screenQuestion').css('display','none');
   window.generatingNewRound=false;
 }
 
 function rightAnswer() {
+  ++scores;
+  $("#star"+scores).css("color","green").attr('class', 'fa fa-star stars');
   // $('#screenRight').animateCss('fadeIn');
+  random = Math.floor((Math.random() * 20));
+  console.log(random);
+  $("#goodPhrase").html(langDB.goodPhrases[random]);
+
   $('#screenRight').css('display', 'block');
   $('#rightPhoto').attr('src', 'http://artchallenge.me/painters/'+currentPainter._id+'/photo.jpg');
 
-  // setTimeout(function () {newRound();}, 5000);
+  setTimeout(function () {newRound();}, 2000);
 }
 
 function wrongAnswer() {
+  scores = 0;
+  $(".stars").css("color","#6c7279").attr('class', 'fa fa-star-o stars');
   // $('#screenWrong').animateCss('fadeIn');
+  random = Math.floor((Math.random() * 12));
+  console.log(random);
+  $("#badPhrase").html(langDB.badPhrases[random]);
+
   $('#screenWrong').css('display', 'block');
   $('#wrongPhoto').attr('src', 'http://artchallenge.me/painters/'+currentPainter._id+'/photo.jpg');
 
-  // setTimeout(function () {newRound();}, 5000);
+  setTimeout(function () {newRound();}, 3000);
 }
 
 // $.couch.db("painters").openDoc(window.truePainter.toString(), {
