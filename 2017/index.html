@@ -91,82 +91,72 @@
       <br>
       <br>
       <div class='row'>
-        <div id='divGame' class='col-lg-6' style='text-align: center; padding: 30px 20px 0px 20px'>
+        <div id='divGame' class='col-lg-6' style='text-align: center; padding: 40px 20px 0px 20px'>
           <img id='art' src='' style='max-height: 700px'>
-          <h4 style='margin-bottom: 0px;'>Fallen Angel (1975)</h4>
+          <h4 style='margin-bottom: 0px;'><text id='title'></text> <text id='year'></text></h4>
         </div>
 
-        <div id='divButtons' class='col-lg-4' style='text-align: center; padding: 30px 30px 20px 30px'>
+        <div id='divButtons' class='col-lg-4' style='display:none; text-align: center; padding: 40px 30px 20px 30px'>
 
-          <div id='score'  style='text-align: center; padding: 0px 0 0px 0; font-size: 18px'>
-            <i class='fa fa-star-o'></i>
-            <i class='fa fa-star-o'></i>
-            <i class='fa fa-star-o'></i>
-            <i class='fa fa-star-o'></i>
-            <i class='fa fa-star-o'></i>
-            <i class='fa fa-star-o'></i>
-            <i class='fa fa-star-o'></i>
-            <i class='fa fa-star-o'></i>
-            <i class='fa fa-star-o'></i>
-            <i class='fa fa-gift'></i>
+          <div id='scores' style='text-align: center; padding: 0px 0 0px 0; font-size: 18px'>
+            <i id='star1' class='fa fa-star-o stars'></i>
+            <i id='star2' class='fa fa-star-o stars'></i>
+            <i id='star3' class='fa fa-star-o stars'></i>
+            <i id='star4' class='fa fa-star-o stars'></i>
+            <i id='star5' class='fa fa-star-o stars'></i>
+            <i id='star6' class='fa fa-star-o stars'></i>
+            <i id='star7' class='fa fa-star-o stars'></i>
+            <i id='star8' class='fa fa-star-o stars'></i>
+            <i id='star9' class='fa fa-star-o stars'></i>
+            <i id='gift' class='fa fa-gift'></i>
           </div>
 
           <div id='screenRight' style='display: none; text-align: center; padding-bottom: 20px'>
             <h3 class='text-success'><i class='fa fa-check'></i> Wonderful!</h3>
-            <img class='img-thumbnail' style='width: 50%; padding: 5px' src='http://artchallenge.me/painters/2/photo.jpg'>
-            <h4>Henri Lebasque</h4>
-
+            <img id='rightPhoto' class='img-thumbnail' style='width: 50%; padding: 5px'>
+            <h4 class='currentName'></h4>
             <p>
-              Wassily Wassilyevich Kandinsky was an influential Russian painter and art theorist...
-              <div  class="collapse bio">
-                He is credited with painting the first purely abstract works. Born in Moscow, Kandinsky spent his childhood in Odessa. He enrolled at the University of Moscow, studying law and economics. Successful in his profession — he was offered a professorship (chair of Roman Law) at the University of Dorpat — he began painting studies (life-drawing, sketching and anatomy) at the age of 30.
-
-                In 1896 Kandinsky settled in Munich, studying first at Anton Ažbes private school and then at the Academy of Fine Arts. He returned to Moscow in 1914, after the outbreak of World War I. Kandinsky was unsympathetic to the official theories on art in Communist Moscow, and returned to Germany in 1921. There, he taught at the Bauhaus school of art and architecture from 1922 until the Nazis closed it in 1933. He then moved to France, where he lived for the rest of his life, becoming a French citizen in 1939 and producing some of his most prominent art. He died at Neuilly-sur-Seine in 1944.
-              </div>
+              <span class="bioMini"></span>
+              <span class="collapse bio"></span>
             </p>
-
-            <a data-toggle="collapse" data-target=".bio" class='btn btn-block btn-large'>Read more ...</a>
-
+            <a href='#' data-toggle="collapse" data-target=".bio" style='color: #333'>Read more ...</a>
             <a onclick='newRound();' class='btn btn-block btn-large btn-success'>Next (<text id='js-counter'>3</text>)></a>
           </div>
 
           <div id='screenWrong' style='display: none; text-align: center; padding-bottom: 20px'>
             <h3 class='text-danger'><i class='fa fa-close'></i> You are nuts!</h3>
-            <img class='img-thumbnail' style='width: 50%; padding: 5px' src='http://artchallenge.me/painters/4/photo.jpg'>
-            <h4>Vasiliy Kandinskiy</h4>
+            <img id='wrongPhoto' class='img-thumbnail' style='width: 50%; padding: 5px'>
+            <h4 class='currentName'></h4>
             <p>
-              Wassily Wassilyevich Kandinsky was an influential Russian painter and art theorist...
-              <div  class="collapse bio">
-                He is credited with painting the first purely abstract works. Born in Moscow, Kandinsky spent his childhood in Odessa. He enrolled at the University of Moscow, studying law and economics. Successful in his profession — he was offered a professorship (chair of Roman Law) at the University of Dorpat — he began painting studies (life-drawing, sketching and anatomy) at the age of 30.
-
-                In 1896 Kandinsky settled in Munich, studying first at Anton Ažbes private school and then at the Academy of Fine Arts. He returned to Moscow in 1914, after the outbreak of World War I. Kandinsky was unsympathetic to the official theories on art in Communist Moscow, and returned to Germany in 1921. There, he taught at the Bauhaus school of art and architecture from 1922 until the Nazis closed it in 1933. He then moved to France, where he lived for the rest of his life, becoming a French citizen in 1939 and producing some of his most prominent art. He died at Neuilly-sur-Seine in 1944.
+              <div class="bioMini"></div>
+              <div class="collapse bio">
               </div>
             </p>
 
-            <a data-toggle="collapse" data-target=".bio" class='btn btn-block btn-large '>Read more ...</a>
+            <a href='#' data-toggle="collapse" data-target=".bio" style='color: #333'>Read more ...</a>
             <a onclick='newRound();' class='btn btn-block btn-large btn-danger'>Close X</a>
           </div>
 
           <div id='screenQuestion'>
 
-            <h3 style='margin-top: 10px; margin-bottom: 0px'>Do you know the author of this painting?</h3>
+            <h3 id='message' style='margin-top: 10px; margin-bottom: 0px'>Do you know the author of this painting?</h3>
 
             <div id='buttons' class='row'>
-              <a onclick='answer(1)' style='text-align: left; font-size: 20px; padding: 5px 20px 5px 20px' class='btn btn-default btn-block'>
-                <img class='img-circle' style='width: 48px; padding-right: 5px' src='http://artchallenge.me/painters/1/photo.jpg'>
-                <lable>Amedeo Modigliani</lable>
+              <a id='btn1' onclick='answer(1)' style='text-align: left; font-size: 20px; padding: 5px 20px 5px 20px' class='btn btn-default btn-block'>
+                <img id='btn-1-img' class='img-circle' style='height: 48px; padding-right: 5px' >
+                <text id='btn-1-text'></text>
               </a>
-              <a onclick='answer(2)'style='text-align: left; font-size: 20px; padding: 5px 20px 5px 20px' class='btn btn-default btn-block'>
-                <img class='img-circle' style='width: 48px; padding-right: 5px' src='http://artchallenge.me/painters/2/photo.jpg'>
-                <lable>Henri Lebasque</lable>
+              <a id='btn2' onclick='answer(2)' style='text-align: left; font-size: 20px; padding: 5px 20px 5px 20px' class='btn btn-default btn-block'>
+                <img id='btn-2-img' class='img-circle' style='height: 48px; padding-right: 5px' >
+                <text id='btn-2-text'></text>
               </a>
-              <a onclick='answer(3)' style='text-align: left; font-size: 20px; padding: 5px 20px 5px 20px' class='btn btn-default btn-block'>
-                <img class='img-circle' style='width: 48px; padding-right: 5px' src='http://artchallenge.me/painters/3/photo.jpg'>
-                <lable>Arkhip Kuinji</lable>
+              <a id='btn3' onclick='answer(3)' style='text-align: left; font-size: 20px; padding: 5px 20px 5px 20px' class='btn btn-default btn-block'>
+                <img id='btn-3-img' class='img-circle' style='height: 48px; padding-right: 5px' >
+                <text id='btn-3-text'></text>
               </a>
-              <a onclick='answer(4)' style='text-align: left; font-size: 20px; padding: 5px 20px 5px 20px' class='btn btn-default btn-block'>
-                <img class='img-circle' style='width: 48px; padding-right: 5px' src='http://artchallenge.me/painters/4/photo.jpg'>
-                <lable>Vasiliy Kandinskiy</lable>
+              <a id='btn4' onclick='answer(4)' style='text-align: left; font-size: 20px; padding: 5px 20px 5px 20px' class='btn btn-default btn-block'>
+                <img id='btn-4-img' class='img-circle' style='height: 48px; padding-right: 5px' >
+                <text id='btn-4-text'></text>
               </a>
             </div>
 
@@ -187,7 +177,7 @@
 
         </div>
 
-        <div class='col-lg-2' id='life' style='text-align: center; padding: 30px'>
+        <div class='col-lg-2' id='divLife' style='text-align: center; padding: 40px'>
           <div class='row'>
             <!-- ArtChallenge.ru_responsive -->
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2407992058828148" data-ad-slot="3910414450" data-ad-format="auto"></ins>
@@ -197,7 +187,7 @@
       </div>
 
       <!-- Footer -->
-      <footer>
+      <footer style='padding-top: 40px;'>
         <div class="row">
           <div class="col-lg-12">
             <p>&copy; Art Challenge 2017</p>
