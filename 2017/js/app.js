@@ -18,20 +18,25 @@ $.couch.db("lang").allDocs({
       langDB = langDB[1].doc;
     }
 
+    loadDB();
+
   }
 });
 
-$.couch.db("painters").allDocs({
-  include_docs: true,
-  success: function(data) {
-    // console.log(data);
-    painters = data.rows;
-    $('#divButtons').css('display', 'block');
-    newRound();
-  }
-});
+function loadDB() {
 
+  $.couch.db("painters").allDocs({
+    include_docs: true,
+    success: function(data) {
+      // console.log(data);
+      painters = data.rows;
+      $('#divButtons').css('display', 'block');
+      $('#welcome').css('display', 'none');
+      newRound();
+    }
+  });
 
+}
 
 function randomPainter() {
   return Math.floor((Math.random() * Object.keys(painters).length));
@@ -47,20 +52,21 @@ function getRandomPicture() {
   $('#title').html("");
   $('#year').html("");
   if(currentPainter.paintings[picture].name[Lang]){
-    $('#title').html(currentPainter.paintings[picture].name[Lang]);
+    $('#title').html("«" + currentPainter.paintings[picture].name[Lang] + "»,");
     $('#year').html(" "+currentPainter.paintings[picture].year+ " ");
   }
 
   console.log(currentPainter._id);
   console.log(langDB.painters);
   $('.currentName').html( langDB.painters[currentPainter._id] );
-  $('.bioMini').html(currentPainter.bio[Lang].slice(0,200));
-  $('.bio').html(currentPainter.bio[Lang].slice(200,-1));
+  // $('.bioMini').html(currentPainter.bio[Lang].slice(0,200));
+  $('.bio').html(currentPainter.bio[Lang]);
 }
 
 function newRound() {
   if (window.generatingNewRound !== true) {
     window.generatingNewRound=true;
+    $('#sharePlz').css('display','none');
     $('#screenWrong').css('display', 'none');
     $('#screenRight').css('display', 'none');
     $('#screenQuestion').css('display', 'block');
@@ -113,10 +119,10 @@ function answer(btn){
 
 function rightAnswer() {
   ++scores;
+  $(".count").html(scores);
   $("#star"+scores).css("color","green").attr('class', 'fa fa-star stars');
   // $('#screenRight').animateCss('fadeIn');
-  random = Math.floor((Math.random() * 20));
-  console.log(random);
+  random = Math.floor((Math.random() * 20) + 1);
   $("#goodPhrase").html(langDB.goodPhrases[random]);
 
   $('#screenRight').css('display', 'block');
@@ -126,17 +132,24 @@ function rightAnswer() {
 }
 
 function wrongAnswer() {
-  scores = 0;
-  $(".stars").css("color","#6c7279").attr('class', 'fa fa-star-o stars');
+  $(".count").html(scores);
+  // scores = 0;
+  // $(".stars").css("color","#6c7279").attr('class', 'fa fa-star-o stars');
   // $('#screenWrong').animateCss('fadeIn');
-  random = Math.floor((Math.random() * 12));
-  console.log(random);
+  random = Math.floor((Math.random() * 12) + 1);
   $("#badPhrase").html(langDB.badPhrases[random]);
-
   $('#screenWrong').css('display', 'block');
   $('#wrongPhoto').attr('src', 'http://artchallenge.me/painters/'+currentPainter._id+'/photo.jpg');
 
-  setTimeout(function () {newRound();}, 3000);
+  scores = 0;
+
+  if (scores > 2) {
+    $('#sharePlz').css('display','block');
+  }
+
+  setTimeout(function () {
+    $(".stars").css("color","#6c7279").attr('class', 'fa fa-star-o stars');
+  }, 2000);
 }
 
 // $.couch.db("painters").openDoc(window.truePainter.toString(), {

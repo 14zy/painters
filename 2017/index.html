@@ -91,10 +91,25 @@
       <br>
       <br>
       <div class='row'>
+
+        <div id='welcome' class='col-lg-12' style=''>
+          <div class='col-lg-6'>
+            <br><br><img src='img/welcome.gif' style='width: 100%'>
+          </div>
+          <div class='col-lg-6'>
+            <br><h2>Добро пожаловать<br>на Art Challenge!</h2>
+            <p>Мы рады прветствовать вас на нашем сайте.</p>
+            <p>Сейчас игра загружается и буквально через несколько секунд вы сможете насладиться великими произведениями искусства.</p>
+            <!-- <button class='btn btn-lg btn-block btn-success'>НАЧАТЬ ИГРУ</button> -->
+          </div>
+        </div>
+
         <div id='divGame' class='col-lg-6' style='text-align: center; padding: 40px 20px 0px 20px'>
           <img id='art' src='' style='max-height: 700px'>
           <h4 style='margin-bottom: 0px;'><text id='title'></text> <text id='year'></text></h4>
         </div>
+
+
 
         <div id='divButtons' class='col-lg-4' style='display:none; text-align: center; padding: 40px 30px 20px 30px'>
 
@@ -112,68 +127,58 @@
           </div>
 
           <div id='screenRight' style='display: none; text-align: center; padding-bottom: 20px'>
-            <br>
-            <img id='rightPhoto' class='img-thumbnail' style='width: 50%; padding: 5px'>
-
-            <h3 style="font-size: 20px; font-family: 'Open Sans';" class='currentName'></h3>
             <h3 class=''><i class='fa fa-check text-success'></i> <text id='goodPhrase'>Right!</text></h3>
-            <br>
-
-            <div style='max-height: 300px; overflow: scroll'>
-              <span class="bioMini"></span>
-              <span class="collapse bio"></span>
-              <a href='#' data-toggle="collapse" data-target=".bio" style='color: #333'>Читать дальше ...</a>
-            </div>
-
-            <a onclick='newRound();' class='btn btn-block btn-large btn-success'>Пропустить</a>(2 сек)
+            <br><img id='rightPhoto' class='img-thumbnail' style='width: 50%; padding: 5px'>
+            <h3 style="font-size: 20px;" class='currentName'></h3>
+            <!-- <br><div style='max-height: 200px; overflow: scroll' class='well'>
+              <span class="bio"></span>
+            </div> -->
+            <a onclick='newRound();' class='btn btn-block btn-large btn-success'>Дальше ></a>
           </div>
-
           <div id='screenWrong' style='display: none; text-align: center; padding-bottom: 20px'>
-            <br>
-            <img id='wrongPhoto' class='img-thumbnail' style='width: 50%; padding: 5px'>
-
-            <h3 style="font-size: 20px; font-family: 'Open Sans';" class='currentName'></h3>
             <h3 class=''><i class='fa fa-close text-danger'></i> <text id='badPhrase'>Wrong!</text></h3>
-            <br>
-
-            <div style='max-height: 300px; overflow: scroll'>
-              <span class="bioMini"></span>
-              <span class="collapse bio"></span>
-              <a href='#' data-toggle="collapse" data-target=".bio" style='color: #333'>Читать дальше ...</a>
+            <br><img id='wrongPhoto' class='img-thumbnail' style='width: 50%; padding: 5px'>
+            <h3 style="font-size: 20px;" class='currentName'></h3>
+            <br><div style='max-height: 200px; overflow: scroll' class='well'>
+              <span class="bio"></span>
             </div>
-
-            <a onclick='newRound();' class='btn btn-block btn-large btn-danger'>Закрыть</a>(3 сек)
+            <div id='sharePlz' style='display:none'>
+              <br>
+              <h4>Вы отгадали <span class='count'>0</span> картины подряд, это больше чем 18% людей игравших в эту игру.<br>Наверняка эта новость понравится вашим друзьям </h4>
+              <a onclick='' class='btn btn-block btn-large btn-info'>Рассказать друзьям (f)</a>
+            </div>
+            <a onclick='newRound();' class='btn btn-block btn-large btn-default'>Пропустить (X)</a>
           </div>
 
           <div id='screenQuestion'>
 
             <h3 id='message' style='margin-top: 10px; margin-bottom: 0px'>
               <!-- Do you know the author of this painting? -->
-              Сможете отгадать автора этой картины?
+              Отгадаете автора этой картины?
             </h3>
 
             <div id='buttons' class='row'>
-              <a id='btn1' onclick='answer(1)' style='text-align: left; font-size: 20px; padding: 5px 20px 5px 20px' class='btn btn-default btn-block'>
-                <img id='btn-1-img' class='img-circle' style='height: 48px; padding-right: 5px' >
+              <a id='btn1' onclick='answer(1)' style='text-align: left; font-size: 18px; padding: 10px' class='btn btn-default btn-block'>
+                <img id='btn-1-img' class='img-circle' style='height: 48px; padding-right: 0px' >
                 <text id='btn-1-text'></text>
               </a>
-              <a id='btn2' onclick='answer(2)' style='text-align: left; font-size: 20px; padding: 5px 20px 5px 20px' class='btn btn-default btn-block'>
-                <img id='btn-2-img' class='img-circle' style='height: 48px; padding-right: 5px' >
+              <a id='btn2' onclick='answer(2)' style='text-align: left; font-size: 18px; padding: 10px' class='btn btn-default btn-block'>
+                <img id='btn-2-img' class='img-circle' style='height: 48px; padding-right: 0px' >
                 <text id='btn-2-text'></text>
               </a>
-              <a id='btn3' onclick='answer(3)' style='text-align: left; font-size: 20px; padding: 5px 20px 5px 20px' class='btn btn-default btn-block'>
-                <img id='btn-3-img' class='img-circle' style='height: 48px; padding-right: 5px' >
+              <a id='btn3' onclick='answer(3)' style='text-align: left; font-size: 18px; padding: 10px' class='btn btn-default btn-block'>
+                <img id='btn-3-img' class='img-circle' style='height: 48px; padding-right: 0px' >
                 <text id='btn-3-text'></text>
               </a>
-              <a id='btn4' onclick='answer(4)' style='text-align: left; font-size: 20px; padding: 5px 20px 5px 20px' class='btn btn-default btn-block'>
-                <img id='btn-4-img' class='img-circle' style='height: 48px; padding-right: 5px' >
+              <a id='btn4' onclick='answer(4)' style='text-align: left; font-size: 18px; padding: 10px' class='btn btn-default btn-block'>
+                <img id='btn-4-img' class='img-circle' style='height: 48px; padding-right: 0px' >
                 <text id='btn-4-text'></text>
               </a>
             </div>
 
             <p>
             <li class="dropdown" style='display:inline-block; padding-top: 20px'>
-              <a style='color: #333' class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-lightbulb-o"></i> Level 1: Popular painters
+              <a style='color: #333' class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-lightbulb-o"></i> Уровень 1: Популярные художники
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="#"><b>Уровень 2:</b> Эпоха Возрождения</a></li>
