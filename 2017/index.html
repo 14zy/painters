@@ -130,24 +130,28 @@
             <h3 class=''><i class='fa fa-check text-success'></i> <text id='goodPhrase'>Right!</text></h3>
             <br><img id='rightPhoto' class='img-thumbnail' style='width: 50%; padding: 5px'>
             <h3 style="font-size: 20px;" class='currentName'></h3>
+            <text id='years'></text>
             <!-- <br><div style='max-height: 200px; overflow: scroll' class='well'>
               <span class="bio"></span>
             </div> -->
-            <a onclick='newRound();' class='btn btn-block btn-large btn-success'>Дальше ></a>
+
+            <!-- <a onclick='newRound();' class='btn btn-block btn-large btn-success'>Дальше ></a> -->
           </div>
           <div id='screenWrong' style='display: none; text-align: center; padding-bottom: 20px'>
             <h3 class=''><i class='fa fa-close text-danger'></i> <text id='badPhrase'>Wrong!</text></h3>
             <br><img id='wrongPhoto' class='img-thumbnail' style='width: 50%; padding: 5px'>
             <h3 style="font-size: 20px;" class='currentName'></h3>
-            <br><div style='max-height: 200px; overflow: scroll' class='well'>
+            <a onclick='#' class='btn btn-block btn-large btn-default'>Открыть коллекцию <i class='fa fa-external-link'></i></a>
+            <a onclick='newRound();' class='btn btn-block btn-large btn-default'>Пропустить (X)</a>
+            <!-- <br><div style='max-height: 200px; overflow: scroll' class='well'>
               <span class="bio"></span>
-            </div>
+            </div> -->
             <div id='sharePlz' style='display:none'>
               <br>
-              <h4>Вы отгадали <span class='count'>0</span> картины подряд, это больше чем 18% людей игравших в эту игру.<br>Наверняка эта новость понравится вашим друзьям </h4>
+              <h4>Вы отлично разбираетесь в искусстве! Вы отгадали <span class='count'>0</span> картины подряд, это больше чем <span class='count-percent'>0%</span> людей игравших в эту игру.</h4>
               <a onclick='' class='btn btn-block btn-large btn-info'>Рассказать друзьям (f)</a>
             </div>
-            <a onclick='newRound();' class='btn btn-block btn-large btn-default'>Пропустить (X)</a>
+
           </div>
 
           <div id='screenQuestion'>
