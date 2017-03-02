@@ -126,10 +126,8 @@ function rightAnswer() {
   // $('#screenRight').animateCss('fadeIn');
   random = Math.floor((Math.random() * 20) + 1);
   $("#goodPhrase").html(langDB.goodPhrases[random]);
-
   $('#screenRight').css('display', 'block');
   $('#rightPhoto').attr('src', 'http://artchallenge.me/painters/'+currentPainter._id+'/photo.jpg');
-
   setTimeout(function () {newRound();}, 1000);
 }
 
@@ -156,7 +154,6 @@ function wrongAnswer() {
   scores = 0;
   newRoundTimer = setTimeout(function () {
   if (window.workingTimer === true){
-    alert('new round');
     newRound();
   }
   }, window.timer);
