@@ -78,14 +78,11 @@
             <a href="#"><i class="fa fa-info"></i> About</a>
           </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container -->
-    </nav>
+        <ul class="nav navbar-nav navbar-right"></ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
 
     <div class="container">
       <br>
@@ -93,27 +90,20 @@
       <div class='row'>
 
         <div id='welcome' class='col-lg-12' style=''>
+          <br><h2 class='text-center'>Добро пожаловать</h2><br>
           <div class='col-lg-6'>
-            <br><br><img src='img/welcome.gif' style='width: 100%'>
+            <img src='img/welcome.gif' style='width: 100%'>
           </div>
           <div class='col-lg-6'>
-            <br><h2>Добро пожаловать<br>на Art Challenge!</h2>
-            <p>Мы рады прветствовать вас на нашем сайте.</p>
+            <p>Мы рады прветствовать вас на Art Challenge.</p>
             <p>Сейчас игра загружается и буквально через несколько секунд вы сможете насладиться великими произведениями искусства.</p>
             <!-- <button class='btn btn-lg btn-block btn-success'>НАЧАТЬ ИГРУ</button> -->
           </div>
         </div>
 
-        <div id='divGame' class='col-lg-6' style='text-align: center; padding: 40px 20px 0px 20px'>
-          <img id='art' src='' style='max-height: 700px'>
-          <h4 style='margin-bottom: 0px;'><text id='title'></text> <text id='year'></text></h4>
-        </div>
+        <div id='divGame' class='col-lg-6' style='text-align: center; padding: 20px 20px 0px 20px'>
 
-
-
-        <div id='divButtons' class='col-lg-4' style='display:none; text-align: center; padding: 40px 30px 20px 30px'>
-
-          <div id='scores' style='text-align: center; padding: 0px 0 0px 0; font-size: 18px'>
+          <div id='scores' style='text-align: center; padding: 0px 0px 10px 0px; font-size: 18px'>
             <i id='star1' class='fa fa-star-o stars'></i>
             <i id='star2' class='fa fa-star-o stars'></i>
             <i id='star3' class='fa fa-star-o stars'></i>
@@ -126,37 +116,37 @@
             <i id='gift' class='fa fa-gift'></i>
           </div>
 
+          <img id='art' src='' style='max-height: 700px'>
+          <h4 style='margin-bottom: 0px;'><text id='title'></text> <text id='year'></text></h4>
+        </div>
+
+
+
+        <div id='divButtons' class='col-lg-4' style='display:none; text-align: center; padding: 20px 30px 20px 30px'>
+
           <div id='screenRight' style='display: none; text-align: center; padding-bottom: 20px'>
             <h3 class=''><i class='fa fa-check text-success'></i> <text id='goodPhrase'>Right!</text></h3>
             <br><img id='rightPhoto' class='img-thumbnail' style='width: 50%; padding: 5px'>
             <h3 style="font-size: 20px;" class='currentName'></h3>
             <text id='years'></text>
-            <!-- <br><div style='max-height: 200px; overflow: scroll' class='well'>
-              <span class="bio"></span>
-            </div> -->
-
-            <!-- <a onclick='newRound();' class='btn btn-block btn-large btn-success'>Дальше ></a> -->
           </div>
+
           <div id='screenWrong' style='display: none; text-align: center; padding-bottom: 20px'>
             <h3 class=''><i class='fa fa-close text-danger'></i> <text id='badPhrase'>Wrong!</text></h3>
             <br><img id='wrongPhoto' class='img-thumbnail' style='width: 50%; padding: 5px'>
             <h3 style="font-size: 20px;" class='currentName'></h3>
-            <a onclick='#' class='btn btn-block btn-large btn-default'>Открыть коллекцию <i class='fa fa-external-link'></i></a>
+            <a onclick='#' class='btn btn-block btn-large btn-default'>Смотреть картины <i class='fa fa-external-link'></i></a>
             <a onclick='newRound();' class='btn btn-block btn-large btn-default'>Пропустить (X)</a>
-            <!-- <br><div style='max-height: 200px; overflow: scroll' class='well'>
-              <span class="bio"></span>
-            </div> -->
             <div id='sharePlz' style='display:none'>
               <br>
-              <h4>Вы отлично разбираетесь в искусстве!<br>Вы отгадали <span class='count'>0</span> картины подряд, это больше чем <span class='count-percent'>0%</span> людей сыгравших в эту игру. Поздравляем!</h4>
+              <h4>Вы отлично разбираетесь в искусстве!<br>Вы отгадали <span class='count'>0</span> картины подряд, это больше чем <span class='count-percent'>0%</span> людей сыгравших в эту игру. Хотите рассказать об этом друзьям?</h4>
               <a onclick='' class='btn btn-block btn-large btn-info'>Рассказать друзьям (f)</a>
             </div>
-
           </div>
 
           <div id='screenQuestion'>
 
-            <h3 id='message' style='margin-top: 10px; margin-bottom: 0px'>
+            <h3 id='message' style='margin-top: 0px; margin-bottom: 0px'>
               <!-- Do you know the author of this painting? -->
               Отгадаете автора этой картины?
             </h3>
@@ -197,7 +187,7 @@
 
         </div>
 
-        <div class='col-lg-2' id='divLife' style='text-align: center; padding-top: 40px'>
+        <div class='col-lg-2' id='divLife' style='text-align: center; padding-top: 20px'>
           <div class='row'>
             <!-- ArtChallenge.ru_responsive -->
             <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2407992058828148" data-ad-slot="3910414450" data-ad-format="auto"></ins>
