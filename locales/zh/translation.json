@@ -265,7 +265,24 @@
     "115": "陀罗可托夫",
     "116": "罗克韦尔肯特",
     "117": "马里洛斯史良",
-    "118": "杰克逊·波洛克"
+    "118": "杰克逊·波洛克",
+    "119": "Vardges Sureniants",
+    "120": "Yeghishe Tadevosyan",
+    "121": "Panos Terlemezian",
+    "122": "Yervand Kochar",
+    "123": "Sedrak Arakelian",
+    "124": "Gevorg Bashinjaghian",
+    "125": "Stepan Aghajanian",
+    "126": "Alexander Bazhbeuk-Melikyan",
+    "127": "Minas Avetisyan",
+    "128": "Hakob Hakobian",
+    "129": "Ashot Oganesyan",
+    "130": "Hakob Kojoyan",
+    "131": "Grigor Khanjyan",
+    "132": "Vahram Gaifejian",
+    "133": "Gevork Grigorian",
+    "134": "Jean Carzou",
+    "135": "Jean Jansem"
   },
   "nation": {
     "Russian": "俄罗斯人",
@@ -344,6 +361,9 @@
     "frenchSet-count": "22位艺术家，3758幅绘画",
     "allSet": "全集",
     "allSet-desc": "所有的艺术家的作品加入游戏——对于有经验的玩家",
-    "allSet-count": "118位艺术家，17695幅绘画"
+    "allSet-count": "118位艺术家，17695幅绘画",
+    "armenianSet": "Armenian painters",
+    "armenianSet-desc": "The Armenian collection",
+    "armenianSet-count": "17位艺术家，2280幅绘画"
   }
 }

@@ -120,7 +120,7 @@ function getart() {
   var art = document.getElementById("art");
   window.truePainter = window.currentSet[Math.floor((Math.random() * window.currentSet.length))];
 
-  $.getJSON(window.platform + window.truePainter + "/data.json")
+  $.getJSON("http://178.62.133.139:5994/painters/" + window.truePainter)
     .done(function(json) {
 
       $("#currentSetImg")[0].src = "pics/sets/" + window.currentSetName + ".png";
@@ -128,7 +128,7 @@ function getart() {
         lng: window.lang
       })); // Этому тут совсем не место, но больше нигде не работает T_T
 
-      window.paintings = json.paintings;
+      window.paintings = Object.keys(json.paintings).length;
       window.image = Math.floor((Math.random() * window.paintings) + 1);
 
       if (window.pnotify == "stack-mobile") {
@@ -825,6 +825,11 @@ function changeSet(value) {
       setCookie('currentSet', value, 360);
       break;
 
+    case "armenianSet":
+      window.currentSet = [117, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133 ,134, 135];
+      setCookie('currentSet', value, 360);
+      break;
+
     default:
       window.currentSet = [1, 4, 7, 9, 14, 15, 17, 19, 21, 22, 24, 26, 27, 28, 29, 30, 32, 33, 34, 35, 36, 39, 40, 41, 42, 43, 45, 46, 49, 50, 53, 54, 55, 57, 58, 61, 62, 63, 69, 72, 73, 75, 77, 79, 80, 82, 83, 94, 95, 112, 118];
       document.cookie = "currentSet=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
@@ -849,28 +854,28 @@ function changeSet(value) {
   }, "slow");
 };
 
-
-window.onload = function() {
-  if (window.enviroment != "mobile") {
-    if (window.lang == "ru") {
-      $("#paintersLinksTitle").html('Каталог художников и их работ:')
-    }
-
-    $("#paintersLinks").html('');
-
-    var foo = new Array(118)
-    $.each(foo, function(i, value) {
-      var painterName = "painters." + (i + 1);
-      painterDiv = '<div class="col-lg-2 col-md-4 col-sm-4 work2">' +
-        '<a title=' + i18n.t(painterName, {lng: window.lang}) + ' href="http://artchallenge.ru/gallery/' + window.lang + '/' + (i + 1) + '.html" class="work-box">' +
-        '<img  style="width:250px" src="pics/painters/' + (i + 1) + '.jpg" alt="' + i18n.t(painterName, {lng: window.lang}) + '">' +
-        '<div class="overlay"><div class="overlay-caption">' +
-        '<p>' + i18n.t(painterName, {
-          lng: window.lang
-        }) + '</p></div></div></a></div>';
-      $("#paintersLinks").append(painterDiv);
-    });
-  } else {
-    $("#painters").css('display', 'none');
-  }
-};
+//
+// window.onload = function() {
+//   if (window.enviroment != "mobile") {
+//     if (window.lang == "ru") {
+//       $("#paintersLinksTitle").html('Каталог художников и их работ:')
+//     }
+//
+//     $("#paintersLinks").html('');
+//
+//     var foo = new Array(118)
+//     $.each(foo, function(i, value) {
+//       var painterName = "painters." + (i + 1);
+//       painterDiv = '<div class="col-lg-2 col-md-4 col-sm-4 work2">' +
+//         '<a title=' + i18n.t(painterName, {lng: window.lang}) + ' href="http://artchallenge.ru/gallery/' + window.lang + '/' + (i + 1) + '.html" class="work-box">' +
+//         '<img  style="width:250px" src="pics/painters/' + (i + 1) + '.jpg" alt="' + i18n.t(painterName, {lng: window.lang}) + '">' +
+//         '<div class="overlay"><div class="overlay-caption">' +
+//         '<p>' + i18n.t(painterName, {
+//           lng: window.lang
+//         }) + '</p></div></div></a></div>';
+//       $("#paintersLinks").append(painterDiv);
+//     });
+//   } else {
+//     $("#painters").css('display', 'none');
+//   }
+// };

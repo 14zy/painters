@@ -266,7 +266,24 @@
     "115": "Fyodor Rokotov",
     "116": "Rockwell Kent",
     "117": "Martiros Saryan",
-    "118": "Jackson Pollock"
+    "118": "Jackson Pollock",
+    "119": "Vardges Sureniants",
+    "120": "Yeghishe Tadevosyan",
+    "121": "Panos Terlemezian",
+    "122": "Yervand Kochar",
+    "123": "Sedrak Arakelian",
+    "124": "Gevorg Bashinjaghian",
+    "125": "Stepan Aghajanian",
+    "126": "Alexander Bazhbeuk-Melikyan",
+    "127": "Minas Avetisyan",
+    "128": "Hakob Hakobian",
+    "129": "Ashot Oganesyan",
+    "130": "Hakob Kojoyan",
+    "131": "Grigor Khanjyan",
+    "132": "Vahram Gaifejian",
+    "133": "Gevork Grigorian",
+    "134": "Jean Carzou",
+    "135": "Jean Jansem"
   },
   "nation": {
     "Russian": "Russo",
@@ -345,6 +362,9 @@
     "frenchSet-count": "22 pittori, 3 758 dipinti",
     "allSet": "La collezione completa",
     "allSet-desc": "I dipinti di tutti gli artisti per giocatori più esperti",
-    "allSet-count": "118 pittori, 17 695 dipinti"
+    "allSet-count": "118 pittori, 17 695 dipinti",
+    "armenianSet": "Armenian painters",
+    "armenianSet-desc": "The Armenian collection",
+    "armenianSet-count": "17 pittori, 2 280 pittori"
   }
 }
