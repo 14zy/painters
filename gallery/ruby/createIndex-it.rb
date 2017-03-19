@@ -128,7 +128,7 @@ lang = "it";
 
 
   gallery = ""
-  for i in 1..118
+  for i in 1..135
 
     painter = JSON.parse `curl -X GET http://178.62.133.139:5994/painters/#{i}`
 

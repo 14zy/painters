@@ -6,7 +6,7 @@ langDB = JSON.parse `curl -X GET http://178.62.133.139:5994/lang/#{lang}`
 
 
 ##Проходимся по всем 118 художникам
-for n in 1..118
+for n in 1..135
 
   allowEdit = ""
 
