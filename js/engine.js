@@ -8,6 +8,20 @@ jQuery.browser = {};
  }
 })();
 
+function getQueryParams(qs) {
+    qs = qs.split('+').join(' ');
+
+    var params = {},
+        tokens,
+        re = /[?&]?([^=]+)=([^&]*)/g;
+
+    while (tokens = re.exec(qs)) {
+        params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+    }
+
+    return params;
+}
+
 $.couch.urlPrefix = "http://178.62.133.139:5994";
 
 
@@ -106,6 +120,12 @@ function load() {
   } else {
     changeSet(getCookie("currentSet"));
   }
+
+  var query = getQueryParams(document.location.search);
+  if (query.set) {
+    changeSet(query.set);
+  }
+  
   getart();
   begood(getCookie("begood"));
 
