@@ -14,13 +14,16 @@
 
 for set in basic french realism impressionism renaissance russian
 do
-	for lang in ru en
+	for lang in es fr it zh
 	do
 		echo $set/$lang
 		
 		for i in {1..10}
-		do
-			echo "Конвертим $i"
+		do	
+			echo "Конвертим картинку $i"
+			convert $set/originals/$i.png -auto-orient -quality 100 $lang.png -gravity southwest -composite $set/$lang/$i.png
+									
+			echo "Добавляем белый фон на $i"
 			convert frame.png -auto-orient -quality 100 $set/$lang/$i.png -gravity center -composite $set/$lang/$i.jpg
 		done
 		echo $set/$lang completed

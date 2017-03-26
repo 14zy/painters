@@ -125,7 +125,7 @@ function load() {
   if (query.set) {
     changeSet(query.set);
   }
-
+  
   getart();
   begood(getCookie("begood"));
 
@@ -575,9 +575,6 @@ function goodPhrase() {
 
 function winner() {
 
-  window.rndShare = Math.floor((Math.random() * 10));
-  window.imageURL = "http://artchallenge.ru/pics/shares/" + window.currentSetName.slice(0, -3) + "/" + window.lang + "/" + window.rndShare + ".png";
-
   var winnerDiv = "\
   <p class='winner-text'>" + i18n.t("message.winner-desc", {
     lng: window.lang,
@@ -586,7 +583,7 @@ function winner() {
     })
   }) + "</p>\
   <p><a onclick='ShareFB();' href='#'>\
-    <img style='width: 100%;' src='"+ window.imageURL +"'>\
+    <img style='width: 100%;' src=pics/badges/" + window.currentSetName + "/winner-badge-" + window.lang + "-shareFB.png>\
   </a></p>\
   <p class='winner-text'>" + i18n.t("message.winner-desc-old", {
     lng: window.lang
@@ -637,39 +634,64 @@ function winner() {
     void(0);
   };
 
-}
+};
 
 function getShares() {
 
   switch (window.lang) {
     case "ru":
+      shares_old = "<a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> ВКонтакте </a><br><a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareOD();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Одноклассники </a><br><a onclick='ShareMM();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Мой Мир </a>";
       shares = "<div style='padding: 0px'>\
-      <button type='button' class='btn btn-info btn-share' aria-label='Facebook' onclick='ShareFB();'>\
-        <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Facebook\
-      </button>\
     <button type='button' class='btn btn-info btn-share' aria-label='ВКонтакте' onclick='ShareVK();'>\
      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> ВКонтакте\
+    </button>\
+    <button type='button' class='btn btn-info btn-share' aria-label='Facebook' onclick='ShareFB();'>\
+      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Facebook\
+    </button>\
+    <button style='display: none' type='button' class='btn btn-lg btn-info btn-share' aria-label='Одноклассники' onclick='ShareOD();'>\
+      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Одноклассники\
+    </button>\
+    <button style='display: none' type='button' class='btn btn-lg btn-info btn-share' aria-label='Twitter' onclick='ShareTW();'>\
+      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Twitter\
     </button>\
     </div>";
       break;
 
     default:
+      shares_old = "<a onclick='ShareFB();' href='#'><span class='glyphicon glyphicon-share-alt'></span> Facebook </a><br><a onclick='ShareTW();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> Twitter </a><br><a onclick='ShareVK();' href='#'> <span class='glyphicon glyphicon-share-alt'></span> VKontakte </a>";
+      shares_old_en = "<div style='padding: 15px'>\
+    <button type='button' class='btn btn-lg btn-primary btn-share' aria-label='Facebook' onclick='ShareFB();'>\
+      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Facebook\
+    </button>\
+    <button type='button' class='btn btn-lg btn-primary btn-share' aria-label='VKontakte' onclick='ShareVK();'>\
+     <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> VKontakte\
+    </button>\
+    <button type='button' class='btn btn-lg btn-info btn-share' aria-label='Мой Мир' onclick='ShareTW();'>\
+      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Twitter\
+    </button>\
+    </div>";
       shares = "<div style='padding: 0px'>\
-      <button type='button' class='btn btn-primary btn-share' aria-label='Facebook' onclick='ShareFB();'>\
-        <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Facebook\
-      </button><br>\
-      <button type='button' style='display: none' class='btn btn-danger btn-share' aria-label='ВКонтакте' onclick='ShareVK();'>\
-       <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> ВКонтакте\
-      </button>\
+    <button type='button' style='display: none' class='btn btn-danger btn-share' aria-label='ВКонтакте' onclick='ShareVK();'>\
+     <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> ВКонтакте\
+    </button>\
+    <button type='button' class='btn btn-primary btn-share' aria-label='Facebook' onclick='ShareFB();'>\
+      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Facebook\
+    </button><br>\
+    <button style='display: none' type='button' class='btn btn-lg btn-info btn-share' aria-label='Одноклассники' onclick='ShareOD();'>\
+      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Одноклассники\
+    </button>\
+    <button style='display: none' type='button' class='btn btn-lg btn-info btn-share' aria-label='Twitter' onclick='ShareTW();'>\
+      <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Twitter\
+    </button>\
     </div>";
       break;
-  }
+  };
 
   return shares;
-}
+};
 
 function ShareFB() {
-  url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=http://artchallenge.ru/?utm_source=fb-win&redirect_uri=http://artchallenge.ru/1.html&picture=" + window.imageURL + "&source=" + window.imageURL+"&name=" + i18n.t("shares.title", {
+  url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=http://artchallenge.ru/?utm_source=fb-win&redirect_uri=http://artchallenge.ru/1.html&picture=http://artchallenge.ru/pics/badges/" + window.currentSetName + "/winner-badge-" + window.lang + "-shareFB.png&source=http://artchallenge.ru/pics/badges/" + window.currentSetName + "/winner-badge-" + window.lang + "-shareFB.png&name=" + i18n.t("shares.title", {
     lng: window.lang
   }) + "&caption=" + i18n.t("shares.caption", {
     lng: window.lang
@@ -678,42 +700,41 @@ function ShareFB() {
   });
   window.open(url, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24594722.reachGoal('WINNER-SHARE-FB');
-}
-//
-// function ShareTW() {
-//   url = "http://twitter.com/share?text=" + i18n.t("shares.title", {
-//     lng: window.lang
-//   }) + " http://artchallenge.ru/pics/badges/" + window.currentSetName + "/winner-badge-" + window.lang + "-shareTW.png &url=http://artchallenge.ru/&hashtags=artchallenge";
-//   window.open(url, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
-//   yaCounter24594722.reachGoal('WINNER-SHARE-TW');
-// };
+};
+
+function ShareTW() {
+  url = "http://twitter.com/share?text=" + i18n.t("shares.title", {
+    lng: window.lang
+  }) + " http://artchallenge.ru/pics/badges/" + window.currentSetName + "/winner-badge-" + window.lang + "-shareTW.png &url=http://artchallenge.ru/&hashtags=artchallenge";
+  window.open(url, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+  yaCounter24594722.reachGoal('WINNER-SHARE-TW');
+};
 
 function ShareVK() {
-
-  url = "http://vk.com/share.php?url=http://artchallenge.ru/?utm_source=vk-win&title=" + i18n.t("shares.description", {
+  url = "http://vk.com/share.php?url=http://artchallenge.ru/?utm_source=vk-win&title=" + i18n.t("shares.title", {
     lng: window.lang
-  }) + " %23ArtChallenge&description=" + i18n.t("shares.caption", {
+  }) + " %23ArtChallenge&description=" + i18n.t("shares.description", {
     lng: window.lang
-  }) + "&image=" + window.imageURL + "&noparse=true";
+  }) + "&image=http://artchallenge.ru/pics/badges/" + window.currentSetName + "/winner-badge-" + window.lang + "-shareVK.png&noparse=true";
   window.open(url, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24594722.reachGoal('WINNER-SHARE-VK');
-}
-//
-// function ShareOD() {
-//   url = "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st.comments=Господа, я отлично разбираюсь в искусстве!&st._surl=http://artchallenge.ru/?utm_source=od-win";
-//   window.open(url, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
-//   yaCounter24594722.reachGoal('WINNER-SHARE-OD');
-// };
+};
 
-// function ShareMM() {
-//   url = "http://connect.mail.ru/share?url=http://artchallenge.ru/?utm_source=mm-win&title=" + i18n.t("shares.title", {
-//     lng: window.lang
-//   }) + "&description=" + i18n.t("shares.description", {
-//     lng: window.lang
-//   }) + "&image_url=http://artchallenge.ru/pics/badges/" + window.currentSetName + "/winner-badge-" + window.lang + "-shareVK.png";
-//   window.open(url, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
-//   yaCounter24594722.reachGoal('WINNER-SHARE-MM');
-// };
+function ShareOD() {
+  url = "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st.comments=Господа, я отлично разбираюсь в искусстве!&st._surl=http://artchallenge.ru/?utm_source=od-win";
+  window.open(url, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+  yaCounter24594722.reachGoal('WINNER-SHARE-OD');
+};
+
+function ShareMM() {
+  url = "http://connect.mail.ru/share?url=http://artchallenge.ru/?utm_source=mm-win&title=" + i18n.t("shares.title", {
+    lng: window.lang
+  }) + "&description=" + i18n.t("shares.description", {
+    lng: window.lang
+  }) + "&image_url=http://artchallenge.ru/pics/badges/" + window.currentSetName + "/winner-badge-" + window.lang + "-shareVK.png";
+  window.open(url, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+  yaCounter24594722.reachGoal('WINNER-SHARE-MM');
+};
 
 function refresh(sign, scroll) {
 
