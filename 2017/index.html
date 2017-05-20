@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
 
@@ -14,11 +15,11 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="http://artchallenge.ru/" />
   <meta property="og:image" content="http://artchallenge.ru/logo-text.jpg" />
-  <meta property="og:site_name" content="Art Challenge"/>
+  <meta property="og:site_name" content="Art Challenge" />
   <meta property="og:title" content="Art Challenge – A Quiz Game of Famous Painters" />
   <meta property="og:description" content="Try to guess 10 painters in a row and beat your friends! " />
 
-  <link href="css/bootstrap.min.css" rel="stylesheet" >
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/app.css?v=1.0" rel="stylesheet">
@@ -27,13 +28,13 @@
 
   <meta name="apple-itunes-app" content="app-id=1088982103">
 
-  <link rel="alternate" hreflang="x-default" href="http://artchallenge.ru/"/>
-  <link rel="alternate" hreflang="ru" href="http://artchallenge.ru/?lang=ru"/>
-  <link rel="alternate" hreflang="en" href="http://artchallenge.ru/?lang=en"/>
-  <link rel="alternate" hreflang="de" href="http://artchallenge.ru/?lang=de"/>
-  <link rel="alternate" hreflang="fr" href="http://artchallenge.ru/?lang=fr"/>
-  <link rel="alternate" hreflang="es" href="http://artchallenge.ru/?lang=es"/>
-  <link rel="alternate" hreflang="it" href="http://artchallenge.ru/?lang=it"/>
+  <link rel="alternate" hreflang="x-default" href="http://artchallenge.ru/" />
+  <link rel="alternate" hreflang="ru" href="http://artchallenge.ru/?lang=ru" />
+  <link rel="alternate" hreflang="en" href="http://artchallenge.ru/?lang=en" />
+  <link rel="alternate" hreflang="de" href="http://artchallenge.ru/?lang=de" />
+  <link rel="alternate" hreflang="fr" href="http://artchallenge.ru/?lang=fr" />
+  <link rel="alternate" hreflang="es" href="http://artchallenge.ru/?lang=es" />
+  <link rel="alternate" hreflang="it" href="http://artchallenge.ru/?lang=it" />
 
   <!--[if lt IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -79,153 +80,156 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right"></ul>
-      </div><!-- /.navbar-collapse -->
+      </div>
+      <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->
   </nav>
 
-    <div class="container">
-      <br>
-      <br>
-      <div class='row'>
+  <div class="container">
+    <br>
+    <br>
+    <div class='row'>
 
-        <div id='welcome' class='col-lg-12' style=''>
-          <br><h2 class='text-center'>Добро пожаловать</h2><br>
-          <div class='col-lg-6'>
-            <img src='img/welcome.gif' style='width: 100%'>
-          </div>
-          <div class='col-lg-6'>
-            <p>Мы рады прветствовать вас на Art Challenge.</p>
-            <p>Сейчас игра загружается и буквально через несколько секунд вы сможете насладиться великими произведениями искусства.</p>
-            <!-- <button class='btn btn-lg btn-block btn-success'>НАЧАТЬ ИГРУ</button> -->
+      <div id='welcome' class='col-lg-12' style=''>
+        <br>
+        <h2 class='text-center'>Добро пожаловать</h2><br>
+        <!-- <div class='col-lg-6'>
+          <img src='img/welcome.gif' style='width: 100%'>
+        </div> -->
+        <div class='col-lg-6'>
+          <p>Мы рады прветствовать вас на Art Challenge.</p>
+          <p>Сейчас игра загружается и буквально через несколько секунд вы сможете насладиться великими произведениями искусства.</p>
+          <!-- <button class='btn btn-lg btn-block btn-success'>НАЧАТЬ ИГРУ</button> -->
+        </div>
+      </div>
+
+      <div id='divGame' class='col-lg-6' style='text-align: center; padding: 30px 20px 0px 20px'>
+
+        <div id='scores' style='text-align: center; padding: 0px 0px 20px 0px; font-size: 18px'>
+          <i id='star1' class='fa fa-star-o stars'></i>
+          <i id='star2' class='fa fa-star-o stars'></i>
+          <i id='star3' class='fa fa-star-o stars'></i>
+          <i id='star4' class='fa fa-star-o stars'></i>
+          <i id='star5' class='fa fa-star-o stars'></i>
+          <i id='star6' class='fa fa-star-o stars'></i>
+          <i id='star7' class='fa fa-star-o stars'></i>
+          <i id='star8' class='fa fa-star-o stars'></i>
+          <i id='star9' class='fa fa-star-o stars'></i>
+          <i id='gift' class='fa fa-gift'></i>
+        </div>
+
+        <img id='art' src='' style='max-height: 700px'>
+        <h4 style='margin-bottom: 0px;'><text id='title'></text> <text id='year'></text></h4>
+      </div>
+
+
+      <div id='divButtons' class='col-lg-4' style='display:none; text-align: center; padding: 30px 30px 20px 30px'>
+
+        <div id='screenRight' style='display: none; text-align: center; padding-bottom: 20px'>
+          <h3 class=''><i class='fa fa-check text-success'></i> <text id='goodPhrase'>Right!</text></h3>
+          <br><img id='rightPhoto' class='img-thumbnail' style='width: 50%; padding: 5px'>
+          <h3 style="font-size: 20px;" class='currentName'></h3>
+          <text class='years'></text>
+        </div>
+
+        <div id='screenWrong' style='display: none; text-align: center; padding-bottom: 20px'>
+          <h3 class=''><i class='fa fa-close text-danger'></i> <text id='badPhrase'>Wrong!</text></h3>
+          <br><img id='wrongPhoto' class='img-thumbnail' style='width: 50%; padding: 5px'>
+          <h3 style="font-size: 20px;" class='currentName'></h3>
+          <text class='years'></text>
+          <a onclick='#' class='btn btn-block btn-large btn-default'>Смотреть картины <i class='fa fa-external-link'></i></a>
+          <a onclick='newRound();' class='btn btn-block btn-large btn-default'>Пропустить (X)</a>
+          <div id='sharePlz' style='display:none'>
+            <br>
+            <h4>Вы отлично разбираетесь в искусстве!<br>Вы отгадали <span class='count'>0</span> картины подряд, это больше чем <span class='count-percent'>0%</span> людей сыгравших в эту игру. Хотите рассказать об этом друзьям?</h4>
+            <a onclick='' class='btn btn-block btn-large btn-info'>Рассказать друзьям (f)</a>
           </div>
         </div>
 
-        <div id='divGame' class='col-lg-6' style='text-align: center; padding: 30px 20px 0px 20px'>
+        <div id='screenQuestion'>
 
-          <div id='scores' style='text-align: center; padding: 0px 0px 10px 0px; font-size: 18px'>
-            <i id='star1' class='fa fa-star-o stars'></i>
-            <i id='star2' class='fa fa-star-o stars'></i>
-            <i id='star3' class='fa fa-star-o stars'></i>
-            <i id='star4' class='fa fa-star-o stars'></i>
-            <i id='star5' class='fa fa-star-o stars'></i>
-            <i id='star6' class='fa fa-star-o stars'></i>
-            <i id='star7' class='fa fa-star-o stars'></i>
-            <i id='star8' class='fa fa-star-o stars'></i>
-            <i id='star9' class='fa fa-star-o stars'></i>
-            <i id='gift' class='fa fa-gift'></i>
-          </div>
-
-          <img id='art' src='' style='max-height: 700px'>
-          <h4 style='margin-bottom: 0px;'><text id='title'></text> <text id='year'></text></h4>
-        </div>
-
-
-
-        <div id='divButtons' class='col-lg-4' style='display:none; text-align: center; padding: 30px 30px 20px 30px'>
-
-          <div id='screenRight' style='display: none; text-align: center; padding-bottom: 20px'>
-            <h3 class=''><i class='fa fa-check text-success'></i> <text id='goodPhrase'>Right!</text></h3>
-            <br><img id='rightPhoto' class='img-thumbnail' style='width: 50%; padding: 5px'>
-            <h3 style="font-size: 20px;" class='currentName'></h3>
-            <text id='years'></text>
-          </div>
-
-          <div id='screenWrong' style='display: none; text-align: center; padding-bottom: 20px'>
-            <h3 class=''><i class='fa fa-close text-danger'></i> <text id='badPhrase'>Wrong!</text></h3>
-            <br><img id='wrongPhoto' class='img-thumbnail' style='width: 50%; padding: 5px'>
-            <h3 style="font-size: 20px;" class='currentName'></h3>
-            <a onclick='#' class='btn btn-block btn-large btn-default'>Смотреть картины <i class='fa fa-external-link'></i></a>
-            <a onclick='newRound();' class='btn btn-block btn-large btn-default'>Пропустить (X)</a>
-            <div id='sharePlz' style='display:none'>
-              <br>
-              <h4>Вы отлично разбираетесь в искусстве!<br>Вы отгадали <span class='count'>0</span> картины подряд, это больше чем <span class='count-percent'>0%</span> людей сыгравших в эту игру. Хотите рассказать об этом друзьям?</h4>
-              <a onclick='' class='btn btn-block btn-large btn-info'>Рассказать друзьям (f)</a>
-            </div>
-          </div>
-
-          <div id='screenQuestion'>
-
-            <h3 id='message' style='margin-top: 0px; margin-bottom: 0px'>
+          <h3 id='message' style='margin-top: 0px; margin-bottom: 0px'>
               <!-- Do you know the author of this painting? -->
-              Отгадаете автора этой картины?
+              Отгадайте художника:
             </h3>
 
-            <div id='buttons' class='row'>
-              <a id='btn1' onclick='answer(1)' style='text-align: left; font-size: 18px; padding: 10px' class='btn btn-default btn-block'>
-                <img id='btn-1-img' class='img-circle' style='height: 48px; padding-right: 0px' >
+          <div id='buttons' class='row'>
+            <a id='btn1' onclick='answer(1)' style='text-align: left; font-size: 18px; padding: 10px' class='btn btn-default btn-block'>
+                <img id='btn-1-img' class='img-circle' style='height: 48px; width: 48px; padding-right: 0px' >
                 <text id='btn-1-text'></text>
               </a>
-              <a id='btn2' onclick='answer(2)' style='text-align: left; font-size: 18px; padding: 10px' class='btn btn-default btn-block'>
-                <img id='btn-2-img' class='img-circle' style='height: 48px; padding-right: 0px' >
+            <a id='btn2' onclick='answer(2)' style='text-align: left; font-size: 18px; padding: 10px' class='btn btn-default btn-block'>
+                <img id='btn-2-img' class='img-circle' style='height: 48px; width: 48px; padding-right: 0px' >
                 <text id='btn-2-text'></text>
               </a>
-              <a id='btn3' onclick='answer(3)' style='text-align: left; font-size: 18px; padding: 10px' class='btn btn-default btn-block'>
-                <img id='btn-3-img' class='img-circle' style='height: 48px; padding-right: 0px' >
+            <a id='btn3' onclick='answer(3)' style='text-align: left; font-size: 18px; padding: 10px' class='btn btn-default btn-block'>
+                <img id='btn-3-img' class='img-circle' style='height: 48px; width: 48px; padding-right: 0px' >
                 <text id='btn-3-text'></text>
               </a>
-              <a id='btn4' onclick='answer(4)' style='text-align: left; font-size: 18px; padding: 10px' class='btn btn-default btn-block'>
-                <img id='btn-4-img' class='img-circle' style='height: 48px; padding-right: 0px' >
+            <a id='btn4' onclick='answer(4)' style='text-align: left; font-size: 18px; padding: 10px' class='btn btn-default btn-block'>
+                <img id='btn-4-img' class='img-circle' style='height: 48px; width: 48px; padding-right: 0px' >
                 <text id='btn-4-text'></text>
               </a>
-            </div>
+          </div>
 
-            <p>
+          <p>
             <li class="dropdown" style='display:inline-block; padding-top: 20px'>
               <a style='color: #333' class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-lightbulb-o"></i> Уровень 1: Популярные художники
                 <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#"><b>Уровень 2:</b> Эпоха Возрождения</a></li>
-                  <li><a href="#"><b>Уровень 3:</b> Художники-реалисты</a></li>
-                  <li><a href="#"><b>Уровень 4:</b> Французские художники</a></li>
-                  <li><a href="#"><b>Уровень 5:</b> Импрессионизм и Пост-Импрессионизм</a></li>
-                  <li><a href="#"><b>Уровень 6:</b> Русские художники</a></li>
-                </ul>
-              </li>
-            </p>
-          </div>
-
-        </div>
-
-        <div class='col-lg-2' id='divLife' style='text-align: center; padding-top: 30px'>
-          <div class='row'>
-            <!-- ArtChallenge.ru_responsive -->
-            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2407992058828148" data-ad-slot="3910414450" data-ad-format="auto"></ins>
-          </div>
+              <ul class="dropdown-menu">
+                <li><a href="#"><b>Уровень 2:</b> Эпоха Возрождения</a></li>
+                <li><a href="#"><b>Уровень 3:</b> Художники-реалисты</a></li>
+                <li><a href="#"><b>Уровень 4:</b> Французские художники</a></li>
+                <li><a href="#"><b>Уровень 5:</b> Импрессионизм и Пост-Импрессионизм</a></li>
+                <li><a href="#"><b>Уровень 6:</b> Русские художники</a></li>
+              </ul>
+            </li>
+          </p>
         </div>
 
       </div>
 
-      <!-- Footer -->
-      <footer style='padding-top: 40px;'>
-        <div class="row">
-          <div class="col-lg-12">
-            <p>&copy; Art Challenge 2017</p>
-          </div>
+      <div class='col-lg-2' id='divLife' style='text-align: center; padding-top: 30px'>
+        <div class='row'>
+          <!-- ArtChallenge.ru_responsive -->
+          <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2407992058828148" data-ad-slot="3910414450" data-ad-format="auto"></ins>
         </div>
-        <!-- /.row -->
-      </footer>
-      <!-- /.container -->
+      </div>
+
     </div>
 
-    <noscript><div><img src="//mc.yandex.ru/watch/24594722" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- Footer -->
+    <footer style='padding-top: 40px;'>
+      <div class="row">
+        <div class="col-lg-12">
+          <p>&copy; Art Challenge 2017</p>
+        </div>
+      </div>
+      <!-- /.row -->
+    </footer>
+    <!-- /.container -->
+  </div>
 
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+  <noscript><div><img src="//mc.yandex.ru/watch/24594722" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 
-    <script src="http://178.62.133.139:5994/_utils/script/json2.js"></script>
-    <script src="http://178.62.133.139:5994/_utils/script/sha1.js"></script>
-    <script src="http://178.62.133.139:5994/_utils/script/jquery.couch.js?0.11.0"></script>
-    <script src="http://178.62.133.139:5994/_utils/script/jquery.dialog.js?0.11.0"></script>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
-    <script src="js/14functions.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/sweetalert2.min.js"></script>
+  <script src="http://178.62.133.139:5994/_utils/script/json2.js"></script>
+  <script src="http://178.62.133.139:5994/_utils/script/sha1.js"></script>
+  <script src="http://178.62.133.139:5994/_utils/script/jquery.couch.js?0.11.0"></script>
+  <script src="http://178.62.133.139:5994/_utils/script/jquery.dialog.js?0.11.0"></script>
 
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+  <script src="js/14functions.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/sweetalert2.min.js"></script>
 
-  </body>
-  </html>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+</body>
+
+</html>

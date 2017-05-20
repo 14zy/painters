@@ -152,7 +152,7 @@ function getart() {
       window.image = Math.floor((Math.random() * window.paintings) + 1);
 
       if (window.pnotify == "stack-mobile") {
-        art.src = window.platform + truePainter + "/thumbnails/" + window.image + ".jpg";
+        art.src = window.platform + truePainter + "/" + window.image + ".jpg"; //thumbnails/
       } else {
         art.src = window.platform + truePainter + "/" + window.image + ".jpg";
       }

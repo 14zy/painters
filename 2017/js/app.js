@@ -61,7 +61,7 @@ function getRandomPicture() {
   $('.currentName').html( langDB.painters[currentPainter._id] );
   // $('.bioMini').html(currentPainter.bio[Lang].slice(0,200));
   $('.bio').html(currentPainter.bio[Lang]);
-  $('#years').html(currentPainter.years);
+  $('.years').html(currentPainter.years);
 }
 
 function newRound() {
