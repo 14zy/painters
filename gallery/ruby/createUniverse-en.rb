@@ -138,6 +138,16 @@ for n in 1..135
                 </div>
               </div>
               <div class="col-md-5 col-sm-6">
+              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <!-- Art Challenge Gallery -->
+              <ins class="adsbygoogle"
+              style="display:block"
+              data-ad-client="ca-pub-2407992058828148"
+              data-ad-slot="6548194427"
+              data-ad-format="auto"></ins>
+              <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
                 <div class="intro-content" id='text'>
                   #{ painter["bio"][lang] }
                   #{ allowEdit }
