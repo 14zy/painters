@@ -633,3 +633,13 @@ ul li {
   width: 100%;
   border: none;
 }
+
+#edutainment {
+	padding: 0px 0 0 5px; margin: 0; text-align: right;
+}
+#edutainment a {
+	text-decoration: none; border: none; margin: 0 0 0 10px;
+}
+#edutainment img {
+	border: none;
+}
