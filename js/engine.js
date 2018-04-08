@@ -72,18 +72,15 @@ function setLang(lang) {
   //   $("#subscribe")[0].style.display="none";
   // }
 
-  if (lang == "ru") {
-
-    $(".syn-art-btn").attr("src", "http://classicaltest.net/ru/img/gr_art_ru.png")
-    $(".syn-music-btn").attr("src", "http://classicaltest.net/ru/img/gr_music_ru.png")
-
-    $(".syn-music-href").attr("href", "http://classicaltest.net/ru/quiz/")
-  } else {
-    $(".syn-art-btn").attr("src", "http://classicaltest.net/ru/img/gr_art_en.png")
-    $(".syn-music-btn").attr("src", "http://classicaltest.net/ru/img/gr_music_en.png")
-
-    $(".syn-music-href").attr("href", "http://classicaltest.net/quiz/")
-  }
+  // if (lang == "ru") {
+  //   $(".syn-art-btn").attr("src", "http://classicaltest.net/ru/img/gr_art_ru.png")
+  //   $(".syn-music-btn").attr("src", "http://classicaltest.net/ru/img/gr_music_ru.png")
+  //   $(".syn-music-href").attr("href", "http://classicaltest.net/ru/quiz/")
+  // } else {
+  //   $(".syn-art-btn").attr("src", "http://classicaltest.net/ru/img/gr_art_en.png")
+  //   $(".syn-music-btn").attr("src", "http://classicaltest.net/ru/img/gr_music_en.png")
+  //   $(".syn-music-href").attr("href", "http://classicaltest.net/quiz/")
+  // }
 
 
 }
