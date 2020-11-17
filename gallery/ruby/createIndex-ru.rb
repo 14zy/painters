@@ -3,14 +3,14 @@ require "json"
 
 ## Берем всю инфу по языку из CouchDB
 lang = "ru";
-# lang = JSON.parse `curl -X GET http://178.62.133.139:5994/lang/ru`
+# lang = JSON.parse `curl -X GET http://178.62.133.139:5997/lang/ru`
 #print lang["head"]["title"]
 
 
 
 
   ## Берем всю инфу по художнику из CouchDB
-  # painter = JSON.parse `curl -X GET http://178.62.133.139:5994/painters/#{n}`
+  # painter = JSON.parse `curl -X GET http://178.62.133.139:5997/painters/#{n}`
   # print painter["name"]
 
   # description =  painter["bio"][lang].sub("<p>","")[0..150].gsub(/\s\w+\s*$/, '...')
@@ -130,7 +130,7 @@ lang = "ru";
   gallery = ""
   for i in 1..135
 
-    painter = JSON.parse `curl -X GET http://178.62.133.139:5994/painters/#{i}`
+    painter = JSON.parse `curl -X GET http://178.62.133.139:5997/painters/#{i}`
 
       gallery = gallery + %{
         <div class="col-lg-2 col-md-4 col-sm-4 work">

@@ -602,7 +602,7 @@ angular.module('starter.controllers', [])
 
 
     // LEADERBOARD
-    $scope.leaderboardDB = new PouchDB('http://artchallenge.me:5994/leaderboard');
+    $scope.leaderboardDB = new PouchDB('http://artchallenge.me:5997/leaderboard');
 
     $scope.leaderboardDB.query('leaderboard/' + $scope.settings.currentSet.id, {
       descending: true,
@@ -661,7 +661,7 @@ angular.module('starter.controllers', [])
 
 
       if ($scope.userInfo.dbname) {
-        pouchService.db.sync('http://artchallenge.me:5994/' + $scope.userInfo.dbname, {
+        pouchService.db.sync('http://artchallenge.me:5997/' + $scope.userInfo.dbname, {
           live: true,
           retry: true
         }).on('complete', function() {
@@ -680,7 +680,7 @@ angular.module('starter.controllers', [])
   }
 
   function syncData(dbname) {
-    pouchService.db.sync('http://artchallenge.me:5994/' + dbname, {}).on('complete', function() {
+    pouchService.db.sync('http://artchallenge.me:5997/' + dbname, {}).on('complete', function() {
       copyDataFromDBtoScope();
       console.log("syncData() completed");
     }).catch(function(err) {
@@ -819,7 +819,7 @@ angular.module('starter.controllers', [])
   }
 
   //Регистрация нового пользователя через имя/email
-  var usersDB = new PouchDB('http://artchallenge.me:5994/painters');
+  var usersDB = new PouchDB('http://artchallenge.me:5997/painters');
 
 
   ///////////// Логин пользователя - может это вообще нахуй не нужно?? //////////
@@ -928,7 +928,7 @@ angular.module('starter.controllers', [])
 
 
             // Подключаем сгенеренную базу к нашему юзеру
-            pouchService.db.replicate.to('http://artchallenge.me:5994/' + $scope.registerData.dbname, {
+            pouchService.db.replicate.to('http://artchallenge.me:5997/' + $scope.registerData.dbname, {
               live: true,
               retry: true
             }).on('error', console.log.bind(console));
@@ -986,7 +986,7 @@ angular.module('starter.controllers', [])
           $scope.userInfo.email = $scope.loginData.email;
           $scope.userInfo.dbname = $scope.loginData.email.replace('@', '-').replace(/\./g, '-');
 
-          pouchService.db.replicate.from('http://artchallenge.me:5994/' + $scope.userInfo.dbname).then(function(result) {
+          pouchService.db.replicate.from('http://artchallenge.me:5997/' + $scope.userInfo.dbname).then(function(result) {
             console.log('Скопировали базу из облака, начинаем copyDataFromDBtoScope()');
             copyDataFromDBtoScope();
 

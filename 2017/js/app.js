@@ -5,7 +5,7 @@ var Lang = "ru";
 var langDB = "";
 var scores = 0;
 
-$.couch.urlPrefix = "http://178.62.133.139:5994";
+$.couch.urlPrefix = "http://178.62.133.139:5997";
 $.couch.db("lang").allDocs({
   include_docs: true,
   success: function(data) {

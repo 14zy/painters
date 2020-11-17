@@ -43,7 +43,7 @@ var request = require('request');
 	
 	
 
-		var cmd = "curl -H 'Content-Type: application/json' -X POST http://178.62.133.139:5994/painters/ -d '" + JSON.stringify(painter).replace(/'/g, "") + "'";
+		var cmd = "curl -H 'Content-Type: application/json' -X POST http://178.62.133.139:5997/painters/ -d '" + JSON.stringify(painter).replace(/'/g, "") + "'";
 
 		exec(cmd, function(error, stdout, stderr) {
 			// console.log(cmd)

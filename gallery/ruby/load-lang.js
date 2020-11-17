@@ -2471,7 +2471,7 @@ var request = require('request');
 
 
 
-		var cmd = "curl -H 'Content-Type: application/json' -X POST http://178.62.133.139:5994/lang/ -d '" + JSON.stringify(es).replace(/'/g, "") + "'";
+		var cmd = "curl -H 'Content-Type: application/json' -X POST http://178.62.133.139:5997/lang/ -d '" + JSON.stringify(es).replace(/'/g, "") + "'";
 
 		exec(cmd, function(error, stdout, stderr) {
 			// console.log(cmd)

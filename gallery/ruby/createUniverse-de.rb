@@ -2,7 +2,7 @@ require "json"
 
 ## Берем всю инфу по текущему языку из CouchDB
 lang = "de";
-langDB = JSON.parse `curl -X GET http://178.62.133.139:5994/lang/#{lang}`
+langDB = JSON.parse `curl -X GET http://178.62.133.139:5997/lang/#{lang}`
 
 
 ##Проходимся по всем 118 художникам
@@ -11,7 +11,7 @@ for n in 1..135
   allowEdit = ""
 
   ## Берем инфу по художнику из CouchDB
-  painter = JSON.parse `curl -X GET http://178.62.133.139:5994/painters/#{n}`
+  painter = JSON.parse `curl -X GET http://178.62.133.139:5997/painters/#{n}`
 
 
   ## Обрабатываем немного
@@ -344,10 +344,10 @@ for n in 1..135
           window.lang = "#{ lang }";
         </script>
 
-        <script src="http://178.62.133.139:5994/_utils/script/json2.js"></script>
-        <script src="http://178.62.133.139:5994/_utils/script/sha1.js"></script>
-        <script src="http://178.62.133.139:5994/_utils/script/jquery.couch.js?0.11.0"></script>
-        <script src="http://178.62.133.139:5994/_utils/script/jquery.dialog.js?0.11.0"></script>
+        <script src="http://178.62.133.139:5997/_utils/script/json2.js"></script>
+        <script src="http://178.62.133.139:5997/_utils/script/sha1.js"></script>
+        <script src="http://178.62.133.139:5997/_utils/script/jquery.couch.js?0.11.0"></script>
+        <script src="http://178.62.133.139:5997/_utils/script/jquery.dialog.js?0.11.0"></script>
 
         <script src="../js/main.js"></script>
       </body>

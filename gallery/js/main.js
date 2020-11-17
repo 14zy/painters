@@ -68,7 +68,7 @@ $(document).ready(function() {
 
 //Ruben
 $(function() {$('.lazy').Lazy();});
-$.couch.urlPrefix = "http://178.62.133.139:5994";
+$.couch.urlPrefix = "http://178.62.133.139:5997";
 
 $('#editBtn').on('click', function() {
   $('#editor').css('display', "block");

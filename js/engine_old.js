@@ -22,7 +22,7 @@ function getQueryParams(qs) {
     return params;
 }
 
-$.couch.urlPrefix = "http://178.62.133.139:5994";
+$.couch.urlPrefix = "http://178.62.133.139:5997";
 
 
 function getCookie(cname) {
@@ -140,7 +140,7 @@ function getart() {
   var art = document.getElementById("art");
   window.truePainter = window.currentSet[Math.floor((Math.random() * window.currentSet.length))];
 
-  $.getJSON("http://178.62.133.139:5994/painters/" + window.truePainter)
+  $.getJSON("http://178.62.133.139:5997/painters/" + window.truePainter)
     .done(function(json) {
 
       $("#currentSetImg")[0].src = "pics/sets/" + window.currentSetName + ".png";
