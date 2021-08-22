@@ -103,7 +103,7 @@ function load() {
     setLang(lang);
   }
 
-  window.platform = "http://artchallenge.me/painters/"; //"http://artchallenge.me/painters/"; // "painters/";
+  window.platform = "https://artchallenge.me/painters/"; //"http://artchallenge.me/painters/"; // "painters/";
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 
   window.errorDelay = 3000;
@@ -599,7 +599,7 @@ function goodPhrase() {
 function winner() {
 
   window.rndShare = Math.floor((Math.random() * 10) + 1);
-  window.imageURL = "http://artchallenge.ru/pics/shares/" + window.currentSetName.slice(0, -3) + "/" + window.lang + "/" + window.rndShare + ".jpg";
+  window.imageURL = "https://artchallenge.ru/pics/shares/" + window.currentSetName.slice(0, -3) + "/" + window.lang + "/" + window.rndShare + ".jpg";
 
   var winnerDiv = "\
   <p class='winner-text'>" + i18n.t("message.winner-desc", {
@@ -692,7 +692,7 @@ function getShares() {
 }
 
 function ShareFB() {
-  url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=http://artchallenge.ru/?utm_source=fb-win&redirect_uri=http://artchallenge.ru/1.html&picture=" + "http://artchallenge.ru/share.jpg" + "&source=" + "http://artchallenge.ru/share.jpg"+"&name=" + i18n.t("shares.title", {
+  url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=https://artchallenge.ru/?utm_source=fb-win&redirect_uri=https://artchallenge.ru/1.html&picture=" + "https://artchallenge.ru/share.jpg" + "&source=" + "https://artchallenge.ru/share.jpg"+"&name=" + i18n.t("shares.title", {
     lng: window.lang
   }) + "&caption=" + i18n.t("shares.caption", {
     lng: window.lang
@@ -713,11 +713,11 @@ function ShareFB() {
 
 function ShareVK() {
 
-  url = "http://vk.com/share.php?url=http://artchallenge.ru/?utm_source=vk-win&title=" + i18n.t("shares.description", {
+  url = "https://vk.com/share.php?url=https://artchallenge.ru/?utm_source=vk-win&title=" + i18n.t("shares.description", {
     lng: window.lang
   }) + " %23ArtChallenge&description=" + i18n.t("shares.caption", {
     lng: window.lang
-  }) + "&image=" + "http://artchallenge.ru/share.jpg" + "&noparse=true";
+  }) + "&image=" + "https://artchallenge.ru/share.jpg" + "&noparse=true";
   window.open(url, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
   yaCounter24594722.reachGoal('WINNER-SHARE-VK');
 }
