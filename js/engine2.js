@@ -150,15 +150,22 @@ function getart() {
   var art = document.getElementById("art");
   window.truePainter = window.currentSet[Math.floor((Math.random() * window.currentSet.length))];
 
-  $.getJSON("http://178.62.133.139:5997/painters/" + window.truePainter)
-    .done(function(json) {
+  // $.getJSON("http://178.62.133.139:5997/painters/" + window.truePainter)
+  //   .done(function(json) {
 
       $("#currentSetImg")[0].src = "pics/sets/" + window.currentSetName + ".png";
       $(".currentSetTitle").html(i18n.t("sets." + window.currentSetName, {
         lng: window.lang
       })); // Этому тут совсем не место, но больше нигде не работает T_T
 
-      window.paintings = Object.keys(json.paintings).length;
+      // window.paintings = Object.keys(json.paintings).length;
+      window.paintings = painters[window.truePainter-1].paintings.length
+      json = painters[window.truePainter-1];
+      
+      // console.log(window.truePainter);
+      // console.log(window.paintings);
+      // console.log( painters[window.truePainter-1].paintings.length  ) ;
+
       window.image = Math.floor((Math.random() * window.paintings) + 1);
 
       if (window.pnotify == "stack-mobile") {
@@ -230,12 +237,14 @@ function getart() {
       
       $('#edit').css('display','none'); $('#description').css('display','block');
       painter = painters[window.truePainter];
+      
       // $.couch.db("painters").openDoc(window.truePainter.toString(), {
       //         success: function(painter) {
                 // console.log('--new image--');
                 // console.log(window.image);
                 // console.log(painter);
                 image = painter.paintings[window.image-1];
+                
                 // console.log(image);
                 // console.log(image.name);
                 // if (image.name[window.lang] === "") {
@@ -265,7 +274,9 @@ function getart() {
                 // $('#description').html(message);
       // }});
 
-    })
+    // })
+
+
     // .fail(function() {
     //   refresh("bad", false);
     // });
