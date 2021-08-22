@@ -22,7 +22,7 @@ function getQueryParams(qs) {
     return params;
 }
 
-// $.couch.urlPrefix = "http://178.62.133.139:5997";
+$.couch.urlPrefix = "http://178.62.133.139:5997";
 
 
 function getCookie(cname) {
@@ -150,22 +150,15 @@ function getart() {
   var art = document.getElementById("art");
   window.truePainter = window.currentSet[Math.floor((Math.random() * window.currentSet.length))];
 
-  // $.getJSON("http://178.62.133.139:5997/painters/" + window.truePainter)
-  //   .done(function(json) {
+  $.getJSON("http://178.62.133.139:5997/painters/" + window.truePainter)
+    .done(function(json) {
 
       $("#currentSetImg")[0].src = "pics/sets/" + window.currentSetName + ".png";
       $(".currentSetTitle").html(i18n.t("sets." + window.currentSetName, {
         lng: window.lang
       })); // Этому тут совсем не место, но больше нигде не работает T_T
 
-      // window.paintings = Object.keys(json.paintings).length;
-      window.paintings = painters[window.truePainter-1].paintings.length
-      json = painters[window.truePainter-1];
-      
-      // console.log(window.truePainter);
-      // console.log(window.paintings);
-      // console.log( painters[window.truePainter-1].paintings.length  ) ;
-
+      window.paintings = Object.keys(json.paintings).length;
       window.image = Math.floor((Math.random() * window.paintings) + 1);
 
       if (window.pnotify == "stack-mobile") {
@@ -234,104 +227,98 @@ function getart() {
         }, 1000);
       }
 
-      
+
       $('#edit').css('display','none'); $('#description').css('display','block');
-      painter = painters[window.truePainter];
-      
-      // $.couch.db("painters").openDoc(window.truePainter.toString(), {
-      //         success: function(painter) {
+      $.couch.db("painters").openDoc(window.truePainter.toString(), {
+              success: function(painter) {
                 // console.log('--new image--');
                 // console.log(window.image);
-                // console.log(painter);
                 image = painter.paintings[window.image-1];
-                
                 // console.log(image);
                 // console.log(image.name);
-                // if (image.name[window.lang] === "") {
+                if (image.name[window.lang] === "") {
 
-                //   if (window.lang == "ru") {
-                //     message = "Картина не подписана (<a style='cursor:pointer'>Добавить название</a>)";
-                //   }
+                  if (window.lang == "ru") {
+                    message = "Картина не подписана (<a style='cursor:pointer'>Добавить название</a>)";
+                  }
 
-                //   if (window.lang != "ru") {
-                //     message = "Undefined painting (<a style='cursor:pointer'>Add details</a>)";
-                //     $('#txtName').attr("placeholder",'Painting title');
-                //     $('#txtYear').attr("placeholder",'Year');
+                  if (window.lang != "ru") {
+                    message = "Undefined painting (<a style='cursor:pointer'>Add details</a>)";
+                    $('#txtName').attr("placeholder",'Painting title');
+                    $('#txtYear').attr("placeholder",'Year');
 
-                //     $('#btnSave').html("<i class='fa fa-save'></i> Save");
-                //     $('#btnEdit').html("<i class='fa fa-close'></i> Close");
-                //   }
+                    $('#btnSave').html("<i class='fa fa-save'></i> Save");
+                    $('#btnEdit').html("<i class='fa fa-close'></i> Close");
+                  }
 
-                //   $('#txtName').val("");
-                //   $('#txtYear').val("");
-                // } else {
-                //   message = image.name[window.lang] + ", " + image.year + ". (<i style='cursor:pointer' class='fa fa-edit'></i>)";
+                  $('#txtName').val("");
+                  $('#txtYear').val("");
+                } else {
+                  message = image.name[window.lang] + ", " + image.year + ". (<i style='cursor:pointer' class='fa fa-edit'></i>)";
 
-                //   $('#txtName').val(image.name[window.lang]);
-                //   $('#txtYear').val(image.year);
-                // }
+                  $('#txtName').val(image.name[window.lang]);
+                  $('#txtYear').val(image.year);
+                }
 
-                // $('#description').html(message);
-      // }});
+                $('#description').html(message);
+      }});
 
-    // })
-
-
-    // .fail(function() {
-    //   refresh("bad", false);
-    // });
+    })
+    .fail(function() {
+      refresh("bad", false);
+    });
 
   puticons();
 }
 
-// function saveInfo() {
+function saveInfo() {
 
-//   if ($('#txtName').val().length > 5  && $('#txtYear').val().length > 3) {
+  if ($('#txtName').val().length > 5  && $('#txtYear').val().length > 3) {
 
-//     pictureName = $('#txtName').val();
-//     pictureYear = $('#txtYear').val();
+    pictureName = $('#txtName').val();
+    pictureYear = $('#txtYear').val();
 
-//     message = pictureName + ". " + pictureYear + " год. (<a ><i class='fa fa-edit'></i></a>)";
-//     $('#description').html(message);
+    message = pictureName + ". " + pictureYear + " год. (<a ><i class='fa fa-edit'></i></a>)";
+    $('#description').html(message);
 
-//     $.couch.db("painters").openDoc(window.truePainter.toString(), {
-//             success: function(data) {
-
-
-//           data.paintings[window.image.id-1].name[window.lang] = pictureName;
-//           data.paintings[window.image.id-1].year = pictureYear;
-
-//           // console.log(data);
-
-//           $.couch.db("painters").saveDoc(data, {
-//                           success: function(data2) {
-//                             console.log(data2);
-//                             // $('#myModal').modal({show: true});
-//                           },
-//                           error: function(status) {
-//                             if (status == 409) {
-//                               alert('Произошла ошибка 409 при отправке в базу даных! #2', "error");
-//                             } else {
-//                               alert('Произошла ошибка при отправке предложения в базу даных! #2', "error");
-//                             }
-//                             console.log(status);
-//                           }
-//                         });
-
-//             },
-//             error: function(status) {
-//               console.log(status);
-//             }
-//      });
+    $.couch.db("painters").openDoc(window.truePainter.toString(), {
+            success: function(data) {
 
 
+          data.paintings[window.image.id-1].name[window.lang] = pictureName;
+          data.paintings[window.image.id-1].year = pictureYear;
 
-//   } else {
-//     alert('Слшиком мало символов');
-//   }
+          // console.log(data);
+
+          $.couch.db("painters").saveDoc(data, {
+                          success: function(data2) {
+                            console.log(data2);
+                            // $('#myModal').modal({show: true});
+                          },
+                          error: function(status) {
+                            if (status == 409) {
+                              alert('Произошла ошибка 409 при отправке в базу даных! #2', "error");
+                            } else {
+                              alert('Произошла ошибка при отправке предложения в базу даных! #2', "error");
+                            }
+                            console.log(status);
+                          }
+                        });
+
+            },
+            error: function(status) {
+              console.log(status);
+            }
+     });
 
 
-//  }
+
+  } else {
+    alert('Слшиком мало символов');
+  }
+
+
+ }
 
 
 function currentWins() {
