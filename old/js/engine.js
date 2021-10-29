@@ -65,8 +65,8 @@ function load() {
   if (window.innerWidth <= 600) {
     window.errorDelay = 3000;
     window.pnotify = "stack-mobile";
-    $('#donate').css('display', "none");
-    $('#donate-mobile').css('display', "block");
+    // $('#donate').css('display', "none");
+    // $('#donate-mobile').css('display', "block");
 	   window.enviroment = "mobile";
   }
 
