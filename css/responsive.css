@@ -1,17 +1,29 @@
 .pictureDiv {
  text-align: center;
- padding-top: 70px;
+ padding-top: 30px;
+
+ padding-right: 10px!important;
+ padding-left: 10px!important;
 }
 
 #introduction {
   padding-top: 50px;
   padding-bottom: 0px;
+  color: #333;
 }
 
 .top-icons {
-  padding-top: 40px;
+  /* padding-bottom: 10px; */
 }
 
+
+.logo {
+margin-top: -5px;
+padding:0!important;
+}
+
+
+    
 
 
 @media screen and (min-width:1024px) {
@@ -31,7 +43,7 @@
    }
 
 	 .pictureDiv {
-    padding-top: 0px;
+    padding-top: 15px;
 	  text-align: center;
 	 }
 
@@ -97,13 +109,17 @@
      bottom: 20px;
    }
  }
+
+ .header-content{
+  /* padding: 10px; */
+  padding-top:16px;
+}
+
  @media screen and (max-width: 768px) {
 
 
 
-   .header-content{
-      padding: 0px!important;
-   }
+   
 
    #mobile-nav{
      display: block!important;
@@ -114,7 +130,8 @@
    }
 
    .logo {
-     display: none
+     
+     /* display: none */
    }
 
    .banner-inner-wrapper {

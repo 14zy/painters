@@ -42,7 +42,7 @@ h5 {
 .btn {
 	border: 1px solid rgba(0, 0, 0, 0.75);
 	margin-top: 20px;
-	color: #2a2a2a;
+	color: #333;
 	font-size: 12px;
 	font-weight: 400;
 	letter-spacing: 1px;
@@ -132,11 +132,11 @@ ul li {
 }
 #header .logo {
 	font-size: 18px;
-	color: #000;
+	color: #333;
 	letter-spacing: 3px;
 	font-weight: 300;
 	float: left;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 }
 #header.fixed {
 	background-color: rgba(255, 255, 255, 0.75);
@@ -590,7 +590,7 @@ ul li {
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 1px 0px rgba(69, 63, 7, 0.22), 0px 2px 5px 3px rgba(0, 0, 0, 0.20);
 }
 .top-icons {
-  color: lightgray;
+  color: #333;
 }
 
 .painter-name {

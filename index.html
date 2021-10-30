@@ -55,8 +55,9 @@
         </span> -->
 
         <div class="header-content clearfix">
-          <a class="logo navbar-brand" href="#" style='margin-top:-20px;'>
-            <img class='' src='2017/logo.png' style='display: inline;  margin-right: 5px; width: 40px; '>Art Challenge </a>
+          <a class="logo " href="#" style=''>
+            <!-- <img class='' src='2017/logo.png' style='display: inline;  margin-right: 5px; width: 40px; '> -->
+            Art Challenge </a>
           <!-- <a class="logo" href="#">Art Challenge</a> -->
           <nav class="navigation" role="navigation">
             <ul class="primary-nav" id='mobile-nav' style='display: none'>
@@ -91,9 +92,11 @@
 				                    <span class="caret"></span>
                 </a>
               </li> -->
-
+              
               <li class="dropdown" style=''>
+                
                 <a style='color: #333' class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  📚
                   <span class="currentSetTitle"></span>
                   <span class="caret"></span>
                 </a>
@@ -105,7 +108,7 @@
                   <li><a style='padding-left: 0; margin-left: 20px;' href="https://artchallenge.ru/?set=renaissanceSet"><b>5:</b> <span data-i18n="sets.renaissanceSet"></span></a></li>
                   <li><a style='padding-left: 0; margin-left: 20px;' href="https://artchallenge.ru/?set=russianSet"><b>6:</b> <span data-i18n="sets.russianSet"></span></a></li>
                   <!-- <li><a style='padding-left: 0; margin-left: 20px;' href="https://artchallenge.ru/?set=armenianSet"><b>7:</b> <span data-i18n="sets.armenianSet"></span></a></li> -->
-                  <li><a style='padding-left: 0; margin-left: 20px;' href="https://artchallenge.ru/?set=allSet"><b>8:</b> <span data-i18n="sets.allSet"></span></a></li>
+                  <li><a style='padding-left: 0; margin-left: 20px;' href="https://artchallenge.ru/?set=allSet"><b>7:</b> <span data-i18n="sets.allSet"></span></a></li>
                 </ul>
               </li>
 
@@ -222,7 +225,7 @@
     <!-- Navigation Section -->
     <!-- Banner Section -->
     <div class="container">
-      <div class="col-md-12 banner-inner-wrapper">
+      <div class="col-md-12 banner-inner-wrapper p-0 m-0" >
         <div class="banner-text">
           <div class='row'>
 
@@ -231,22 +234,6 @@
             <div class='col-lg-8 pictureDiv'>
 
               <img id="art">
-
-              <div class='hidden-xs' onclick="$('#edit').css('display','block'); $('#description').css('display','none');" id="description">
-              </div>
-
-              <div id="edit" style='display:none' class='well'>
-	               <textarea style='width: 400px; height: 35px;  display: inline' class='form-control' id='txtName' placeholder='Название картины'></textarea>
-                 <textarea style='width: 130px; height: 35px; display: inline' class='form-control' id='txtYear' placeholder='Год создания'></textarea>
-                 <br>
-                 <a class='btn btn-default' id='btnSave' onclick="$('#edit').css('display','none'); $('#description').css('display','block'); saveInfo();"><i class='fa fa-save'></i> Сохранить</a>
-                 <a class='btn btn-default' id='btnClose' onclick="$('#edit').css('display','none'); $('#description').css('display','block');"><i class='fa fa-close'></i> Закрыть</a>
-                 <br>
-               </div>
-
-             </div>
-
-             <div class='col-lg-4' style='text-align: center'>
 
               <div class="top-icons">
                 <span id="icon1" class="glyphicon glyphicon-ok-circle"></span>
@@ -260,6 +247,24 @@
                 <span id="icon9" class="glyphicon glyphicon-ok-circle"></span>
                 <span id="icon10" class="glyphicon glyphicon-gift"></span>
               </div>
+
+              <div class='hidden-xs' onclick="$('#edit').css('display','block'); $('#description').css('display','none');" id="description"></div>
+              <div id="edit" style='display:none' class='well'>
+	               <textarea style='width: 400px; height: 35px;  display: inline' class='form-control' id='txtName' placeholder='Название картины'></textarea>
+                 <textarea style='width: 130px; height: 35px; display: inline' class='form-control' id='txtYear' placeholder='Год создания'></textarea>
+                 <br>
+                 <a class='btn btn-default' id='btnSave' onclick="$('#edit').css('display','none'); $('#description').css('display','block'); saveInfo();"><i class='fa fa-save'></i> Сохранить</a>
+                 <a class='btn btn-default' id='btnClose' onclick="$('#edit').css('display','none'); $('#description').css('display','block');"><i class='fa fa-close'></i> Закрыть</a>
+                 <br>
+               </div>
+
+             </div>
+
+             <div class='col-lg-4' style='text-align: center'>
+
+              
+              <br>
+
 
   	          <div>
   	            <a id="btn1" onclick="checkAnswer('btn1');" class="btn btn-lg" style='padding: 10px 16px; font-size: 18px; width: 100%; margin-top: 10px' role="button"></a>
@@ -501,8 +506,72 @@
     <div class="container">
 
       <div class="col-md-4">
-        <h4>ArtChallenge.ru</h4>
-        <p>© 2014 All rights reserved.<br>
+        <!-- <a href="https://artchallenge.ru"><h4>ArtChallenge.ru</h4></a> -->
+        <div class="">
+
+          <!-- <h4 data-i18n="desc.settings">Options:</h4> -->
+          
+          <text data-i18n="desc.swear">Swearing</text>:
+          <text data-i18n="desc.swear-on" id="btnOn" onclick="begood(0); ">On</text>
+          /
+          <text data-i18n="desc.swear-off" id="btnOff" onclick="begood(1);">Off</text>
+          <br>
+
+          <text data-i18n="desc.lang">Language</text>:
+          <div class="btn-group dropup">
+            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" style="border: none; background: none; margin-top: 0">
+              <img id="langMain" src="pics/flags/EN.png" alt="" width="32">
+              <span class="caret"></span>
+            </button>
+            <ul id="langDropMenu" class="dropdown-menu">
+              <li>
+                <a class="lang" id="ru" onclick="setLang('ru');" title="Russian version"><img src="pics/flags/RU.png" alt="Русский">
+                  Русский</a>
+              </li>
+              <li>
+                <a class="lang" id="en" onclick="setLang('en');" title="English version"><img src="pics/flags/EN.png" alt="English">
+                  English</a>
+              </li>
+              <li>
+                <a class="lang" id="de" onclick="setLang('de');" title="Deutsch version"><img src="pics/flags/DE.png" alt="Deutsch">
+                  Deutsch</a>
+              </li>
+              <li>
+                <a class="lang" id="fr" onclick="setLang('fr');" title="Français version"><img src="pics/flags/FR.png" alt="Deutsch">
+                  Français</a>
+              </li>
+              <li>
+                <a class="lang" id="es" onclick="setLang('es');" title="Español version"><img src="pics/flags/ES.png" alt="Español">
+                  Español</a>
+              </li>
+              <li>
+                <a class="lang" id="it" onclick="setLang('it');" title="Italiana version"><img src="pics/flags/IT.png" alt="Italiana">
+                  Italiano</a>
+              </li>
+              <li>
+                <a class="lang" id="zh" onclick="setLang('zh');" title="Chinese version"><img src="pics/flags/ZH.png" alt="Chinese">
+                  Chinese</a>
+              </li>
+            </ul>
+          </div>
+
+          
+          
+          <br><br>
+          <!-- <p>
+          <a href='https://artchallenge.me/'>Старая версия сайта</a></p> -->
+        </div>
+
+        <div class="pb-2">
+
+          <h4 data-i18n="desc.how-help-desc">If you like this site, could you be so kind to share it with your friends?</h4>
+          
+          <!-- <div style="margin-left: -5px;" data-i18n="[data-yashareTitle]head.title;[data-yashareDescription]head.description" class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="facebook,vkontakte,twitter,odnoklassniki" data-yashareTheme="counter" data-yashareImage="https://artchallenge.ru/logo-text.jpg" data-yashareLink="https://artchallenge.ru/"></div> -->
+  
+          <div style="margin-left: -5px;" class="ya-share2" data-i18n="[data-yashareTitle]head.title;[data-yashareDescription]head.description" data-yashareImage="https://artchallenge.ru/logo-text.jpg" data-yashareLink="https://artchallenge.ru/" data-curtain data-size="m" data-shape="round" data-services="vkontakte,facebook,odnoklassniki,telegram,twitter,whatsapp"></div>
+          <br>
+        </div>
+        
           <span data-i18n="footer.created">Created by</span>
           <a target="_blank" href="https://facebook.com/ruben.bbv" title="Ruben Babaev"><img style="margin-bottom: 7px;" height="20" width="20" src="pics/ruben.jpg" alt="Ruben Babaev">
             <span data-i18n="footer.ruben">Ruben</span>
@@ -511,68 +580,13 @@
           <a target="_blank" href="https://facebook.com/plotkina.anna" title="Anna Plotkina"><img style="margin: 0 3px 4px 0;" height="18" width="18" src="pics/anna.jpg" alt="Anna Plotkina">
             <span data-i18n="footer.anna">Anna</span>
           </a>
+          <p>© 2014 All rights reserved.<br>
         </p>
       </div>
 
-      <div class="col-md-5">
+      
 
-        <h4 data-i18n="desc.how-help-desc">If you like this site, could you be so kind to share it with your friends?</h4>
-        
-        <!-- <div style="margin-left: -5px;" data-i18n="[data-yashareTitle]head.title;[data-yashareDescription]head.description" class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="facebook,vkontakte,twitter,odnoklassniki" data-yashareTheme="counter" data-yashareImage="https://artchallenge.ru/logo-text.jpg" data-yashareLink="https://artchallenge.ru/"></div> -->
-
-        <div style="margin-left: -5px;" class="ya-share2" data-i18n="[data-yashareTitle]head.title;[data-yashareDescription]head.description" data-yashareImage="https://artchallenge.ru/logo-text.jpg" data-yashareLink="https://artchallenge.ru/" data-curtain data-size="m" data-shape="round" data-services="vkontakte,facebook,odnoklassniki,telegram,twitter,whatsapp"></div>
-        <br>
-      </div>
-
-      <div class="col-md-3">
-
-        <h4 data-i18n="desc.settings">Options:</h4>
-        <text data-i18n="desc.swear">Swearing</text>:
-        <text data-i18n="desc.swear-on" id="btnOn" onclick="begood(0); ">On</text>
-        /
-        <text data-i18n="desc.swear-off" id="btnOff" onclick="begood(1);">Off</text>
-        <br>
-        <text data-i18n="desc.lang">Language</text>:
-        <div class="btn-group dropup">
-          <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" style="border: none; background: none; margin-top: 0">
-            <img id="langMain" src="pics/flags/EN.png" alt="" width="32">
-            <span class="caret"></span>
-          </button>
-          <ul id="langDropMenu" class="dropdown-menu">
-            <li>
-              <a class="lang" id="ru" onclick="setLang('ru');" title="Russian version"><img src="pics/flags/RU.png" alt="Русский">
-                Русский</a>
-            </li>
-            <li>
-              <a class="lang" id="en" onclick="setLang('en');" title="English version"><img src="pics/flags/EN.png" alt="English">
-                English</a>
-            </li>
-            <li>
-              <a class="lang" id="de" onclick="setLang('de');" title="Deutsch version"><img src="pics/flags/DE.png" alt="Deutsch">
-                Deutsch</a>
-            </li>
-            <li>
-              <a class="lang" id="fr" onclick="setLang('fr');" title="Français version"><img src="pics/flags/FR.png" alt="Deutsch">
-                Français</a>
-            </li>
-            <li>
-              <a class="lang" id="es" onclick="setLang('es');" title="Español version"><img src="pics/flags/ES.png" alt="Español">
-                Español</a>
-            </li>
-            <li>
-              <a class="lang" id="it" onclick="setLang('it');" title="Italiana version"><img src="pics/flags/IT.png" alt="Italiana">
-                Italiano</a>
-            </li>
-            <li>
-              <a class="lang" id="zh" onclick="setLang('zh');" title="Chinese version"><img src="pics/flags/ZH.png" alt="Chinese">
-                Chinese</a>
-            </li>
-          </ul>
-        </div>
-        <br><br>
-        <p>
-        <a href='https://artchallenge.me/'>Старая версия сайта</a></p>
-      </div>
+      
 
 
 
