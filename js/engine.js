@@ -144,11 +144,15 @@ function load() {
 
 load();
 
+
+
 function getart() {
   currentWins();
 
   var art = document.getElementById("art");
   window.truePainter = window.currentSet[Math.floor((Math.random() * window.currentSet.length))];
+  
+  window.truePainterName = i18n.t("painters." + truePainter, {lng: window.lang});
 
   // $.getJSON("http://178.62.133.139:5997/painters/" + window.truePainter)
   //   .done(function(json) {
@@ -162,17 +166,23 @@ function getart() {
       window.paintings = painters[window.truePainter-1].paintings.length
       json = painters[window.truePainter-1];
       
+      
       // console.log(window.truePainter);
       // console.log(window.paintings);
       // console.log( painters[window.truePainter-1].paintings.length  ) ;
 
       window.image = Math.floor((Math.random() * window.paintings) + 1);
-
-      if (window.pnotify == "stack-mobile") {
-        art.src = window.platform + truePainter + "/" + window.image + ".jpg"; //thumbnails/
-      } else {
+      
+      if (window.truePainterName !== "") {
         art.src = window.platform + truePainter + "/" + window.image + ".jpg";
       }
+      
+
+      // if (window.pnotify == "stack-mobile") {
+      //   art.src = window.platform + truePainter + "/" + window.image + ".jpg"; //thumbnails/
+      // } else {
+      //   
+      // }
 
       window.link = json.link.local;
       if (window.lang == "ru") { //Временно, пока в json не будут ссылки на википедию на всех языках
@@ -190,9 +200,7 @@ function getart() {
         window.bio = "Просим не гневаться, но биография этого художника временно отсутствует; ежели Вам известен хороший источник, будьте так любезны, сообщите его нам: <a href='mailto:report@artchallenge.ru'>report@artchallenge.ru</a>.<br><br>We beg your pardon, but temporary this painter's biography is not available; if you know the good source, please contact us: <a href='mailto:report@artchallenge.ru'>report@artchallenge.ru</a>.";
       }
 
-      window.truePainterName = i18n.t("painters." + truePainter, {
-        lng: window.lang
-      });
+      
 
       window.nation = undefined;
       json.nationality.forEach(function(entry) {
@@ -224,6 +232,7 @@ function getart() {
       window.nationEnSingle = json.nationality[0];
       //
 
+      
       if (window.truePainterName !== "") {
         putButtons(window.truePainterName);
       } else {
