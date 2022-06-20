@@ -104,7 +104,7 @@ function load() {
   }
 
   //https://cdn.imgproxify.com/image?url=http://rybikyem.beget.tech/painters/54/250-test.jpg
-  window.platform = "https://cdn.imgproxify.com/image?url=http://rybikyem.beget.tech/painters/"; //http://178.62.133.139/painters/ //"http://artchallenge.me/painters/"; // "painters/"; //http://178.62.133.139/painters/1/1.jpg; //images.weserv.nl/?url=http://178.62.133.139/painters/119/1.jpg
+  window.platform = "https://images.weserv.nl/?url=http://rybikyem.beget.tech/painters/"; //http://178.62.133.139/painters/ //"http://artchallenge.me/painters/"; // "painters/"; //http://178.62.133.139/painters/1/1.jpg; //images.weserv.nl/?url=http://178.62.133.139/painters/119/1.jpg
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 
   window.errorDelay = 3000;
