@@ -96,7 +96,7 @@ function load() {
   if (langCookie !== "") {
     lang = langCookie;
   }
-  if (lang == "ru" || lang == "en" || lang == "de" || lang == "fr" || lang == "it" || lang == "es" || lang == "zh") {
+  if (lang == "ru" || lang == "en" || lang == "de" || lang == "fr" || lang == "it" || lang == "es") {
     setLang(lang);
   } else {
     lang = "en";
