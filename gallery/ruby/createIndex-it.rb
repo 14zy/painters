@@ -187,7 +187,7 @@ lang = "it";
               </ul>
             </div>
             <div class="col-md-5">
-              <p>© 2013-2016 All rights reserved.<br>
+              <p>© 2013 – 2023 All rights reserved.<br>
                 Made with
                 <i class="fa fa-heart pulse"></i>
                 in
