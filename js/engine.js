@@ -479,7 +479,7 @@ function checkAnswer(btn) {
       title: badPhrase(),
       text: "<div style='text-align: left'>" + "<img src='" + window.platform + window.truePainter + "/photo.jpg' style='width: 60%; margin: 5px 0 10px 0'><br><p class='painter-name'>" + i18n.t("message.wrong-desc", {
         lng: window.lang
-      }) + " " + window.truePainterName + "!</p><hr style='margin: 5px'>" + window.nation + ", " + window.years + "<br>" + window.genre + "<a target='_blank' id='btnLearnMore' href='gallery/" + window.lang + "/" + window.truePainter + ".html' onclick='learnMore();' class='btn btn-large' style='width: 100%' role='button'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", {
+      }) + " " + window.truePainterName + "!</p><hr style='margin: 5px'>" + window.nation + ", " + window.years + "<br>" + window.genre + "<a  id='btnLearnMore' href='gallery/" + window.lang + "/" + window.truePainter + ".html' onclick='learnMore();' class='btn btn-large' style='width: 100%' role='button'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", {
         lng: window.lang
       }) + "</a><br></div>",
       type: 'error',
