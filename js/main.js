@@ -52,4 +52,12 @@ $(document).ready(function() {
 		$('.nav-toggle').toggleClass('close-nav');
 		nav.toggleClass('open');
 	});
+
+
+	swal({
+		title: "Технические работы",
+		type: "error",
+		text: "Пожалуйста, используйте сайт ArtChallenge.World"
+	  });
+
 });
