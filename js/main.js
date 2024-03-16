@@ -54,10 +54,10 @@ $(document).ready(function() {
 	});
 
 
-	swal({
-		title: "Технические работы",
-		type: "error",
-		text: "Пожалуйста, используйте сайт ArtChallenge.World"
-	  });
+	// swal({
+	// 	title: "Технические работы",
+	// 	type: "error",
+	// 	text: "Пожалуйста, используйте сайт ArtChallenge.World"
+	//   });
 
 });
