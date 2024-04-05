@@ -93,7 +93,7 @@ function load() {
     lang = lang.substring(0, 2).toLowerCase();
   }
   langCookie = getCookie("lang");
-  if (langCookie !== "") {
+  if (langCookie !== "") {``
     lang = langCookie;
   }
   if (lang == "ru" || lang == "en" || lang == "de" || lang == "fr" || lang == "it" || lang == "es" || lang == "zh") {
@@ -105,7 +105,7 @@ function load() {
 
   
   //https://cdn.imgproxify.com/image?url=http://rybikyem.beget.tech/painters/54/250-test.jpg
-  window.platform = "https://res.cloudinary.com/daxsqgruu/image/upload/artchallenge/" //"https://ik.imagekit.io/artchallenge/"; //"https://artchallenge.ru/pictures/"; //"https://ik.imagekit.io/artchallenge/"; //http://178.62.133.139/painters/ //"http://artchallenge.me/painters/"; // "painters/"; //http://178.62.133.139/painters/1/1.jpg; //images.weserv.nl/?url=http://178.62.133.139/painters/119/1.jpg // https://ik.imagekit.io/artchallenge/21/152.jpg
+  window.platform = "https://res.cloudinary.com/drknuk7m5/image/upload/ac/"; //"https://res.cloudinary.com/daxsqgruu/image/upload/artchallenge/" //"https://ik.imagekit.io/artchallenge/"; //"https://artchallenge.ru/pictures/"; //"https://ik.imagekit.io/artchallenge/"; //http://178.62.133.139/painters/ //"http://artchallenge.me/painters/"; // "painters/"; //http://178.62.133.139/painters/1/1.jpg; //images.weserv.nl/?url=http://178.62.133.139/painters/119/1.jpg // https://ik.imagekit.io/artchallenge/21/152.jpg
   document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 
   window.errorDelay = 3000;
