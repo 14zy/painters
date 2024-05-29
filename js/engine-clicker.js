@@ -683,10 +683,10 @@ function getShares() {
     case "ru":
       shares = "<div style='padding: 0px'>\
       <button type='button' class='btn btn-info btn-share' aria-label='Facebook' onclick='ShareFB();'>\
-        <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Facebook\
+        <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Mint NFT Medal\
       </button>\
     <button type='button' class='btn btn-info btn-share' aria-label='ВКонтакте' onclick='ShareVK();'>\
-     <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> ВКонтакте\
+     <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Register RubeTON Wallet \
     </button>\
     </div>";
       break;
@@ -707,15 +707,18 @@ function getShares() {
 }
 
 function ShareFB() {
-  url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=https://artchallenge.ru/?utm_source=fb-win&redirect_uri=https://artchallenge.ru/1.html&picture=" + "https://artchallenge.ru/share.jpg" + "&source=" + "https://artchallenge.ru/share.jpg"+"&name=" + i18n.t("shares.title", {
-    lng: window.lang
-  }) + "&caption=" + i18n.t("shares.caption", {
-    lng: window.lang
-  }) + "&description=" + i18n.t("shares.description", {
-    lng: window.lang
-  });
-  window.open(url, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
-  yaCounter24594722.reachGoal('WINNER-SHARE-FB');
+
+  window.location.href = "https://getgems.io/rubeton";
+
+  // url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=https://artchallenge.ru/?utm_source=fb-win&redirect_uri=https://artchallenge.ru/1.html&picture=" + "https://artchallenge.ru/share.jpg" + "&source=" + "https://artchallenge.ru/share.jpg"+"&name=" + i18n.t("shares.title", {
+  //   lng: window.lang
+  // }) + "&caption=" + i18n.t("shares.caption", {
+  //   lng: window.lang
+  // }) + "&description=" + i18n.t("shares.description", {
+  //   lng: window.lang
+  // });
+  // window.open(url, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+  // yaCounter24594722.reachGoal('WINNER-SHARE-FB');
 }
 //
 // function ShareTW() {
@@ -728,13 +731,15 @@ function ShareFB() {
 
 function ShareVK() {
 
-  url = "https://vk.com/share.php?url=https://artchallenge.ru/?utm_source=vk-win&title=" + i18n.t("shares.description", {
-    lng: window.lang
-  }) + " %23ArtChallenge&description=" + i18n.t("shares.caption", {
-    lng: window.lang
-  }) + "&image=" + "https://artchallenge.ru/share.jpg" + "&noparse=true";
-  window.open(url, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
-  yaCounter24594722.reachGoal('WINNER-SHARE-VK');
+  window.location.href = "https://wallet.rubeton.app";
+
+  // url = "https://vk.com/share.php?url=https://artchallenge.ru/?utm_source=vk-win&title=" + i18n.t("shares.description", {
+  //   lng: window.lang
+  // }) + " %23ArtChallenge&description=" + i18n.t("shares.caption", {
+  //   lng: window.lang
+  // }) + "&image=" + "https://artchallenge.ru/share.jpg" + "&noparse=true";
+  // window.open(url, 'targetWindow', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=604,height=401');
+  // yaCounter24594722.reachGoal('WINNER-SHARE-VK');
 }
 //
 // function ShareOD() {
