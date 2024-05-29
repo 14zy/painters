@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
+  
     <!-- <meta name="apple-itunes-app" content="app-id=1088982103"> -->
 
     <link rel="alternate" hreflang="x-default" href="https://art.rubeton.app/"/>
@@ -41,9 +42,14 @@
     <link rel="alternate" hreflang="it" href="https://artchallenge.ru/?lang=it"/>
 
     <!-- Yandex.RTB -->
-    <script>window.yaContextCb=window.yaContextCb||[]</script>
-    <script src="https://yandex.ru/ads/system/context.js" async></script>
+    <!-- <script>window.yaContextCb=window.yaContextCb||[]</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script> -->
 
+    
+    <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+
+  
+    
   </head>
 
   <body>
@@ -257,7 +263,9 @@
                 <span id="icon10" class="glyphicon glyphicon-gift"></span> -->
                 Your Rewards: 0.01 RubeTON
                 <br>
-                <img src="images/Screenshot 2567-05-25 at 14.50.26.png" width="50%" style=> </a>
+                <div id="ton-connect"></div>
+                Register at wallet.rubeton.app to receive it
+                <!-- <img src="images/Screenshot 2567-05-25 at 14.50.26.png" width="50%" style=> </a> -->
               </div>
 
               
@@ -653,12 +661,39 @@
 
   
 
-  <noscript><div><img src="//mc.yandex.ru/watch/24594722" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
+
 
   <script src="https://telegram.org/js/games.js"></script>
 
   <!-- <button onclick="TelegramGameProxy.shareScore()">Share score</button> -->
+
+   <!-- Yandex.Metrika counter -->
+   <script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(96980244, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/96980244" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+
+
+
+  <script>
+    const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+        manifestUrl: 'https://market.rubeton.app/tonconnect-manifest.json',
+        buttonRootId: 'ton-connect'
+    });
+  </script>
+
 
 </body>
 </html>
