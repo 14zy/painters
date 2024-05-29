@@ -241,12 +241,12 @@
     <div class="container">
       <div class="col-md-12 banner-inner-wrapper p-0 m-0" >
         
-        <div class="banner-text">
+        <div class="banner-text" style="padding-top: 3px!important">
           <div class='row'>
 
 
 
-            <div class='col-lg-8 pictureDiv'>
+            <div class='col-lg-8 pictureDiv' style="padding-top: 0px">
 
               <img id="art">
 
@@ -361,16 +361,23 @@
         <div class="col-md-5 col-sm-6">
           
           <div class="intro-content">
-            <h3 data-i18n="desc.what">What's going on here?</h3>
-            <p data-i18n="desc.what-desc">We offer you to have some fun by playing the art history game!</p>
+            <span>More info</span>
+            <br>
+            <a href="https://buy.rubeton.app" class="btn btn-lg" style='' role="button">Buy RubeTON</a>
+            <a href="#" class="btn btn-lg" style='' role="button">Refer a friend</a>
+            <a href="#" class="btn btn-lg" style='' role="button">Share a game</a>
+            <br>
+            <a href="https://wallet.rubeton.app" class="btn btn-lg btn-success" style='' role="button">Register RubeTON Wallet</a>
+            <a href="https://dex.rubeton.app" class="btn btn-lg" style='' role="button">Dex</a>
+            <a onclick="window.location.href='ton://transfer/rubenwallet.ton?amount=1000000000&text=Mint-' + window.truePainter + '-' + window.image.id" class="btn btn-lg" role="button">Mint as NFT</a>
+            <br>
+            <a href="#" class="btn btn-lg" style='' role="button">Order Paintings</a>
+            <a href="https://rubeton.app" class="btn btn-lg" style='' role="button">Visit RubeTON.app</a>
 
-            <h3 data-i18n="desc.how">How does it work?</h3>
-            <p data-i18n="[html]desc.how-desc">You need to guess the artists who made famous paintings.<br>You win if you manage to guess 10 painters in a row.</p>
-
-            <h3 data-i18n="desc.what-good">What’s the use of it?</h3>
-            <p data-i18n="[html]desc.what-good-desc">Play in your free time and very soon you’ll be able to tell Claude Monet from Edouard Manet at a glance, let alone Alfred Sisley :)</p>
+            
           </div>
         </div>
+        
 
         <!-- <div class="col-md-2 col-sm-6">
           <div class="intro-content"></div>
@@ -550,14 +557,18 @@
     <div class="container">
 
       <div class="col-md-4">
-        <!-- <a href="https://artchallenge.ru"><h4>ArtChallenge.ru</h4></a> -->
-        <div class="">
+        <br>
+        
 
-          <!-- <h4 data-i18n="desc.settings">Options:</h4> -->
-          
-          
+        <div class="pb-2">
+          <h4 data-i18n="desc.how-help-desc">If you like this site, could you be so kind to share it with your friends?</h4>
+          <!-- <div style="margin-left: -5px;" data-i18n="[data-yashareTitle]head.title;[data-yashareDescription]head.description" class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="facebook,vkontakte,twitter,odnoklassniki" data-yashareTheme="counter" data-yashareImage="https://artchallenge.ru/logo-text.jpg" data-yashareLink="https://artchallenge.ru/"></div> -->
+          <div style="margin-left: -5px;" class="ya-share2" data-i18n="[data-yashareTitle]head.title;[data-yashareDescription]head.description" data-yashareImage="https://artchallenge.ru/logo.jpg" data-yashareLink="https://art.rubeton.app/" data-curtain data-size="m" data-shape="round" data-services="telegram,twitter,whatsapp,reddit,linkedin,vkontakte,facebook"></div>
+          <br>
+        </div>
+        <br>
 
-          <text data-i18n="desc.lang">Language</text>:
+        <text data-i18n="desc.lang">Language</text>:
           <div class="btn-group dropup">
             <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" style="border: none; background: none; margin-top: 0">
               <img id="langMain" src="pics/flags/EN.png" alt="" width="32">
@@ -594,39 +605,15 @@
               </li>
             </ul>
           </div>
-
-          
-          
-          <br><br>
-          <!-- <p>
-          <a href='https://artchallenge.me/'>Старая версия сайта</a></p> -->
-        </div>
-
-        <div class="pb-2">
-
-          <h4 data-i18n="desc.how-help-desc">If you like this site, could you be so kind to share it with your friends?</h4>
-          
-          <!-- <div style="margin-left: -5px;" data-i18n="[data-yashareTitle]head.title;[data-yashareDescription]head.description" class="yashare-auto-init" data-yashareL10n="ru" data-yashareQuickServices="facebook,vkontakte,twitter,odnoklassniki" data-yashareTheme="counter" data-yashareImage="https://artchallenge.ru/logo-text.jpg" data-yashareLink="https://artchallenge.ru/"></div> -->
-  
-          <div style="margin-left: -5px;" class="ya-share2" data-i18n="[data-yashareTitle]head.title;[data-yashareDescription]head.description" data-yashareImage="https://artchallenge.ru/logo-text.jpg" data-yashareLink="https://artchallenge.ru/" data-curtain data-size="m" data-shape="round" data-services="telegram,twitter,whatsapp,reddit,linkedin,vkontakte,odnoklassniki,facebook"></div>
-          <br>
-        </div>
         
-          <!-- <span data-i18n="footer.created">Created by</span>
-          <a target="_blank" href="https://facebook.com/ruben.bbv" title="Ruben Babaev"><img style="margin-bottom: 7px;" height="20" width="20" src="pics/ruben.jpg" alt="Ruben Babaev">
-            <span data-i18n="footer.ruben">Ruben</span>
-          </a> -->
-          <!-- <span data-i18n="footer.and">and</span>
-          <a target="_blank" href="https://facebook.com/plotkina.anna" title="Anna Plotkina"><img style="margin: 0 3px 4px 0;" height="18" width="18" src="pics/anna.jpg" alt="Anna Plotkina">
-            <span data-i18n="footer.anna">Anna</span>
-          </a> -->
+     
           
           <br>
           
-          <p>© 2024. Made with ♦️ in RubeTON<br>
-        </p>
+          <p>© 2024. Made with ♦️ in RubeTON</p>
+          
         <h5><a href="https://rubeton.app/">RubeTON.app</a></h5>
-          <br>
+          
       </div>
 
       

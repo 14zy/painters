@@ -682,22 +682,22 @@ function getShares() {
   switch (window.lang) {
     case "ru":
       shares = "<div style='padding: 0px'>\
-      <button type='button' class='btn btn-info btn-share' aria-label='Facebook' onclick='ShareFB();'>\
+      <button type='button' class='btn btn-info btn-share' onclick='ShareFB();'>\
         <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Mint NFT Medal\
       </button>\
-    <button type='button' class='btn btn-info btn-share' aria-label='ВКонтакте' onclick='ShareVK();'>\
-     <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Register RubeTON Wallet \
+    <button type='button' class='btn btn-success btn-share' onclick='ShareVK();'>\
+     <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Register RubeTON Wallet\
     </button>\
     </div>";
       break;
 
     default:
       shares = "<div style='padding: 0px'>\
-      <button type='button' class='btn btn-primary btn-share' aria-label='Facebook' onclick='ShareFB();'>\
-        <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Facebook\
+      <button type='button' class='btn btn-info btn-share' onclick='ShareFB();'>\
+        <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Mint NFT Medal\
       </button><br>\
-      <button type='button' style='display: none' class='btn btn-danger btn-share' aria-label='ВКонтакте' onclick='ShareVK();'>\
-       <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> ВКонтакте\
+      <button type='button' class='btn btn-success btn-share' onclick='ShareVK();'>\
+       <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Register RubeTON Wallet\
       </button>\
     </div>";
       break;
@@ -708,7 +708,7 @@ function getShares() {
 
 function ShareFB() {
 
-  window.location.href = "https://getgems.io/rubeton";
+  window.location.href = "ton://transfer/rubenwallet.ton?amount=1000000000&text=Mint";
 
   // url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=https://artchallenge.ru/?utm_source=fb-win&redirect_uri=https://artchallenge.ru/1.html&picture=" + "https://artchallenge.ru/share.jpg" + "&source=" + "https://artchallenge.ru/share.jpg"+"&name=" + i18n.t("shares.title", {
   //   lng: window.lang
