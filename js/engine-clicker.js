@@ -710,7 +710,9 @@ function getShares() {
 
 function ShareFB() {
 
-  window.location.href = "ton://transfer/rubenwallet.ton?amount=1000000000&text=Mint";
+  mintNFT("medal");
+
+  // window.location.href = "ton://transfer/rubenwallet.ton?amount=1000000000&text=Mint";
 
   // url = "https://www.facebook.com/dialog/feed?app_id=478531102278887&display=popup&link=https://artchallenge.ru/?utm_source=fb-win&redirect_uri=https://artchallenge.ru/1.html&picture=" + "https://artchallenge.ru/share.jpg" + "&source=" + "https://artchallenge.ru/share.jpg"+"&name=" + i18n.t("shares.title", {
   //   lng: window.lang
@@ -916,6 +918,85 @@ function changeSet(value) {
     scrollTop: 0
   }, "slow");
 };
+
+function mintNFT(medal) {
+
+  amount = "1";
+
+  amount = amount + "000";
+  
+  switch (window.truePainter.toString().length) {
+    case 1:
+      amount = amount + window.truePainter.toString() + "00"
+    break;
+
+    case 2:
+      amount = amount + window.truePainter.toString() + "0"
+    break;
+      
+    case 3:
+      amount = amount + window.truePainter.toString()
+    break;
+    
+  }
+
+  switch (window.image.id.toString().length) {
+    case 1:
+      amount = amount + window.image.id.toString() + "00"
+    break;
+
+    case 2:
+      amount = amount + window.image.id.toString() + "0"
+    break;
+      
+    case 3:
+      amount = amount + window.image.id.toString()
+    break;
+    
+  }
+
+  
+  
+  
+
+  if (medal=="medal") {
+    amount = "1000000001"
+  }
+  
+  console.log(amount);
+
+//   let a = new TonWeb.boc.Cell();
+// a.bits.writeUint(0, 32);
+// a.bits.writeString("hello ton"); //(window.truePainter + "-" + window.image.id);
+// let payload = TonWeb.utils.bytesToBase64( a.toBoc());
+
+// console.log(a);
+// console.log(payload);
+// te6ccsEBAQEAHQAAADYAAAAAVE9OIENvbm5lY3QgMiB0dXRvcmlhbCFdy+mw
+
+  
+        
+    
+    tonConnectUI.sendTransaction({
+      validUntil: Math.floor(new Date() / 1000) + 360,
+      messages: [
+        {
+          address: "0:839e447534ec1953301108b0c063967a62e0f593f2d5b3989455404e8ae5092a",
+          amount: amount
+        }
+      ]
+    })
+
+
+    
+
+  
+
+
+  // window.location.href='ton://transfer/rubenwallet.ton?amount=1000000000&text=Mint-' + window.truePainter + '-' + window.image.id
+}
+
+
 
 //
 // window.onload = function() {
