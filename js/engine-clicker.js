@@ -128,7 +128,9 @@ function load() {
   if (getCookie("currentSet") === "") {
     window.currentSetName = "basicSet";
     window.currentSet = [1, 4, 7, 9, 14, 15, 17, 19, 21, 22, 24, 26, 27, 28, 29, 30, 32, 33, 34, 35, 36, 39, 40, 41, 42, 43, 45, 46, 49, 50, 53, 54, 55, 57, 58, 61, 62, 63, 69, 72, 73, 75, 77, 79, 80, 82, 83, 94, 95, 112, 118];
-    document.getElementById("basicSet").className = "lang-active";
+
+    document.getElementById("basicSet").className = "";
+
   } else {
     changeSet(getCookie("currentSet"));
   }
@@ -824,12 +826,12 @@ function begood(value) {
   if (value == 0) {
     setCookie('begood', 0, 360);
     window.goodboy = 0;
-    document.getElementById("btnOff").style.color = "#428BCA";
-    document.getElementById("btnOff").style.fontWeight = "normal";
-    document.getElementById("btnOff").style.cursor = "pointer";
-    document.getElementById("btnOn").style.color = "black";
-    document.getElementById("btnOn").style.fontWeight = "bold";
-    document.getElementById("btnOn").style.cursor = "default";
+    // document.getElementById("btnOff").style.color = "#428BCA";
+    // document.getElementById("btnOff").style.fontWeight = "normal";
+    // document.getElementById("btnOff").style.cursor = "pointer";
+    // document.getElementById("btnOn").style.color = "black";
+    // document.getElementById("btnOn").style.fontWeight = "bold";
+    // document.getElementById("btnOn").style.cursor = "default";
   };
 }
 
@@ -877,14 +879,33 @@ function changeSet(value) {
       document.cookie = "currentSet=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
   };
 
-  document.getElementById(value).className = "lang-active";
+  // document.getElementById(value).className = "lang-active";
 
   if (window.currentSetName != null) {
-    document.getElementById(window.currentSetName).className = "btn btn-success";
+    // document.getElementById(window.currentSetName).className = "btn btn-success";
     window.currentSetName = value;
     refresh("bad", false);
+    // swal( i18n.t("sets." + window.currentSetName , {lng: window.lang}) );
+
+    
+
+    // swal({
+		// title: "Технические работы",
+    // timer: 2000,
+		// text: "Пожалуйста, используйте сайт ArtChallenge.World"
+	  // });
+
+    swal({
+      // type: "success",
+      title: i18n.t("sets." + window.currentSetName , {lng: window.lang}),
+      timer: 2000
+    });
+
+
+
   } else {
     window.currentSetName = value;
+    
   }
 
   if (window.msgWinner) { // Временно. Если была победа, а потом чувак выбирает новую коллекцию - просто перезагрузка страницы
