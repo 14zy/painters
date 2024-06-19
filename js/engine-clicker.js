@@ -425,10 +425,14 @@ function checkAnswer(btn) {
 
     var wins = parseInt(window.counter);
 
-    if (wins == 10) {
+    if (wins == 10 || wins == 100) {
+      document.getElementById("iconNumber").innerHTML = (wins * 0.01);
+      wins = 1 + wins;
+      setCookie('wins', wins, "session");
+
       winner();
     } else {
-      document.getElementById("iconNumber").innerHTML = (wins);
+      document.getElementById("iconNumber").innerHTML = (wins * 0.01);
       wins = 1 + wins;
       setCookie('wins', wins, "session");
 
@@ -646,7 +650,7 @@ function winner() {
     },
     width: "350px",
     buttons: {
-      closer: true,
+      closer: false,
       closer_hover: false,
       sticker: false
     },
@@ -684,11 +688,7 @@ function getShares() {
       <button type='button' class='btn btn-info btn-share' onclick='ShareFB();'>\
         <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Mint NFT Medal & Get Rewards\
       </button><br>\
-      <button type='button' class='btn btn-success btn-share' onclick='ShareVK();'>\
-       <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Register RubeTON Wallet\
-      </button>\
-      <br>\
-      <button type='button' class='btn btn-share' onclick='refresh();'>\
+      <button type='button' class='btn btn-share' onclick='PNotify.removeAll();'>\
        <span class='glyphicon glyphicon glyphicon-menu-right' aria-hidden='true'></span> Continue play\
       </button>\
     </div>";
@@ -911,49 +911,62 @@ function changeSet(value) {
 
 function mintNFT(medal) {
 
-  amount = "1";
+  // amount = "1";
 
-  amount = amount + "000";
+  // amount = amount + "000";
   
-  switch (window.truePainter.toString().length) {
-    case 1:
-      amount = amount + window.truePainter.toString() + "00"
-    break;
+  // switch (window.truePainter.toString().length) {
+  //   case 1:
+  //     amount = amount + window.truePainter.toString() + "00"
+  //   break;
 
-    case 2:
-      amount = amount + window.truePainter.toString() + "0"
-    break;
+  //   case 2:
+  //     amount = amount + window.truePainter.toString() + "0"
+  //   break;
       
-    case 3:
-      amount = amount + window.truePainter.toString()
-    break;
+  //   case 3:
+  //     amount = amount + window.truePainter.toString()
+  //   break;
     
-  }
+  // }
 
-  switch (window.image.id.toString().length) {
-    case 1:
-      amount = amount + window.image.id.toString() + "00"
-    break;
+  // switch (window.image.id.toString().length) {
+  //   case 1:
+  //     amount = amount + window.image.id.toString() + "00"
+  //   break;
 
-    case 2:
-      amount = amount + window.image.id.toString() + "0"
-    break;
+  //   case 2:
+  //     amount = amount + window.image.id.toString() + "0"
+  //   break;
       
-    case 3:
-      amount = amount + window.image.id.toString()
-    break;
+  //   case 3:
+  //     amount = amount + window.image.id.toString()
+  //   break;
     
-  }
+  // }
 
-  
-  
-  
 
   if (medal=="medal") {
-    amount = "1000000001"
+    amount = "1000000"
+  }
+
+  switch (window.answer.toString().length) {
+    case 1:
+      amount = amount + window.answer.toString() + "00"
+    break;
+
+    case 2:
+      amount = amount + window.answer.toString() + "0"
+    break;
+      
+    case 3:
+      amount = amount + window.answer.toString()
+    break;
+    
   }
   
-  // console.log(amount);
+  
+  console.log(amount);
 
 //   let a = new TonWeb.boc.Cell();
 // a.bits.writeUint(0, 32);
