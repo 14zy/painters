@@ -39,7 +39,7 @@ function setLang(lang) {
   if (window.lang != null) { //Не менять на !==
     document.getElementById(window.lang).className = "lang";
     setCookie('lang', lang, 360);
-    document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    // document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
     refresh("bad", false);
   }
   window.lang = lang;
@@ -398,8 +398,8 @@ function putButtons(painter) {
 
 function puticons() {
   for (var i = 1; i < window.counter; i++) {
-    document.getElementById("icon" + i).style.color = "rgb(53,115,45)";
-    $("#icon" + i).removeClass('animated tada');
+    // document.getElementById("icon" + i).style.color = "rgb(53,115,45)";
+    // $("#icon" + i).removeClass('animated tada');
   }
 }
 
@@ -465,11 +465,11 @@ function checkAnswer(btn) {
 
       });
       yaCounter24594722.reachGoal('WIN');
-      window.answer = 1;
+      // window.answer = 1;
 
       //putincos повтор
-      document.getElementById("icon" + (wins - 1)).style.color = "rgb(53,115,45)";
-      $("#icon" + (wins - 1)).addClass('animated tada');
+      // document.getElementById("icon" + (wins - 1)).style.color = "rgb(53,115,45)";
+      // $("#icon" + (wins - 1)).addClass('animated tada');
 
       
 
@@ -484,13 +484,11 @@ function checkAnswer(btn) {
       title: badPhrase(),
       text: "<div style='text-align: left'>" + "<img src='" + window.platform + window.truePainter + "/photo.jpg' style='width: 60%; margin: 5px 0 10px 0'><br><p class='painter-name'>" + i18n.t("message.wrong-desc", {
         lng: window.lang
-      }) + " " + window.truePainterName + "!</p><hr style='margin: 5px'>" + window.nation + ", " + window.years + "<br>" + window.genre + "<a target='_blank' id='btnLearnMore' href='gallery/" + window.lang + "/" + window.truePainter + ".html' onclick='learnMore();' class='btn btn-large' style='width: 100%' role='button'><span class='glyphicon glyphicon-search'></span> " + i18n.t("message.learn-more", {
-        lng: window.lang
-      }) + "</a><br></div>",
+      }) + " " + window.truePainterName + "!</p><hr style='margin: 5px'>" + window.nation + ", " + window.years + "<br>" + window.genre + "<br></div>",
       type: 'error',
       icon: '',
       hide: true,
-      animate_speed: "normal",
+      animate_speed: "fast",
       delay: window.errorDelay,
       remove: true,
       addclass: window.pnotify,
@@ -511,8 +509,8 @@ function checkAnswer(btn) {
       }
     });
 
-    document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    document.getElementById("iconNumber").innerHTML = "0";
+    // document.cookie = "wins=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    // document.getElementById("iconNumber").innerHTML = "0";
 
     document.getElementById("btn1").onclick = function() {
       void(0);
@@ -532,7 +530,7 @@ function checkAnswer(btn) {
     $("#" + btn).addClass('btn-danger');
 
     yaCounter24594722.reachGoal('FAIL');
-    window.answer = 0;
+    // window.answer = 0;
   }
 
   // yaCounter24594722.reachGoal('ANSWER-CLICK');
@@ -618,8 +616,8 @@ function winner() {
   window.rndShare = Math.floor((Math.random() * 10) + 1);
   window.imageURL = "https://artchallenge.ru/pics/shares/" + window.currentSetName.slice(0, -3) + "/" + window.lang + "/" + window.rndShare + ".jpg";
 
-  var winnerDiv = "\
-  <p class='winner-text'>" + i18n.t("message.winner-desc", {
+  var winnerDiv = "✔️10 New medal\
+  <p class='winner-text'" + i18n.t("message.winner-desc", {
     lng: window.lang,
     setName: i18n.t("sets." + window.currentSetName, {
       lng: window.lang
@@ -628,12 +626,8 @@ function winner() {
   <p><a onclick='ShareFB();' href='#'>\
     <img style='width: 100%;' src='"+ window.imageURL.slice(0,-3) +"png'>\
   </a></p>\
-  <p class='winner-text'>" + i18n.t("message.winner-desc-old", {
-    lng: window.lang
-  }) + "</p>\
-  <p class='winner-text'>" + i18n.t("message.share", {
-    lng: window.lang
-  }) + "</p>" + getShares();
+  <p class='winner-text'>" + "</p>\
+  <p class='winner-text'>" + "Mint an NFT and receive rewards" + "</p>" + getShares();
 
   window.msgWinner = new PNotify({
     title: i18n.t("message.winner", {
@@ -661,45 +655,41 @@ function winner() {
       menu: false
     }
   });
-  document.getElementById("icon10").style.color = "rgb(53,115,45)";
+  // document.getElementById("icon10").style.color = "rgb(53,115,45)";
   // yaCounter24594722.reachGoal('WINNER');
 
-  document.getElementById("btn1").onclick = function() {
-    void(0);
-  };
-  document.getElementById("btn2").onclick = function() {
-    void(0);
-  };
-  document.getElementById("btn3").onclick = function() {
-    void(0);
-  };
-  document.getElementById("btn4").onclick = function() {
-    void(0);
-  };
+  refresh();
+
+  // document.getElementById("btn1").onclick = function() {
+  //   void(0);
+  // };
+  // document.getElementById("btn2").onclick = function() {
+  //   void(0);
+  // };
+  // document.getElementById("btn3").onclick = function() {
+  //   void(0);
+  // };
+  // document.getElementById("btn4").onclick = function() {
+  //   void(0);
+  // };
 
 }
 
 function getShares() {
 
   switch (window.lang) {
-    case "ru":
-      shares = "<div style='padding: 0px'>\
-      <button type='button' class='btn btn-info btn-share' onclick='ShareFB();'>\
-        <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Mint NFT Medal\
-      </button>\
-    <button type='button' class='btn btn-success btn-share' onclick='ShareVK();'>\
-     <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Register RubeTON Wallet\
-    </button>\
-    </div>";
-      break;
-
+  
     default:
       shares = "<div style='padding: 0px'>\
       <button type='button' class='btn btn-info btn-share' onclick='ShareFB();'>\
-        <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Mint NFT Medal\
+        <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Mint NFT Medal & Get Rewards\
       </button><br>\
       <button type='button' class='btn btn-success btn-share' onclick='ShareVK();'>\
        <span class='glyphicon glyphicon-share-alt' aria-hidden='true'></span> Register RubeTON Wallet\
+      </button>\
+      <br>\
+      <button type='button' class='btn btn-share' onclick='refresh();'>\
+       <span class='glyphicon glyphicon glyphicon-menu-right' aria-hidden='true'></span> Continue play\
       </button>\
     </div>";
       break;
@@ -806,9 +796,9 @@ function refresh(sign, scroll) {
   getart();
 
   if (sign == "bad") {
-    window.counter = 1;
+    // window.counter = 1;
     for (var i = 1; i <= 10; i++) {
-      document.getElementById("icon" + i).style.color = "lightgray";
+      // document.getElementById("icon" + i).style.color = "lightgray";
     };
   };
 }
@@ -963,7 +953,7 @@ function mintNFT(medal) {
     amount = "1000000001"
   }
   
-  console.log(amount);
+  // console.log(amount);
 
 //   let a = new TonWeb.boc.Cell();
 // a.bits.writeUint(0, 32);
