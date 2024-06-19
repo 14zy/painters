@@ -950,17 +950,19 @@ function mintNFT(medal) {
     amount = "1000000"
   }
 
-  switch (window.answer.toString().length) {
+window.counter = window.counter - 1;
+
+  switch (window.counter.toString().length) {
     case 1:
-      amount = amount + window.answer.toString() + "00"
+      amount = amount + window.counter.toString() + "00"
     break;
 
     case 2:
-      amount = amount + window.answer.toString() + "0"
+      amount = amount + window.counter.toString() + "0"
     break;
       
     case 3:
-      amount = amount + window.answer.toString()
+      amount = amount + window.counter.toString()
     break;
     
   }
