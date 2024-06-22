@@ -876,7 +876,7 @@ function changeSet(value) {
   if (window.currentSetName != null) {
     // document.getElementById(window.currentSetName).className = "btn btn-success";
     window.currentSetName = value;
-    refresh("bad", false);
+    // refresh("bad", false);
     // swal( i18n.t("sets." + window.currentSetName , {lng: window.lang}) );
 
     
