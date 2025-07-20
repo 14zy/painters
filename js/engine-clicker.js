@@ -358,31 +358,34 @@ function currentWins() {
 function putButtons(painter) {
 
   function randomPainter() {
-    var random = "painters." + window.currentSet[Math.floor((Math.random() * window.currentSet.length))];
-    return i18n.t(random, {
-      lng: window.lang
-    });
+    var idx = Math.floor((Math.random() * window.currentSet.length));
+    var id = window.currentSet[idx];
+    var name = i18n.t("painters." + id, { lng: window.lang });
+    return { name: name, id: id };
   }
 
-  var painters = [painter];
+  var painters = [{ name: painter, id: window.truePainter }];
   for (var i = 0; i < 10; i++) {
     painters.push(randomPainter());
-    if (painters[1] === "") {
+    if (painters[1].name === "") {
       console.log("Error from painters: do refresh(bad, false)");
       refresh("bad", false);
     }
   }
 
-  //unique
-  painters = painters.reverse().filter(function(e, i, painters) {
-    return painters.indexOf(e, i + 1) === -1;
+  //unique by name
+  painters = painters.reverse().filter(function(e, i, arr) {
+    return arr.findIndex(x => x.name === e.name) === i;
   }).reverse();
 
   var buttons = [];
-  buttons.push(painters[0]);
-  buttons.push(painters[1]);
-  buttons.push(painters[2]);
-  buttons.push(painters[3]);
+  // Ensure the first painter is the correct answer
+  buttons.push("<img class='img-circle' width='22px' src='gallery/images/painters/" + painters[0].id + ".jpg'> " + painters[0].name);
+
+  // Add three random painters from the array (excluding the first one)
+  for (var i = 1; i < 4; i++) {
+    buttons.push("<img class='img-circle' width='22px' src='gallery/images/painters/" + painters[i].id + ".jpg'> " + painters[i].name);
+  }
 
   function shuffle(o) { //v1.0
     for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
@@ -405,7 +408,9 @@ function puticons() {
 
 
 function checkAnswer(btn) {
-  var answer = document.getElementById(btn).innerHTML;
+  var answer = document.getElementById(btn).innerHTML.replace(/<img[^>]*>\s*/, '').trim();
+
+  console.log("Answer: " + answer);
 
   if (answer == window.truePainterName) {
 
