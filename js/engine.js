@@ -529,7 +529,7 @@ function checkAnswer(btn) {
     window.answer = 0;
   }
 
-  // yaCounter24594722.reachGoal('ANSWER-CLICK');
+  yaCounter24594722.reachGoal('ANSWER-CLICK');
   // recordData();
 }
 
@@ -656,7 +656,7 @@ function winner() {
     }
   });
   document.getElementById("icon10").style.color = "rgb(53,115,45)";
-  // yaCounter24594722.reachGoal('WINNER');
+  yaCounter24594722.reachGoal('WINNER');
 
   document.getElementById("btn1").onclick = function() {
     void(0);
